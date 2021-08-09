@@ -3,7 +3,7 @@ Utilities for bootstrapping an app that uses the Windows App SDK.
 !*/
 
 use bindings::{
-    Microsoft::ProjectReunion::Foundation::*,
+    Microsoft::WindowsAppSDK::Foundation::*,
     Windows::Win32::{
         Foundation::HWND,
         Storage::Packaging::Appx::{PACKAGE_VERSION, PACKAGE_VERSION_0, PACKAGE_VERSION_0_0},
@@ -19,17 +19,14 @@ use bindings::{
 ///
 /// If multiple packages meet the criteria, the best candidate is selected.
 pub fn initialize() -> windows::Result<()> {
-    initialize_without_dialog()
-    .map_err(|outer_error| {
-        unsafe {
-            MessageBoxW(
-                HWND::default(),
-                "To run this application, the Windows App SDK preview runtime must be installed.\n\nhttps://aka.ms/projectreunion/0.8preview",
-                "This application could not be started",
-                MB_OK | MB_ICONERROR,
-            );
-            outer_error
-        }
+    initialize_without_dialog().map_err(|outer_error| unsafe {
+        MessageBoxW(
+            HWND::default(),
+            "To run this application, the Windows App SDK preview runtime must be installed.",
+            "This application could not be started",
+            MB_OK | MB_ICONERROR,
+        );
+        outer_error
     })
 }
 
