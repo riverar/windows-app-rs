@@ -2,13 +2,11 @@
 Utilities for bootstrapping an app that uses the Windows App SDK.
 !*/
 
-use bindings::{
-    Microsoft::WindowsAppSDK::Foundation::*,
-    Windows::Win32::{
-        Foundation::HWND,
-        Storage::Packaging::Appx::{PACKAGE_VERSION, PACKAGE_VERSION_0, PACKAGE_VERSION_0_0},
-        UI::WindowsAndMessaging::{MessageBoxW, MB_ICONERROR, MB_OK},
-    },
+use crate::Microsoft::WindowsAppSdk::Foundation::*;
+use windows::Win32::{
+    Foundation::HWND,
+    Storage::Packaging::Appx::{PACKAGE_VERSION, PACKAGE_VERSION_0, PACKAGE_VERSION_0_0},
+    UI::WindowsAndMessaging::{MessageBoxW, MB_ICONERROR, MB_OK},
 };
 
 /// Locates the Windows App SDK framework package compatible with the (currently internal)
