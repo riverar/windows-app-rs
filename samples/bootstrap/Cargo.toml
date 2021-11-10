@@ -12,10 +12,15 @@ exclude = []
 publish = false
 
 [build-dependencies]
-"windows" = { git = "https://github.com/microsoft/windows-rs", features = ["build"] }
+"windows" = { version = "0.26", features = ["build"] }
+
+[dependencies]
+"windows" = { version = "0.26" }
 
 [dependencies.windows-app]
 path = "../../"
 features = [
-    "WindowsAppSdk_Foundation"
+    "Foundation",
+    "WindowsAppSdk_Foundation",
+    "Windows_System_Power"
 ]

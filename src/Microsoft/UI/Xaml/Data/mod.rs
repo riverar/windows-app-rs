@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Binding(pub ::windows::runtime::IInspectable);
 impl Binding {
@@ -21,9 +21,9 @@ impl Binding {
     pub fn Path(&self) -> ::windows::runtime::Result<super::PropertyPath> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::PropertyPath>(result__)
@@ -37,7 +37,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -47,9 +47,9 @@ impl Binding {
     pub fn Mode(&self) -> ::windows::runtime::Result<BindingMode> {
         let this = self;
         unsafe {
-            let mut result__: BindingMode = ::std::mem::zeroed();
+            let mut result__: BindingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<BindingMode>(result__)
@@ -59,17 +59,20 @@ impl Binding {
     pub fn SetMode(&self, value: BindingMode) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn Source(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -86,7 +89,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -96,9 +99,9 @@ impl Binding {
     pub fn RelativeSource(&self) -> ::windows::runtime::Result<RelativeSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<RelativeSource>(result__)
@@ -112,7 +115,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -122,10 +125,10 @@ impl Binding {
     pub fn ElementName(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -142,7 +145,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -152,9 +155,9 @@ impl Binding {
     pub fn Converter(&self) -> ::windows::runtime::Result<IValueConverter> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IValueConverter>(result__)
@@ -168,7 +171,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -180,9 +183,9 @@ impl Binding {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -199,7 +202,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -209,10 +212,10 @@ impl Binding {
     pub fn ConverterLanguage(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -229,7 +232,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -239,9 +242,9 @@ impl Binding {
     pub fn FallbackValue(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -258,7 +261,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -268,9 +271,9 @@ impl Binding {
     pub fn TargetNullValue(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -287,7 +290,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -297,9 +300,9 @@ impl Binding {
     pub fn UpdateSourceTrigger(&self) -> ::windows::runtime::Result<UpdateSourceTrigger> {
         let this = self;
         unsafe {
-            let mut result__: UpdateSourceTrigger = ::std::mem::zeroed();
+            let mut result__: UpdateSourceTrigger = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<UpdateSourceTrigger>(result__)
@@ -313,7 +316,7 @@ impl Binding {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -322,11 +325,12 @@ impl Binding {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn new() -> ::windows::runtime::Result<Binding> {
         Self::IBindingFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<Binding>(result__)
@@ -339,9 +343,9 @@ impl Binding {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -361,7 +365,7 @@ impl Binding {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -376,7 +380,7 @@ impl Binding {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -392,9 +396,9 @@ impl Binding {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -411,9 +415,9 @@ impl Binding {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -432,9 +436,9 @@ impl Binding {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -454,7 +458,7 @@ impl Binding {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -465,9 +469,9 @@ impl Binding {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -480,9 +484,9 @@ impl Binding {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -513,12 +517,12 @@ unsafe impl ::windows::runtime::Interface for Binding {
 impl ::windows::runtime::RuntimeName for Binding {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.Binding";
 }
-impl ::std::convert::From<Binding> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Binding> for ::windows::runtime::IUnknown {
     fn from(value: Binding) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Binding> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Binding> for ::windows::runtime::IUnknown {
     fn from(value: &Binding) -> Self {
         value.0 .0.clone()
     }
@@ -533,12 +537,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Binding> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Binding> for ::windows::runtime::IInspectable {
     fn from(value: Binding) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Binding> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Binding> for ::windows::runtime::IInspectable {
     fn from(value: &Binding) -> Self {
         value.0.clone()
     }
@@ -553,72 +557,73 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Binding> for BindingBase {
+impl ::core::convert::From<Binding> for BindingBase {
     fn from(value: Binding) -> Self {
-        ::std::convert::Into::<BindingBase>::into(&value)
+        ::core::convert::Into::<BindingBase>::into(&value)
     }
 }
-impl ::std::convert::From<&Binding> for BindingBase {
+impl ::core::convert::From<&Binding> for BindingBase {
     fn from(value: &Binding) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, BindingBase> for Binding {
     fn into_param(self) -> ::windows::runtime::Param<'a, BindingBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<BindingBase>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<BindingBase>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, BindingBase> for &Binding {
     fn into_param(self) -> ::windows::runtime::Param<'a, BindingBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<BindingBase>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<BindingBase>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Binding> for super::DependencyObject {
+impl ::core::convert::From<Binding> for super::DependencyObject {
     fn from(value: Binding) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Binding> for super::DependencyObject {
+impl ::core::convert::From<&Binding> for super::DependencyObject {
     fn from(value: &Binding) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Binding {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Binding {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Binding {}
-unsafe impl ::std::marker::Sync for Binding {}
+unsafe impl ::core::marker::Send for Binding {}
+unsafe impl ::core::marker::Sync for Binding {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BindingBase(pub ::windows::runtime::IInspectable);
 impl BindingBase {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn new() -> ::windows::runtime::Result<BindingBase> {
         Self::IBindingBaseFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<BindingBase>(result__)
@@ -631,9 +636,9 @@ impl BindingBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -653,7 +658,7 @@ impl BindingBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -668,7 +673,7 @@ impl BindingBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -684,9 +689,9 @@ impl BindingBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -703,9 +708,9 @@ impl BindingBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -724,9 +729,9 @@ impl BindingBase {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -746,7 +751,7 @@ impl BindingBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -757,9 +762,9 @@ impl BindingBase {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -772,9 +777,9 @@ impl BindingBase {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -808,12 +813,12 @@ unsafe impl ::windows::runtime::Interface for BindingBase {
 impl ::windows::runtime::RuntimeName for BindingBase {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.BindingBase";
 }
-impl ::std::convert::From<BindingBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BindingBase> for ::windows::runtime::IUnknown {
     fn from(value: BindingBase) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BindingBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BindingBase> for ::windows::runtime::IUnknown {
     fn from(value: &BindingBase) -> Self {
         value.0 .0.clone()
     }
@@ -828,12 +833,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BindingBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BindingBase> for ::windows::runtime::IInspectable {
     fn from(value: BindingBase) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BindingBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BindingBase> for ::windows::runtime::IInspectable {
     fn from(value: &BindingBase) -> Self {
         value.0.clone()
     }
@@ -848,39 +853,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<BindingBase> for super::DependencyObject {
+impl ::core::convert::From<BindingBase> for super::DependencyObject {
     fn from(value: BindingBase) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&BindingBase> for super::DependencyObject {
+impl ::core::convert::From<&BindingBase> for super::DependencyObject {
     fn from(value: &BindingBase) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for BindingBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &BindingBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for BindingBase {}
-unsafe impl ::std::marker::Sync for BindingBase {}
+unsafe impl ::core::marker::Send for BindingBase {}
+unsafe impl ::core::marker::Sync for BindingBase {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BindingExpression(pub ::windows::runtime::IInspectable);
 impl BindingExpression {
@@ -888,9 +893,9 @@ impl BindingExpression {
     pub fn DataItem(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -900,9 +905,9 @@ impl BindingExpression {
     pub fn ParentBinding(&self) -> ::windows::runtime::Result<Binding> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Binding>(result__)
@@ -912,7 +917,7 @@ impl BindingExpression {
     pub fn UpdateSource(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).8)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -933,12 +938,12 @@ unsafe impl ::windows::runtime::Interface for BindingExpression {
 impl ::windows::runtime::RuntimeName for BindingExpression {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.BindingExpression";
 }
-impl ::std::convert::From<BindingExpression> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BindingExpression> for ::windows::runtime::IUnknown {
     fn from(value: BindingExpression) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BindingExpression> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BindingExpression> for ::windows::runtime::IUnknown {
     fn from(value: &BindingExpression) -> Self {
         value.0 .0.clone()
     }
@@ -953,12 +958,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BindingExpression> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BindingExpression> for ::windows::runtime::IInspectable {
     fn from(value: BindingExpression) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BindingExpression> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BindingExpression> for ::windows::runtime::IInspectable {
     fn from(value: &BindingExpression) -> Self {
         value.0.clone()
     }
@@ -975,37 +980,37 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<BindingExpression> for BindingExpressionBase {
+impl ::core::convert::From<BindingExpression> for BindingExpressionBase {
     fn from(value: BindingExpression) -> Self {
-        ::std::convert::Into::<BindingExpressionBase>::into(&value)
+        ::core::convert::Into::<BindingExpressionBase>::into(&value)
     }
 }
-impl ::std::convert::From<&BindingExpression> for BindingExpressionBase {
+impl ::core::convert::From<&BindingExpression> for BindingExpressionBase {
     fn from(value: &BindingExpression) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, BindingExpressionBase> for BindingExpression {
     fn into_param(self) -> ::windows::runtime::Param<'a, BindingExpressionBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<BindingExpressionBase>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<BindingExpressionBase>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, BindingExpressionBase> for &BindingExpression {
     fn into_param(self) -> ::windows::runtime::Param<'a, BindingExpressionBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<BindingExpressionBase>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<BindingExpressionBase>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for BindingExpression {}
-unsafe impl ::std::marker::Sync for BindingExpression {}
+unsafe impl ::core::marker::Send for BindingExpression {}
+unsafe impl ::core::marker::Sync for BindingExpression {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BindingExpressionBase(pub ::windows::runtime::IInspectable);
 impl BindingExpressionBase {}
@@ -1026,12 +1031,12 @@ unsafe impl ::windows::runtime::Interface for BindingExpressionBase {
 impl ::windows::runtime::RuntimeName for BindingExpressionBase {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.BindingExpressionBase";
 }
-impl ::std::convert::From<BindingExpressionBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BindingExpressionBase> for ::windows::runtime::IUnknown {
     fn from(value: BindingExpressionBase) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BindingExpressionBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BindingExpressionBase> for ::windows::runtime::IUnknown {
     fn from(value: &BindingExpressionBase) -> Self {
         value.0 .0.clone()
     }
@@ -1048,12 +1053,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BindingExpressionBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BindingExpressionBase> for ::windows::runtime::IInspectable {
     fn from(value: BindingExpressionBase) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BindingExpressionBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BindingExpressionBase> for ::windows::runtime::IInspectable {
     fn from(value: &BindingExpressionBase) -> Self {
         value.0.clone()
     }
@@ -1072,16 +1077,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for BindingExpressionBase {}
-unsafe impl ::std::marker::Sync for BindingExpressionBase {}
+unsafe impl ::core::marker::Send for BindingExpressionBase {}
+unsafe impl ::core::marker::Sync for BindingExpressionBase {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct BindingMode(pub i32);
@@ -1090,7 +1095,7 @@ impl BindingMode {
     pub const OneTime: BindingMode = BindingMode(2i32);
     pub const TwoWay: BindingMode = BindingMode(3i32);
 }
-impl ::std::convert::From<i32> for BindingMode {
+impl ::core::convert::From<i32> for BindingMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1108,10 +1113,10 @@ impl ::windows::runtime::DefaultType for BindingMode {
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BindingOperations(pub ::windows::runtime::IInspectable);
 impl BindingOperations {
@@ -1128,7 +1133,7 @@ impl BindingOperations {
     ) -> ::windows::runtime::Result<()> {
         Self::IBindingOperationsStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 dp.into_param().abi(),
                 binding.into_param().abi(),
@@ -1166,12 +1171,12 @@ unsafe impl ::windows::runtime::Interface for BindingOperations {
 impl ::windows::runtime::RuntimeName for BindingOperations {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.BindingOperations";
 }
-impl ::std::convert::From<BindingOperations> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BindingOperations> for ::windows::runtime::IUnknown {
     fn from(value: BindingOperations) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BindingOperations> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BindingOperations> for ::windows::runtime::IUnknown {
     fn from(value: &BindingOperations) -> Self {
         value.0 .0.clone()
     }
@@ -1186,12 +1191,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BindingOperations> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BindingOperations> for ::windows::runtime::IInspectable {
     fn from(value: BindingOperations) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BindingOperations> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BindingOperations> for ::windows::runtime::IInspectable {
     fn from(value: &BindingOperations) -> Self {
         value.0.clone()
     }
@@ -1208,15 +1213,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for BindingOperations {}
-unsafe impl ::std::marker::Sync for BindingOperations {}
+unsafe impl ::core::marker::Send for BindingOperations {}
+unsafe impl ::core::marker::Sync for BindingOperations {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CollectionViewSource(pub ::windows::runtime::IInspectable);
 impl CollectionViewSource {
@@ -1239,9 +1244,9 @@ impl CollectionViewSource {
     pub fn Source(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1258,7 +1263,7 @@ impl CollectionViewSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1268,9 +1273,9 @@ impl CollectionViewSource {
     pub fn View(&self) -> ::windows::runtime::Result<ICollectionView> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ICollectionView>(result__)
@@ -1280,9 +1285,9 @@ impl CollectionViewSource {
     pub fn IsSourceGrouped(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -1293,7 +1298,7 @@ impl CollectionViewSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1303,9 +1308,9 @@ impl CollectionViewSource {
     pub fn ItemsPath(&self) -> ::windows::runtime::Result<super::PropertyPath> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::PropertyPath>(result__)
@@ -1319,7 +1324,7 @@ impl CollectionViewSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1328,9 +1333,9 @@ impl CollectionViewSource {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn SourceProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICollectionViewSourceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1339,9 +1344,9 @@ impl CollectionViewSource {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn ViewProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICollectionViewSourceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1350,9 +1355,9 @@ impl CollectionViewSource {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn IsSourceGroupedProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICollectionViewSourceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1361,9 +1366,9 @@ impl CollectionViewSource {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn ItemsPathProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICollectionViewSourceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1376,9 +1381,9 @@ impl CollectionViewSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1398,7 +1403,7 @@ impl CollectionViewSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1413,7 +1418,7 @@ impl CollectionViewSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1429,9 +1434,9 @@ impl CollectionViewSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1448,9 +1453,9 @@ impl CollectionViewSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1469,9 +1474,9 @@ impl CollectionViewSource {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1491,7 +1496,7 @@ impl CollectionViewSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1502,9 +1507,9 @@ impl CollectionViewSource {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1517,9 +1522,9 @@ impl CollectionViewSource {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1555,12 +1560,12 @@ unsafe impl ::windows::runtime::Interface for CollectionViewSource {
 impl ::windows::runtime::RuntimeName for CollectionViewSource {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.CollectionViewSource";
 }
-impl ::std::convert::From<CollectionViewSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CollectionViewSource> for ::windows::runtime::IUnknown {
     fn from(value: CollectionViewSource) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CollectionViewSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CollectionViewSource> for ::windows::runtime::IUnknown {
     fn from(value: &CollectionViewSource) -> Self {
         value.0 .0.clone()
     }
@@ -1577,12 +1582,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CollectionViewSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CollectionViewSource> for ::windows::runtime::IInspectable {
     fn from(value: CollectionViewSource) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CollectionViewSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CollectionViewSource> for ::windows::runtime::IInspectable {
     fn from(value: &CollectionViewSource) -> Self {
         value.0.clone()
     }
@@ -1601,39 +1606,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<CollectionViewSource> for super::DependencyObject {
+impl ::core::convert::From<CollectionViewSource> for super::DependencyObject {
     fn from(value: CollectionViewSource) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&CollectionViewSource> for super::DependencyObject {
+impl ::core::convert::From<&CollectionViewSource> for super::DependencyObject {
     fn from(value: &CollectionViewSource) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for CollectionViewSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &CollectionViewSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for CollectionViewSource {}
-unsafe impl ::std::marker::Sync for CollectionViewSource {}
+unsafe impl ::core::marker::Send for CollectionViewSource {}
+unsafe impl ::core::marker::Sync for CollectionViewSource {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CurrentChangingEventArgs(pub ::windows::runtime::IInspectable);
 impl CurrentChangingEventArgs {
@@ -1641,9 +1646,9 @@ impl CurrentChangingEventArgs {
     pub fn Cancel(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -1653,17 +1658,20 @@ impl CurrentChangingEventArgs {
     pub fn SetCancel(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn IsCancelable(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -1672,11 +1680,12 @@ impl CurrentChangingEventArgs {
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn new() -> ::windows::runtime::Result<CurrentChangingEventArgs> {
         Self::ICurrentChangingEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<CurrentChangingEventArgs>(result__)
@@ -1687,12 +1696,13 @@ impl CurrentChangingEventArgs {
         iscancelable: bool,
     ) -> ::windows::runtime::Result<CurrentChangingEventArgs> {
         Self::ICurrentChangingEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 iscancelable,
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<CurrentChangingEventArgs>(result__)
@@ -1726,12 +1736,12 @@ unsafe impl ::windows::runtime::Interface for CurrentChangingEventArgs {
 impl ::windows::runtime::RuntimeName for CurrentChangingEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.CurrentChangingEventArgs";
 }
-impl ::std::convert::From<CurrentChangingEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CurrentChangingEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: CurrentChangingEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CurrentChangingEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CurrentChangingEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &CurrentChangingEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1750,12 +1760,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CurrentChangingEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CurrentChangingEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: CurrentChangingEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CurrentChangingEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CurrentChangingEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &CurrentChangingEventArgs) -> Self {
         value.0.clone()
     }
@@ -1774,22 +1784,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for CurrentChangingEventArgs {}
-unsafe impl ::std::marker::Sync for CurrentChangingEventArgs {}
+unsafe impl ::core::marker::Send for CurrentChangingEventArgs {}
+unsafe impl ::core::marker::Sync for CurrentChangingEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CurrentChangingEventHandler(::windows::runtime::IUnknown);
 impl CurrentChangingEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<CurrentChangingEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<CurrentChangingEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -1800,7 +1810,7 @@ impl CurrentChangingEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn Invoke<
@@ -1815,7 +1825,7 @@ impl CurrentChangingEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1856,8 +1866,8 @@ pub struct CurrentChangingEventHandler_abi(
 #[repr(C)]
 struct CurrentChangingEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<CurrentChangingEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<CurrentChangingEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -1867,8 +1877,8 @@ struct CurrentChangingEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<CurrentChangingEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<CurrentChangingEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > CurrentChangingEventHandler_box<F>
@@ -1891,7 +1901,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1908,7 +1918,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -1924,10 +1934,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DataErrorsChangedEventArgs(pub ::windows::runtime::IInspectable);
 impl DataErrorsChangedEventArgs {
@@ -1935,10 +1945,10 @@ impl DataErrorsChangedEventArgs {
     pub fn PropertyName(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -1955,7 +1965,7 @@ impl DataErrorsChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1969,9 +1979,9 @@ impl DataErrorsChangedEventArgs {
         name: Param0,
     ) -> ::windows::runtime::Result<DataErrorsChangedEventArgs> {
         Self::IDataErrorsChangedEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -2006,12 +2016,12 @@ unsafe impl ::windows::runtime::Interface for DataErrorsChangedEventArgs {
 impl ::windows::runtime::RuntimeName for DataErrorsChangedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs";
 }
-impl ::std::convert::From<DataErrorsChangedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DataErrorsChangedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: DataErrorsChangedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DataErrorsChangedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DataErrorsChangedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &DataErrorsChangedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -2030,12 +2040,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DataErrorsChangedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DataErrorsChangedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: DataErrorsChangedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DataErrorsChangedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DataErrorsChangedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &DataErrorsChangedEventArgs) -> Self {
         value.0.clone()
     }
@@ -2054,8 +2064,8 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for DataErrorsChangedEventArgs {}
-unsafe impl ::std::marker::Sync for DataErrorsChangedEventArgs {}
+unsafe impl ::core::marker::Send for DataErrorsChangedEventArgs {}
+unsafe impl ::core::marker::Sync for DataErrorsChangedEventArgs {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IBinding(pub ::windows::runtime::IInspectable);
@@ -2125,19 +2135,11 @@ pub struct IBinding_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-    ) -> ::windows::runtime::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::runtime::RawPtr,
-        result__: *mut ::windows::runtime::RawPtr,
-    ) -> ::windows::runtime::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::runtime::RawPtr,
-        value: ::windows::runtime::RawPtr,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -2149,11 +2151,19 @@ pub struct IBinding_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::windows::runtime::RawPtr,
+    ) -> ::windows::runtime::HRESULT,
+    pub  unsafe extern "system" fn(
+        this: ::windows::runtime::RawPtr,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+    ) -> ::windows::runtime::HRESULT,
+    pub  unsafe extern "system" fn(
+        this: ::windows::runtime::RawPtr,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -2533,10 +2543,10 @@ pub struct IBindingOperationsStatics_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ICollectionView(pub ::windows::runtime::IInspectable);
@@ -2554,9 +2564,9 @@ impl ICollectionView {
     pub fn CurrentItem(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -2566,9 +2576,9 @@ impl ICollectionView {
     pub fn CurrentPosition(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -2578,9 +2588,9 @@ impl ICollectionView {
     pub fn IsCurrentAfterLast(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2590,9 +2600,9 @@ impl ICollectionView {
     pub fn IsCurrentBeforeFirst(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2606,9 +2616,9 @@ impl ICollectionView {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IObservableVector<
@@ -2620,9 +2630,9 @@ impl ICollectionView {
     pub fn HasMoreItems(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2641,9 +2651,9 @@ impl ICollectionView {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -2661,7 +2671,7 @@ impl ICollectionView {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2677,9 +2687,9 @@ impl ICollectionView {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -2697,7 +2707,7 @@ impl ICollectionView {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2713,9 +2723,9 @@ impl ICollectionView {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 item.into_param().abi(),
                 &mut result__,
             )
@@ -2726,9 +2736,9 @@ impl ICollectionView {
     pub fn MoveCurrentToPosition(&self, index: i32) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -2739,9 +2749,9 @@ impl ICollectionView {
     pub fn MoveCurrentToFirst(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2751,9 +2761,9 @@ impl ICollectionView {
     pub fn MoveCurrentToLast(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2763,9 +2773,9 @@ impl ICollectionView {
     pub fn MoveCurrentToNext(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2775,9 +2785,9 @@ impl ICollectionView {
     pub fn MoveCurrentToPrevious(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2791,9 +2801,9 @@ impl ICollectionView {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 count,
                 &mut result__,
             )
@@ -2810,9 +2820,9 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IIterable<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
@@ -2837,9 +2847,9 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IObservableVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 vhnd.into_param().abi(),
                 &mut result__,
             )
@@ -2859,7 +2869,7 @@ impl ICollectionView {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2874,9 +2884,9 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -2889,9 +2899,9 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -2907,9 +2917,9 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<
@@ -2930,9 +2940,9 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -2954,7 +2964,7 @@ impl ICollectionView {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -2975,7 +2985,7 @@ impl ICollectionView {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -2989,7 +2999,7 @@ impl ICollectionView {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -3008,7 +3018,7 @@ impl ICollectionView {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3020,7 +3030,7 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
@@ -3029,7 +3039,7 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
@@ -3042,12 +3052,12 @@ impl ICollectionView {
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -3063,9 +3073,9 @@ impl ICollectionView {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -3075,12 +3085,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICollectionView {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{f8bb90d8-e008-5d65-8c97-7bb790a4230c}");
 }
-impl ::std::convert::From<ICollectionView> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICollectionView> for ::windows::runtime::IUnknown {
     fn from(value: ICollectionView) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICollectionView> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICollectionView> for ::windows::runtime::IUnknown {
     fn from(value: &ICollectionView) -> Self {
         value.0 .0.clone()
     }
@@ -3095,12 +3105,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICollectionView> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICollectionView> for ::windows::runtime::IInspectable {
     fn from(value: ICollectionView) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICollectionView> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICollectionView> for ::windows::runtime::IInspectable {
     fn from(value: &ICollectionView) -> Self {
         value.0.clone()
     }
@@ -3117,15 +3127,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<ICollectionView>
+impl ::core::convert::TryFrom<ICollectionView>
     for ::windows::Foundation::Collections::IIterable<::windows::runtime::IInspectable>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ICollectionView) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&ICollectionView>
+impl ::core::convert::TryFrom<&ICollectionView>
     for ::windows::Foundation::Collections::IIterable<::windows::runtime::IInspectable>
 {
     type Error = ::windows::runtime::Error;
@@ -3160,22 +3170,22 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IIterable<::windows::runtime::IInspectable>,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IIterable<::windows::runtime::IInspectable>,
         >::try_into(self)
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<ICollectionView>
+impl ::core::convert::TryFrom<ICollectionView>
     for ::windows::Foundation::Collections::IObservableVector<::windows::runtime::IInspectable>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ICollectionView) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&ICollectionView>
+impl ::core::convert::TryFrom<&ICollectionView>
     for ::windows::Foundation::Collections::IObservableVector<::windows::runtime::IInspectable>
 {
     type Error = ::windows::runtime::Error;
@@ -3210,22 +3220,22 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IObservableVector<::windows::runtime::IInspectable>,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IObservableVector<::windows::runtime::IInspectable>,
         >::try_into(self)
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<ICollectionView>
+impl ::core::convert::TryFrom<ICollectionView>
     for ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ICollectionView) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&ICollectionView>
+impl ::core::convert::TryFrom<&ICollectionView>
     for ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>
 {
     type Error = ::windows::runtime::Error;
@@ -3260,7 +3270,7 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IVector<::windows::runtime::IInspectable>,
         >::try_into(self)
         .map(::windows::runtime::Param::Owned)
@@ -3268,20 +3278,20 @@ impl<'a>
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for ICollectionView {
+impl ::core::iter::IntoIterator for ICollectionView {
     type Item = ::windows::runtime::IInspectable;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &ICollectionView {
+impl ::core::iter::IntoIterator for &ICollectionView {
     type Item = ::windows::runtime::IInspectable;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
@@ -3384,10 +3394,10 @@ pub struct ICollectionView_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ICollectionViewFactory(pub ::windows::runtime::IInspectable);
@@ -3405,9 +3415,9 @@ impl ICollectionViewFactory {
     pub fn CreateView(&self) -> ::windows::runtime::Result<ICollectionView> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ICollectionView>(result__)
@@ -3418,12 +3428,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICollectionViewFactory {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{d971f795-5728-5bef-9602-43f2c4250e56}");
 }
-impl ::std::convert::From<ICollectionViewFactory> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICollectionViewFactory> for ::windows::runtime::IUnknown {
     fn from(value: ICollectionViewFactory) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICollectionViewFactory> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICollectionViewFactory> for ::windows::runtime::IUnknown {
     fn from(value: &ICollectionViewFactory) -> Self {
         value.0 .0.clone()
     }
@@ -3442,12 +3452,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICollectionViewFactory> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICollectionViewFactory> for ::windows::runtime::IInspectable {
     fn from(value: ICollectionViewFactory) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICollectionViewFactory> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICollectionViewFactory> for ::windows::runtime::IInspectable {
     fn from(value: &ICollectionViewFactory) -> Self {
         value.0.clone()
     }
@@ -3496,10 +3506,10 @@ pub struct ICollectionViewFactory_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ICollectionViewGroup(pub ::windows::runtime::IInspectable);
@@ -3517,9 +3527,9 @@ impl ICollectionViewGroup {
     pub fn Group(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -3533,9 +3543,9 @@ impl ICollectionViewGroup {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IObservableVector<
@@ -3548,12 +3558,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICollectionViewGroup {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{96a08da8-be38-5ae0-903d-6fb6111e61f5}");
 }
-impl ::std::convert::From<ICollectionViewGroup> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICollectionViewGroup> for ::windows::runtime::IUnknown {
     fn from(value: ICollectionViewGroup) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICollectionViewGroup> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICollectionViewGroup> for ::windows::runtime::IUnknown {
     fn from(value: &ICollectionViewGroup) -> Self {
         value.0 .0.clone()
     }
@@ -3570,12 +3580,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICollectionViewGroup> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICollectionViewGroup> for ::windows::runtime::IInspectable {
     fn from(value: ICollectionViewGroup) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICollectionViewGroup> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICollectionViewGroup> for ::windows::runtime::IInspectable {
     fn from(value: &ICollectionViewGroup) -> Self {
         value.0.clone()
     }
@@ -3841,10 +3851,10 @@ pub struct ICurrentChangingEventArgsFactory_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ICustomProperty(pub ::windows::runtime::IInspectable);
@@ -3862,10 +3872,10 @@ impl ICustomProperty {
     pub fn Type(&self) -> ::windows::runtime::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
@@ -3875,10 +3885,10 @@ impl ICustomProperty {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3894,9 +3904,9 @@ impl ICustomProperty {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 &mut result__,
             )
@@ -3916,7 +3926,7 @@ impl ICustomProperty {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -3935,9 +3945,9 @@ impl ICustomProperty {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 index.into_param().abi(),
                 &mut result__,
@@ -3960,7 +3970,7 @@ impl ICustomProperty {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 value.into_param().abi(),
                 index.into_param().abi(),
@@ -3972,9 +3982,9 @@ impl ICustomProperty {
     pub fn CanWrite(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -3984,9 +3994,9 @@ impl ICustomProperty {
     pub fn CanRead(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -3997,12 +4007,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICustomProperty {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{30da92c0-23e8-42a0-ae7c-734a0e5d2782}");
 }
-impl ::std::convert::From<ICustomProperty> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICustomProperty> for ::windows::runtime::IUnknown {
     fn from(value: ICustomProperty) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICustomProperty> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICustomProperty> for ::windows::runtime::IUnknown {
     fn from(value: &ICustomProperty) -> Self {
         value.0 .0.clone()
     }
@@ -4017,12 +4027,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICustomProperty> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICustomProperty> for ::windows::runtime::IInspectable {
     fn from(value: ICustomProperty) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICustomProperty> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICustomProperty> for ::windows::runtime::IInspectable {
     fn from(value: &ICustomProperty) -> Self {
         value.0.clone()
     }
@@ -4064,11 +4074,11 @@ pub struct ICustomProperty_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -4103,10 +4113,10 @@ pub struct ICustomProperty_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ICustomPropertyProvider(pub ::windows::runtime::IInspectable);
@@ -4130,9 +4140,9 @@ impl ICustomPropertyProvider {
     ) -> ::windows::runtime::Result<ICustomProperty> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -4151,9 +4161,9 @@ impl ICustomPropertyProvider {
     ) -> ::windows::runtime::Result<ICustomProperty> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 r#type.into_param().abi(),
                 &mut result__,
@@ -4167,10 +4177,10 @@ impl ICustomPropertyProvider {
     ) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -4180,10 +4190,10 @@ impl ICustomPropertyProvider {
     pub fn Type(&self) -> ::windows::runtime::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
@@ -4194,12 +4204,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICustomPropertyProvider {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{7c925755-3e48-42b4-8677-76372267033f}");
 }
-impl ::std::convert::From<ICustomPropertyProvider> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICustomPropertyProvider> for ::windows::runtime::IUnknown {
     fn from(value: ICustomPropertyProvider) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICustomPropertyProvider> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICustomPropertyProvider> for ::windows::runtime::IUnknown {
     fn from(value: &ICustomPropertyProvider) -> Self {
         value.0 .0.clone()
     }
@@ -4218,12 +4228,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICustomPropertyProvider> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICustomPropertyProvider> for ::windows::runtime::IInspectable {
     fn from(value: ICustomPropertyProvider) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICustomPropertyProvider> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICustomPropertyProvider> for ::windows::runtime::IInspectable {
     fn from(value: &ICustomPropertyProvider) -> Self {
         value.0.clone()
     }
@@ -4267,22 +4277,22 @@ pub struct ICustomPropertyProvider_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        r#type: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        r#type: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -4322,11 +4332,11 @@ pub struct IDataErrorsChangedEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -4366,7 +4376,7 @@ pub struct IDataErrorsChangedEventArgsFactory_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
@@ -4464,10 +4474,10 @@ pub struct IItemIndexRangeFactory_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct IItemsRangeInfo(pub ::windows::runtime::IInspectable);
@@ -4497,7 +4507,7 @@ impl IItemsRangeInfo {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 visiblerange.into_param().abi(),
                 trackeditems.into_param().abi(),
             )
@@ -4508,7 +4518,7 @@ impl IItemsRangeInfo {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -4516,12 +4526,12 @@ unsafe impl ::windows::runtime::RuntimeType for IItemsRangeInfo {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{b8376d08-85fb-563b-8273-39ef2d138256}");
 }
-impl ::std::convert::From<IItemsRangeInfo> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IItemsRangeInfo> for ::windows::runtime::IUnknown {
     fn from(value: IItemsRangeInfo) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IItemsRangeInfo> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IItemsRangeInfo> for ::windows::runtime::IUnknown {
     fn from(value: &IItemsRangeInfo) -> Self {
         value.0 .0.clone()
     }
@@ -4536,12 +4546,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IItemsRangeInfo> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IItemsRangeInfo> for ::windows::runtime::IInspectable {
     fn from(value: IItemsRangeInfo) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IItemsRangeInfo> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IItemsRangeInfo> for ::windows::runtime::IInspectable {
     fn from(value: &IItemsRangeInfo) -> Self {
         value.0.clone()
     }
@@ -4558,13 +4568,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<IItemsRangeInfo> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<IItemsRangeInfo> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: IItemsRangeInfo) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&IItemsRangeInfo> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&IItemsRangeInfo> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &IItemsRangeInfo) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -4577,7 +4587,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &IItemsRangeInfo {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
@@ -4613,10 +4623,10 @@ pub struct IItemsRangeInfo_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct INotifyDataErrorInfo(pub ::windows::runtime::IInspectable);
@@ -4634,9 +4644,9 @@ impl INotifyDataErrorInfo {
     pub fn HasErrors(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4655,9 +4665,9 @@ impl INotifyDataErrorInfo {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -4675,7 +4685,7 @@ impl INotifyDataErrorInfo {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4690,9 +4700,9 @@ impl INotifyDataErrorInfo {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -4706,12 +4716,12 @@ unsafe impl ::windows::runtime::RuntimeType for INotifyDataErrorInfo {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{0ee6c2cc-273e-567d-bc0a-1dd87ee51eba}");
 }
-impl ::std::convert::From<INotifyDataErrorInfo> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<INotifyDataErrorInfo> for ::windows::runtime::IUnknown {
     fn from(value: INotifyDataErrorInfo) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&INotifyDataErrorInfo> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&INotifyDataErrorInfo> for ::windows::runtime::IUnknown {
     fn from(value: &INotifyDataErrorInfo) -> Self {
         value.0 .0.clone()
     }
@@ -4728,12 +4738,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<INotifyDataErrorInfo> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<INotifyDataErrorInfo> for ::windows::runtime::IInspectable {
     fn from(value: INotifyDataErrorInfo) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&INotifyDataErrorInfo> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&INotifyDataErrorInfo> for ::windows::runtime::IInspectable {
     fn from(value: &INotifyDataErrorInfo) -> Self {
         value.0.clone()
     }
@@ -4790,16 +4800,16 @@ pub struct INotifyDataErrorInfo_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        propertyname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        propertyname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct INotifyPropertyChanged(pub ::windows::runtime::IInspectable);
@@ -4823,9 +4833,9 @@ impl INotifyPropertyChanged {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -4843,7 +4853,7 @@ impl INotifyPropertyChanged {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4854,12 +4864,12 @@ unsafe impl ::windows::runtime::RuntimeType for INotifyPropertyChanged {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{90b17601-b065-586e-83d9-9adc3a695284}");
 }
-impl ::std::convert::From<INotifyPropertyChanged> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<INotifyPropertyChanged> for ::windows::runtime::IUnknown {
     fn from(value: INotifyPropertyChanged) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&INotifyPropertyChanged> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&INotifyPropertyChanged> for ::windows::runtime::IUnknown {
     fn from(value: &INotifyPropertyChanged) -> Self {
         value.0 .0.clone()
     }
@@ -4878,12 +4888,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<INotifyPropertyChanged> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<INotifyPropertyChanged> for ::windows::runtime::IInspectable {
     fn from(value: INotifyPropertyChanged) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&INotifyPropertyChanged> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&INotifyPropertyChanged> for ::windows::runtime::IInspectable {
     fn from(value: &INotifyPropertyChanged) -> Self {
         value.0.clone()
     }
@@ -4972,7 +4982,7 @@ pub struct IPropertyChangedEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -5012,7 +5022,7 @@ pub struct IPropertyChangedEventArgsFactory_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         baseinterface: ::windows::runtime::RawPtr,
         innerinterface: *mut ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
@@ -5106,10 +5116,10 @@ pub struct IRelativeSourceFactory_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ISelectionInfo(pub ::windows::runtime::IInspectable);
@@ -5131,7 +5141,7 @@ impl ISelectionInfo {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 itemindexrange.into_param().abi(),
             )
             .ok()
@@ -5145,7 +5155,7 @@ impl ISelectionInfo {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 itemindexrange.into_param().abi(),
             )
             .ok()
@@ -5155,9 +5165,9 @@ impl ISelectionInfo {
     pub fn IsSelected(&self, index: i32) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -5171,9 +5181,9 @@ impl ISelectionInfo {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<ItemIndexRange>>(result__)
@@ -5184,12 +5194,12 @@ unsafe impl ::windows::runtime::RuntimeType for ISelectionInfo {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{1b84c26b-9532-5803-935b-a03bf7e875dc}");
 }
-impl ::std::convert::From<ISelectionInfo> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISelectionInfo> for ::windows::runtime::IUnknown {
     fn from(value: ISelectionInfo) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ISelectionInfo> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISelectionInfo> for ::windows::runtime::IUnknown {
     fn from(value: &ISelectionInfo) -> Self {
         value.0 .0.clone()
     }
@@ -5204,12 +5214,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ISelectionInfo> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ISelectionInfo> for ::windows::runtime::IInspectable {
     fn from(value: ISelectionInfo) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISelectionInfo> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ISelectionInfo> for ::windows::runtime::IInspectable {
     fn from(value: &ISelectionInfo) -> Self {
         value.0.clone()
     }
@@ -5269,10 +5279,10 @@ pub struct ISelectionInfo_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct ISupportIncrementalLoading(pub ::windows::runtime::IInspectable);
@@ -5294,9 +5304,9 @@ impl ISupportIncrementalLoading {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 count,
                 &mut result__,
             )
@@ -5307,9 +5317,9 @@ impl ISupportIncrementalLoading {
     pub fn HasMoreItems(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -5320,12 +5330,12 @@ unsafe impl ::windows::runtime::RuntimeType for ISupportIncrementalLoading {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{d8f9b586-a64a-5ff8-868e-204e144f2cf4}");
 }
-impl ::std::convert::From<ISupportIncrementalLoading> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISupportIncrementalLoading> for ::windows::runtime::IUnknown {
     fn from(value: ISupportIncrementalLoading) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ISupportIncrementalLoading> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISupportIncrementalLoading> for ::windows::runtime::IUnknown {
     fn from(value: &ISupportIncrementalLoading) -> Self {
         value.0 .0.clone()
     }
@@ -5344,12 +5354,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ISupportIncrementalLoading> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ISupportIncrementalLoading> for ::windows::runtime::IInspectable {
     fn from(value: ISupportIncrementalLoading) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISupportIncrementalLoading> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ISupportIncrementalLoading> for ::windows::runtime::IInspectable {
     fn from(value: &ISupportIncrementalLoading) -> Self {
         value.0.clone()
     }
@@ -5403,10 +5413,10 @@ pub struct ISupportIncrementalLoading_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct IValueConverter(pub ::windows::runtime::IInspectable);
@@ -5436,9 +5446,9 @@ impl IValueConverter {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 targettype.into_param().abi(),
                 parameter.into_param().abi(),
@@ -5464,9 +5474,9 @@ impl IValueConverter {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 targettype.into_param().abi(),
                 parameter.into_param().abi(),
@@ -5481,12 +5491,12 @@ unsafe impl ::windows::runtime::RuntimeType for IValueConverter {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{afdd2bff-10f5-5173-b7c0-3590bd96cb35}");
 }
-impl ::std::convert::From<IValueConverter> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IValueConverter> for ::windows::runtime::IUnknown {
     fn from(value: IValueConverter) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IValueConverter> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IValueConverter> for ::windows::runtime::IUnknown {
     fn from(value: &IValueConverter) -> Self {
         value.0 .0.clone()
     }
@@ -5501,12 +5511,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IValueConverter> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IValueConverter> for ::windows::runtime::IInspectable {
     fn from(value: IValueConverter) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IValueConverter> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IValueConverter> for ::windows::runtime::IInspectable {
     fn from(value: &IValueConverter) -> Self {
         value.0.clone()
     }
@@ -5549,27 +5559,27 @@ pub struct IValueConverter_abi(
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
         value: ::windows::runtime::RawPtr,
-        targettype: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        targettype: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
         parameter: ::windows::runtime::RawPtr,
-        language: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        language: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
         value: ::windows::runtime::RawPtr,
-        targettype: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        targettype: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
         parameter: ::windows::runtime::RawPtr,
-        language: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        language: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ItemIndexRange(pub ::windows::runtime::IInspectable);
 impl ItemIndexRange {
@@ -5577,9 +5587,9 @@ impl ItemIndexRange {
     pub fn FirstIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -5589,9 +5599,9 @@ impl ItemIndexRange {
     pub fn Length(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -5601,9 +5611,9 @@ impl ItemIndexRange {
     pub fn LastIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -5615,13 +5625,14 @@ impl ItemIndexRange {
         length: u32,
     ) -> ::windows::runtime::Result<ItemIndexRange> {
         Self::IItemIndexRangeFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 firstindex,
                 length,
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<ItemIndexRange>(result__)
@@ -5657,12 +5668,12 @@ unsafe impl ::windows::runtime::Interface for ItemIndexRange {
 impl ::windows::runtime::RuntimeName for ItemIndexRange {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.ItemIndexRange";
 }
-impl ::std::convert::From<ItemIndexRange> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ItemIndexRange> for ::windows::runtime::IUnknown {
     fn from(value: ItemIndexRange) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ItemIndexRange> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ItemIndexRange> for ::windows::runtime::IUnknown {
     fn from(value: &ItemIndexRange) -> Self {
         value.0 .0.clone()
     }
@@ -5677,12 +5688,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ItemIndexRange> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ItemIndexRange> for ::windows::runtime::IInspectable {
     fn from(value: ItemIndexRange) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ItemIndexRange> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ItemIndexRange> for ::windows::runtime::IInspectable {
     fn from(value: &ItemIndexRange) -> Self {
         value.0.clone()
     }
@@ -5699,33 +5710,33 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ItemIndexRange {}
-unsafe impl ::std::marker::Sync for ItemIndexRange {}
-#[derive(:: std :: clone :: Clone, :: std :: marker :: Copy)]
+unsafe impl ::core::marker::Send for ItemIndexRange {}
+unsafe impl ::core::marker::Sync for ItemIndexRange {}
+#[derive(:: core :: clone :: Clone, :: core :: marker :: Copy)]
 #[repr(C)]
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 pub struct LoadMoreItemsResult {
     pub Count: u32,
 }
 impl LoadMoreItemsResult {}
-impl ::std::default::Default for LoadMoreItemsResult {
+impl ::core::default::Default for LoadMoreItemsResult {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        unsafe { ::core::mem::zeroed() }
     }
 }
-impl ::std::fmt::Debug for LoadMoreItemsResult {
-    fn fmt(&self, fmt: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
+impl ::core::fmt::Debug for LoadMoreItemsResult {
+    fn fmt(&self, fmt: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
         fmt.debug_struct("LoadMoreItemsResult")
             .field("Count", &self.Count)
             .finish()
     }
 }
-impl ::std::cmp::PartialEq for LoadMoreItemsResult {
+impl ::core::cmp::PartialEq for LoadMoreItemsResult {
     fn eq(&self, other: &Self) -> bool {
         self.Count == other.Count
     }
 }
-impl ::std::cmp::Eq for LoadMoreItemsResult {}
+impl ::core::cmp::Eq for LoadMoreItemsResult {}
 unsafe impl ::windows::runtime::Abi for LoadMoreItemsResult {
     type Abi = Self;
 }
@@ -5740,10 +5751,10 @@ impl ::windows::runtime::DefaultType for LoadMoreItemsResult {
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PropertyChangedEventArgs(pub ::windows::runtime::IInspectable);
 impl PropertyChangedEventArgs {
@@ -5751,10 +5762,10 @@ impl PropertyChangedEventArgs {
     pub fn PropertyName(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -5768,12 +5779,13 @@ impl PropertyChangedEventArgs {
         name: Param0,
     ) -> ::windows::runtime::Result<PropertyChangedEventArgs> {
         Self::IPropertyChangedEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<PropertyChangedEventArgs>(result__)
@@ -5807,12 +5819,12 @@ unsafe impl ::windows::runtime::Interface for PropertyChangedEventArgs {
 impl ::windows::runtime::RuntimeName for PropertyChangedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.PropertyChangedEventArgs";
 }
-impl ::std::convert::From<PropertyChangedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PropertyChangedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: PropertyChangedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PropertyChangedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PropertyChangedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &PropertyChangedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -5831,12 +5843,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PropertyChangedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PropertyChangedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: PropertyChangedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PropertyChangedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PropertyChangedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &PropertyChangedEventArgs) -> Self {
         value.0.clone()
     }
@@ -5855,22 +5867,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for PropertyChangedEventArgs {}
-unsafe impl ::std::marker::Sync for PropertyChangedEventArgs {}
+unsafe impl ::core::marker::Send for PropertyChangedEventArgs {}
+unsafe impl ::core::marker::Sync for PropertyChangedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PropertyChangedEventHandler(::windows::runtime::IUnknown);
 impl PropertyChangedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<PropertyChangedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<PropertyChangedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -5881,7 +5893,7 @@ impl PropertyChangedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn Invoke<
@@ -5896,7 +5908,7 @@ impl PropertyChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -5937,8 +5949,8 @@ pub struct PropertyChangedEventHandler_abi(
 #[repr(C)]
 struct PropertyChangedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<PropertyChangedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<PropertyChangedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -5948,8 +5960,8 @@ struct PropertyChangedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<PropertyChangedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<PropertyChangedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > PropertyChangedEventHandler_box<F>
@@ -5972,7 +5984,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -5989,7 +6001,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -6005,10 +6017,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RelativeSource(pub ::windows::runtime::IInspectable);
 impl RelativeSource {
@@ -6016,9 +6028,9 @@ impl RelativeSource {
     pub fn Mode(&self) -> ::windows::runtime::Result<RelativeSourceMode> {
         let this = self;
         unsafe {
-            let mut result__: RelativeSourceMode = ::std::mem::zeroed();
+            let mut result__: RelativeSourceMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<RelativeSourceMode>(result__)
@@ -6028,18 +6040,22 @@ impl RelativeSource {
     pub fn SetMode(&self, value: RelativeSourceMode) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Data`*"]
     pub fn new() -> ::windows::runtime::Result<RelativeSource> {
         Self::IRelativeSourceFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<RelativeSource>(result__)
@@ -6052,9 +6068,9 @@ impl RelativeSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6074,7 +6090,7 @@ impl RelativeSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -6089,7 +6105,7 @@ impl RelativeSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -6105,9 +6121,9 @@ impl RelativeSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6124,9 +6140,9 @@ impl RelativeSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6145,9 +6161,9 @@ impl RelativeSource {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -6167,7 +6183,7 @@ impl RelativeSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -6178,9 +6194,9 @@ impl RelativeSource {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -6193,9 +6209,9 @@ impl RelativeSource {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6231,12 +6247,12 @@ unsafe impl ::windows::runtime::Interface for RelativeSource {
 impl ::windows::runtime::RuntimeName for RelativeSource {
     const NAME: &'static str = "Microsoft.UI.Xaml.Data.RelativeSource";
 }
-impl ::std::convert::From<RelativeSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RelativeSource> for ::windows::runtime::IUnknown {
     fn from(value: RelativeSource) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RelativeSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RelativeSource> for ::windows::runtime::IUnknown {
     fn from(value: &RelativeSource) -> Self {
         value.0 .0.clone()
     }
@@ -6251,12 +6267,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RelativeSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RelativeSource> for ::windows::runtime::IInspectable {
     fn from(value: RelativeSource) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RelativeSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RelativeSource> for ::windows::runtime::IInspectable {
     fn from(value: &RelativeSource) -> Self {
         value.0.clone()
     }
@@ -6273,40 +6289,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<RelativeSource> for super::DependencyObject {
+impl ::core::convert::From<RelativeSource> for super::DependencyObject {
     fn from(value: RelativeSource) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&RelativeSource> for super::DependencyObject {
+impl ::core::convert::From<&RelativeSource> for super::DependencyObject {
     fn from(value: &RelativeSource) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for RelativeSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &RelativeSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for RelativeSource {}
-unsafe impl ::std::marker::Sync for RelativeSource {}
+unsafe impl ::core::marker::Send for RelativeSource {}
+unsafe impl ::core::marker::Sync for RelativeSource {}
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct RelativeSourceMode(pub i32);
@@ -6315,7 +6331,7 @@ impl RelativeSourceMode {
     pub const TemplatedParent: RelativeSourceMode = RelativeSourceMode(1i32);
     pub const Self_: RelativeSourceMode = RelativeSourceMode(2i32);
 }
-impl ::std::convert::From<i32> for RelativeSourceMode {
+impl ::core::convert::From<i32> for RelativeSourceMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -6333,12 +6349,12 @@ impl ::windows::runtime::DefaultType for RelativeSourceMode {
 }
 #[doc = "*Required features: `UI_Xaml_Data`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct UpdateSourceTrigger(pub i32);
@@ -6348,7 +6364,7 @@ impl UpdateSourceTrigger {
     pub const Explicit: UpdateSourceTrigger = UpdateSourceTrigger(2i32);
     pub const LostFocus: UpdateSourceTrigger = UpdateSourceTrigger(3i32);
 }
-impl ::std::convert::From<i32> for UpdateSourceTrigger {
+impl ::core::convert::From<i32> for UpdateSourceTrigger {
     fn from(value: i32) -> Self {
         Self(value)
     }

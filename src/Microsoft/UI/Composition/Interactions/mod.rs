@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositionConditionalValue(pub ::windows::runtime::IInspectable);
 impl CompositionConditionalValue {
@@ -21,9 +21,9 @@ impl CompositionConditionalValue {
     pub fn Condition(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -40,7 +40,7 @@ impl CompositionConditionalValue {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -50,9 +50,9 @@ impl CompositionConditionalValue {
     pub fn Value(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -66,7 +66,7 @@ impl CompositionConditionalValue {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -77,9 +77,9 @@ impl CompositionConditionalValue {
         compositor: Param0,
     ) -> ::windows::runtime::Result<CompositionConditionalValue> {
         Self::ICompositionConditionalValueStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -99,7 +99,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -110,9 +110,9 @@ impl CompositionConditionalValue {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -122,9 +122,9 @@ impl CompositionConditionalValue {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -143,7 +143,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -161,7 +161,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -171,10 +171,10 @@ impl CompositionConditionalValue {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -191,7 +191,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -203,9 +203,9 @@ impl CompositionConditionalValue {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -222,7 +222,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -239,7 +239,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -256,7 +256,7 @@ impl CompositionConditionalValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -269,9 +269,9 @@ impl CompositionConditionalValue {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -287,9 +287,9 @@ impl CompositionConditionalValue {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -300,7 +300,7 @@ impl CompositionConditionalValue {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ICompositionConditionalValueStatics<
@@ -331,12 +331,12 @@ unsafe impl ::windows::runtime::Interface for CompositionConditionalValue {
 impl ::windows::runtime::RuntimeName for CompositionConditionalValue {
     const NAME: &'static str = "Microsoft.UI.Composition.Interactions.CompositionConditionalValue";
 }
-impl ::std::convert::From<CompositionConditionalValue> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositionConditionalValue> for ::windows::runtime::IUnknown {
     fn from(value: CompositionConditionalValue) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositionConditionalValue> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CompositionConditionalValue> for ::windows::runtime::IUnknown {
     fn from(value: &CompositionConditionalValue) -> Self {
         value.0 .0.clone()
     }
@@ -355,12 +355,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositionConditionalValue> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CompositionConditionalValue> for ::windows::runtime::IInspectable {
     fn from(value: CompositionConditionalValue) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositionConditionalValue> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CompositionConditionalValue> for ::windows::runtime::IInspectable {
     fn from(value: &CompositionConditionalValue) -> Self {
         value.0.clone()
     }
@@ -379,13 +379,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<CompositionConditionalValue> for super::IAnimationObject {
+impl ::core::convert::TryFrom<CompositionConditionalValue> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: CompositionConditionalValue) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&CompositionConditionalValue> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&CompositionConditionalValue> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &CompositionConditionalValue) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -402,18 +402,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &CompositionConditionalValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<CompositionConditionalValue> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<CompositionConditionalValue> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: CompositionConditionalValue) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&CompositionConditionalValue> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&CompositionConditionalValue> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &CompositionConditionalValue) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -430,17 +430,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &CompositionConditionalValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<CompositionConditionalValue> for super::CompositionObject {
+impl ::core::convert::From<CompositionConditionalValue> for super::CompositionObject {
     fn from(value: CompositionConditionalValue) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&CompositionConditionalValue> for super::CompositionObject {
+impl ::core::convert::From<&CompositionConditionalValue> for super::CompositionObject {
     fn from(value: &CompositionConditionalValue) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -449,7 +449,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for CompositionConditionalValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -458,20 +458,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &CompositionConditionalValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for CompositionConditionalValue {}
-unsafe impl ::std::marker::Sync for CompositionConditionalValue {}
+unsafe impl ::core::marker::Send for CompositionConditionalValue {}
+unsafe impl ::core::marker::Sync for CompositionConditionalValue {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositionInteractionSourceCollection(pub ::windows::runtime::IInspectable);
 impl CompositionInteractionSourceCollection {
@@ -479,9 +479,9 @@ impl CompositionInteractionSourceCollection {
     pub fn Count(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -495,7 +495,7 @@ impl CompositionInteractionSourceCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -509,7 +509,7 @@ impl CompositionInteractionSourceCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -519,7 +519,7 @@ impl CompositionInteractionSourceCollection {
     pub fn RemoveAll(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).9)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
@@ -532,9 +532,9 @@ impl CompositionInteractionSourceCollection {
             ::windows::Foundation::Collections::IIterable<ICompositionInteractionSource>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
@@ -555,7 +555,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -566,9 +566,9 @@ impl CompositionInteractionSourceCollection {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -578,9 +578,9 @@ impl CompositionInteractionSourceCollection {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -599,7 +599,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -617,7 +617,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -627,10 +627,10 @@ impl CompositionInteractionSourceCollection {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -647,7 +647,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -659,9 +659,9 @@ impl CompositionInteractionSourceCollection {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -678,7 +678,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -695,7 +695,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -712,7 +712,7 @@ impl CompositionInteractionSourceCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -725,9 +725,9 @@ impl CompositionInteractionSourceCollection {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -743,9 +743,9 @@ impl CompositionInteractionSourceCollection {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -756,7 +756,7 @@ impl CompositionInteractionSourceCollection {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -776,12 +776,14 @@ impl ::windows::runtime::RuntimeName for CompositionInteractionSourceCollection 
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection";
 }
-impl ::std::convert::From<CompositionInteractionSourceCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositionInteractionSourceCollection>
+    for ::windows::runtime::IUnknown
+{
     fn from(value: CompositionInteractionSourceCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositionInteractionSourceCollection>
+impl ::core::convert::From<&CompositionInteractionSourceCollection>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &CompositionInteractionSourceCollection) -> Self {
@@ -802,14 +804,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositionInteractionSourceCollection>
+impl ::core::convert::From<CompositionInteractionSourceCollection>
     for ::windows::runtime::IInspectable
 {
     fn from(value: CompositionInteractionSourceCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositionInteractionSourceCollection>
+impl ::core::convert::From<&CompositionInteractionSourceCollection>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &CompositionInteractionSourceCollection) -> Self {
@@ -830,15 +832,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<CompositionInteractionSourceCollection>
+impl ::core::convert::TryFrom<CompositionInteractionSourceCollection>
     for ::windows::Foundation::Collections::IIterable<ICompositionInteractionSource>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: CompositionInteractionSourceCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&CompositionInteractionSourceCollection>
+impl ::core::convert::TryFrom<&CompositionInteractionSourceCollection>
     for ::windows::Foundation::Collections::IIterable<ICompositionInteractionSource>
 {
     type Error = ::windows::runtime::Error;
@@ -875,20 +877,20 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IIterable<ICompositionInteractionSource>,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IIterable<ICompositionInteractionSource>,
         >::try_into(self)
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<CompositionInteractionSourceCollection> for super::IAnimationObject {
+impl ::core::convert::TryFrom<CompositionInteractionSourceCollection> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: CompositionInteractionSourceCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&CompositionInteractionSourceCollection> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&CompositionInteractionSourceCollection> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(
         value: &CompositionInteractionSourceCollection,
@@ -907,20 +909,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &CompositionInteractionSourceCollection
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<CompositionInteractionSourceCollection>
+impl ::core::convert::TryFrom<CompositionInteractionSourceCollection>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: CompositionInteractionSourceCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&CompositionInteractionSourceCollection>
+impl ::core::convert::TryFrom<&CompositionInteractionSourceCollection>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -941,17 +943,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &CompositionInteractionSourceCollection
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<CompositionInteractionSourceCollection> for super::CompositionObject {
+impl ::core::convert::From<CompositionInteractionSourceCollection> for super::CompositionObject {
     fn from(value: CompositionInteractionSourceCollection) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&CompositionInteractionSourceCollection> for super::CompositionObject {
+impl ::core::convert::From<&CompositionInteractionSourceCollection> for super::CompositionObject {
     fn from(value: &CompositionInteractionSourceCollection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -960,7 +962,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for CompositionInteractionSourceCollection
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -969,23 +971,23 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &CompositionInteractionSourceCollection
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for CompositionInteractionSourceCollection {}
-unsafe impl ::std::marker::Sync for CompositionInteractionSourceCollection {}
+unsafe impl ::core::marker::Send for CompositionInteractionSourceCollection {}
+unsafe impl ::core::marker::Sync for CompositionInteractionSourceCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for CompositionInteractionSourceCollection {
+impl ::core::iter::IntoIterator for CompositionInteractionSourceCollection {
     type Item = ICompositionInteractionSource;
     type IntoIter = ::windows::Foundation::Collections::IIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &CompositionInteractionSourceCollection {
+impl ::core::iter::IntoIterator for &CompositionInteractionSourceCollection {
     type Item = ICompositionInteractionSource;
     type IntoIter = ::windows::Foundation::Collections::IIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
@@ -1087,10 +1089,10 @@ pub struct ICompositionConditionalValueStatics_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 pub struct ICompositionInteractionSource(pub ::windows::runtime::IInspectable);
@@ -1108,12 +1110,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICompositionInteractionSource {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{711c72c0-c406-4a12-859b-b44f651af046}");
 }
-impl ::std::convert::From<ICompositionInteractionSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICompositionInteractionSource> for ::windows::runtime::IUnknown {
     fn from(value: ICompositionInteractionSource) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICompositionInteractionSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICompositionInteractionSource> for ::windows::runtime::IUnknown {
     fn from(value: &ICompositionInteractionSource) -> Self {
         value.0 .0.clone()
     }
@@ -1132,12 +1134,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICompositionInteractionSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICompositionInteractionSource> for ::windows::runtime::IInspectable {
     fn from(value: ICompositionInteractionSource) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICompositionInteractionSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICompositionInteractionSource> for ::windows::runtime::IInspectable {
     fn from(value: &ICompositionInteractionSource) -> Self {
         value.0.clone()
     }
@@ -2387,10 +2389,10 @@ pub struct IInteractionTrackerInteractingStateEnteredArgs2_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 pub struct IInteractionTrackerOwner(pub ::windows::runtime::IInspectable);
@@ -2417,7 +2419,7 @@ impl IInteractionTrackerOwner {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 args.into_param().abi(),
             )
@@ -2437,7 +2439,7 @@ impl IInteractionTrackerOwner {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 args.into_param().abi(),
             )
@@ -2457,7 +2459,7 @@ impl IInteractionTrackerOwner {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 args.into_param().abi(),
             )
@@ -2477,7 +2479,7 @@ impl IInteractionTrackerOwner {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 args.into_param().abi(),
             )
@@ -2497,7 +2499,7 @@ impl IInteractionTrackerOwner {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 args.into_param().abi(),
             )
@@ -2517,7 +2519,7 @@ impl IInteractionTrackerOwner {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 args.into_param().abi(),
             )
@@ -2529,12 +2531,12 @@ unsafe impl ::windows::runtime::RuntimeType for IInteractionTrackerOwner {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{8869779d-1d2a-5816-836a-68a910507d87}");
 }
-impl ::std::convert::From<IInteractionTrackerOwner> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IInteractionTrackerOwner> for ::windows::runtime::IUnknown {
     fn from(value: IInteractionTrackerOwner) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IInteractionTrackerOwner> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IInteractionTrackerOwner> for ::windows::runtime::IUnknown {
     fn from(value: &IInteractionTrackerOwner) -> Self {
         value.0 .0.clone()
     }
@@ -2553,12 +2555,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IInteractionTrackerOwner> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IInteractionTrackerOwner> for ::windows::runtime::IInspectable {
     fn from(value: IInteractionTrackerOwner) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IInteractionTrackerOwner> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IInteractionTrackerOwner> for ::windows::runtime::IInspectable {
     fn from(value: &IInteractionTrackerOwner) -> Self {
         value.0.clone()
     }
@@ -3341,12 +3343,12 @@ pub struct IVisualInteractionSourceStatics2_abi(
 );
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InteractionBindingAxisModes(pub u32);
@@ -3356,7 +3358,7 @@ impl InteractionBindingAxisModes {
     pub const PositionY: InteractionBindingAxisModes = InteractionBindingAxisModes(2u32);
     pub const Scale: InteractionBindingAxisModes = InteractionBindingAxisModes(4u32);
 }
-impl ::std::convert::From<u32> for InteractionBindingAxisModes {
+impl ::core::convert::From<u32> for InteractionBindingAxisModes {
     fn from(value: u32) -> Self {
         Self(value)
     }
@@ -3372,29 +3374,29 @@ unsafe impl ::windows::runtime::RuntimeType for InteractionBindingAxisModes {
 impl ::windows::runtime::DefaultType for InteractionBindingAxisModes {
     type DefaultType = Self;
 }
-impl ::std::ops::BitOr for InteractionBindingAxisModes {
+impl ::core::ops::BitOr for InteractionBindingAxisModes {
     type Output = Self;
     fn bitor(self, rhs: Self) -> Self {
         Self(self.0 | rhs.0)
     }
 }
-impl ::std::ops::BitAnd for InteractionBindingAxisModes {
+impl ::core::ops::BitAnd for InteractionBindingAxisModes {
     type Output = Self;
     fn bitand(self, rhs: Self) -> Self {
         Self(self.0 & rhs.0)
     }
 }
-impl ::std::ops::BitOrAssign for InteractionBindingAxisModes {
+impl ::core::ops::BitOrAssign for InteractionBindingAxisModes {
     fn bitor_assign(&mut self, rhs: Self) {
         self.0.bitor_assign(rhs.0)
     }
 }
-impl ::std::ops::BitAndAssign for InteractionBindingAxisModes {
+impl ::core::ops::BitAndAssign for InteractionBindingAxisModes {
     fn bitand_assign(&mut self, rhs: Self) {
         self.0.bitand_assign(rhs.0)
     }
 }
-impl ::std::ops::Not for InteractionBindingAxisModes {
+impl ::core::ops::Not for InteractionBindingAxisModes {
     type Output = Self;
     fn not(self) -> Self {
         Self(self.0.not())
@@ -3402,12 +3404,12 @@ impl ::std::ops::Not for InteractionBindingAxisModes {
 }
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InteractionChainingMode(pub i32);
@@ -3416,7 +3418,7 @@ impl InteractionChainingMode {
     pub const Always: InteractionChainingMode = InteractionChainingMode(1i32);
     pub const Never: InteractionChainingMode = InteractionChainingMode(2i32);
 }
-impl ::std::convert::From<i32> for InteractionChainingMode {
+impl ::core::convert::From<i32> for InteractionChainingMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -3435,10 +3437,10 @@ impl ::windows::runtime::DefaultType for InteractionChainingMode {
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionSourceConfiguration(pub ::windows::runtime::IInspectable);
 impl InteractionSourceConfiguration {
@@ -3448,9 +3450,9 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<InteractionSourceRedirectionMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionSourceRedirectionMode = ::std::mem::zeroed();
+            let mut result__: InteractionSourceRedirectionMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceRedirectionMode>(result__)
@@ -3463,8 +3465,11 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
@@ -3473,9 +3478,9 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<InteractionSourceRedirectionMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionSourceRedirectionMode = ::std::mem::zeroed();
+            let mut result__: InteractionSourceRedirectionMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceRedirectionMode>(result__)
@@ -3488,17 +3493,20 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
     pub fn ScaleSourceMode(&self) -> ::windows::runtime::Result<InteractionSourceRedirectionMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionSourceRedirectionMode = ::std::mem::zeroed();
+            let mut result__: InteractionSourceRedirectionMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceRedirectionMode>(result__)
@@ -3512,7 +3520,7 @@ impl InteractionSourceConfiguration {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3531,7 +3539,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -3542,9 +3550,9 @@ impl InteractionSourceConfiguration {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -3554,9 +3562,9 @@ impl InteractionSourceConfiguration {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -3575,7 +3583,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -3593,7 +3601,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -3603,10 +3611,10 @@ impl InteractionSourceConfiguration {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3623,7 +3631,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3635,9 +3643,9 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -3654,7 +3662,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3671,7 +3679,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3688,7 +3696,7 @@ impl InteractionSourceConfiguration {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3701,9 +3709,9 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -3719,9 +3727,9 @@ impl InteractionSourceConfiguration {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -3732,7 +3740,7 @@ impl InteractionSourceConfiguration {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -3752,12 +3760,12 @@ impl ::windows::runtime::RuntimeName for InteractionSourceConfiguration {
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration";
 }
-impl ::std::convert::From<InteractionSourceConfiguration> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionSourceConfiguration> for ::windows::runtime::IUnknown {
     fn from(value: InteractionSourceConfiguration) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionSourceConfiguration> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionSourceConfiguration> for ::windows::runtime::IUnknown {
     fn from(value: &InteractionSourceConfiguration) -> Self {
         value.0 .0.clone()
     }
@@ -3776,12 +3784,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionSourceConfiguration> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InteractionSourceConfiguration> for ::windows::runtime::IInspectable {
     fn from(value: InteractionSourceConfiguration) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionSourceConfiguration> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InteractionSourceConfiguration> for ::windows::runtime::IInspectable {
     fn from(value: &InteractionSourceConfiguration) -> Self {
         value.0.clone()
     }
@@ -3800,13 +3808,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionSourceConfiguration> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionSourceConfiguration> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionSourceConfiguration) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionSourceConfiguration> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&InteractionSourceConfiguration> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionSourceConfiguration) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -3823,18 +3831,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionSourceConfiguration
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionSourceConfiguration> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<InteractionSourceConfiguration> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionSourceConfiguration) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionSourceConfiguration> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&InteractionSourceConfiguration>
+    for ::windows::Foundation::IClosable
+{
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionSourceConfiguration) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -3851,17 +3861,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionSourceConfiguration
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionSourceConfiguration> for super::CompositionObject {
+impl ::core::convert::From<InteractionSourceConfiguration> for super::CompositionObject {
     fn from(value: InteractionSourceConfiguration) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionSourceConfiguration> for super::CompositionObject {
+impl ::core::convert::From<&InteractionSourceConfiguration> for super::CompositionObject {
     fn from(value: &InteractionSourceConfiguration) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -3870,7 +3880,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionSourceConfiguration
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -3879,21 +3889,21 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionSourceConfiguration
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionSourceConfiguration {}
-unsafe impl ::std::marker::Sync for InteractionSourceConfiguration {}
+unsafe impl ::core::marker::Send for InteractionSourceConfiguration {}
+unsafe impl ::core::marker::Sync for InteractionSourceConfiguration {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InteractionSourceMode(pub i32);
@@ -3902,7 +3912,7 @@ impl InteractionSourceMode {
     pub const EnabledWithInertia: InteractionSourceMode = InteractionSourceMode(1i32);
     pub const EnabledWithoutInertia: InteractionSourceMode = InteractionSourceMode(2i32);
 }
-impl ::std::convert::From<i32> for InteractionSourceMode {
+impl ::core::convert::From<i32> for InteractionSourceMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -3920,12 +3930,12 @@ impl ::windows::runtime::DefaultType for InteractionSourceMode {
 }
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InteractionSourceRedirectionMode(pub i32);
@@ -3933,7 +3943,7 @@ impl InteractionSourceRedirectionMode {
     pub const Disabled: InteractionSourceRedirectionMode = InteractionSourceRedirectionMode(0i32);
     pub const Enabled: InteractionSourceRedirectionMode = InteractionSourceRedirectionMode(1i32);
 }
-impl ::std::convert::From<i32> for InteractionSourceRedirectionMode {
+impl ::core::convert::From<i32> for InteractionSourceRedirectionMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -3952,10 +3962,10 @@ impl ::windows::runtime::DefaultType for InteractionSourceRedirectionMode {
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTracker(pub ::windows::runtime::IInspectable);
 impl InteractionTracker {
@@ -3965,9 +3975,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<CompositionInteractionSourceCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<CompositionInteractionSourceCollection>(result__)
@@ -3977,9 +3987,9 @@ impl InteractionTracker {
     pub fn IsPositionRoundingSuggested(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -3991,9 +4001,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -4010,7 +4020,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4020,9 +4030,9 @@ impl InteractionTracker {
     pub fn MaxScale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -4033,7 +4043,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4045,9 +4055,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -4064,7 +4074,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4074,9 +4084,9 @@ impl InteractionTracker {
     pub fn MinScale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -4087,7 +4097,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4099,9 +4109,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -4111,9 +4121,9 @@ impl InteractionTracker {
     pub fn NaturalRestingScale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -4123,9 +4133,9 @@ impl InteractionTracker {
     pub fn Owner(&self) -> ::windows::runtime::Result<IInteractionTrackerOwner> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IInteractionTrackerOwner>(result__)
@@ -4135,9 +4145,9 @@ impl InteractionTracker {
     pub fn Position(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -4151,8 +4161,8 @@ impl InteractionTracker {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
-            ( :: windows :: runtime :: Interface :: vtable ( this ) .20 ) ( :: std :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation:: IReference :: < ::windows::Foundation::Numerics:: Vector3 > > ( result__ )
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
+            ( :: windows :: runtime :: Interface :: vtable ( this ) .20 ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation:: IReference :: < ::windows::Foundation::Numerics:: Vector3 > > ( result__ )
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
@@ -4169,7 +4179,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4181,9 +4191,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -4193,9 +4203,9 @@ impl InteractionTracker {
     pub fn Scale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -4207,9 +4217,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<::windows::Foundation::IReference<f32>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::IReference<f32>>(result__)
@@ -4226,7 +4236,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4236,9 +4246,9 @@ impl InteractionTracker {
     pub fn ScaleVelocityInPercentPerSecond(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -4253,7 +4263,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 adjustment,
                 positionthreshold,
             )
@@ -4269,7 +4279,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 adjustment,
                 positionthreshold,
             )
@@ -4290,7 +4300,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 modifiers.into_param().abi(),
             )
             .ok()
@@ -4310,7 +4320,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 modifiers.into_param().abi(),
             )
             .ok()
@@ -4330,7 +4340,7 @@ impl InteractionTracker {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 modifiers.into_param().abi(),
             )
             .ok()
@@ -4346,9 +4356,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 &mut result__,
             )
@@ -4365,9 +4375,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 amount.into_param().abi(),
                 &mut result__,
             )
@@ -4384,9 +4394,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 animation.into_param().abi(),
                 &mut result__,
             )
@@ -4403,9 +4413,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 velocityinpixelspersecond.into_param().abi(),
                 &mut result__,
             )
@@ -4423,9 +4433,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
                 centerpoint.into_param().abi(),
                 &mut result__,
@@ -4445,9 +4455,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 animation.into_param().abi(),
                 centerpoint.into_param().abi(),
                 &mut result__,
@@ -4466,9 +4476,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 velocityinpercentpersecond,
                 centerpoint.into_param().abi(),
                 &mut result__,
@@ -4490,7 +4500,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -4510,7 +4520,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -4530,7 +4540,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker3>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 modifiers.into_param().abi(),
             )
             .ok()
@@ -4547,9 +4557,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker4>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 option,
                 &mut result__,
@@ -4568,9 +4578,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker4>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 amount.into_param().abi(),
                 option,
                 &mut result__,
@@ -4582,9 +4592,9 @@ impl InteractionTracker {
     pub fn IsInertiaFromImpulse(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker4>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4602,9 +4612,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<IInteractionTracker5>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 option,
                 posupdateoption,
@@ -4618,9 +4628,9 @@ impl InteractionTracker {
         compositor: Param0,
     ) -> ::windows::runtime::Result<InteractionTracker> {
         Self::IInteractionTrackerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -4637,9 +4647,9 @@ impl InteractionTracker {
         owner: Param1,
     ) -> ::windows::runtime::Result<InteractionTracker> {
         Self::IInteractionTrackerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 owner.into_param().abi(),
                 &mut result__,
@@ -4659,7 +4669,7 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<()> {
         Self::IInteractionTrackerStatics2(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 boundtracker1.into_param().abi(),
                 boundtracker2.into_param().abi(),
                 axismode,
@@ -4677,9 +4687,9 @@ impl InteractionTracker {
         boundtracker2: Param1,
     ) -> ::windows::runtime::Result<InteractionBindingAxisModes> {
         Self::IInteractionTrackerStatics2(|this| unsafe {
-            let mut result__: InteractionBindingAxisModes = ::std::mem::zeroed();
+            let mut result__: InteractionBindingAxisModes = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 boundtracker1.into_param().abi(),
                 boundtracker2.into_param().abi(),
                 &mut result__,
@@ -4700,7 +4710,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -4711,9 +4721,9 @@ impl InteractionTracker {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -4723,9 +4733,9 @@ impl InteractionTracker {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -4744,7 +4754,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -4762,7 +4772,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -4772,10 +4782,10 @@ impl InteractionTracker {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -4792,7 +4802,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4804,9 +4814,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -4823,7 +4833,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4840,7 +4850,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4857,7 +4867,7 @@ impl InteractionTracker {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4870,9 +4880,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -4888,9 +4898,9 @@ impl InteractionTracker {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -4901,7 +4911,7 @@ impl InteractionTracker {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IInteractionTrackerStatics<
@@ -4944,12 +4954,12 @@ unsafe impl ::windows::runtime::Interface for InteractionTracker {
 impl ::windows::runtime::RuntimeName for InteractionTracker {
     const NAME: &'static str = "Microsoft.UI.Composition.Interactions.InteractionTracker";
 }
-impl ::std::convert::From<InteractionTracker> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTracker> for ::windows::runtime::IUnknown {
     fn from(value: InteractionTracker) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTracker> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionTracker> for ::windows::runtime::IUnknown {
     fn from(value: &InteractionTracker) -> Self {
         value.0 .0.clone()
     }
@@ -4966,12 +4976,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTracker> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InteractionTracker> for ::windows::runtime::IInspectable {
     fn from(value: InteractionTracker) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTracker> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InteractionTracker> for ::windows::runtime::IInspectable {
     fn from(value: &InteractionTracker) -> Self {
         value.0.clone()
     }
@@ -4990,13 +5000,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTracker> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionTracker> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTracker) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTracker> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&InteractionTracker> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionTracker) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -5009,18 +5019,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for Interact
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &InteractionTracker {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTracker> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<InteractionTracker> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTracker) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTracker> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&InteractionTracker> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionTracker) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -5037,45 +5047,45 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTracker
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTracker> for super::CompositionObject {
+impl ::core::convert::From<InteractionTracker> for super::CompositionObject {
     fn from(value: InteractionTracker) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTracker> for super::CompositionObject {
+impl ::core::convert::From<&InteractionTracker> for super::CompositionObject {
     fn from(value: &InteractionTracker) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for InteractionTracker {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &InteractionTracker {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTracker {}
-unsafe impl ::std::marker::Sync for InteractionTracker {}
+unsafe impl ::core::marker::Send for InteractionTracker {}
+unsafe impl ::core::marker::Sync for InteractionTracker {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InteractionTrackerClampingOption(pub i32);
@@ -5083,7 +5093,7 @@ impl InteractionTrackerClampingOption {
     pub const Auto: InteractionTrackerClampingOption = InteractionTrackerClampingOption(0i32);
     pub const Disabled: InteractionTrackerClampingOption = InteractionTrackerClampingOption(1i32);
 }
-impl ::std::convert::From<i32> for InteractionTrackerClampingOption {
+impl ::core::convert::From<i32> for InteractionTrackerClampingOption {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -5102,10 +5112,10 @@ impl ::windows::runtime::DefaultType for InteractionTrackerClampingOption {
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerCustomAnimationStateEnteredArgs(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerCustomAnimationStateEnteredArgs {
@@ -5113,9 +5123,9 @@ impl InteractionTrackerCustomAnimationStateEnteredArgs {
     pub fn RequestId(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -5127,9 +5137,9 @@ impl InteractionTrackerCustomAnimationStateEnteredArgs {
             IInteractionTrackerCustomAnimationStateEnteredArgs2,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -5152,14 +5162,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerCustomAnimationStateE
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs";
 }
-impl ::std::convert::From<InteractionTrackerCustomAnimationStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerCustomAnimationStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: InteractionTrackerCustomAnimationStateEnteredArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerCustomAnimationStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerCustomAnimationStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerCustomAnimationStateEnteredArgs) -> Self {
@@ -5180,14 +5190,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerCustomAnimationStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerCustomAnimationStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerCustomAnimationStateEnteredArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerCustomAnimationStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerCustomAnimationStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerCustomAnimationStateEnteredArgs) -> Self {
@@ -5208,15 +5218,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerCustomAnimationStateEnteredArgs {}
-unsafe impl ::std::marker::Sync for InteractionTrackerCustomAnimationStateEnteredArgs {}
+unsafe impl ::core::marker::Send for InteractionTrackerCustomAnimationStateEnteredArgs {}
+unsafe impl ::core::marker::Sync for InteractionTrackerCustomAnimationStateEnteredArgs {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerIdleStateEnteredArgs(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerIdleStateEnteredArgs {
@@ -5224,9 +5234,9 @@ impl InteractionTrackerIdleStateEnteredArgs {
     pub fn RequestId(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -5237,9 +5247,9 @@ impl InteractionTrackerIdleStateEnteredArgs {
         let this =
             &::windows::runtime::Interface::cast::<IInteractionTrackerIdleStateEnteredArgs2>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -5262,12 +5272,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerIdleStateEnteredArgs 
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs";
 }
-impl ::std::convert::From<InteractionTrackerIdleStateEnteredArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerIdleStateEnteredArgs>
+    for ::windows::runtime::IUnknown
+{
     fn from(value: InteractionTrackerIdleStateEnteredArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerIdleStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerIdleStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerIdleStateEnteredArgs) -> Self {
@@ -5288,14 +5300,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerIdleStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerIdleStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerIdleStateEnteredArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerIdleStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerIdleStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerIdleStateEnteredArgs) -> Self {
@@ -5316,15 +5328,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerIdleStateEnteredArgs {}
-unsafe impl ::std::marker::Sync for InteractionTrackerIdleStateEnteredArgs {}
+unsafe impl ::core::marker::Send for InteractionTrackerIdleStateEnteredArgs {}
+unsafe impl ::core::marker::Sync for InteractionTrackerIdleStateEnteredArgs {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerInertiaModifier(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerInertiaModifier {
@@ -5341,7 +5353,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -5352,9 +5364,9 @@ impl InteractionTrackerInertiaModifier {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -5364,9 +5376,9 @@ impl InteractionTrackerInertiaModifier {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -5385,7 +5397,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -5403,7 +5415,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -5413,10 +5425,10 @@ impl InteractionTrackerInertiaModifier {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -5433,7 +5445,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5445,9 +5457,9 @@ impl InteractionTrackerInertiaModifier {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -5464,7 +5476,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5481,7 +5493,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5498,7 +5510,7 @@ impl InteractionTrackerInertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5511,9 +5523,9 @@ impl InteractionTrackerInertiaModifier {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -5529,9 +5541,9 @@ impl InteractionTrackerInertiaModifier {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -5542,7 +5554,7 @@ impl InteractionTrackerInertiaModifier {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -5562,12 +5574,12 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerInertiaModifier {
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier";
 }
-impl ::std::convert::From<InteractionTrackerInertiaModifier> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerInertiaModifier> for ::windows::runtime::IUnknown {
     fn from(value: InteractionTrackerInertiaModifier) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaModifier> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionTrackerInertiaModifier> for ::windows::runtime::IUnknown {
     fn from(value: &InteractionTrackerInertiaModifier) -> Self {
         value.0 .0.clone()
     }
@@ -5586,12 +5598,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaModifier> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InteractionTrackerInertiaModifier> for ::windows::runtime::IInspectable {
     fn from(value: InteractionTrackerInertiaModifier) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaModifier> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InteractionTrackerInertiaModifier>
+    for ::windows::runtime::IInspectable
+{
     fn from(value: &InteractionTrackerInertiaModifier) -> Self {
         value.0.clone()
     }
@@ -5610,13 +5624,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaModifier> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionTrackerInertiaModifier> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaModifier) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaModifier> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaModifier> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionTrackerInertiaModifier) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -5633,20 +5647,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionTrackerInertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaModifier>
+impl ::core::convert::TryFrom<InteractionTrackerInertiaModifier>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaModifier) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaModifier>
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaModifier>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -5665,17 +5679,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTrackerInertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaModifier> for super::CompositionObject {
+impl ::core::convert::From<InteractionTrackerInertiaModifier> for super::CompositionObject {
     fn from(value: InteractionTrackerInertiaModifier) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaModifier> for super::CompositionObject {
+impl ::core::convert::From<&InteractionTrackerInertiaModifier> for super::CompositionObject {
     fn from(value: &InteractionTrackerInertiaModifier) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -5684,7 +5698,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionTrackerInertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -5693,20 +5707,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionTrackerInertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerInertiaModifier {}
-unsafe impl ::std::marker::Sync for InteractionTrackerInertiaModifier {}
+unsafe impl ::core::marker::Send for InteractionTrackerInertiaModifier {}
+unsafe impl ::core::marker::Sync for InteractionTrackerInertiaModifier {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerInertiaMotion(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerInertiaMotion {
@@ -5714,9 +5728,9 @@ impl InteractionTrackerInertiaMotion {
     pub fn Condition(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -5733,7 +5747,7 @@ impl InteractionTrackerInertiaMotion {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5743,9 +5757,9 @@ impl InteractionTrackerInertiaMotion {
     pub fn Motion(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -5759,7 +5773,7 @@ impl InteractionTrackerInertiaMotion {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5770,9 +5784,9 @@ impl InteractionTrackerInertiaMotion {
         compositor: Param0,
     ) -> ::windows::runtime::Result<InteractionTrackerInertiaMotion> {
         Self::IInteractionTrackerInertiaMotionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -5792,7 +5806,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -5803,9 +5817,9 @@ impl InteractionTrackerInertiaMotion {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -5815,9 +5829,9 @@ impl InteractionTrackerInertiaMotion {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -5836,7 +5850,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -5854,7 +5868,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -5864,10 +5878,10 @@ impl InteractionTrackerInertiaMotion {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -5884,7 +5898,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5896,9 +5910,9 @@ impl InteractionTrackerInertiaMotion {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -5915,7 +5929,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5932,7 +5946,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5949,7 +5963,7 @@ impl InteractionTrackerInertiaMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5962,9 +5976,9 @@ impl InteractionTrackerInertiaMotion {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -5980,9 +5994,9 @@ impl InteractionTrackerInertiaMotion {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -5993,7 +6007,7 @@ impl InteractionTrackerInertiaMotion {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IInteractionTrackerInertiaMotionStatics<
@@ -6025,12 +6039,12 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerInertiaMotion {
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion";
 }
-impl ::std::convert::From<InteractionTrackerInertiaMotion> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerInertiaMotion> for ::windows::runtime::IUnknown {
     fn from(value: InteractionTrackerInertiaMotion) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaMotion> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionTrackerInertiaMotion> for ::windows::runtime::IUnknown {
     fn from(value: &InteractionTrackerInertiaMotion) -> Self {
         value.0 .0.clone()
     }
@@ -6049,12 +6063,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaMotion> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InteractionTrackerInertiaMotion> for ::windows::runtime::IInspectable {
     fn from(value: InteractionTrackerInertiaMotion) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaMotion> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InteractionTrackerInertiaMotion> for ::windows::runtime::IInspectable {
     fn from(value: &InteractionTrackerInertiaMotion) -> Self {
         value.0.clone()
     }
@@ -6073,13 +6087,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaMotion> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionTrackerInertiaMotion> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaMotion) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaMotion> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaMotion> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionTrackerInertiaMotion) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -6096,18 +6110,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionTrackerInertiaMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaMotion> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<InteractionTrackerInertiaMotion>
+    for ::windows::Foundation::IClosable
+{
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaMotion) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaMotion>
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaMotion>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -6126,17 +6142,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTrackerInertiaMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaMotion> for InteractionTrackerInertiaModifier {
+impl ::core::convert::From<InteractionTrackerInertiaMotion> for InteractionTrackerInertiaModifier {
     fn from(value: InteractionTrackerInertiaMotion) -> Self {
-        ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(&value)
+        ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaMotion> for InteractionTrackerInertiaModifier {
+impl ::core::convert::From<&InteractionTrackerInertiaMotion> for InteractionTrackerInertiaModifier {
     fn from(value: &InteractionTrackerInertiaMotion) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -6146,7 +6162,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerInertiaModifier>
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerInertiaModifier> {
         ::windows::runtime::Param::Owned(
-            ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(self),
+            ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(self),
         )
     }
 }
@@ -6155,18 +6171,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerInertiaModifier>
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerInertiaModifier> {
         ::windows::runtime::Param::Owned(
-            ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(
-                ::std::clone::Clone::clone(self),
+            ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(
+                ::core::clone::Clone::clone(self),
             ),
         )
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaMotion> for super::CompositionObject {
+impl ::core::convert::From<InteractionTrackerInertiaMotion> for super::CompositionObject {
     fn from(value: InteractionTrackerInertiaMotion) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaMotion> for super::CompositionObject {
+impl ::core::convert::From<&InteractionTrackerInertiaMotion> for super::CompositionObject {
     fn from(value: &InteractionTrackerInertiaMotion) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -6175,7 +6191,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionTrackerInertiaMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -6184,20 +6200,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionTrackerInertiaMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerInertiaMotion {}
-unsafe impl ::std::marker::Sync for InteractionTrackerInertiaMotion {}
+unsafe impl ::core::marker::Send for InteractionTrackerInertiaMotion {}
+unsafe impl ::core::marker::Sync for InteractionTrackerInertiaMotion {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerInertiaNaturalMotion(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerInertiaNaturalMotion {
@@ -6205,9 +6221,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     pub fn Condition(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -6224,7 +6240,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6234,9 +6250,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     pub fn NaturalMotion(&self) -> ::windows::runtime::Result<super::ScalarNaturalMotionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ScalarNaturalMotionAnimation>(result__)
@@ -6253,7 +6269,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6264,9 +6280,9 @@ impl InteractionTrackerInertiaNaturalMotion {
         compositor: Param0,
     ) -> ::windows::runtime::Result<InteractionTrackerInertiaNaturalMotion> {
         Self::IInteractionTrackerInertiaNaturalMotionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -6286,7 +6302,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -6297,9 +6313,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -6309,9 +6325,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -6330,7 +6346,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -6348,7 +6364,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -6358,10 +6374,10 @@ impl InteractionTrackerInertiaNaturalMotion {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -6378,7 +6394,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6390,9 +6406,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -6409,7 +6425,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6426,7 +6442,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6443,7 +6459,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6456,9 +6472,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6474,9 +6490,9 @@ impl InteractionTrackerInertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -6487,7 +6503,7 @@ impl InteractionTrackerInertiaNaturalMotion {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IInteractionTrackerInertiaNaturalMotionStatics<
@@ -6519,12 +6535,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerInertiaNaturalMotion 
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion";
 }
-impl ::std::convert::From<InteractionTrackerInertiaNaturalMotion> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerInertiaNaturalMotion>
+    for ::windows::runtime::IUnknown
+{
     fn from(value: InteractionTrackerInertiaNaturalMotion) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerInertiaNaturalMotion>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerInertiaNaturalMotion) -> Self {
@@ -6545,14 +6563,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::From<InteractionTrackerInertiaNaturalMotion>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerInertiaNaturalMotion) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerInertiaNaturalMotion>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerInertiaNaturalMotion) -> Self {
@@ -6573,13 +6591,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaNaturalMotion> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionTrackerInertiaNaturalMotion> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaNaturalMotion) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaNaturalMotion> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaNaturalMotion> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(
         value: &InteractionTrackerInertiaNaturalMotion,
@@ -6598,20 +6616,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionTrackerInertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::TryFrom<InteractionTrackerInertiaNaturalMotion>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaNaturalMotion) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaNaturalMotion>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -6632,19 +6650,19 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTrackerInertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::From<InteractionTrackerInertiaNaturalMotion>
     for InteractionTrackerInertiaModifier
 {
     fn from(value: InteractionTrackerInertiaNaturalMotion) -> Self {
-        ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(&value)
+        ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerInertiaNaturalMotion>
     for InteractionTrackerInertiaModifier
 {
     fn from(value: &InteractionTrackerInertiaNaturalMotion) -> Self {
@@ -6656,7 +6674,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerInertiaModifier>
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerInertiaModifier> {
         ::windows::runtime::Param::Owned(
-            ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(self),
+            ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(self),
         )
     }
 }
@@ -6665,18 +6683,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerInertiaModifier>
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerInertiaModifier> {
         ::windows::runtime::Param::Owned(
-            ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(
-                ::std::clone::Clone::clone(self),
+            ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(
+                ::core::clone::Clone::clone(self),
             ),
         )
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaNaturalMotion> for super::CompositionObject {
+impl ::core::convert::From<InteractionTrackerInertiaNaturalMotion> for super::CompositionObject {
     fn from(value: InteractionTrackerInertiaNaturalMotion) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaNaturalMotion> for super::CompositionObject {
+impl ::core::convert::From<&InteractionTrackerInertiaNaturalMotion> for super::CompositionObject {
     fn from(value: &InteractionTrackerInertiaNaturalMotion) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -6685,7 +6703,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionTrackerInertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -6694,20 +6712,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionTrackerInertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerInertiaNaturalMotion {}
-unsafe impl ::std::marker::Sync for InteractionTrackerInertiaNaturalMotion {}
+unsafe impl ::core::marker::Send for InteractionTrackerInertiaNaturalMotion {}
+unsafe impl ::core::marker::Sync for InteractionTrackerInertiaNaturalMotion {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerInertiaRestingValue(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerInertiaRestingValue {
@@ -6715,9 +6733,9 @@ impl InteractionTrackerInertiaRestingValue {
     pub fn Condition(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -6734,7 +6752,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6744,9 +6762,9 @@ impl InteractionTrackerInertiaRestingValue {
     pub fn RestingValue(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -6763,7 +6781,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6774,9 +6792,9 @@ impl InteractionTrackerInertiaRestingValue {
         compositor: Param0,
     ) -> ::windows::runtime::Result<InteractionTrackerInertiaRestingValue> {
         Self::IInteractionTrackerInertiaRestingValueStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -6796,7 +6814,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -6807,9 +6825,9 @@ impl InteractionTrackerInertiaRestingValue {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -6819,9 +6837,9 @@ impl InteractionTrackerInertiaRestingValue {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -6840,7 +6858,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -6858,7 +6876,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -6868,10 +6886,10 @@ impl InteractionTrackerInertiaRestingValue {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -6888,7 +6906,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6900,9 +6918,9 @@ impl InteractionTrackerInertiaRestingValue {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -6919,7 +6937,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6936,7 +6954,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6953,7 +6971,7 @@ impl InteractionTrackerInertiaRestingValue {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6966,9 +6984,9 @@ impl InteractionTrackerInertiaRestingValue {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6984,9 +7002,9 @@ impl InteractionTrackerInertiaRestingValue {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -6997,7 +7015,7 @@ impl InteractionTrackerInertiaRestingValue {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IInteractionTrackerInertiaRestingValueStatics<
@@ -7029,12 +7047,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerInertiaRestingValue {
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue";
 }
-impl ::std::convert::From<InteractionTrackerInertiaRestingValue> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerInertiaRestingValue> for ::windows::runtime::IUnknown {
     fn from(value: InteractionTrackerInertiaRestingValue) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaRestingValue> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionTrackerInertiaRestingValue>
+    for ::windows::runtime::IUnknown
+{
     fn from(value: &InteractionTrackerInertiaRestingValue) -> Self {
         value.0 .0.clone()
     }
@@ -7053,14 +7073,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaRestingValue>
+impl ::core::convert::From<InteractionTrackerInertiaRestingValue>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerInertiaRestingValue) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaRestingValue>
+impl ::core::convert::From<&InteractionTrackerInertiaRestingValue>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerInertiaRestingValue) -> Self {
@@ -7081,13 +7101,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaRestingValue> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionTrackerInertiaRestingValue> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaRestingValue) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaRestingValue> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaRestingValue> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &InteractionTrackerInertiaRestingValue) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7104,20 +7124,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionTrackerInertiaRestingValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerInertiaRestingValue>
+impl ::core::convert::TryFrom<InteractionTrackerInertiaRestingValue>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InteractionTrackerInertiaRestingValue) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerInertiaRestingValue>
+impl ::core::convert::TryFrom<&InteractionTrackerInertiaRestingValue>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -7136,19 +7156,19 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTrackerInertiaRestingValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaRestingValue>
+impl ::core::convert::From<InteractionTrackerInertiaRestingValue>
     for InteractionTrackerInertiaModifier
 {
     fn from(value: InteractionTrackerInertiaRestingValue) -> Self {
-        ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(&value)
+        ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaRestingValue>
+impl ::core::convert::From<&InteractionTrackerInertiaRestingValue>
     for InteractionTrackerInertiaModifier
 {
     fn from(value: &InteractionTrackerInertiaRestingValue) -> Self {
@@ -7160,7 +7180,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerInertiaModifier>
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerInertiaModifier> {
         ::windows::runtime::Param::Owned(
-            ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(self),
+            ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(self),
         )
     }
 }
@@ -7169,18 +7189,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerInertiaModifier>
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerInertiaModifier> {
         ::windows::runtime::Param::Owned(
-            ::std::convert::Into::<InteractionTrackerInertiaModifier>::into(
-                ::std::clone::Clone::clone(self),
+            ::core::convert::Into::<InteractionTrackerInertiaModifier>::into(
+                ::core::clone::Clone::clone(self),
             ),
         )
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaRestingValue> for super::CompositionObject {
+impl ::core::convert::From<InteractionTrackerInertiaRestingValue> for super::CompositionObject {
     fn from(value: InteractionTrackerInertiaRestingValue) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaRestingValue> for super::CompositionObject {
+impl ::core::convert::From<&InteractionTrackerInertiaRestingValue> for super::CompositionObject {
     fn from(value: &InteractionTrackerInertiaRestingValue) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -7189,7 +7209,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionTrackerInertiaRestingValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -7198,20 +7218,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionTrackerInertiaRestingValue
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerInertiaRestingValue {}
-unsafe impl ::std::marker::Sync for InteractionTrackerInertiaRestingValue {}
+unsafe impl ::core::marker::Send for InteractionTrackerInertiaRestingValue {}
+unsafe impl ::core::marker::Sync for InteractionTrackerInertiaRestingValue {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerInertiaStateEnteredArgs(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerInertiaStateEnteredArgs {
@@ -7223,8 +7243,8 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
-            ( :: windows :: runtime :: Interface :: vtable ( this ) .6 ) ( :: std :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation:: IReference :: < ::windows::Foundation::Numerics:: Vector3 > > ( result__ )
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
+            ( :: windows :: runtime :: Interface :: vtable ( this ) .6 ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation:: IReference :: < ::windows::Foundation::Numerics:: Vector3 > > ( result__ )
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
@@ -7233,9 +7253,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::IReference<f32>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::IReference<f32>>(result__)
@@ -7247,9 +7267,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -7259,9 +7279,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     pub fn NaturalRestingScale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -7273,9 +7293,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -7285,9 +7305,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     pub fn RequestId(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -7297,9 +7317,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
     pub fn ScaleVelocityInPercentPerSecond(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -7311,9 +7331,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
             IInteractionTrackerInertiaStateEnteredArgs2,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7325,9 +7345,9 @@ impl InteractionTrackerInertiaStateEnteredArgs {
             IInteractionTrackerInertiaStateEnteredArgs3,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7350,14 +7370,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerInertiaStateEnteredAr
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs";
 }
-impl ::std::convert::From<InteractionTrackerInertiaStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerInertiaStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: InteractionTrackerInertiaStateEnteredArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerInertiaStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerInertiaStateEnteredArgs) -> Self {
@@ -7378,14 +7398,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerInertiaStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerInertiaStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerInertiaStateEnteredArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInertiaStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerInertiaStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerInertiaStateEnteredArgs) -> Self {
@@ -7406,15 +7426,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerInertiaStateEnteredArgs {}
-unsafe impl ::std::marker::Sync for InteractionTrackerInertiaStateEnteredArgs {}
+unsafe impl ::core::marker::Send for InteractionTrackerInertiaStateEnteredArgs {}
+unsafe impl ::core::marker::Sync for InteractionTrackerInertiaStateEnteredArgs {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerInteractingStateEnteredArgs(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerInteractingStateEnteredArgs {
@@ -7422,9 +7442,9 @@ impl InteractionTrackerInteractingStateEnteredArgs {
     pub fn RequestId(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -7436,9 +7456,9 @@ impl InteractionTrackerInteractingStateEnteredArgs {
             IInteractionTrackerInteractingStateEnteredArgs2,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7461,14 +7481,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerInteractingStateEnter
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs";
 }
-impl ::std::convert::From<InteractionTrackerInteractingStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerInteractingStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: InteractionTrackerInteractingStateEnteredArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInteractingStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerInteractingStateEnteredArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerInteractingStateEnteredArgs) -> Self {
@@ -7489,14 +7509,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerInteractingStateEnteredArgs>
+impl ::core::convert::From<InteractionTrackerInteractingStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerInteractingStateEnteredArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerInteractingStateEnteredArgs>
+impl ::core::convert::From<&InteractionTrackerInteractingStateEnteredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerInteractingStateEnteredArgs) -> Self {
@@ -7517,16 +7537,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerInteractingStateEnteredArgs {}
-unsafe impl ::std::marker::Sync for InteractionTrackerInteractingStateEnteredArgs {}
+unsafe impl ::core::marker::Send for InteractionTrackerInteractingStateEnteredArgs {}
+unsafe impl ::core::marker::Sync for InteractionTrackerInteractingStateEnteredArgs {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InteractionTrackerPositionUpdateOption(pub i32);
@@ -7536,7 +7556,7 @@ impl InteractionTrackerPositionUpdateOption {
     pub const AllowActiveCustomScaleAnimation: InteractionTrackerPositionUpdateOption =
         InteractionTrackerPositionUpdateOption(1i32);
 }
-impl ::std::convert::From<i32> for InteractionTrackerPositionUpdateOption {
+impl ::core::convert::From<i32> for InteractionTrackerPositionUpdateOption {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -7555,10 +7575,10 @@ impl ::windows::runtime::DefaultType for InteractionTrackerPositionUpdateOption 
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerRequestIgnoredArgs(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerRequestIgnoredArgs {
@@ -7566,9 +7586,9 @@ impl InteractionTrackerRequestIgnoredArgs {
     pub fn RequestId(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -7591,12 +7611,12 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerRequestIgnoredArgs {
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs";
 }
-impl ::std::convert::From<InteractionTrackerRequestIgnoredArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerRequestIgnoredArgs> for ::windows::runtime::IUnknown {
     fn from(value: InteractionTrackerRequestIgnoredArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerRequestIgnoredArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionTrackerRequestIgnoredArgs> for ::windows::runtime::IUnknown {
     fn from(value: &InteractionTrackerRequestIgnoredArgs) -> Self {
         value.0 .0.clone()
     }
@@ -7615,14 +7635,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerRequestIgnoredArgs>
+impl ::core::convert::From<InteractionTrackerRequestIgnoredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerRequestIgnoredArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerRequestIgnoredArgs>
+impl ::core::convert::From<&InteractionTrackerRequestIgnoredArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerRequestIgnoredArgs) -> Self {
@@ -7643,15 +7663,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerRequestIgnoredArgs {}
-unsafe impl ::std::marker::Sync for InteractionTrackerRequestIgnoredArgs {}
+unsafe impl ::core::marker::Send for InteractionTrackerRequestIgnoredArgs {}
+unsafe impl ::core::marker::Sync for InteractionTrackerRequestIgnoredArgs {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerValuesChangedArgs(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerValuesChangedArgs {
@@ -7659,9 +7679,9 @@ impl InteractionTrackerValuesChangedArgs {
     pub fn Position(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -7671,9 +7691,9 @@ impl InteractionTrackerValuesChangedArgs {
     pub fn RequestId(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -7683,9 +7703,9 @@ impl InteractionTrackerValuesChangedArgs {
     pub fn Scale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -7708,12 +7728,12 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerValuesChangedArgs {
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs";
 }
-impl ::std::convert::From<InteractionTrackerValuesChangedArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InteractionTrackerValuesChangedArgs> for ::windows::runtime::IUnknown {
     fn from(value: InteractionTrackerValuesChangedArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerValuesChangedArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InteractionTrackerValuesChangedArgs> for ::windows::runtime::IUnknown {
     fn from(value: &InteractionTrackerValuesChangedArgs) -> Self {
         value.0 .0.clone()
     }
@@ -7732,14 +7752,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerValuesChangedArgs>
+impl ::core::convert::From<InteractionTrackerValuesChangedArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerValuesChangedArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerValuesChangedArgs>
+impl ::core::convert::From<&InteractionTrackerValuesChangedArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerValuesChangedArgs) -> Self {
@@ -7760,15 +7780,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerValuesChangedArgs {}
-unsafe impl ::std::marker::Sync for InteractionTrackerValuesChangedArgs {}
+unsafe impl ::core::marker::Send for InteractionTrackerValuesChangedArgs {}
+unsafe impl ::core::marker::Sync for InteractionTrackerValuesChangedArgs {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerVector2InertiaModifier(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerVector2InertiaModifier {
@@ -7785,7 +7805,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -7796,9 +7816,9 @@ impl InteractionTrackerVector2InertiaModifier {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -7808,9 +7828,9 @@ impl InteractionTrackerVector2InertiaModifier {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -7829,7 +7849,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -7847,7 +7867,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -7857,10 +7877,10 @@ impl InteractionTrackerVector2InertiaModifier {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -7877,7 +7897,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7889,9 +7909,9 @@ impl InteractionTrackerVector2InertiaModifier {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -7908,7 +7928,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7925,7 +7945,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7942,7 +7962,7 @@ impl InteractionTrackerVector2InertiaModifier {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7955,9 +7975,9 @@ impl InteractionTrackerVector2InertiaModifier {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -7973,9 +7993,9 @@ impl InteractionTrackerVector2InertiaModifier {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -7986,7 +8006,7 @@ impl InteractionTrackerVector2InertiaModifier {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -8006,14 +8026,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerVector2InertiaModifie
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier";
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::From<InteractionTrackerVector2InertiaModifier>
     for ::windows::runtime::IUnknown
 {
     fn from(value: InteractionTrackerVector2InertiaModifier) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::From<&InteractionTrackerVector2InertiaModifier>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerVector2InertiaModifier) -> Self {
@@ -8034,14 +8054,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::From<InteractionTrackerVector2InertiaModifier>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerVector2InertiaModifier) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::From<&InteractionTrackerVector2InertiaModifier>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerVector2InertiaModifier) -> Self {
@@ -8062,15 +8082,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerVector2InertiaModifier> for super::IAnimationObject {
+impl ::core::convert::TryFrom<InteractionTrackerVector2InertiaModifier>
+    for super::IAnimationObject
+{
     type Error = ::windows::runtime::Error;
     fn try_from(
         value: InteractionTrackerVector2InertiaModifier,
     ) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::TryFrom<&InteractionTrackerVector2InertiaModifier>
     for super::IAnimationObject
 {
     type Error = ::windows::runtime::Error;
@@ -8091,22 +8113,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionTrackerVector2InertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::TryFrom<InteractionTrackerVector2InertiaModifier>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
     fn try_from(
         value: InteractionTrackerVector2InertiaModifier,
     ) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerVector2InertiaModifier>
+impl ::core::convert::TryFrom<&InteractionTrackerVector2InertiaModifier>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -8127,17 +8149,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTrackerVector2InertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaModifier> for super::CompositionObject {
+impl ::core::convert::From<InteractionTrackerVector2InertiaModifier> for super::CompositionObject {
     fn from(value: InteractionTrackerVector2InertiaModifier) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaModifier> for super::CompositionObject {
+impl ::core::convert::From<&InteractionTrackerVector2InertiaModifier> for super::CompositionObject {
     fn from(value: &InteractionTrackerVector2InertiaModifier) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -8146,7 +8168,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionTrackerVector2InertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -8155,20 +8177,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionTrackerVector2InertiaModifier
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerVector2InertiaModifier {}
-unsafe impl ::std::marker::Sync for InteractionTrackerVector2InertiaModifier {}
+unsafe impl ::core::marker::Send for InteractionTrackerVector2InertiaModifier {}
+unsafe impl ::core::marker::Sync for InteractionTrackerVector2InertiaModifier {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InteractionTrackerVector2InertiaNaturalMotion(pub ::windows::runtime::IInspectable);
 impl InteractionTrackerVector2InertiaNaturalMotion {
@@ -8176,9 +8198,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     pub fn Condition(&self) -> ::windows::runtime::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ExpressionAnimation>(result__)
@@ -8195,7 +8217,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8207,9 +8229,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::Vector2NaturalMotionAnimation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Vector2NaturalMotionAnimation>(result__)
@@ -8226,7 +8248,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8237,9 +8259,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         compositor: Param0,
     ) -> ::windows::runtime::Result<InteractionTrackerVector2InertiaNaturalMotion> {
         Self::IInteractionTrackerVector2InertiaNaturalMotionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -8259,7 +8281,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -8270,9 +8292,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -8282,9 +8304,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -8303,7 +8325,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -8321,7 +8343,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -8331,10 +8353,10 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -8351,7 +8373,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8363,9 +8385,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -8382,7 +8404,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8399,7 +8421,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8416,7 +8438,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8429,9 +8451,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -8447,9 +8469,9 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -8460,7 +8482,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IInteractionTrackerVector2InertiaNaturalMotionStatics<
@@ -8494,14 +8516,14 @@ impl ::windows::runtime::RuntimeName for InteractionTrackerVector2InertiaNatural
     const NAME: &'static str =
         "Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion";
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
     for ::windows::runtime::IUnknown
 {
     fn from(value: InteractionTrackerVector2InertiaNaturalMotion) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &InteractionTrackerVector2InertiaNaturalMotion) -> Self {
@@ -8522,14 +8544,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
     for ::windows::runtime::IInspectable
 {
     fn from(value: InteractionTrackerVector2InertiaNaturalMotion) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &InteractionTrackerVector2InertiaNaturalMotion) -> Self {
@@ -8550,17 +8572,17 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::TryFrom<InteractionTrackerVector2InertiaNaturalMotion>
     for super::IAnimationObject
 {
     type Error = ::windows::runtime::Error;
     fn try_from(
         value: InteractionTrackerVector2InertiaNaturalMotion,
     ) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::TryFrom<&InteractionTrackerVector2InertiaNaturalMotion>
     for super::IAnimationObject
 {
     type Error = ::windows::runtime::Error;
@@ -8581,22 +8603,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &InteractionTrackerVector2InertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::TryFrom<InteractionTrackerVector2InertiaNaturalMotion>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
     fn try_from(
         value: InteractionTrackerVector2InertiaNaturalMotion,
     ) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::TryFrom<&InteractionTrackerVector2InertiaNaturalMotion>
     for ::windows::Foundation::IClosable
 {
     type Error = ::windows::runtime::Error;
@@ -8617,19 +8639,19 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &InteractionTrackerVector2InertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
     for InteractionTrackerVector2InertiaModifier
 {
     fn from(value: InteractionTrackerVector2InertiaNaturalMotion) -> Self {
-        ::std::convert::Into::<InteractionTrackerVector2InertiaModifier>::into(&value)
+        ::core::convert::Into::<InteractionTrackerVector2InertiaModifier>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
     for InteractionTrackerVector2InertiaModifier
 {
     fn from(value: &InteractionTrackerVector2InertiaNaturalMotion) -> Self {
@@ -8640,7 +8662,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerVector2InertiaModif
     for InteractionTrackerVector2InertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerVector2InertiaModifier> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<
+        ::windows::runtime::Param::Owned(::core::convert::Into::<
             InteractionTrackerVector2InertiaModifier,
         >::into(self))
     }
@@ -8649,19 +8671,19 @@ impl<'a> ::windows::runtime::IntoParam<'a, InteractionTrackerVector2InertiaModif
     for &InteractionTrackerVector2InertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, InteractionTrackerVector2InertiaModifier> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<
+        ::windows::runtime::Param::Owned(::core::convert::Into::<
             InteractionTrackerVector2InertiaModifier,
-        >::into(::std::clone::Clone::clone(self)))
+        >::into(::core::clone::Clone::clone(self)))
     }
 }
-impl ::std::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<InteractionTrackerVector2InertiaNaturalMotion>
     for super::CompositionObject
 {
     fn from(value: InteractionTrackerVector2InertiaNaturalMotion) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
+impl ::core::convert::From<&InteractionTrackerVector2InertiaNaturalMotion>
     for super::CompositionObject
 {
     fn from(value: &InteractionTrackerVector2InertiaNaturalMotion) -> Self {
@@ -8672,7 +8694,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for InteractionTrackerVector2InertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -8681,20 +8703,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &InteractionTrackerVector2InertiaNaturalMotion
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InteractionTrackerVector2InertiaNaturalMotion {}
-unsafe impl ::std::marker::Sync for InteractionTrackerVector2InertiaNaturalMotion {}
+unsafe impl ::core::marker::Send for InteractionTrackerVector2InertiaNaturalMotion {}
+unsafe impl ::core::marker::Sync for InteractionTrackerVector2InertiaNaturalMotion {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct VisualInteractionSource(pub ::windows::runtime::IInspectable);
 impl VisualInteractionSource {
@@ -8702,9 +8724,9 @@ impl VisualInteractionSource {
     pub fn IsPositionXRailsEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8714,17 +8736,20 @@ impl VisualInteractionSource {
     pub fn SetIsPositionXRailsEnabled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
     pub fn IsPositionYRailsEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8734,8 +8759,11 @@ impl VisualInteractionSource {
     pub fn SetIsPositionYRailsEnabled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Interactions`*"]
@@ -8744,9 +8772,9 @@ impl VisualInteractionSource {
     ) -> ::windows::runtime::Result<VisualInteractionSourceRedirectionMode> {
         let this = self;
         unsafe {
-            let mut result__: VisualInteractionSourceRedirectionMode = ::std::mem::zeroed();
+            let mut result__: VisualInteractionSourceRedirectionMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<VisualInteractionSourceRedirectionMode>(result__)
@@ -8760,7 +8788,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8770,9 +8798,9 @@ impl VisualInteractionSource {
     pub fn PositionXChainingMode(&self) -> ::windows::runtime::Result<InteractionChainingMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionChainingMode = ::std::mem::zeroed();
+            let mut result__: InteractionChainingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionChainingMode>(result__)
@@ -8786,7 +8814,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8796,9 +8824,9 @@ impl VisualInteractionSource {
     pub fn PositionXSourceMode(&self) -> ::windows::runtime::Result<InteractionSourceMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionSourceMode = ::std::mem::zeroed();
+            let mut result__: InteractionSourceMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceMode>(result__)
@@ -8812,7 +8840,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8822,9 +8850,9 @@ impl VisualInteractionSource {
     pub fn PositionYChainingMode(&self) -> ::windows::runtime::Result<InteractionChainingMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionChainingMode = ::std::mem::zeroed();
+            let mut result__: InteractionChainingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionChainingMode>(result__)
@@ -8838,7 +8866,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8848,9 +8876,9 @@ impl VisualInteractionSource {
     pub fn PositionYSourceMode(&self) -> ::windows::runtime::Result<InteractionSourceMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionSourceMode = ::std::mem::zeroed();
+            let mut result__: InteractionSourceMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceMode>(result__)
@@ -8864,7 +8892,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8874,9 +8902,9 @@ impl VisualInteractionSource {
     pub fn ScaleChainingMode(&self) -> ::windows::runtime::Result<InteractionChainingMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionChainingMode = ::std::mem::zeroed();
+            let mut result__: InteractionChainingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionChainingMode>(result__)
@@ -8890,7 +8918,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8900,9 +8928,9 @@ impl VisualInteractionSource {
     pub fn ScaleSourceMode(&self) -> ::windows::runtime::Result<InteractionSourceMode> {
         let this = self;
         unsafe {
-            let mut result__: InteractionSourceMode = ::std::mem::zeroed();
+            let mut result__: InteractionSourceMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceMode>(result__)
@@ -8916,7 +8944,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8926,9 +8954,9 @@ impl VisualInteractionSource {
     pub fn Source(&self) -> ::windows::runtime::Result<super::Visual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Visual>(result__)
@@ -8946,7 +8974,7 @@ impl VisualInteractionSource {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pointerpoint.into_param().abi(),
             )
             .ok()
@@ -8958,9 +8986,9 @@ impl VisualInteractionSource {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -8970,9 +8998,9 @@ impl VisualInteractionSource {
     pub fn DeltaScale(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -8982,9 +9010,9 @@ impl VisualInteractionSource {
     pub fn Position(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -8996,9 +9024,9 @@ impl VisualInteractionSource {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -9008,9 +9036,9 @@ impl VisualInteractionSource {
     pub fn Scale(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -9020,9 +9048,9 @@ impl VisualInteractionSource {
     pub fn ScaleVelocity(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -9042,7 +9070,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -9062,7 +9090,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -9082,7 +9110,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -9102,7 +9130,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -9122,7 +9150,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 conditionalvalues.into_param().abi(),
             )
             .ok()
@@ -9132,9 +9160,9 @@ impl VisualInteractionSource {
     pub fn PointerWheelConfig(&self) -> ::windows::runtime::Result<InteractionSourceConfiguration> {
         let this = &::windows::runtime::Interface::cast::<IVisualInteractionSource3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InteractionSourceConfiguration>(result__)
@@ -9145,9 +9173,9 @@ impl VisualInteractionSource {
         source: Param0,
     ) -> ::windows::runtime::Result<VisualInteractionSource> {
         Self::IVisualInteractionSourceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 source.into_param().abi(),
                 &mut result__,
             )
@@ -9162,9 +9190,9 @@ impl VisualInteractionSource {
         source: Param0,
     ) -> ::windows::runtime::Result<VisualInteractionSource> {
         Self::IVisualInteractionSourceStatics2(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 source.into_param().abi(),
                 &mut result__,
             )
@@ -9184,7 +9212,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -9195,9 +9223,9 @@ impl VisualInteractionSource {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -9207,9 +9235,9 @@ impl VisualInteractionSource {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -9228,7 +9256,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -9246,7 +9274,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -9256,10 +9284,10 @@ impl VisualInteractionSource {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -9276,7 +9304,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9288,9 +9316,9 @@ impl VisualInteractionSource {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -9307,7 +9335,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9324,7 +9352,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9341,7 +9369,7 @@ impl VisualInteractionSource {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9354,9 +9382,9 @@ impl VisualInteractionSource {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -9372,9 +9400,9 @@ impl VisualInteractionSource {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -9385,7 +9413,7 @@ impl VisualInteractionSource {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IVisualInteractionSourceStatics<
@@ -9428,12 +9456,12 @@ unsafe impl ::windows::runtime::Interface for VisualInteractionSource {
 impl ::windows::runtime::RuntimeName for VisualInteractionSource {
     const NAME: &'static str = "Microsoft.UI.Composition.Interactions.VisualInteractionSource";
 }
-impl ::std::convert::From<VisualInteractionSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<VisualInteractionSource> for ::windows::runtime::IUnknown {
     fn from(value: VisualInteractionSource) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&VisualInteractionSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&VisualInteractionSource> for ::windows::runtime::IUnknown {
     fn from(value: &VisualInteractionSource) -> Self {
         value.0 .0.clone()
     }
@@ -9452,12 +9480,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<VisualInteractionSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<VisualInteractionSource> for ::windows::runtime::IInspectable {
     fn from(value: VisualInteractionSource) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&VisualInteractionSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&VisualInteractionSource> for ::windows::runtime::IInspectable {
     fn from(value: &VisualInteractionSource) -> Self {
         value.0.clone()
     }
@@ -9476,13 +9504,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<VisualInteractionSource> for ICompositionInteractionSource {
+impl ::core::convert::TryFrom<VisualInteractionSource> for ICompositionInteractionSource {
     type Error = ::windows::runtime::Error;
     fn try_from(value: VisualInteractionSource) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&VisualInteractionSource> for ICompositionInteractionSource {
+impl ::core::convert::TryFrom<&VisualInteractionSource> for ICompositionInteractionSource {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &VisualInteractionSource) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9499,18 +9527,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ICompositionInteractionSource>
     for &VisualInteractionSource
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ICompositionInteractionSource> {
-        ::std::convert::TryInto::<ICompositionInteractionSource>::try_into(self)
+        ::core::convert::TryInto::<ICompositionInteractionSource>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<VisualInteractionSource> for super::IAnimationObject {
+impl ::core::convert::TryFrom<VisualInteractionSource> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: VisualInteractionSource) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&VisualInteractionSource> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&VisualInteractionSource> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &VisualInteractionSource) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9523,18 +9551,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for VisualIn
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &VisualInteractionSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<VisualInteractionSource> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<VisualInteractionSource> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: VisualInteractionSource) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&VisualInteractionSource> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&VisualInteractionSource> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &VisualInteractionSource) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9551,45 +9579,45 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &VisualInteractionSource
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<VisualInteractionSource> for super::CompositionObject {
+impl ::core::convert::From<VisualInteractionSource> for super::CompositionObject {
     fn from(value: VisualInteractionSource) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&VisualInteractionSource> for super::CompositionObject {
+impl ::core::convert::From<&VisualInteractionSource> for super::CompositionObject {
     fn from(value: &VisualInteractionSource) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for VisualInteractionSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &VisualInteractionSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for VisualInteractionSource {}
-unsafe impl ::std::marker::Sync for VisualInteractionSource {}
+unsafe impl ::core::marker::Send for VisualInteractionSource {}
+unsafe impl ::core::marker::Sync for VisualInteractionSource {}
 #[doc = "*Required features: `UI_Composition_Interactions`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct VisualInteractionSourceRedirectionMode(pub i32);
@@ -9603,7 +9631,7 @@ impl VisualInteractionSourceRedirectionMode {
     pub const CapableTouchpadAndPointerWheel: VisualInteractionSourceRedirectionMode =
         VisualInteractionSourceRedirectionMode(3i32);
 }
-impl ::std::convert::From<i32> for VisualInteractionSourceRedirectionMode {
+impl ::core::convert::From<i32> for VisualInteractionSourceRedirectionMode {
     fn from(value: i32) -> Self {
         Self(value)
     }

@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FrameNavigationOptions(pub ::windows::runtime::IInspectable);
 impl FrameNavigationOptions {
@@ -21,9 +21,9 @@ impl FrameNavigationOptions {
     pub fn IsNavigationStackEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -33,8 +33,11 @@ impl FrameNavigationOptions {
     pub fn SetIsNavigationStackEnabled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media_Animation")]
@@ -44,9 +47,9 @@ impl FrameNavigationOptions {
     ) -> ::windows::runtime::Result<super::Media::Animation::NavigationTransitionInfo> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Animation::NavigationTransitionInfo>(result__)
@@ -64,7 +67,7 @@ impl FrameNavigationOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -73,11 +76,12 @@ impl FrameNavigationOptions {
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn new() -> ::windows::runtime::Result<FrameNavigationOptions> {
         Self::IFrameNavigationOptionsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<FrameNavigationOptions>(result__)
@@ -111,12 +115,12 @@ unsafe impl ::windows::runtime::Interface for FrameNavigationOptions {
 impl ::windows::runtime::RuntimeName for FrameNavigationOptions {
     const NAME: &'static str = "Microsoft.UI.Xaml.Navigation.FrameNavigationOptions";
 }
-impl ::std::convert::From<FrameNavigationOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FrameNavigationOptions> for ::windows::runtime::IUnknown {
     fn from(value: FrameNavigationOptions) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FrameNavigationOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FrameNavigationOptions> for ::windows::runtime::IUnknown {
     fn from(value: &FrameNavigationOptions) -> Self {
         value.0 .0.clone()
     }
@@ -135,12 +139,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FrameNavigationOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FrameNavigationOptions> for ::windows::runtime::IInspectable {
     fn from(value: FrameNavigationOptions) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FrameNavigationOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FrameNavigationOptions> for ::windows::runtime::IInspectable {
     fn from(value: &FrameNavigationOptions) -> Self {
         value.0.clone()
     }
@@ -159,8 +163,8 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FrameNavigationOptions {}
-unsafe impl ::std::marker::Sync for FrameNavigationOptions {}
+unsafe impl ::core::marker::Send for FrameNavigationOptions {}
+unsafe impl ::core::marker::Sync for FrameNavigationOptions {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IFrameNavigationOptions(pub ::windows::runtime::IInspectable);
@@ -308,7 +312,7 @@ pub struct INavigatingCancelEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -372,7 +376,7 @@ pub struct INavigationEventArgs_abi(
     #[cfg(not(feature = "UI_Xaml_Media_Animation"))] usize,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -436,7 +440,7 @@ pub struct INavigationFailedEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -476,7 +480,7 @@ pub struct IPageStackEntry_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -527,7 +531,7 @@ pub struct IPageStackEntryFactory_abi(
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        sourcepagetype: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+        sourcepagetype: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
         parameter: ::windows::runtime::RawPtr,
         navigationtransitioninfo: ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
@@ -577,17 +581,17 @@ pub struct IPageStackEntryStatics_abi(
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigatedEventHandler(::windows::runtime::IUnknown);
 impl NavigatedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigationEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigationEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -598,7 +602,7 @@ impl NavigatedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn Invoke<
@@ -613,7 +617,7 @@ impl NavigatedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -654,8 +658,8 @@ pub struct NavigatedEventHandler_abi(
 #[repr(C)]
 struct NavigatedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<NavigationEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<NavigationEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -665,8 +669,8 @@ struct NavigatedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigationEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigationEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > NavigatedEventHandler_box<F>
@@ -689,7 +693,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -706,7 +710,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -722,10 +726,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigatingCancelEventArgs(pub ::windows::runtime::IInspectable);
 impl NavigatingCancelEventArgs {
@@ -733,9 +737,9 @@ impl NavigatingCancelEventArgs {
     pub fn Cancel(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -745,17 +749,20 @@ impl NavigatingCancelEventArgs {
     pub fn SetCancel(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn NavigationMode(&self) -> ::windows::runtime::Result<NavigationMode> {
         let this = self;
         unsafe {
-            let mut result__: NavigationMode = ::std::mem::zeroed();
+            let mut result__: NavigationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<NavigationMode>(result__)
@@ -767,10 +774,10 @@ impl NavigatingCancelEventArgs {
     ) -> ::windows::runtime::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
@@ -780,9 +787,9 @@ impl NavigatingCancelEventArgs {
     pub fn Parameter(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -795,9 +802,9 @@ impl NavigatingCancelEventArgs {
     ) -> ::windows::runtime::Result<super::Media::Animation::NavigationTransitionInfo> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Animation::NavigationTransitionInfo>(result__)
@@ -819,12 +826,12 @@ unsafe impl ::windows::runtime::Interface for NavigatingCancelEventArgs {
 impl ::windows::runtime::RuntimeName for NavigatingCancelEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Navigation.NavigatingCancelEventArgs";
 }
-impl ::std::convert::From<NavigatingCancelEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<NavigatingCancelEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: NavigatingCancelEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&NavigatingCancelEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&NavigatingCancelEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &NavigatingCancelEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -843,12 +850,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<NavigatingCancelEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<NavigatingCancelEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: NavigatingCancelEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&NavigatingCancelEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&NavigatingCancelEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &NavigatingCancelEventArgs) -> Self {
         value.0.clone()
     }
@@ -867,22 +874,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for NavigatingCancelEventArgs {}
-unsafe impl ::std::marker::Sync for NavigatingCancelEventArgs {}
+unsafe impl ::core::marker::Send for NavigatingCancelEventArgs {}
+unsafe impl ::core::marker::Sync for NavigatingCancelEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigatingCancelEventHandler(::windows::runtime::IUnknown);
 impl NavigatingCancelEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigatingCancelEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigatingCancelEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -893,7 +900,7 @@ impl NavigatingCancelEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn Invoke<
@@ -908,7 +915,7 @@ impl NavigatingCancelEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -949,8 +956,8 @@ pub struct NavigatingCancelEventHandler_abi(
 #[repr(C)]
 struct NavigatingCancelEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<NavigatingCancelEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<NavigatingCancelEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -960,8 +967,8 @@ struct NavigatingCancelEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigatingCancelEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigatingCancelEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > NavigatingCancelEventHandler_box<F>
@@ -984,7 +991,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1001,7 +1008,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -1016,12 +1023,12 @@ impl<
 }
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct NavigationCacheMode(pub i32);
@@ -1030,7 +1037,7 @@ impl NavigationCacheMode {
     pub const Required: NavigationCacheMode = NavigationCacheMode(1i32);
     pub const Enabled: NavigationCacheMode = NavigationCacheMode(2i32);
 }
-impl ::std::convert::From<i32> for NavigationCacheMode {
+impl ::core::convert::From<i32> for NavigationCacheMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1049,10 +1056,10 @@ impl ::windows::runtime::DefaultType for NavigationCacheMode {
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigationEventArgs(pub ::windows::runtime::IInspectable);
 impl NavigationEventArgs {
@@ -1060,9 +1067,9 @@ impl NavigationEventArgs {
     pub fn Content(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1072,9 +1079,9 @@ impl NavigationEventArgs {
     pub fn Parameter(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1087,9 +1094,9 @@ impl NavigationEventArgs {
     ) -> ::windows::runtime::Result<super::Media::Animation::NavigationTransitionInfo> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Animation::NavigationTransitionInfo>(result__)
@@ -1101,10 +1108,10 @@ impl NavigationEventArgs {
     ) -> ::windows::runtime::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
@@ -1114,9 +1121,9 @@ impl NavigationEventArgs {
     pub fn NavigationMode(&self) -> ::windows::runtime::Result<NavigationMode> {
         let this = self;
         unsafe {
-            let mut result__: NavigationMode = ::std::mem::zeroed();
+            let mut result__: NavigationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<NavigationMode>(result__)
@@ -1126,9 +1133,9 @@ impl NavigationEventArgs {
     pub fn Uri(&self) -> ::windows::runtime::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
@@ -1142,7 +1149,7 @@ impl NavigationEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1164,12 +1171,12 @@ unsafe impl ::windows::runtime::Interface for NavigationEventArgs {
 impl ::windows::runtime::RuntimeName for NavigationEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Navigation.NavigationEventArgs";
 }
-impl ::std::convert::From<NavigationEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<NavigationEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: NavigationEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&NavigationEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&NavigationEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &NavigationEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1186,12 +1193,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<NavigationEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<NavigationEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: NavigationEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&NavigationEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&NavigationEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &NavigationEventArgs) -> Self {
         value.0.clone()
     }
@@ -1210,15 +1217,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for NavigationEventArgs {}
-unsafe impl ::std::marker::Sync for NavigationEventArgs {}
+unsafe impl ::core::marker::Send for NavigationEventArgs {}
+unsafe impl ::core::marker::Sync for NavigationEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigationFailedEventArgs(pub ::windows::runtime::IInspectable);
 impl NavigationFailedEventArgs {
@@ -1226,9 +1233,9 @@ impl NavigationFailedEventArgs {
     pub fn Exception(&self) -> ::windows::runtime::Result<::windows::runtime::HRESULT> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::HRESULT = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::HRESULT = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HRESULT>(result__)
@@ -1238,9 +1245,9 @@ impl NavigationFailedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -1250,8 +1257,11 @@ impl NavigationFailedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
@@ -1260,10 +1270,10 @@ impl NavigationFailedEventArgs {
     ) -> ::windows::runtime::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
@@ -1285,12 +1295,12 @@ unsafe impl ::windows::runtime::Interface for NavigationFailedEventArgs {
 impl ::windows::runtime::RuntimeName for NavigationFailedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Navigation.NavigationFailedEventArgs";
 }
-impl ::std::convert::From<NavigationFailedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<NavigationFailedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: NavigationFailedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&NavigationFailedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&NavigationFailedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &NavigationFailedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1309,12 +1319,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<NavigationFailedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<NavigationFailedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: NavigationFailedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&NavigationFailedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&NavigationFailedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &NavigationFailedEventArgs) -> Self {
         value.0.clone()
     }
@@ -1333,22 +1343,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for NavigationFailedEventArgs {}
-unsafe impl ::std::marker::Sync for NavigationFailedEventArgs {}
+unsafe impl ::core::marker::Send for NavigationFailedEventArgs {}
+unsafe impl ::core::marker::Sync for NavigationFailedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigationFailedEventHandler(::windows::runtime::IUnknown);
 impl NavigationFailedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigationFailedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigationFailedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -1359,7 +1369,7 @@ impl NavigationFailedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn Invoke<
@@ -1374,7 +1384,7 @@ impl NavigationFailedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1415,8 +1425,8 @@ pub struct NavigationFailedEventHandler_abi(
 #[repr(C)]
 struct NavigationFailedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<NavigationFailedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<NavigationFailedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -1426,8 +1436,8 @@ struct NavigationFailedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigationFailedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigationFailedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > NavigationFailedEventHandler_box<F>
@@ -1450,7 +1460,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1467,7 +1477,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -1482,12 +1492,12 @@ impl<
 }
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct NavigationMode(pub i32);
@@ -1497,7 +1507,7 @@ impl NavigationMode {
     pub const Forward: NavigationMode = NavigationMode(2i32);
     pub const Refresh: NavigationMode = NavigationMode(3i32);
 }
-impl ::std::convert::From<i32> for NavigationMode {
+impl ::core::convert::From<i32> for NavigationMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1516,17 +1526,17 @@ impl ::windows::runtime::DefaultType for NavigationMode {
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NavigationStoppedEventHandler(::windows::runtime::IUnknown);
 impl NavigationStoppedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigationEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigationEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -1537,7 +1547,7 @@ impl NavigationStoppedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn Invoke<
@@ -1552,7 +1562,7 @@ impl NavigationStoppedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1593,8 +1603,8 @@ pub struct NavigationStoppedEventHandler_abi(
 #[repr(C)]
 struct NavigationStoppedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<NavigationEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<NavigationEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -1604,8 +1614,8 @@ struct NavigationStoppedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NavigationEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NavigationEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > NavigationStoppedEventHandler_box<F>
@@ -1629,7 +1639,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1646,7 +1656,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -1662,10 +1672,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Navigation`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PageStackEntry(pub ::windows::runtime::IInspectable);
 impl PageStackEntry {
@@ -1675,10 +1685,10 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
@@ -1688,9 +1698,9 @@ impl PageStackEntry {
     pub fn Parameter(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1703,9 +1713,9 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<super::Media::Animation::NavigationTransitionInfo> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Animation::NavigationTransitionInfo>(result__)
@@ -1724,9 +1734,9 @@ impl PageStackEntry {
         navigationtransitioninfo: Param2,
     ) -> ::windows::runtime::Result<PageStackEntry> {
         Self::IPageStackEntryFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sourcepagetype.into_param().abi(),
                 parameter.into_param().abi(),
                 navigationtransitioninfo.into_param().abi(),
@@ -1738,9 +1748,9 @@ impl PageStackEntry {
     #[doc = "*Required features: `UI_Xaml_Navigation`*"]
     pub fn SourcePageTypeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPageStackEntryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1753,9 +1763,9 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1775,7 +1785,7 @@ impl PageStackEntry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1790,7 +1800,7 @@ impl PageStackEntry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1806,9 +1816,9 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1825,9 +1835,9 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1846,9 +1856,9 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1868,7 +1878,7 @@ impl PageStackEntry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1879,9 +1889,9 @@ impl PageStackEntry {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1894,9 +1904,9 @@ impl PageStackEntry {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1944,12 +1954,12 @@ unsafe impl ::windows::runtime::Interface for PageStackEntry {
 impl ::windows::runtime::RuntimeName for PageStackEntry {
     const NAME: &'static str = "Microsoft.UI.Xaml.Navigation.PageStackEntry";
 }
-impl ::std::convert::From<PageStackEntry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PageStackEntry> for ::windows::runtime::IUnknown {
     fn from(value: PageStackEntry) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PageStackEntry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PageStackEntry> for ::windows::runtime::IUnknown {
     fn from(value: &PageStackEntry) -> Self {
         value.0 .0.clone()
     }
@@ -1964,12 +1974,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PageStackEntry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PageStackEntry> for ::windows::runtime::IInspectable {
     fn from(value: PageStackEntry) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PageStackEntry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PageStackEntry> for ::windows::runtime::IInspectable {
     fn from(value: &PageStackEntry) -> Self {
         value.0.clone()
     }
@@ -1986,29 +1996,29 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PageStackEntry> for super::DependencyObject {
+impl ::core::convert::From<PageStackEntry> for super::DependencyObject {
     fn from(value: PageStackEntry) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PageStackEntry> for super::DependencyObject {
+impl ::core::convert::From<&PageStackEntry> for super::DependencyObject {
     fn from(value: &PageStackEntry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PageStackEntry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PageStackEntry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PageStackEntry {}
-unsafe impl ::std::marker::Sync for PageStackEntry {}
+unsafe impl ::core::marker::Send for PageStackEntry {}
+unsafe impl ::core::marker::Sync for PageStackEntry {}

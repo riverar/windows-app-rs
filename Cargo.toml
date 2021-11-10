@@ -1,6 +1,6 @@
 [package]
 name = "windows-app"
-version = "0.23.0"
+version = "0.2.0"
 authors = [""]
 edition = "2018"
 license = "MIT OR Apache-2.0"
@@ -13,27 +13,27 @@ exclude = [".github", ".windows", "docs", "tests"]
 [workspace]
 members = [
     "crates/tools/*",
-    "crates/targets/*",
-    "samples/*"
+    "crates/targets/*"
 ]
 
 [target.i686-pc-windows-msvc.dependencies]
-windows_app_i686_msvc = { path = "crates/targets/i686_msvc", version = "0.25.0" }
+windows_app_i686_msvc = { path = "crates/targets/i686_msvc", version = "0.2.0" }
 
 [target.x86_64-pc-windows-msvc.dependencies]
-windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.25.0" }
+windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.2.0" }
 
 [target.aarch64-pc-windows-msvc.dependencies]
-windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.25.0" }
+windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.2.0" }
 
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-git = "https://github.com/microsoft/windows-rs"
+version = "0.26"
 features = [
     "std",
+    "Foundation_Collections",
     "Win32_Foundation",
     "Win32_Storage_Packaging_Appx",
     "Win32_UI_WindowsAndMessaging"

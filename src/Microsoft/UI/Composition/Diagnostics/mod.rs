@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Composition_Diagnostics`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositionDebugHeatMaps(pub ::windows::runtime::IInspectable);
 impl CompositionDebugHeatMaps {
@@ -25,7 +25,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 subtree.into_param().abi(),
             )
             .ok()
@@ -39,7 +39,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 subtree.into_param().abi(),
             )
             .ok()
@@ -54,7 +54,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 subtree.into_param().abi(),
                 contentkinds,
             )
@@ -69,7 +69,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 subtree.into_param().abi(),
             )
             .ok()
@@ -91,12 +91,12 @@ unsafe impl ::windows::runtime::Interface for CompositionDebugHeatMaps {
 impl ::windows::runtime::RuntimeName for CompositionDebugHeatMaps {
     const NAME: &'static str = "Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps";
 }
-impl ::std::convert::From<CompositionDebugHeatMaps> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositionDebugHeatMaps> for ::windows::runtime::IUnknown {
     fn from(value: CompositionDebugHeatMaps) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositionDebugHeatMaps> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CompositionDebugHeatMaps> for ::windows::runtime::IUnknown {
     fn from(value: &CompositionDebugHeatMaps) -> Self {
         value.0 .0.clone()
     }
@@ -115,12 +115,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositionDebugHeatMaps> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CompositionDebugHeatMaps> for ::windows::runtime::IInspectable {
     fn from(value: CompositionDebugHeatMaps) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositionDebugHeatMaps> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CompositionDebugHeatMaps> for ::windows::runtime::IInspectable {
     fn from(value: &CompositionDebugHeatMaps) -> Self {
         value.0.clone()
     }
@@ -139,16 +139,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for CompositionDebugHeatMaps {}
-unsafe impl ::std::marker::Sync for CompositionDebugHeatMaps {}
+unsafe impl ::core::marker::Send for CompositionDebugHeatMaps {}
+unsafe impl ::core::marker::Sync for CompositionDebugHeatMaps {}
 #[doc = "*Required features: `UI_Composition_Diagnostics`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct CompositionDebugOverdrawContentKinds(pub u32);
@@ -172,7 +172,7 @@ impl CompositionDebugOverdrawContentKinds {
     pub const All: CompositionDebugOverdrawContentKinds =
         CompositionDebugOverdrawContentKinds(4294967295u32);
 }
-impl ::std::convert::From<u32> for CompositionDebugOverdrawContentKinds {
+impl ::core::convert::From<u32> for CompositionDebugOverdrawContentKinds {
     fn from(value: u32) -> Self {
         Self(value)
     }
@@ -188,29 +188,29 @@ unsafe impl ::windows::runtime::RuntimeType for CompositionDebugOverdrawContentK
 impl ::windows::runtime::DefaultType for CompositionDebugOverdrawContentKinds {
     type DefaultType = Self;
 }
-impl ::std::ops::BitOr for CompositionDebugOverdrawContentKinds {
+impl ::core::ops::BitOr for CompositionDebugOverdrawContentKinds {
     type Output = Self;
     fn bitor(self, rhs: Self) -> Self {
         Self(self.0 | rhs.0)
     }
 }
-impl ::std::ops::BitAnd for CompositionDebugOverdrawContentKinds {
+impl ::core::ops::BitAnd for CompositionDebugOverdrawContentKinds {
     type Output = Self;
     fn bitand(self, rhs: Self) -> Self {
         Self(self.0 & rhs.0)
     }
 }
-impl ::std::ops::BitOrAssign for CompositionDebugOverdrawContentKinds {
+impl ::core::ops::BitOrAssign for CompositionDebugOverdrawContentKinds {
     fn bitor_assign(&mut self, rhs: Self) {
         self.0.bitor_assign(rhs.0)
     }
 }
-impl ::std::ops::BitAndAssign for CompositionDebugOverdrawContentKinds {
+impl ::core::ops::BitAndAssign for CompositionDebugOverdrawContentKinds {
     fn bitand_assign(&mut self, rhs: Self) {
         self.0.bitand_assign(rhs.0)
     }
 }
-impl ::std::ops::Not for CompositionDebugOverdrawContentKinds {
+impl ::core::ops::Not for CompositionDebugOverdrawContentKinds {
     type Output = Self;
     fn not(self) -> Self {
         Self(self.0.not())
@@ -219,10 +219,10 @@ impl ::std::ops::Not for CompositionDebugOverdrawContentKinds {
 #[doc = "*Required features: `UI_Composition_Diagnostics`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositionDebugSettings(pub ::windows::runtime::IInspectable);
 impl CompositionDebugSettings {
@@ -230,9 +230,9 @@ impl CompositionDebugSettings {
     pub fn HeatMaps(&self) -> ::windows::runtime::Result<CompositionDebugHeatMaps> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<CompositionDebugHeatMaps>(result__)
@@ -243,9 +243,9 @@ impl CompositionDebugSettings {
         compositor: Param0,
     ) -> ::windows::runtime::Result<CompositionDebugSettings> {
         Self::ICompositionDebugSettingsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -280,12 +280,12 @@ unsafe impl ::windows::runtime::Interface for CompositionDebugSettings {
 impl ::windows::runtime::RuntimeName for CompositionDebugSettings {
     const NAME: &'static str = "Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings";
 }
-impl ::std::convert::From<CompositionDebugSettings> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositionDebugSettings> for ::windows::runtime::IUnknown {
     fn from(value: CompositionDebugSettings) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositionDebugSettings> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CompositionDebugSettings> for ::windows::runtime::IUnknown {
     fn from(value: &CompositionDebugSettings) -> Self {
         value.0 .0.clone()
     }
@@ -304,12 +304,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositionDebugSettings> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CompositionDebugSettings> for ::windows::runtime::IInspectable {
     fn from(value: CompositionDebugSettings) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositionDebugSettings> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CompositionDebugSettings> for ::windows::runtime::IInspectable {
     fn from(value: &CompositionDebugSettings) -> Self {
         value.0.clone()
     }
@@ -328,8 +328,8 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for CompositionDebugSettings {}
-unsafe impl ::std::marker::Sync for CompositionDebugSettings {}
+unsafe impl ::core::marker::Send for CompositionDebugSettings {}
+unsafe impl ::core::marker::Sync for CompositionDebugSettings {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct ICompositionDebugHeatMaps(pub ::windows::runtime::IInspectable);

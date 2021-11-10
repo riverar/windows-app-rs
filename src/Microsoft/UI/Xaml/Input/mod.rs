@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AccessKeyDisplayDismissedEventArgs(pub ::windows::runtime::IInspectable);
 impl AccessKeyDisplayDismissedEventArgs {
@@ -48,12 +48,12 @@ unsafe impl ::windows::runtime::Interface for AccessKeyDisplayDismissedEventArgs
 impl ::windows::runtime::RuntimeName for AccessKeyDisplayDismissedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs";
 }
-impl ::std::convert::From<AccessKeyDisplayDismissedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AccessKeyDisplayDismissedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: AccessKeyDisplayDismissedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AccessKeyDisplayDismissedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AccessKeyDisplayDismissedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &AccessKeyDisplayDismissedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -72,12 +72,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AccessKeyDisplayDismissedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AccessKeyDisplayDismissedEventArgs>
+    for ::windows::runtime::IInspectable
+{
     fn from(value: AccessKeyDisplayDismissedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AccessKeyDisplayDismissedEventArgs>
+impl ::core::convert::From<&AccessKeyDisplayDismissedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &AccessKeyDisplayDismissedEventArgs) -> Self {
@@ -98,15 +100,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AccessKeyDisplayDismissedEventArgs {}
-unsafe impl ::std::marker::Sync for AccessKeyDisplayDismissedEventArgs {}
+unsafe impl ::core::marker::Send for AccessKeyDisplayDismissedEventArgs {}
+unsafe impl ::core::marker::Sync for AccessKeyDisplayDismissedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AccessKeyDisplayRequestedEventArgs(pub ::windows::runtime::IInspectable);
 impl AccessKeyDisplayRequestedEventArgs {
@@ -129,10 +131,10 @@ impl AccessKeyDisplayRequestedEventArgs {
     pub fn PressedKeys(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -154,12 +156,12 @@ unsafe impl ::windows::runtime::Interface for AccessKeyDisplayRequestedEventArgs
 impl ::windows::runtime::RuntimeName for AccessKeyDisplayRequestedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs";
 }
-impl ::std::convert::From<AccessKeyDisplayRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AccessKeyDisplayRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: AccessKeyDisplayRequestedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AccessKeyDisplayRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AccessKeyDisplayRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &AccessKeyDisplayRequestedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -178,12 +180,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AccessKeyDisplayRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AccessKeyDisplayRequestedEventArgs>
+    for ::windows::runtime::IInspectable
+{
     fn from(value: AccessKeyDisplayRequestedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AccessKeyDisplayRequestedEventArgs>
+impl ::core::convert::From<&AccessKeyDisplayRequestedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &AccessKeyDisplayRequestedEventArgs) -> Self {
@@ -204,15 +208,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AccessKeyDisplayRequestedEventArgs {}
-unsafe impl ::std::marker::Sync for AccessKeyDisplayRequestedEventArgs {}
+unsafe impl ::core::marker::Send for AccessKeyDisplayRequestedEventArgs {}
+unsafe impl ::core::marker::Sync for AccessKeyDisplayRequestedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AccessKeyInvokedEventArgs(pub ::windows::runtime::IInspectable);
 impl AccessKeyInvokedEventArgs {
@@ -235,9 +239,9 @@ impl AccessKeyInvokedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -247,8 +251,11 @@ impl AccessKeyInvokedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -267,12 +274,12 @@ unsafe impl ::windows::runtime::Interface for AccessKeyInvokedEventArgs {
 impl ::windows::runtime::RuntimeName for AccessKeyInvokedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs";
 }
-impl ::std::convert::From<AccessKeyInvokedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AccessKeyInvokedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: AccessKeyInvokedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AccessKeyInvokedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AccessKeyInvokedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &AccessKeyInvokedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -291,12 +298,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AccessKeyInvokedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AccessKeyInvokedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: AccessKeyInvokedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AccessKeyInvokedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AccessKeyInvokedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &AccessKeyInvokedEventArgs) -> Self {
         value.0.clone()
     }
@@ -315,24 +322,24 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AccessKeyInvokedEventArgs {}
-unsafe impl ::std::marker::Sync for AccessKeyInvokedEventArgs {}
+unsafe impl ::core::marker::Send for AccessKeyInvokedEventArgs {}
+unsafe impl ::core::marker::Sync for AccessKeyInvokedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AccessKeyManager(pub ::windows::runtime::IInspectable);
 impl AccessKeyManager {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn IsDisplayModeEnabled() -> ::windows::runtime::Result<bool> {
         Self::IAccessKeyManagerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -341,9 +348,9 @@ impl AccessKeyManager {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn AreKeyTipsEnabled() -> ::windows::runtime::Result<bool> {
         Self::IAccessKeyManagerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -352,8 +359,11 @@ impl AccessKeyManager {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn SetAreKeyTipsEnabled(value: bool) -> ::windows::runtime::Result<()> {
         Self::IAccessKeyManagerStatics(|this| unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         })
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -370,9 +380,9 @@ impl AccessKeyManager {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IAccessKeyManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -388,7 +398,7 @@ impl AccessKeyManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IAccessKeyManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -397,7 +407,7 @@ impl AccessKeyManager {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn ExitDisplayMode() -> ::windows::runtime::Result<()> {
         Self::IAccessKeyManagerStatics(|this| unsafe {
-            (::windows::runtime::Interface::vtable(this).11)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).11)(::core::mem::transmute_copy(this)).ok()
         })
     }
     pub fn IAccessKeyManagerStatics<
@@ -430,12 +440,12 @@ unsafe impl ::windows::runtime::Interface for AccessKeyManager {
 impl ::windows::runtime::RuntimeName for AccessKeyManager {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.AccessKeyManager";
 }
-impl ::std::convert::From<AccessKeyManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AccessKeyManager> for ::windows::runtime::IUnknown {
     fn from(value: AccessKeyManager) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AccessKeyManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AccessKeyManager> for ::windows::runtime::IUnknown {
     fn from(value: &AccessKeyManager) -> Self {
         value.0 .0.clone()
     }
@@ -450,12 +460,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AccessKeyManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AccessKeyManager> for ::windows::runtime::IInspectable {
     fn from(value: AccessKeyManager) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AccessKeyManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AccessKeyManager> for ::windows::runtime::IInspectable {
     fn from(value: &AccessKeyManager) -> Self {
         value.0.clone()
     }
@@ -472,15 +482,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AccessKeyManager {}
-unsafe impl ::std::marker::Sync for AccessKeyManager {}
+unsafe impl ::core::marker::Send for AccessKeyManager {}
+unsafe impl ::core::marker::Sync for AccessKeyManager {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CanExecuteRequestedEventArgs(pub ::windows::runtime::IInspectable);
 impl CanExecuteRequestedEventArgs {
@@ -488,9 +498,9 @@ impl CanExecuteRequestedEventArgs {
     pub fn Parameter(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -500,9 +510,9 @@ impl CanExecuteRequestedEventArgs {
     pub fn CanExecute(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -512,8 +522,11 @@ impl CanExecuteRequestedEventArgs {
     pub fn SetCanExecute(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -532,12 +545,12 @@ unsafe impl ::windows::runtime::Interface for CanExecuteRequestedEventArgs {
 impl ::windows::runtime::RuntimeName for CanExecuteRequestedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.CanExecuteRequestedEventArgs";
 }
-impl ::std::convert::From<CanExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CanExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: CanExecuteRequestedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CanExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CanExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &CanExecuteRequestedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -556,12 +569,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CanExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CanExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: CanExecuteRequestedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CanExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CanExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &CanExecuteRequestedEventArgs) -> Self {
         value.0.clone()
     }
@@ -580,15 +593,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for CanExecuteRequestedEventArgs {}
-unsafe impl ::std::marker::Sync for CanExecuteRequestedEventArgs {}
+unsafe impl ::core::marker::Send for CanExecuteRequestedEventArgs {}
+unsafe impl ::core::marker::Sync for CanExecuteRequestedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CharacterReceivedRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl CharacterReceivedRoutedEventArgs {
@@ -596,9 +609,9 @@ impl CharacterReceivedRoutedEventArgs {
     pub fn Character(&self) -> ::windows::runtime::Result<u16> {
         let this = self;
         unsafe {
-            let mut result__: u16 = ::std::mem::zeroed();
+            let mut result__: u16 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u16>(result__)
@@ -610,9 +623,9 @@ impl CharacterReceivedRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::UI::Core::CorePhysicalKeyStatus> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Core::CorePhysicalKeyStatus = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Core::CorePhysicalKeyStatus = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CorePhysicalKeyStatus>(result__)
@@ -622,9 +635,9 @@ impl CharacterReceivedRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -634,17 +647,20 @@ impl CharacterReceivedRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -666,12 +682,12 @@ unsafe impl ::windows::runtime::Interface for CharacterReceivedRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for CharacterReceivedRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs";
 }
-impl ::std::convert::From<CharacterReceivedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CharacterReceivedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: CharacterReceivedRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CharacterReceivedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CharacterReceivedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &CharacterReceivedRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -690,12 +706,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CharacterReceivedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CharacterReceivedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: CharacterReceivedRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CharacterReceivedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CharacterReceivedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &CharacterReceivedRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -714,12 +730,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<CharacterReceivedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<CharacterReceivedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: CharacterReceivedRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&CharacterReceivedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&CharacterReceivedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &CharacterReceivedRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -728,27 +744,29 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for CharacterReceivedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &CharacterReceivedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for CharacterReceivedRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for CharacterReceivedRoutedEventArgs {}
+unsafe impl ::core::marker::Send for CharacterReceivedRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for CharacterReceivedRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ContextRequestedEventArgs(pub ::windows::runtime::IInspectable);
 impl ContextRequestedEventArgs {
@@ -771,9 +789,9 @@ impl ContextRequestedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -783,8 +801,11 @@ impl ContextRequestedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -795,9 +816,9 @@ impl ContextRequestedEventArgs {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 point,
                 &mut result__,
@@ -809,9 +830,9 @@ impl ContextRequestedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -833,12 +854,12 @@ unsafe impl ::windows::runtime::Interface for ContextRequestedEventArgs {
 impl ::windows::runtime::RuntimeName for ContextRequestedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ContextRequestedEventArgs";
 }
-impl ::std::convert::From<ContextRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ContextRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ContextRequestedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ContextRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ContextRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ContextRequestedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -857,12 +878,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ContextRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ContextRequestedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: ContextRequestedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ContextRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ContextRequestedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &ContextRequestedEventArgs) -> Self {
         value.0.clone()
     }
@@ -881,44 +902,46 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ContextRequestedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<ContextRequestedEventArgs> for super::RoutedEventArgs {
     fn from(value: ContextRequestedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&ContextRequestedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&ContextRequestedEventArgs> for super::RoutedEventArgs {
     fn from(value: &ContextRequestedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for ContextRequestedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &ContextRequestedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ContextRequestedEventArgs {}
-unsafe impl ::std::marker::Sync for ContextRequestedEventArgs {}
+unsafe impl ::core::marker::Send for ContextRequestedEventArgs {}
+unsafe impl ::core::marker::Sync for ContextRequestedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DoubleTappedEventHandler(::windows::runtime::IUnknown);
 impl DoubleTappedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<DoubleTappedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<DoubleTappedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -929,7 +952,7 @@ impl DoubleTappedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -944,7 +967,7 @@ impl DoubleTappedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -985,8 +1008,8 @@ pub struct DoubleTappedEventHandler_abi(
 #[repr(C)]
 struct DoubleTappedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<DoubleTappedRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<DoubleTappedRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -996,8 +1019,8 @@ struct DoubleTappedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<DoubleTappedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<DoubleTappedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > DoubleTappedEventHandler_box<F>
@@ -1020,7 +1043,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1037,7 +1060,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -1053,10 +1076,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DoubleTappedRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl DoubleTappedRoutedEventArgs {
@@ -1082,9 +1105,9 @@ impl DoubleTappedRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -1094,9 +1117,9 @@ impl DoubleTappedRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -1106,8 +1129,11 @@ impl DoubleTappedRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -1117,9 +1143,9 @@ impl DoubleTappedRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 &mut result__,
             )
@@ -1130,9 +1156,9 @@ impl DoubleTappedRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1154,12 +1180,12 @@ unsafe impl ::windows::runtime::Interface for DoubleTappedRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for DoubleTappedRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs";
 }
-impl ::std::convert::From<DoubleTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DoubleTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: DoubleTappedRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DoubleTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DoubleTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &DoubleTappedRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1178,12 +1204,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DoubleTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DoubleTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: DoubleTappedRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DoubleTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DoubleTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &DoubleTappedRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -1202,39 +1228,41 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<DoubleTappedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<DoubleTappedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: DoubleTappedRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&DoubleTappedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&DoubleTappedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &DoubleTappedRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for DoubleTappedRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &DoubleTappedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for DoubleTappedRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for DoubleTappedRoutedEventArgs {}
+unsafe impl ::core::marker::Send for DoubleTappedRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for DoubleTappedRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ExecuteRequestedEventArgs(pub ::windows::runtime::IInspectable);
 impl ExecuteRequestedEventArgs {
@@ -1242,9 +1270,9 @@ impl ExecuteRequestedEventArgs {
     pub fn Parameter(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1266,12 +1294,12 @@ unsafe impl ::windows::runtime::Interface for ExecuteRequestedEventArgs {
 impl ::windows::runtime::RuntimeName for ExecuteRequestedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ExecuteRequestedEventArgs";
 }
-impl ::std::convert::From<ExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ExecuteRequestedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ExecuteRequestedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ExecuteRequestedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1290,12 +1318,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: ExecuteRequestedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ExecuteRequestedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &ExecuteRequestedEventArgs) -> Self {
         value.0.clone()
     }
@@ -1314,15 +1342,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ExecuteRequestedEventArgs {}
-unsafe impl ::std::marker::Sync for ExecuteRequestedEventArgs {}
+unsafe impl ::core::marker::Send for ExecuteRequestedEventArgs {}
+unsafe impl ::core::marker::Sync for ExecuteRequestedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FindNextElementOptions(pub ::windows::runtime::IInspectable);
 impl FindNextElementOptions {
@@ -1345,9 +1373,9 @@ impl FindNextElementOptions {
     pub fn SearchRoot(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -1361,7 +1389,7 @@ impl FindNextElementOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1371,9 +1399,9 @@ impl FindNextElementOptions {
     pub fn ExclusionRect(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -1390,7 +1418,7 @@ impl FindNextElementOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1400,9 +1428,9 @@ impl FindNextElementOptions {
     pub fn HintRect(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -1419,7 +1447,7 @@ impl FindNextElementOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1431,9 +1459,9 @@ impl FindNextElementOptions {
     ) -> ::windows::runtime::Result<XYFocusNavigationStrategyOverride> {
         let this = self;
         unsafe {
-            let mut result__: XYFocusNavigationStrategyOverride = ::std::mem::zeroed();
+            let mut result__: XYFocusNavigationStrategyOverride = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<XYFocusNavigationStrategyOverride>(result__)
@@ -1447,7 +1475,7 @@ impl FindNextElementOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1469,12 +1497,12 @@ unsafe impl ::windows::runtime::Interface for FindNextElementOptions {
 impl ::windows::runtime::RuntimeName for FindNextElementOptions {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.FindNextElementOptions";
 }
-impl ::std::convert::From<FindNextElementOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FindNextElementOptions> for ::windows::runtime::IUnknown {
     fn from(value: FindNextElementOptions) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FindNextElementOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FindNextElementOptions> for ::windows::runtime::IUnknown {
     fn from(value: &FindNextElementOptions) -> Self {
         value.0 .0.clone()
     }
@@ -1493,12 +1521,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FindNextElementOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FindNextElementOptions> for ::windows::runtime::IInspectable {
     fn from(value: FindNextElementOptions) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FindNextElementOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FindNextElementOptions> for ::windows::runtime::IInspectable {
     fn from(value: &FindNextElementOptions) -> Self {
         value.0.clone()
     }
@@ -1517,16 +1545,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FindNextElementOptions {}
-unsafe impl ::std::marker::Sync for FindNextElementOptions {}
+unsafe impl ::core::marker::Send for FindNextElementOptions {}
+unsafe impl ::core::marker::Sync for FindNextElementOptions {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct FocusInputDeviceKind(pub i32);
@@ -1538,7 +1566,7 @@ impl FocusInputDeviceKind {
     pub const Keyboard: FocusInputDeviceKind = FocusInputDeviceKind(4i32);
     pub const GameController: FocusInputDeviceKind = FocusInputDeviceKind(5i32);
 }
-impl ::std::convert::From<i32> for FocusInputDeviceKind {
+impl ::core::convert::From<i32> for FocusInputDeviceKind {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1557,10 +1585,10 @@ impl ::windows::runtime::DefaultType for FocusInputDeviceKind {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FocusManager(pub ::windows::runtime::IInspectable);
 impl FocusManager {
@@ -1575,9 +1603,9 @@ impl FocusManager {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1593,7 +1621,7 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IFocusManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1610,9 +1638,9 @@ impl FocusManager {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1628,7 +1656,7 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IFocusManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1645,9 +1673,9 @@ impl FocusManager {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1663,7 +1691,7 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IFocusManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1680,9 +1708,9 @@ impl FocusManager {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1698,7 +1726,7 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IFocusManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1711,9 +1739,9 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<::windows::Foundation::IAsyncOperation<FocusMovementResult>>
     {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
                 &mut result__,
@@ -1727,9 +1755,9 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<::windows::Foundation::IAsyncOperation<FocusMovementResult>>
     {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 &mut result__,
             )
@@ -1746,9 +1774,9 @@ impl FocusManager {
     ) -> ::windows::runtime::Result<::windows::Foundation::IAsyncOperation<FocusMovementResult>>
     {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 focusnavigationoptions.into_param().abi(),
                 &mut result__,
@@ -1765,9 +1793,9 @@ impl FocusManager {
         focusnavigationoptions: Param1,
     ) -> ::windows::runtime::Result<bool> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 focusnavigationoptions.into_param().abi(),
                 &mut result__,
@@ -1780,9 +1808,9 @@ impl FocusManager {
         focusnavigationdirection: FocusNavigationDirection,
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 &mut result__,
             )
@@ -1797,9 +1825,9 @@ impl FocusManager {
         searchscope: Param0,
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 searchscope.into_param().abi(),
                 &mut result__,
             )
@@ -1814,9 +1842,9 @@ impl FocusManager {
         searchscope: Param0,
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 searchscope.into_param().abi(),
                 &mut result__,
             )
@@ -1832,9 +1860,9 @@ impl FocusManager {
         focusnavigationoptions: Param1,
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 focusnavigationoptions.into_param().abi(),
                 &mut result__,
@@ -1847,9 +1875,9 @@ impl FocusManager {
         focusnavigationdirection: FocusNavigationDirection,
     ) -> ::windows::runtime::Result<super::UIElement> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 &mut result__,
             )
@@ -1865,9 +1893,9 @@ impl FocusManager {
         hintrect: Param1,
     ) -> ::windows::runtime::Result<super::UIElement> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 hintrect.into_param().abi(),
                 &mut result__,
@@ -1880,9 +1908,9 @@ impl FocusManager {
         focusnavigationdirection: FocusNavigationDirection,
     ) -> ::windows::runtime::Result<bool> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 focusnavigationdirection,
                 &mut result__,
             )
@@ -1892,9 +1920,9 @@ impl FocusManager {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn GetFocusedElement() -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -1908,9 +1936,9 @@ impl FocusManager {
         xamlroot: Param0,
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         Self::IFocusManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 xamlroot.into_param().abi(),
                 &mut result__,
             )
@@ -1945,12 +1973,12 @@ unsafe impl ::windows::runtime::Interface for FocusManager {
 impl ::windows::runtime::RuntimeName for FocusManager {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.FocusManager";
 }
-impl ::std::convert::From<FocusManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FocusManager> for ::windows::runtime::IUnknown {
     fn from(value: FocusManager) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FocusManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FocusManager> for ::windows::runtime::IUnknown {
     fn from(value: &FocusManager) -> Self {
         value.0 .0.clone()
     }
@@ -1965,12 +1993,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FocusManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FocusManager> for ::windows::runtime::IInspectable {
     fn from(value: FocusManager) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FocusManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FocusManager> for ::windows::runtime::IInspectable {
     fn from(value: &FocusManager) -> Self {
         value.0.clone()
     }
@@ -1985,15 +2013,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FocusManager {}
-unsafe impl ::std::marker::Sync for FocusManager {}
+unsafe impl ::core::marker::Send for FocusManager {}
+unsafe impl ::core::marker::Sync for FocusManager {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FocusManagerGotFocusEventArgs(pub ::windows::runtime::IInspectable);
 impl FocusManagerGotFocusEventArgs {
@@ -2001,9 +2029,9 @@ impl FocusManagerGotFocusEventArgs {
     pub fn NewFocusedElement(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -2013,9 +2041,9 @@ impl FocusManagerGotFocusEventArgs {
     pub fn CorrelationId(&self) -> ::windows::runtime::Result<::windows::runtime::GUID> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::GUID = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::GUID = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::GUID>(result__)
@@ -2037,12 +2065,12 @@ unsafe impl ::windows::runtime::Interface for FocusManagerGotFocusEventArgs {
 impl ::windows::runtime::RuntimeName for FocusManagerGotFocusEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.FocusManagerGotFocusEventArgs";
 }
-impl ::std::convert::From<FocusManagerGotFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FocusManagerGotFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: FocusManagerGotFocusEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FocusManagerGotFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FocusManagerGotFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &FocusManagerGotFocusEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -2061,12 +2089,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FocusManagerGotFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FocusManagerGotFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: FocusManagerGotFocusEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FocusManagerGotFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FocusManagerGotFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &FocusManagerGotFocusEventArgs) -> Self {
         value.0.clone()
     }
@@ -2085,15 +2113,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FocusManagerGotFocusEventArgs {}
-unsafe impl ::std::marker::Sync for FocusManagerGotFocusEventArgs {}
+unsafe impl ::core::marker::Send for FocusManagerGotFocusEventArgs {}
+unsafe impl ::core::marker::Sync for FocusManagerGotFocusEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FocusManagerLostFocusEventArgs(pub ::windows::runtime::IInspectable);
 impl FocusManagerLostFocusEventArgs {
@@ -2101,9 +2129,9 @@ impl FocusManagerLostFocusEventArgs {
     pub fn OldFocusedElement(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -2113,9 +2141,9 @@ impl FocusManagerLostFocusEventArgs {
     pub fn CorrelationId(&self) -> ::windows::runtime::Result<::windows::runtime::GUID> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::GUID = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::GUID = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::GUID>(result__)
@@ -2137,12 +2165,12 @@ unsafe impl ::windows::runtime::Interface for FocusManagerLostFocusEventArgs {
 impl ::windows::runtime::RuntimeName for FocusManagerLostFocusEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.FocusManagerLostFocusEventArgs";
 }
-impl ::std::convert::From<FocusManagerLostFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FocusManagerLostFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: FocusManagerLostFocusEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FocusManagerLostFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FocusManagerLostFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &FocusManagerLostFocusEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -2161,12 +2189,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FocusManagerLostFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FocusManagerLostFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: FocusManagerLostFocusEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FocusManagerLostFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FocusManagerLostFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &FocusManagerLostFocusEventArgs) -> Self {
         value.0.clone()
     }
@@ -2185,15 +2213,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FocusManagerLostFocusEventArgs {}
-unsafe impl ::std::marker::Sync for FocusManagerLostFocusEventArgs {}
+unsafe impl ::core::marker::Send for FocusManagerLostFocusEventArgs {}
+unsafe impl ::core::marker::Sync for FocusManagerLostFocusEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FocusMovementResult(pub ::windows::runtime::IInspectable);
 impl FocusMovementResult {
@@ -2201,9 +2229,9 @@ impl FocusMovementResult {
     pub fn Succeeded(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2227,12 +2255,12 @@ unsafe impl ::windows::runtime::Interface for FocusMovementResult {
 impl ::windows::runtime::RuntimeName for FocusMovementResult {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.FocusMovementResult";
 }
-impl ::std::convert::From<FocusMovementResult> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FocusMovementResult> for ::windows::runtime::IUnknown {
     fn from(value: FocusMovementResult) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FocusMovementResult> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FocusMovementResult> for ::windows::runtime::IUnknown {
     fn from(value: &FocusMovementResult) -> Self {
         value.0 .0.clone()
     }
@@ -2249,12 +2277,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FocusMovementResult> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FocusMovementResult> for ::windows::runtime::IInspectable {
     fn from(value: FocusMovementResult) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FocusMovementResult> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FocusMovementResult> for ::windows::runtime::IInspectable {
     fn from(value: &FocusMovementResult) -> Self {
         value.0.clone()
     }
@@ -2273,16 +2301,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FocusMovementResult {}
-unsafe impl ::std::marker::Sync for FocusMovementResult {}
+unsafe impl ::core::marker::Send for FocusMovementResult {}
+unsafe impl ::core::marker::Sync for FocusMovementResult {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct FocusNavigationDirection(pub i32);
@@ -2295,7 +2323,7 @@ impl FocusNavigationDirection {
     pub const Right: FocusNavigationDirection = FocusNavigationDirection(5i32);
     pub const None: FocusNavigationDirection = FocusNavigationDirection(6i32);
 }
-impl ::std::convert::From<i32> for FocusNavigationDirection {
+impl ::core::convert::From<i32> for FocusNavigationDirection {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -2314,10 +2342,10 @@ impl ::windows::runtime::DefaultType for FocusNavigationDirection {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GettingFocusEventArgs(pub ::windows::runtime::IInspectable);
 impl GettingFocusEventArgs {
@@ -2325,9 +2353,9 @@ impl GettingFocusEventArgs {
     pub fn OldFocusedElement(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -2337,9 +2365,9 @@ impl GettingFocusEventArgs {
     pub fn NewFocusedElement(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -2356,7 +2384,7 @@ impl GettingFocusEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2366,9 +2394,9 @@ impl GettingFocusEventArgs {
     pub fn FocusState(&self) -> ::windows::runtime::Result<super::FocusState> {
         let this = self;
         unsafe {
-            let mut result__: super::FocusState = ::std::mem::zeroed();
+            let mut result__: super::FocusState = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FocusState>(result__)
@@ -2378,9 +2406,9 @@ impl GettingFocusEventArgs {
     pub fn Direction(&self) -> ::windows::runtime::Result<FocusNavigationDirection> {
         let this = self;
         unsafe {
-            let mut result__: FocusNavigationDirection = ::std::mem::zeroed();
+            let mut result__: FocusNavigationDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FocusNavigationDirection>(result__)
@@ -2390,9 +2418,9 @@ impl GettingFocusEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2403,7 +2431,7 @@ impl GettingFocusEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2413,9 +2441,9 @@ impl GettingFocusEventArgs {
     pub fn InputDevice(&self) -> ::windows::runtime::Result<FocusInputDeviceKind> {
         let this = self;
         unsafe {
-            let mut result__: FocusInputDeviceKind = ::std::mem::zeroed();
+            let mut result__: FocusInputDeviceKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FocusInputDeviceKind>(result__)
@@ -2425,9 +2453,9 @@ impl GettingFocusEventArgs {
     pub fn Cancel(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2438,7 +2466,7 @@ impl GettingFocusEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2448,9 +2476,9 @@ impl GettingFocusEventArgs {
     pub fn CorrelationId(&self) -> ::windows::runtime::Result<::windows::runtime::GUID> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::GUID = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::GUID = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::GUID>(result__)
@@ -2460,9 +2488,9 @@ impl GettingFocusEventArgs {
     pub fn TryCancel(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2478,9 +2506,9 @@ impl GettingFocusEventArgs {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -2491,9 +2519,9 @@ impl GettingFocusEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -2517,12 +2545,12 @@ unsafe impl ::windows::runtime::Interface for GettingFocusEventArgs {
 impl ::windows::runtime::RuntimeName for GettingFocusEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.GettingFocusEventArgs";
 }
-impl ::std::convert::From<GettingFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GettingFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: GettingFocusEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GettingFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GettingFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &GettingFocusEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -2539,12 +2567,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GettingFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GettingFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: GettingFocusEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GettingFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GettingFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &GettingFocusEventArgs) -> Self {
         value.0.clone()
     }
@@ -2563,44 +2591,46 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<GettingFocusEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<GettingFocusEventArgs> for super::RoutedEventArgs {
     fn from(value: GettingFocusEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&GettingFocusEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&GettingFocusEventArgs> for super::RoutedEventArgs {
     fn from(value: &GettingFocusEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for GettingFocusEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &GettingFocusEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for GettingFocusEventArgs {}
-unsafe impl ::std::marker::Sync for GettingFocusEventArgs {}
+unsafe impl ::core::marker::Send for GettingFocusEventArgs {}
+unsafe impl ::core::marker::Sync for GettingFocusEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct HoldingEventHandler(::windows::runtime::IUnknown);
 impl HoldingEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<HoldingRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<HoldingRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -2611,7 +2641,7 @@ impl HoldingEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -2626,7 +2656,7 @@ impl HoldingEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -2667,8 +2697,8 @@ pub struct HoldingEventHandler_abi(
 #[repr(C)]
 struct HoldingEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<HoldingRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<HoldingRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -2678,8 +2708,8 @@ struct HoldingEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<HoldingRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<HoldingRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > HoldingEventHandler_box<F>
@@ -2702,7 +2732,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -2719,7 +2749,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -2735,10 +2765,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct HoldingRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl HoldingRoutedEventArgs {
@@ -2764,9 +2794,9 @@ impl HoldingRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -2777,9 +2807,9 @@ impl HoldingRoutedEventArgs {
     pub fn HoldingState(&self) -> ::windows::runtime::Result<super::super::Input::HoldingState> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::HoldingState = ::std::mem::zeroed();
+            let mut result__: super::super::Input::HoldingState = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::HoldingState>(result__)
@@ -2789,9 +2819,9 @@ impl HoldingRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2801,8 +2831,11 @@ impl HoldingRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -2812,9 +2845,9 @@ impl HoldingRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 &mut result__,
             )
@@ -2825,9 +2858,9 @@ impl HoldingRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -2849,12 +2882,12 @@ unsafe impl ::windows::runtime::Interface for HoldingRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for HoldingRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs";
 }
-impl ::std::convert::From<HoldingRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<HoldingRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: HoldingRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&HoldingRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&HoldingRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &HoldingRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -2873,12 +2906,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<HoldingRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<HoldingRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: HoldingRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&HoldingRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&HoldingRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &HoldingRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -2897,30 +2930,32 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<HoldingRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<HoldingRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: HoldingRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&HoldingRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&HoldingRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &HoldingRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for HoldingRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &HoldingRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for HoldingRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for HoldingRoutedEventArgs {}
+unsafe impl ::core::marker::Send for HoldingRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for HoldingRoutedEventArgs {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IAccessKeyDisplayDismissedEventArgs(pub ::windows::runtime::IInspectable);
@@ -2994,7 +3029,7 @@ pub struct IAccessKeyDisplayRequestedEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -3237,10 +3272,10 @@ pub struct ICharacterReceivedRoutedEventArgs_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 pub struct ICommand(pub ::windows::runtime::IInspectable);
@@ -3267,9 +3302,9 @@ impl ICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3287,7 +3322,7 @@ impl ICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3303,9 +3338,9 @@ impl ICommand {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 parameter.into_param().abi(),
                 &mut result__,
             )
@@ -3323,7 +3358,7 @@ impl ICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 parameter.into_param().abi(),
             )
             .ok()
@@ -3334,12 +3369,12 @@ unsafe impl ::windows::runtime::RuntimeType for ICommand {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{e5af3542-ca67-4081-995b-709dd13792df}");
 }
-impl ::std::convert::From<ICommand> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ICommand> for ::windows::runtime::IUnknown {
     fn from(value: ICommand) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ICommand> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ICommand> for ::windows::runtime::IUnknown {
     fn from(value: &ICommand) -> Self {
         value.0 .0.clone()
     }
@@ -3354,12 +3389,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ICommand> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ICommand> for ::windows::runtime::IInspectable {
     fn from(value: ICommand) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ICommand> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ICommand> for ::windows::runtime::IInspectable {
     fn from(value: &ICommand) -> Self {
         value.0.clone()
     }
@@ -4422,7 +4457,7 @@ pub struct IKeyRoutedEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -5765,11 +5800,11 @@ pub struct IXamlUICommand_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     #[cfg(feature = "UI_Xaml_Controls")]
     pub  unsafe extern "system" fn(
@@ -5789,19 +5824,19 @@ pub struct IXamlUICommand_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -5936,10 +5971,10 @@ pub struct IXamlUICommandStatics_abi(
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InertiaExpansionBehavior(pub ::windows::runtime::IInspectable);
 impl InertiaExpansionBehavior {
@@ -5947,9 +5982,9 @@ impl InertiaExpansionBehavior {
     pub fn DesiredDeceleration(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -5959,17 +5994,20 @@ impl InertiaExpansionBehavior {
     pub fn SetDesiredDeceleration(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn DesiredExpansion(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -5979,8 +6017,11 @@ impl InertiaExpansionBehavior {
     pub fn SetDesiredExpansion(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -5999,12 +6040,12 @@ unsafe impl ::windows::runtime::Interface for InertiaExpansionBehavior {
 impl ::windows::runtime::RuntimeName for InertiaExpansionBehavior {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.InertiaExpansionBehavior";
 }
-impl ::std::convert::From<InertiaExpansionBehavior> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InertiaExpansionBehavior> for ::windows::runtime::IUnknown {
     fn from(value: InertiaExpansionBehavior) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InertiaExpansionBehavior> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InertiaExpansionBehavior> for ::windows::runtime::IUnknown {
     fn from(value: &InertiaExpansionBehavior) -> Self {
         value.0 .0.clone()
     }
@@ -6023,12 +6064,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InertiaExpansionBehavior> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InertiaExpansionBehavior> for ::windows::runtime::IInspectable {
     fn from(value: InertiaExpansionBehavior) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InertiaExpansionBehavior> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InertiaExpansionBehavior> for ::windows::runtime::IInspectable {
     fn from(value: &InertiaExpansionBehavior) -> Self {
         value.0.clone()
     }
@@ -6047,15 +6088,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InertiaExpansionBehavior {}
-unsafe impl ::std::marker::Sync for InertiaExpansionBehavior {}
+unsafe impl ::core::marker::Send for InertiaExpansionBehavior {}
+unsafe impl ::core::marker::Sync for InertiaExpansionBehavior {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InertiaRotationBehavior(pub ::windows::runtime::IInspectable);
 impl InertiaRotationBehavior {
@@ -6063,9 +6104,9 @@ impl InertiaRotationBehavior {
     pub fn DesiredDeceleration(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -6075,17 +6116,20 @@ impl InertiaRotationBehavior {
     pub fn SetDesiredDeceleration(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn DesiredRotation(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -6095,8 +6139,11 @@ impl InertiaRotationBehavior {
     pub fn SetDesiredRotation(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -6115,12 +6162,12 @@ unsafe impl ::windows::runtime::Interface for InertiaRotationBehavior {
 impl ::windows::runtime::RuntimeName for InertiaRotationBehavior {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.InertiaRotationBehavior";
 }
-impl ::std::convert::From<InertiaRotationBehavior> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InertiaRotationBehavior> for ::windows::runtime::IUnknown {
     fn from(value: InertiaRotationBehavior) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InertiaRotationBehavior> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InertiaRotationBehavior> for ::windows::runtime::IUnknown {
     fn from(value: &InertiaRotationBehavior) -> Self {
         value.0 .0.clone()
     }
@@ -6139,12 +6186,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InertiaRotationBehavior> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InertiaRotationBehavior> for ::windows::runtime::IInspectable {
     fn from(value: InertiaRotationBehavior) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InertiaRotationBehavior> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InertiaRotationBehavior> for ::windows::runtime::IInspectable {
     fn from(value: &InertiaRotationBehavior) -> Self {
         value.0.clone()
     }
@@ -6163,15 +6210,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InertiaRotationBehavior {}
-unsafe impl ::std::marker::Sync for InertiaRotationBehavior {}
+unsafe impl ::core::marker::Send for InertiaRotationBehavior {}
+unsafe impl ::core::marker::Sync for InertiaRotationBehavior {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InertiaTranslationBehavior(pub ::windows::runtime::IInspectable);
 impl InertiaTranslationBehavior {
@@ -6179,9 +6226,9 @@ impl InertiaTranslationBehavior {
     pub fn DesiredDeceleration(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -6191,17 +6238,20 @@ impl InertiaTranslationBehavior {
     pub fn SetDesiredDeceleration(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn DesiredDisplacement(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -6211,8 +6261,11 @@ impl InertiaTranslationBehavior {
     pub fn SetDesiredDisplacement(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -6231,12 +6284,12 @@ unsafe impl ::windows::runtime::Interface for InertiaTranslationBehavior {
 impl ::windows::runtime::RuntimeName for InertiaTranslationBehavior {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.InertiaTranslationBehavior";
 }
-impl ::std::convert::From<InertiaTranslationBehavior> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InertiaTranslationBehavior> for ::windows::runtime::IUnknown {
     fn from(value: InertiaTranslationBehavior) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InertiaTranslationBehavior> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InertiaTranslationBehavior> for ::windows::runtime::IUnknown {
     fn from(value: &InertiaTranslationBehavior) -> Self {
         value.0 .0.clone()
     }
@@ -6255,12 +6308,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InertiaTranslationBehavior> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InertiaTranslationBehavior> for ::windows::runtime::IInspectable {
     fn from(value: InertiaTranslationBehavior) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InertiaTranslationBehavior> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InertiaTranslationBehavior> for ::windows::runtime::IInspectable {
     fn from(value: &InertiaTranslationBehavior) -> Self {
         value.0.clone()
     }
@@ -6279,15 +6332,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for InertiaTranslationBehavior {}
-unsafe impl ::std::marker::Sync for InertiaTranslationBehavior {}
+unsafe impl ::core::marker::Send for InertiaTranslationBehavior {}
+unsafe impl ::core::marker::Sync for InertiaTranslationBehavior {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InputScope(pub ::windows::runtime::IInspectable);
 impl InputScope {
@@ -6313,9 +6366,9 @@ impl InputScope {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<InputScopeName>>(result__)
@@ -6328,9 +6381,9 @@ impl InputScope {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6350,7 +6403,7 @@ impl InputScope {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -6365,7 +6418,7 @@ impl InputScope {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -6381,9 +6434,9 @@ impl InputScope {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6400,9 +6453,9 @@ impl InputScope {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6421,9 +6474,9 @@ impl InputScope {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -6443,7 +6496,7 @@ impl InputScope {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -6454,9 +6507,9 @@ impl InputScope {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -6469,9 +6522,9 @@ impl InputScope {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6495,12 +6548,12 @@ unsafe impl ::windows::runtime::Interface for InputScope {
 impl ::windows::runtime::RuntimeName for InputScope {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.InputScope";
 }
-impl ::std::convert::From<InputScope> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InputScope> for ::windows::runtime::IUnknown {
     fn from(value: InputScope) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InputScope> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InputScope> for ::windows::runtime::IUnknown {
     fn from(value: &InputScope) -> Self {
         value.0 .0.clone()
     }
@@ -6515,12 +6568,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InputScope> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InputScope> for ::windows::runtime::IInspectable {
     fn from(value: InputScope) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InputScope> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InputScope> for ::windows::runtime::IInspectable {
     fn from(value: &InputScope) -> Self {
         value.0.clone()
     }
@@ -6535,39 +6588,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<InputScope> for super::DependencyObject {
+impl ::core::convert::From<InputScope> for super::DependencyObject {
     fn from(value: InputScope) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InputScope> for super::DependencyObject {
+impl ::core::convert::From<&InputScope> for super::DependencyObject {
     fn from(value: &InputScope) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for InputScope {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &InputScope {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InputScope {}
-unsafe impl ::std::marker::Sync for InputScope {}
+unsafe impl ::core::marker::Send for InputScope {}
+unsafe impl ::core::marker::Sync for InputScope {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InputScopeName(pub ::windows::runtime::IInspectable);
 impl InputScopeName {
@@ -6590,9 +6643,9 @@ impl InputScopeName {
     pub fn NameValue(&self) -> ::windows::runtime::Result<InputScopeNameValue> {
         let this = self;
         unsafe {
-            let mut result__: InputScopeNameValue = ::std::mem::zeroed();
+            let mut result__: InputScopeNameValue = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InputScopeNameValue>(result__)
@@ -6602,8 +6655,11 @@ impl InputScopeName {
     pub fn SetNameValue(&self, value: InputScopeNameValue) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -6611,9 +6667,9 @@ impl InputScopeName {
         namevalue: InputScopeNameValue,
     ) -> ::windows::runtime::Result<InputScopeName> {
         Self::IInputScopeNameFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 namevalue,
                 &mut result__,
             )
@@ -6627,9 +6683,9 @@ impl InputScopeName {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6649,7 +6705,7 @@ impl InputScopeName {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -6664,7 +6720,7 @@ impl InputScopeName {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -6680,9 +6736,9 @@ impl InputScopeName {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6699,9 +6755,9 @@ impl InputScopeName {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6720,9 +6776,9 @@ impl InputScopeName {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -6742,7 +6798,7 @@ impl InputScopeName {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -6753,9 +6809,9 @@ impl InputScopeName {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -6768,9 +6824,9 @@ impl InputScopeName {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6806,12 +6862,12 @@ unsafe impl ::windows::runtime::Interface for InputScopeName {
 impl ::windows::runtime::RuntimeName for InputScopeName {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.InputScopeName";
 }
-impl ::std::convert::From<InputScopeName> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InputScopeName> for ::windows::runtime::IUnknown {
     fn from(value: InputScopeName) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InputScopeName> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InputScopeName> for ::windows::runtime::IUnknown {
     fn from(value: &InputScopeName) -> Self {
         value.0 .0.clone()
     }
@@ -6826,12 +6882,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InputScopeName> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InputScopeName> for ::windows::runtime::IInspectable {
     fn from(value: InputScopeName) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InputScopeName> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InputScopeName> for ::windows::runtime::IInspectable {
     fn from(value: &InputScopeName) -> Self {
         value.0.clone()
     }
@@ -6848,40 +6904,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<InputScopeName> for super::DependencyObject {
+impl ::core::convert::From<InputScopeName> for super::DependencyObject {
     fn from(value: InputScopeName) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InputScopeName> for super::DependencyObject {
+impl ::core::convert::From<&InputScopeName> for super::DependencyObject {
     fn from(value: &InputScopeName) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for InputScopeName {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &InputScopeName {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InputScopeName {}
-unsafe impl ::std::marker::Sync for InputScopeName {}
+unsafe impl ::core::marker::Send for InputScopeName {}
+unsafe impl ::core::marker::Sync for InputScopeName {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct InputScopeNameValue(pub i32);
@@ -6930,7 +6986,7 @@ impl InputScopeNameValue {
     pub const FormulaNumber: InputScopeNameValue = InputScopeNameValue(67i32);
     pub const ChatWithoutEmoji: InputScopeNameValue = InputScopeNameValue(68i32);
 }
-impl ::std::convert::From<i32> for InputScopeNameValue {
+impl ::core::convert::From<i32> for InputScopeNameValue {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -6949,17 +7005,17 @@ impl ::windows::runtime::DefaultType for InputScopeNameValue {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct KeyEventHandler(::windows::runtime::IUnknown);
 impl KeyEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<KeyRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<KeyRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -6970,7 +7026,7 @@ impl KeyEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -6985,7 +7041,7 @@ impl KeyEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -7026,8 +7082,8 @@ pub struct KeyEventHandler_abi(
 #[repr(C)]
 struct KeyEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<KeyRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<KeyRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -7037,8 +7093,8 @@ struct KeyEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<KeyRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<KeyRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > KeyEventHandler_box<F>
@@ -7061,7 +7117,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -7078,7 +7134,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -7094,10 +7150,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct KeyRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl KeyRoutedEventArgs {
@@ -7105,9 +7161,9 @@ impl KeyRoutedEventArgs {
     pub fn Key(&self) -> ::windows::runtime::Result<::windows::System::VirtualKey> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKey = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKey = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKey>(result__)
@@ -7119,9 +7175,9 @@ impl KeyRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::UI::Core::CorePhysicalKeyStatus> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Core::CorePhysicalKeyStatus = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Core::CorePhysicalKeyStatus = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CorePhysicalKeyStatus>(result__)
@@ -7131,9 +7187,9 @@ impl KeyRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7143,17 +7199,20 @@ impl KeyRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn OriginalKey(&self) -> ::windows::runtime::Result<::windows::System::VirtualKey> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKey = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKey = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKey>(result__)
@@ -7163,10 +7222,10 @@ impl KeyRoutedEventArgs {
     pub fn DeviceId(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -7176,9 +7235,9 @@ impl KeyRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -7202,12 +7261,12 @@ unsafe impl ::windows::runtime::Interface for KeyRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for KeyRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.KeyRoutedEventArgs";
 }
-impl ::std::convert::From<KeyRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<KeyRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: KeyRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&KeyRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&KeyRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &KeyRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -7224,12 +7283,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<KeyRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<KeyRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: KeyRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&KeyRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&KeyRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &KeyRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -7248,38 +7307,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<KeyRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<KeyRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: KeyRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&KeyRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&KeyRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &KeyRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for KeyRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &KeyRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for KeyRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for KeyRoutedEventArgs {}
+unsafe impl ::core::marker::Send for KeyRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for KeyRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct KeyTipPlacementMode(pub i32);
@@ -7292,7 +7353,7 @@ impl KeyTipPlacementMode {
     pub const Center: KeyTipPlacementMode = KeyTipPlacementMode(5i32);
     pub const Hidden: KeyTipPlacementMode = KeyTipPlacementMode(6i32);
 }
-impl ::std::convert::From<i32> for KeyTipPlacementMode {
+impl ::core::convert::From<i32> for KeyTipPlacementMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -7311,10 +7372,10 @@ impl ::windows::runtime::DefaultType for KeyTipPlacementMode {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct KeyboardAccelerator(pub ::windows::runtime::IInspectable);
 impl KeyboardAccelerator {
@@ -7322,9 +7383,9 @@ impl KeyboardAccelerator {
     pub fn Key(&self) -> ::windows::runtime::Result<::windows::System::VirtualKey> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKey = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKey = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKey>(result__)
@@ -7334,17 +7395,20 @@ impl KeyboardAccelerator {
     pub fn SetKey(&self, value: ::windows::System::VirtualKey) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Modifiers(&self) -> ::windows::runtime::Result<::windows::System::VirtualKeyModifiers> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKeyModifiers = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKeyModifiers = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKeyModifiers>(result__)
@@ -7357,17 +7421,20 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn IsEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7378,7 +7445,7 @@ impl KeyboardAccelerator {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -7388,9 +7455,9 @@ impl KeyboardAccelerator {
     pub fn ScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -7404,7 +7471,7 @@ impl KeyboardAccelerator {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7426,9 +7493,9 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7446,7 +7513,7 @@ impl KeyboardAccelerator {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7455,9 +7522,9 @@ impl KeyboardAccelerator {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn KeyProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IKeyboardAcceleratorStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -7466,9 +7533,9 @@ impl KeyboardAccelerator {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn ModifiersProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IKeyboardAcceleratorStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -7477,9 +7544,9 @@ impl KeyboardAccelerator {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn IsEnabledProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IKeyboardAcceleratorStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -7488,9 +7555,9 @@ impl KeyboardAccelerator {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn ScopeOwnerProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IKeyboardAcceleratorStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -7499,11 +7566,12 @@ impl KeyboardAccelerator {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn new() -> ::windows::runtime::Result<KeyboardAccelerator> {
         Self::IKeyboardAcceleratorFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<KeyboardAccelerator>(result__)
@@ -7516,9 +7584,9 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -7538,7 +7606,7 @@ impl KeyboardAccelerator {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -7553,7 +7621,7 @@ impl KeyboardAccelerator {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -7569,9 +7637,9 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -7588,9 +7656,9 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -7609,9 +7677,9 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -7631,7 +7699,7 @@ impl KeyboardAccelerator {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -7642,9 +7710,9 @@ impl KeyboardAccelerator {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -7657,9 +7725,9 @@ impl KeyboardAccelerator {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -7707,12 +7775,12 @@ unsafe impl ::windows::runtime::Interface for KeyboardAccelerator {
 impl ::windows::runtime::RuntimeName for KeyboardAccelerator {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.KeyboardAccelerator";
 }
-impl ::std::convert::From<KeyboardAccelerator> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<KeyboardAccelerator> for ::windows::runtime::IUnknown {
     fn from(value: KeyboardAccelerator) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&KeyboardAccelerator> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&KeyboardAccelerator> for ::windows::runtime::IUnknown {
     fn from(value: &KeyboardAccelerator) -> Self {
         value.0 .0.clone()
     }
@@ -7729,12 +7797,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<KeyboardAccelerator> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<KeyboardAccelerator> for ::windows::runtime::IInspectable {
     fn from(value: KeyboardAccelerator) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&KeyboardAccelerator> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&KeyboardAccelerator> for ::windows::runtime::IInspectable {
     fn from(value: &KeyboardAccelerator) -> Self {
         value.0.clone()
     }
@@ -7753,39 +7821,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<KeyboardAccelerator> for super::DependencyObject {
+impl ::core::convert::From<KeyboardAccelerator> for super::DependencyObject {
     fn from(value: KeyboardAccelerator) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&KeyboardAccelerator> for super::DependencyObject {
+impl ::core::convert::From<&KeyboardAccelerator> for super::DependencyObject {
     fn from(value: &KeyboardAccelerator) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for KeyboardAccelerator {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &KeyboardAccelerator {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for KeyboardAccelerator {}
-unsafe impl ::std::marker::Sync for KeyboardAccelerator {}
+unsafe impl ::core::marker::Send for KeyboardAccelerator {}
+unsafe impl ::core::marker::Sync for KeyboardAccelerator {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct KeyboardAcceleratorInvokedEventArgs(pub ::windows::runtime::IInspectable);
 impl KeyboardAcceleratorInvokedEventArgs {
@@ -7793,9 +7861,9 @@ impl KeyboardAcceleratorInvokedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7805,17 +7873,20 @@ impl KeyboardAcceleratorInvokedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Element(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -7825,9 +7896,9 @@ impl KeyboardAcceleratorInvokedEventArgs {
     pub fn KeyboardAccelerator(&self) -> ::windows::runtime::Result<KeyboardAccelerator> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<KeyboardAccelerator>(result__)
@@ -7849,12 +7920,12 @@ unsafe impl ::windows::runtime::Interface for KeyboardAcceleratorInvokedEventArg
 impl ::windows::runtime::RuntimeName for KeyboardAcceleratorInvokedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs";
 }
-impl ::std::convert::From<KeyboardAcceleratorInvokedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<KeyboardAcceleratorInvokedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: KeyboardAcceleratorInvokedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&KeyboardAcceleratorInvokedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&KeyboardAcceleratorInvokedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &KeyboardAcceleratorInvokedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -7873,14 +7944,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<KeyboardAcceleratorInvokedEventArgs>
+impl ::core::convert::From<KeyboardAcceleratorInvokedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: KeyboardAcceleratorInvokedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&KeyboardAcceleratorInvokedEventArgs>
+impl ::core::convert::From<&KeyboardAcceleratorInvokedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &KeyboardAcceleratorInvokedEventArgs) -> Self {
@@ -7901,16 +7972,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for KeyboardAcceleratorInvokedEventArgs {}
-unsafe impl ::std::marker::Sync for KeyboardAcceleratorInvokedEventArgs {}
+unsafe impl ::core::marker::Send for KeyboardAcceleratorInvokedEventArgs {}
+unsafe impl ::core::marker::Sync for KeyboardAcceleratorInvokedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct KeyboardAcceleratorPlacementMode(pub i32);
@@ -7918,7 +7989,7 @@ impl KeyboardAcceleratorPlacementMode {
     pub const Auto: KeyboardAcceleratorPlacementMode = KeyboardAcceleratorPlacementMode(0i32);
     pub const Hidden: KeyboardAcceleratorPlacementMode = KeyboardAcceleratorPlacementMode(1i32);
 }
-impl ::std::convert::From<i32> for KeyboardAcceleratorPlacementMode {
+impl ::core::convert::From<i32> for KeyboardAcceleratorPlacementMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -7936,12 +8007,12 @@ impl ::windows::runtime::DefaultType for KeyboardAcceleratorPlacementMode {
 }
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct KeyboardNavigationMode(pub i32);
@@ -7950,7 +8021,7 @@ impl KeyboardNavigationMode {
     pub const Cycle: KeyboardNavigationMode = KeyboardNavigationMode(1i32);
     pub const Once: KeyboardNavigationMode = KeyboardNavigationMode(2i32);
 }
-impl ::std::convert::From<i32> for KeyboardNavigationMode {
+impl ::core::convert::From<i32> for KeyboardNavigationMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -7969,10 +8040,10 @@ impl ::windows::runtime::DefaultType for KeyboardNavigationMode {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LosingFocusEventArgs(pub ::windows::runtime::IInspectable);
 impl LosingFocusEventArgs {
@@ -7980,9 +8051,9 @@ impl LosingFocusEventArgs {
     pub fn OldFocusedElement(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -7992,9 +8063,9 @@ impl LosingFocusEventArgs {
     pub fn NewFocusedElement(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -8011,7 +8082,7 @@ impl LosingFocusEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8021,9 +8092,9 @@ impl LosingFocusEventArgs {
     pub fn FocusState(&self) -> ::windows::runtime::Result<super::FocusState> {
         let this = self;
         unsafe {
-            let mut result__: super::FocusState = ::std::mem::zeroed();
+            let mut result__: super::FocusState = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FocusState>(result__)
@@ -8033,9 +8104,9 @@ impl LosingFocusEventArgs {
     pub fn Direction(&self) -> ::windows::runtime::Result<FocusNavigationDirection> {
         let this = self;
         unsafe {
-            let mut result__: FocusNavigationDirection = ::std::mem::zeroed();
+            let mut result__: FocusNavigationDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FocusNavigationDirection>(result__)
@@ -8045,9 +8116,9 @@ impl LosingFocusEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8058,7 +8129,7 @@ impl LosingFocusEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8068,9 +8139,9 @@ impl LosingFocusEventArgs {
     pub fn InputDevice(&self) -> ::windows::runtime::Result<FocusInputDeviceKind> {
         let this = self;
         unsafe {
-            let mut result__: FocusInputDeviceKind = ::std::mem::zeroed();
+            let mut result__: FocusInputDeviceKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FocusInputDeviceKind>(result__)
@@ -8080,9 +8151,9 @@ impl LosingFocusEventArgs {
     pub fn Cancel(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8093,7 +8164,7 @@ impl LosingFocusEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8103,9 +8174,9 @@ impl LosingFocusEventArgs {
     pub fn CorrelationId(&self) -> ::windows::runtime::Result<::windows::runtime::GUID> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::GUID = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::GUID = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::GUID>(result__)
@@ -8115,9 +8186,9 @@ impl LosingFocusEventArgs {
     pub fn TryCancel(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8133,9 +8204,9 @@ impl LosingFocusEventArgs {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -8146,9 +8217,9 @@ impl LosingFocusEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -8172,12 +8243,12 @@ unsafe impl ::windows::runtime::Interface for LosingFocusEventArgs {
 impl ::windows::runtime::RuntimeName for LosingFocusEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.LosingFocusEventArgs";
 }
-impl ::std::convert::From<LosingFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<LosingFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: LosingFocusEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LosingFocusEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&LosingFocusEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &LosingFocusEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -8194,12 +8265,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LosingFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<LosingFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: LosingFocusEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LosingFocusEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&LosingFocusEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &LosingFocusEventArgs) -> Self {
         value.0.clone()
     }
@@ -8218,44 +8289,46 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<LosingFocusEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<LosingFocusEventArgs> for super::RoutedEventArgs {
     fn from(value: LosingFocusEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&LosingFocusEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&LosingFocusEventArgs> for super::RoutedEventArgs {
     fn from(value: &LosingFocusEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for LosingFocusEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &LosingFocusEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for LosingFocusEventArgs {}
-unsafe impl ::std::marker::Sync for LosingFocusEventArgs {}
+unsafe impl ::core::marker::Send for LosingFocusEventArgs {}
+unsafe impl ::core::marker::Sync for LosingFocusEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationCompletedEventHandler(::windows::runtime::IUnknown);
 impl ManipulationCompletedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationCompletedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationCompletedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -8266,7 +8339,7 @@ impl ManipulationCompletedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -8281,7 +8354,7 @@ impl ManipulationCompletedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -8322,8 +8395,8 @@ pub struct ManipulationCompletedEventHandler_abi(
 #[repr(C)]
 struct ManipulationCompletedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<ManipulationCompletedRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<ManipulationCompletedRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -8333,8 +8406,8 @@ struct ManipulationCompletedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationCompletedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationCompletedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > ManipulationCompletedEventHandler_box<F>
@@ -8358,7 +8431,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -8375,7 +8448,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -8391,10 +8464,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationCompletedRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl ManipulationCompletedRoutedEventArgs {
@@ -8417,9 +8490,9 @@ impl ManipulationCompletedRoutedEventArgs {
     pub fn Container(&self) -> ::windows::runtime::Result<super::UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElement>(result__)
@@ -8429,9 +8502,9 @@ impl ManipulationCompletedRoutedEventArgs {
     pub fn Position(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -8441,9 +8514,9 @@ impl ManipulationCompletedRoutedEventArgs {
     pub fn IsInertial(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8454,9 +8527,9 @@ impl ManipulationCompletedRoutedEventArgs {
     pub fn Cumulative(&self) -> ::windows::runtime::Result<super::super::Input::ManipulationDelta> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationDelta = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationDelta = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationDelta>(result__)
@@ -8469,9 +8542,9 @@ impl ManipulationCompletedRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::ManipulationVelocities> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationVelocities = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationVelocities = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationVelocities>(result__)
@@ -8481,9 +8554,9 @@ impl ManipulationCompletedRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8494,7 +8567,7 @@ impl ManipulationCompletedRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8507,9 +8580,9 @@ impl ManipulationCompletedRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -8519,9 +8592,9 @@ impl ManipulationCompletedRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -8543,12 +8616,12 @@ unsafe impl ::windows::runtime::Interface for ManipulationCompletedRoutedEventAr
 impl ::windows::runtime::RuntimeName for ManipulationCompletedRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs";
 }
-impl ::std::convert::From<ManipulationCompletedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ManipulationCompletedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ManipulationCompletedRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ManipulationCompletedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ManipulationCompletedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ManipulationCompletedRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -8567,14 +8640,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ManipulationCompletedRoutedEventArgs>
+impl ::core::convert::From<ManipulationCompletedRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: ManipulationCompletedRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ManipulationCompletedRoutedEventArgs>
+impl ::core::convert::From<&ManipulationCompletedRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &ManipulationCompletedRoutedEventArgs) -> Self {
@@ -8595,12 +8668,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ManipulationCompletedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<ManipulationCompletedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: ManipulationCompletedRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&ManipulationCompletedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&ManipulationCompletedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &ManipulationCompletedRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -8609,34 +8682,36 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for ManipulationCompletedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &ManipulationCompletedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ManipulationCompletedRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for ManipulationCompletedRoutedEventArgs {}
+unsafe impl ::core::marker::Send for ManipulationCompletedRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for ManipulationCompletedRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationDeltaEventHandler(::windows::runtime::IUnknown);
 impl ManipulationDeltaEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationDeltaRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationDeltaRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -8647,7 +8722,7 @@ impl ManipulationDeltaEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -8662,7 +8737,7 @@ impl ManipulationDeltaEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -8703,8 +8778,8 @@ pub struct ManipulationDeltaEventHandler_abi(
 #[repr(C)]
 struct ManipulationDeltaEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<ManipulationDeltaRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<ManipulationDeltaRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -8714,8 +8789,8 @@ struct ManipulationDeltaEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationDeltaRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationDeltaRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > ManipulationDeltaEventHandler_box<F>
@@ -8739,7 +8814,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -8756,7 +8831,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -8772,10 +8847,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationDeltaRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl ManipulationDeltaRoutedEventArgs {
@@ -8798,9 +8873,9 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn Container(&self) -> ::windows::runtime::Result<super::UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElement>(result__)
@@ -8810,9 +8885,9 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn Position(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -8822,9 +8897,9 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn IsInertial(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8835,9 +8910,9 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn Delta(&self) -> ::windows::runtime::Result<super::super::Input::ManipulationDelta> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationDelta = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationDelta = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationDelta>(result__)
@@ -8848,9 +8923,9 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn Cumulative(&self) -> ::windows::runtime::Result<super::super::Input::ManipulationDelta> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationDelta = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationDelta = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationDelta>(result__)
@@ -8863,9 +8938,9 @@ impl ManipulationDeltaRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::ManipulationVelocities> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationVelocities = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationVelocities = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationVelocities>(result__)
@@ -8875,9 +8950,9 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8888,7 +8963,7 @@ impl ManipulationDeltaRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8901,9 +8976,9 @@ impl ManipulationDeltaRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -8913,16 +8988,16 @@ impl ManipulationDeltaRoutedEventArgs {
     pub fn Complete(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -8944,12 +9019,12 @@ unsafe impl ::windows::runtime::Interface for ManipulationDeltaRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for ManipulationDeltaRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs";
 }
-impl ::std::convert::From<ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ManipulationDeltaRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ManipulationDeltaRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -8968,12 +9043,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: ManipulationDeltaRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ManipulationDeltaRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &ManipulationDeltaRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -8992,12 +9067,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ManipulationDeltaRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<ManipulationDeltaRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: ManipulationDeltaRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&ManipulationDeltaRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&ManipulationDeltaRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &ManipulationDeltaRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -9006,34 +9081,36 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for ManipulationDeltaRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &ManipulationDeltaRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ManipulationDeltaRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for ManipulationDeltaRoutedEventArgs {}
+unsafe impl ::core::marker::Send for ManipulationDeltaRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for ManipulationDeltaRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationInertiaStartingEventHandler(::windows::runtime::IUnknown);
 impl ManipulationInertiaStartingEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationInertiaStartingRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationInertiaStartingRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -9044,7 +9121,7 @@ impl ManipulationInertiaStartingEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -9059,7 +9136,7 @@ impl ManipulationInertiaStartingEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -9100,8 +9177,8 @@ pub struct ManipulationInertiaStartingEventHandler_abi(
 #[repr(C)]
 struct ManipulationInertiaStartingEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<ManipulationInertiaStartingRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<ManipulationInertiaStartingRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -9111,8 +9188,8 @@ struct ManipulationInertiaStartingEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationInertiaStartingRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationInertiaStartingRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > ManipulationInertiaStartingEventHandler_box<F>
@@ -9137,7 +9214,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -9154,7 +9231,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -9170,10 +9247,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationInertiaStartingRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl ManipulationInertiaStartingRoutedEventArgs {
@@ -9196,9 +9273,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn Container(&self) -> ::windows::runtime::Result<super::UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElement>(result__)
@@ -9208,9 +9285,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn ExpansionBehavior(&self) -> ::windows::runtime::Result<InertiaExpansionBehavior> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InertiaExpansionBehavior>(result__)
@@ -9227,7 +9304,7 @@ impl ManipulationInertiaStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9237,9 +9314,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn RotationBehavior(&self) -> ::windows::runtime::Result<InertiaRotationBehavior> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InertiaRotationBehavior>(result__)
@@ -9256,7 +9333,7 @@ impl ManipulationInertiaStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9266,9 +9343,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn TranslationBehavior(&self) -> ::windows::runtime::Result<InertiaTranslationBehavior> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InertiaTranslationBehavior>(result__)
@@ -9285,7 +9362,7 @@ impl ManipulationInertiaStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9295,9 +9372,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -9308,7 +9385,7 @@ impl ManipulationInertiaStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9321,9 +9398,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -9334,9 +9411,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn Delta(&self) -> ::windows::runtime::Result<super::super::Input::ManipulationDelta> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationDelta = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationDelta = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationDelta>(result__)
@@ -9347,9 +9424,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn Cumulative(&self) -> ::windows::runtime::Result<super::super::Input::ManipulationDelta> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationDelta = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationDelta = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationDelta>(result__)
@@ -9362,9 +9439,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::ManipulationVelocities> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationVelocities = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationVelocities = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationVelocities>(result__)
@@ -9374,9 +9451,9 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -9398,14 +9475,14 @@ unsafe impl ::windows::runtime::Interface for ManipulationInertiaStartingRoutedE
 impl ::windows::runtime::RuntimeName for ManipulationInertiaStartingRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs";
 }
-impl ::std::convert::From<ManipulationInertiaStartingRoutedEventArgs>
+impl ::core::convert::From<ManipulationInertiaStartingRoutedEventArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: ManipulationInertiaStartingRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ManipulationInertiaStartingRoutedEventArgs>
+impl ::core::convert::From<&ManipulationInertiaStartingRoutedEventArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &ManipulationInertiaStartingRoutedEventArgs) -> Self {
@@ -9426,14 +9503,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ManipulationInertiaStartingRoutedEventArgs>
+impl ::core::convert::From<ManipulationInertiaStartingRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: ManipulationInertiaStartingRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ManipulationInertiaStartingRoutedEventArgs>
+impl ::core::convert::From<&ManipulationInertiaStartingRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &ManipulationInertiaStartingRoutedEventArgs) -> Self {
@@ -9454,12 +9531,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ManipulationInertiaStartingRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<ManipulationInertiaStartingRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: ManipulationInertiaStartingRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&ManipulationInertiaStartingRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&ManipulationInertiaStartingRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &ManipulationInertiaStartingRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -9468,28 +9545,30 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for ManipulationInertiaStartingRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &ManipulationInertiaStartingRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ManipulationInertiaStartingRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for ManipulationInertiaStartingRoutedEventArgs {}
+unsafe impl ::core::marker::Send for ManipulationInertiaStartingRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for ManipulationInertiaStartingRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct ManipulationModes(pub u32);
@@ -9507,7 +9586,7 @@ impl ManipulationModes {
     pub const All: ManipulationModes = ManipulationModes(65535u32);
     pub const System: ManipulationModes = ManipulationModes(65536u32);
 }
-impl ::std::convert::From<u32> for ManipulationModes {
+impl ::core::convert::From<u32> for ManipulationModes {
     fn from(value: u32) -> Self {
         Self(value)
     }
@@ -9523,29 +9602,29 @@ unsafe impl ::windows::runtime::RuntimeType for ManipulationModes {
 impl ::windows::runtime::DefaultType for ManipulationModes {
     type DefaultType = Self;
 }
-impl ::std::ops::BitOr for ManipulationModes {
+impl ::core::ops::BitOr for ManipulationModes {
     type Output = Self;
     fn bitor(self, rhs: Self) -> Self {
         Self(self.0 | rhs.0)
     }
 }
-impl ::std::ops::BitAnd for ManipulationModes {
+impl ::core::ops::BitAnd for ManipulationModes {
     type Output = Self;
     fn bitand(self, rhs: Self) -> Self {
         Self(self.0 & rhs.0)
     }
 }
-impl ::std::ops::BitOrAssign for ManipulationModes {
+impl ::core::ops::BitOrAssign for ManipulationModes {
     fn bitor_assign(&mut self, rhs: Self) {
         self.0.bitor_assign(rhs.0)
     }
 }
-impl ::std::ops::BitAndAssign for ManipulationModes {
+impl ::core::ops::BitAndAssign for ManipulationModes {
     fn bitand_assign(&mut self, rhs: Self) {
         self.0.bitand_assign(rhs.0)
     }
 }
-impl ::std::ops::Not for ManipulationModes {
+impl ::core::ops::Not for ManipulationModes {
     type Output = Self;
     fn not(self) -> Self {
         Self(self.0.not())
@@ -9554,10 +9633,10 @@ impl ::std::ops::Not for ManipulationModes {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationPivot(pub ::windows::runtime::IInspectable);
 impl ManipulationPivot {
@@ -9580,9 +9659,9 @@ impl ManipulationPivot {
     pub fn Center(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -9599,7 +9678,7 @@ impl ManipulationPivot {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9609,9 +9688,9 @@ impl ManipulationPivot {
     pub fn Radius(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -9621,8 +9700,11 @@ impl ManipulationPivot {
     pub fn SetRadius(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -9634,9 +9716,9 @@ impl ManipulationPivot {
         radius: f64,
     ) -> ::windows::runtime::Result<ManipulationPivot> {
         Self::IManipulationPivotFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 center.into_param().abi(),
                 radius,
                 &mut result__,
@@ -9674,12 +9756,12 @@ unsafe impl ::windows::runtime::Interface for ManipulationPivot {
 impl ::windows::runtime::RuntimeName for ManipulationPivot {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ManipulationPivot";
 }
-impl ::std::convert::From<ManipulationPivot> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ManipulationPivot> for ::windows::runtime::IUnknown {
     fn from(value: ManipulationPivot) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ManipulationPivot> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ManipulationPivot> for ::windows::runtime::IUnknown {
     fn from(value: &ManipulationPivot) -> Self {
         value.0 .0.clone()
     }
@@ -9694,12 +9776,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ManipulationPivot> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ManipulationPivot> for ::windows::runtime::IInspectable {
     fn from(value: ManipulationPivot) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ManipulationPivot> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ManipulationPivot> for ::windows::runtime::IInspectable {
     fn from(value: &ManipulationPivot) -> Self {
         value.0.clone()
     }
@@ -9716,22 +9798,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ManipulationPivot {}
-unsafe impl ::std::marker::Sync for ManipulationPivot {}
+unsafe impl ::core::marker::Send for ManipulationPivot {}
+unsafe impl ::core::marker::Sync for ManipulationPivot {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationStartedEventHandler(::windows::runtime::IUnknown);
 impl ManipulationStartedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationStartedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationStartedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -9742,7 +9824,7 @@ impl ManipulationStartedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -9757,7 +9839,7 @@ impl ManipulationStartedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -9798,8 +9880,8 @@ pub struct ManipulationStartedEventHandler_abi(
 #[repr(C)]
 struct ManipulationStartedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<ManipulationStartedRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<ManipulationStartedRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -9809,8 +9891,8 @@ struct ManipulationStartedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationStartedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationStartedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > ManipulationStartedEventHandler_box<F>
@@ -9834,7 +9916,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -9851,7 +9933,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -9867,10 +9949,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationStartedRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl ManipulationStartedRoutedEventArgs {
@@ -9878,9 +9960,9 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn Container(&self) -> ::windows::runtime::Result<super::UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElement>(result__)
@@ -9890,9 +9972,9 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn Position(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -9902,9 +9984,9 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -9914,8 +9996,11 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Input")]
@@ -9925,9 +10010,9 @@ impl ManipulationStartedRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -9938,9 +10023,9 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn Cumulative(&self) -> ::windows::runtime::Result<super::super::Input::ManipulationDelta> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::ManipulationDelta = ::std::mem::zeroed();
+            let mut result__: super::super::Input::ManipulationDelta = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::ManipulationDelta>(result__)
@@ -9950,17 +10035,18 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn Complete(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).12)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).12)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn new() -> ::windows::runtime::Result<ManipulationStartedRoutedEventArgs> {
         Self::IManipulationStartedRoutedEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<ManipulationStartedRoutedEventArgs>(result__)
@@ -9970,9 +10056,9 @@ impl ManipulationStartedRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -10006,12 +10092,12 @@ unsafe impl ::windows::runtime::Interface for ManipulationStartedRoutedEventArgs
 impl ::windows::runtime::RuntimeName for ManipulationStartedRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs";
 }
-impl ::std::convert::From<ManipulationStartedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ManipulationStartedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ManipulationStartedRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ManipulationStartedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ManipulationStartedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ManipulationStartedRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -10030,12 +10116,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ManipulationStartedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ManipulationStartedRoutedEventArgs>
+    for ::windows::runtime::IInspectable
+{
     fn from(value: ManipulationStartedRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ManipulationStartedRoutedEventArgs>
+impl ::core::convert::From<&ManipulationStartedRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &ManipulationStartedRoutedEventArgs) -> Self {
@@ -10056,12 +10144,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ManipulationStartedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<ManipulationStartedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: ManipulationStartedRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&ManipulationStartedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&ManipulationStartedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &ManipulationStartedRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -10070,34 +10158,36 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for ManipulationStartedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &ManipulationStartedRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ManipulationStartedRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for ManipulationStartedRoutedEventArgs {}
+unsafe impl ::core::marker::Send for ManipulationStartedRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for ManipulationStartedRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationStartingEventHandler(::windows::runtime::IUnknown);
 impl ManipulationStartingEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationStartingRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationStartingRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -10108,7 +10198,7 @@ impl ManipulationStartingEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -10123,7 +10213,7 @@ impl ManipulationStartingEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -10164,8 +10254,8 @@ pub struct ManipulationStartingEventHandler_abi(
 #[repr(C)]
 struct ManipulationStartingEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<ManipulationStartingRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<ManipulationStartingRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -10175,8 +10265,8 @@ struct ManipulationStartingEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<ManipulationStartingRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<ManipulationStartingRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > ManipulationStartingEventHandler_box<F>
@@ -10200,7 +10290,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -10217,7 +10307,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -10233,10 +10323,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ManipulationStartingRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl ManipulationStartingRoutedEventArgs {
@@ -10259,9 +10349,9 @@ impl ManipulationStartingRoutedEventArgs {
     pub fn Mode(&self) -> ::windows::runtime::Result<ManipulationModes> {
         let this = self;
         unsafe {
-            let mut result__: ManipulationModes = ::std::mem::zeroed();
+            let mut result__: ManipulationModes = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ManipulationModes>(result__)
@@ -10271,17 +10361,20 @@ impl ManipulationStartingRoutedEventArgs {
     pub fn SetMode(&self, value: ManipulationModes) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Container(&self) -> ::windows::runtime::Result<super::UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElement>(result__)
@@ -10295,7 +10388,7 @@ impl ManipulationStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10305,9 +10398,9 @@ impl ManipulationStartingRoutedEventArgs {
     pub fn Pivot(&self) -> ::windows::runtime::Result<ManipulationPivot> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ManipulationPivot>(result__)
@@ -10321,7 +10414,7 @@ impl ManipulationStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10331,9 +10424,9 @@ impl ManipulationStartingRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10344,7 +10437,7 @@ impl ManipulationStartingRoutedEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10354,9 +10447,9 @@ impl ManipulationStartingRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -10378,12 +10471,12 @@ unsafe impl ::windows::runtime::Interface for ManipulationStartingRoutedEventArg
 impl ::windows::runtime::RuntimeName for ManipulationStartingRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs";
 }
-impl ::std::convert::From<ManipulationStartingRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ManipulationStartingRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ManipulationStartingRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ManipulationStartingRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ManipulationStartingRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ManipulationStartingRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -10402,14 +10495,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ManipulationStartingRoutedEventArgs>
+impl ::core::convert::From<ManipulationStartingRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: ManipulationStartingRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ManipulationStartingRoutedEventArgs>
+impl ::core::convert::From<&ManipulationStartingRoutedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &ManipulationStartingRoutedEventArgs) -> Self {
@@ -10430,12 +10523,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ManipulationStartingRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<ManipulationStartingRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: ManipulationStartingRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&ManipulationStartingRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&ManipulationStartingRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &ManipulationStartingRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -10444,27 +10537,29 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for ManipulationStartingRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &ManipulationStartingRoutedEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ManipulationStartingRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for ManipulationStartingRoutedEventArgs {}
+unsafe impl ::core::marker::Send for ManipulationStartingRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for ManipulationStartingRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NoFocusCandidateFoundEventArgs(pub ::windows::runtime::IInspectable);
 impl NoFocusCandidateFoundEventArgs {
@@ -10472,9 +10567,9 @@ impl NoFocusCandidateFoundEventArgs {
     pub fn Direction(&self) -> ::windows::runtime::Result<FocusNavigationDirection> {
         let this = self;
         unsafe {
-            let mut result__: FocusNavigationDirection = ::std::mem::zeroed();
+            let mut result__: FocusNavigationDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FocusNavigationDirection>(result__)
@@ -10484,9 +10579,9 @@ impl NoFocusCandidateFoundEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10496,17 +10591,20 @@ impl NoFocusCandidateFoundEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn InputDevice(&self) -> ::windows::runtime::Result<FocusInputDeviceKind> {
         let this = self;
         unsafe {
-            let mut result__: FocusInputDeviceKind = ::std::mem::zeroed();
+            let mut result__: FocusInputDeviceKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FocusInputDeviceKind>(result__)
@@ -10516,9 +10614,9 @@ impl NoFocusCandidateFoundEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -10540,12 +10638,12 @@ unsafe impl ::windows::runtime::Interface for NoFocusCandidateFoundEventArgs {
 impl ::windows::runtime::RuntimeName for NoFocusCandidateFoundEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs";
 }
-impl ::std::convert::From<NoFocusCandidateFoundEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<NoFocusCandidateFoundEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: NoFocusCandidateFoundEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&NoFocusCandidateFoundEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&NoFocusCandidateFoundEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &NoFocusCandidateFoundEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -10564,12 +10662,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<NoFocusCandidateFoundEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<NoFocusCandidateFoundEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: NoFocusCandidateFoundEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&NoFocusCandidateFoundEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&NoFocusCandidateFoundEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &NoFocusCandidateFoundEventArgs) -> Self {
         value.0.clone()
     }
@@ -10588,12 +10686,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<NoFocusCandidateFoundEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<NoFocusCandidateFoundEventArgs> for super::RoutedEventArgs {
     fn from(value: NoFocusCandidateFoundEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&NoFocusCandidateFoundEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&NoFocusCandidateFoundEventArgs> for super::RoutedEventArgs {
     fn from(value: &NoFocusCandidateFoundEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -10602,27 +10700,29 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for NoFocusCandidateFoundEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs>
     for &NoFocusCandidateFoundEventArgs
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for NoFocusCandidateFoundEventArgs {}
-unsafe impl ::std::marker::Sync for NoFocusCandidateFoundEventArgs {}
+unsafe impl ::core::marker::Send for NoFocusCandidateFoundEventArgs {}
+unsafe impl ::core::marker::Sync for NoFocusCandidateFoundEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Pointer(pub ::windows::runtime::IInspectable);
 impl Pointer {
@@ -10630,9 +10730,9 @@ impl Pointer {
     pub fn PointerId(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -10645,9 +10745,9 @@ impl Pointer {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -10657,9 +10757,9 @@ impl Pointer {
     pub fn IsInContact(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10669,9 +10769,9 @@ impl Pointer {
     pub fn IsInRange(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10695,12 +10795,12 @@ unsafe impl ::windows::runtime::Interface for Pointer {
 impl ::windows::runtime::RuntimeName for Pointer {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.Pointer";
 }
-impl ::std::convert::From<Pointer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Pointer> for ::windows::runtime::IUnknown {
     fn from(value: Pointer) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Pointer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Pointer> for ::windows::runtime::IUnknown {
     fn from(value: &Pointer) -> Self {
         value.0 .0.clone()
     }
@@ -10715,12 +10815,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Pointer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Pointer> for ::windows::runtime::IInspectable {
     fn from(value: Pointer) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Pointer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Pointer> for ::windows::runtime::IInspectable {
     fn from(value: &Pointer) -> Self {
         value.0.clone()
     }
@@ -10735,22 +10835,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for Pointer {}
-unsafe impl ::std::marker::Sync for Pointer {}
+unsafe impl ::core::marker::Send for Pointer {}
+unsafe impl ::core::marker::Sync for Pointer {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PointerEventHandler(::windows::runtime::IUnknown);
 impl PointerEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<PointerRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<PointerRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -10761,7 +10861,7 @@ impl PointerEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -10776,7 +10876,7 @@ impl PointerEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -10817,8 +10917,8 @@ pub struct PointerEventHandler_abi(
 #[repr(C)]
 struct PointerEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<PointerRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<PointerRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -10828,8 +10928,8 @@ struct PointerEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<PointerRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<PointerRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > PointerEventHandler_box<F>
@@ -10852,7 +10952,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -10869,7 +10969,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -10885,10 +10985,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PointerRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl PointerRoutedEventArgs {
@@ -10896,9 +10996,9 @@ impl PointerRoutedEventArgs {
     pub fn Pointer(&self) -> ::windows::runtime::Result<Pointer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Pointer>(result__)
@@ -10910,9 +11010,9 @@ impl PointerRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::System::VirtualKeyModifiers> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKeyModifiers = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKeyModifiers = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKeyModifiers>(result__)
@@ -10922,9 +11022,9 @@ impl PointerRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10934,17 +11034,20 @@ impl PointerRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn IsGenerated(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10958,9 +11061,9 @@ impl PointerRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerPoint> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 &mut result__,
             )
@@ -10980,9 +11083,9 @@ impl PointerRoutedEventArgs {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 &mut result__,
             )
@@ -10995,9 +11098,9 @@ impl PointerRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -11019,12 +11122,12 @@ unsafe impl ::windows::runtime::Interface for PointerRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for PointerRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.PointerRoutedEventArgs";
 }
-impl ::std::convert::From<PointerRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PointerRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: PointerRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PointerRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PointerRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &PointerRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -11043,12 +11146,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PointerRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PointerRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: PointerRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PointerRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PointerRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &PointerRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -11067,37 +11170,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PointerRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<PointerRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: PointerRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&PointerRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&PointerRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &PointerRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for PointerRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &PointerRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PointerRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for PointerRoutedEventArgs {}
+unsafe impl ::core::marker::Send for PointerRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for PointerRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ProcessKeyboardAcceleratorEventArgs(pub ::windows::runtime::IInspectable);
 impl ProcessKeyboardAcceleratorEventArgs {
@@ -11105,9 +11210,9 @@ impl ProcessKeyboardAcceleratorEventArgs {
     pub fn Key(&self) -> ::windows::runtime::Result<::windows::System::VirtualKey> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKey = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKey = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKey>(result__)
@@ -11117,9 +11222,9 @@ impl ProcessKeyboardAcceleratorEventArgs {
     pub fn Modifiers(&self) -> ::windows::runtime::Result<::windows::System::VirtualKeyModifiers> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::System::VirtualKeyModifiers = ::std::mem::zeroed();
+            let mut result__: ::windows::System::VirtualKeyModifiers = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::System::VirtualKeyModifiers>(result__)
@@ -11129,9 +11234,9 @@ impl ProcessKeyboardAcceleratorEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -11141,8 +11246,11 @@ impl ProcessKeyboardAcceleratorEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -11161,12 +11269,12 @@ unsafe impl ::windows::runtime::Interface for ProcessKeyboardAcceleratorEventArg
 impl ::windows::runtime::RuntimeName for ProcessKeyboardAcceleratorEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs";
 }
-impl ::std::convert::From<ProcessKeyboardAcceleratorEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ProcessKeyboardAcceleratorEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ProcessKeyboardAcceleratorEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ProcessKeyboardAcceleratorEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ProcessKeyboardAcceleratorEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ProcessKeyboardAcceleratorEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -11185,14 +11293,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ProcessKeyboardAcceleratorEventArgs>
+impl ::core::convert::From<ProcessKeyboardAcceleratorEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: ProcessKeyboardAcceleratorEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ProcessKeyboardAcceleratorEventArgs>
+impl ::core::convert::From<&ProcessKeyboardAcceleratorEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &ProcessKeyboardAcceleratorEventArgs) -> Self {
@@ -11213,22 +11321,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ProcessKeyboardAcceleratorEventArgs {}
-unsafe impl ::std::marker::Sync for ProcessKeyboardAcceleratorEventArgs {}
+unsafe impl ::core::marker::Send for ProcessKeyboardAcceleratorEventArgs {}
+unsafe impl ::core::marker::Sync for ProcessKeyboardAcceleratorEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RightTappedEventHandler(::windows::runtime::IUnknown);
 impl RightTappedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<RightTappedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<RightTappedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -11239,7 +11347,7 @@ impl RightTappedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -11254,7 +11362,7 @@ impl RightTappedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -11295,8 +11403,8 @@ pub struct RightTappedEventHandler_abi(
 #[repr(C)]
 struct RightTappedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<RightTappedRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<RightTappedRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -11306,8 +11414,8 @@ struct RightTappedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<RightTappedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<RightTappedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > RightTappedEventHandler_box<F>
@@ -11330,7 +11438,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -11347,7 +11455,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -11363,10 +11471,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RightTappedRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl RightTappedRoutedEventArgs {
@@ -11392,9 +11500,9 @@ impl RightTappedRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -11404,9 +11512,9 @@ impl RightTappedRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -11416,8 +11524,11 @@ impl RightTappedRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -11427,9 +11538,9 @@ impl RightTappedRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 &mut result__,
             )
@@ -11440,9 +11551,9 @@ impl RightTappedRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -11464,12 +11575,12 @@ unsafe impl ::windows::runtime::Interface for RightTappedRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for RightTappedRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs";
 }
-impl ::std::convert::From<RightTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RightTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: RightTappedRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RightTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RightTappedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &RightTappedRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -11488,12 +11599,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RightTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RightTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: RightTappedRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RightTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RightTappedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &RightTappedRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -11512,37 +11623,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<RightTappedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<RightTappedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: RightTappedRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&RightTappedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&RightTappedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &RightTappedRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for RightTappedRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &RightTappedRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for RightTappedRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for RightTappedRoutedEventArgs {}
+unsafe impl ::core::marker::Send for RightTappedRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for RightTappedRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct StandardUICommand(pub ::windows::runtime::IInspectable);
 impl StandardUICommand {
@@ -11550,9 +11663,9 @@ impl StandardUICommand {
     pub fn Kind(&self) -> ::windows::runtime::Result<StandardUICommandKind> {
         let this = self;
         unsafe {
-            let mut result__: StandardUICommandKind = ::std::mem::zeroed();
+            let mut result__: StandardUICommandKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<StandardUICommandKind>(result__)
@@ -11562,16 +11675,19 @@ impl StandardUICommand {
     pub fn SetKind(&self, value: StandardUICommandKind) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn KindProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IStandardUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -11580,11 +11696,12 @@ impl StandardUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn new() -> ::windows::runtime::Result<StandardUICommand> {
         Self::IStandardUICommandFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<StandardUICommand>(result__)
@@ -11595,12 +11712,13 @@ impl StandardUICommand {
         kind: StandardUICommandKind,
     ) -> ::windows::runtime::Result<StandardUICommand> {
         Self::IStandardUICommandFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 kind,
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<StandardUICommand>(result__)
@@ -11613,9 +11731,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -11635,7 +11753,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -11650,7 +11768,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -11666,9 +11784,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -11685,9 +11803,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -11706,9 +11824,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -11728,7 +11846,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -11739,9 +11857,9 @@ impl StandardUICommand {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -11754,9 +11872,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -11775,9 +11893,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -11795,7 +11913,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11811,9 +11929,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 parameter.into_param().abi(),
                 &mut result__,
             )
@@ -11831,7 +11949,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 parameter.into_param().abi(),
             )
             .ok()
@@ -11841,10 +11959,10 @@ impl StandardUICommand {
     pub fn Label(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -11858,7 +11976,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11869,9 +11987,9 @@ impl StandardUICommand {
     pub fn IconSource(&self) -> ::windows::runtime::Result<super::Controls::IconSource> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Controls::IconSource>(result__)
@@ -11889,7 +12007,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11902,9 +12020,9 @@ impl StandardUICommand {
     {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<KeyboardAccelerator>>(result__)
@@ -11914,10 +12032,10 @@ impl StandardUICommand {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -11934,7 +12052,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11944,10 +12062,10 @@ impl StandardUICommand {
     pub fn Description(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -11964,7 +12082,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11974,9 +12092,9 @@ impl StandardUICommand {
     pub fn Command(&self) -> ::windows::runtime::Result<ICommand> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ICommand>(result__)
@@ -11990,7 +12108,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12009,9 +12127,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -12029,7 +12147,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -12048,9 +12166,9 @@ impl StandardUICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -12068,7 +12186,7 @@ impl StandardUICommand {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -12078,7 +12196,7 @@ impl StandardUICommand {
     pub fn NotifyCanExecuteChanged(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IXamlUICommand>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).21)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).21)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn IStandardUICommandStatics<
@@ -12123,12 +12241,12 @@ unsafe impl ::windows::runtime::Interface for StandardUICommand {
 impl ::windows::runtime::RuntimeName for StandardUICommand {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.StandardUICommand";
 }
-impl ::std::convert::From<StandardUICommand> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<StandardUICommand> for ::windows::runtime::IUnknown {
     fn from(value: StandardUICommand) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&StandardUICommand> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&StandardUICommand> for ::windows::runtime::IUnknown {
     fn from(value: &StandardUICommand) -> Self {
         value.0 .0.clone()
     }
@@ -12143,12 +12261,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<StandardUICommand> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<StandardUICommand> for ::windows::runtime::IInspectable {
     fn from(value: StandardUICommand) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&StandardUICommand> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&StandardUICommand> for ::windows::runtime::IInspectable {
     fn from(value: &StandardUICommand) -> Self {
         value.0.clone()
     }
@@ -12165,13 +12283,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<StandardUICommand> for ICommand {
+impl ::core::convert::TryFrom<StandardUICommand> for ICommand {
     type Error = ::windows::runtime::Error;
     fn try_from(value: StandardUICommand) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&StandardUICommand> for ICommand {
+impl ::core::convert::TryFrom<&StandardUICommand> for ICommand {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &StandardUICommand) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -12184,67 +12302,67 @@ impl<'a> ::windows::runtime::IntoParam<'a, ICommand> for StandardUICommand {
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ICommand> for &StandardUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, ICommand> {
-        ::std::convert::TryInto::<ICommand>::try_into(self)
+        ::core::convert::TryInto::<ICommand>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<StandardUICommand> for XamlUICommand {
+impl ::core::convert::From<StandardUICommand> for XamlUICommand {
     fn from(value: StandardUICommand) -> Self {
-        ::std::convert::Into::<XamlUICommand>::into(&value)
+        ::core::convert::Into::<XamlUICommand>::into(&value)
     }
 }
-impl ::std::convert::From<&StandardUICommand> for XamlUICommand {
+impl ::core::convert::From<&StandardUICommand> for XamlUICommand {
     fn from(value: &StandardUICommand) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, XamlUICommand> for StandardUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, XamlUICommand> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<XamlUICommand>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<XamlUICommand>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, XamlUICommand> for &StandardUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, XamlUICommand> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<XamlUICommand>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<XamlUICommand>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<StandardUICommand> for super::DependencyObject {
+impl ::core::convert::From<StandardUICommand> for super::DependencyObject {
     fn from(value: StandardUICommand) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&StandardUICommand> for super::DependencyObject {
+impl ::core::convert::From<&StandardUICommand> for super::DependencyObject {
     fn from(value: &StandardUICommand) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for StandardUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &StandardUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for StandardUICommand {}
-unsafe impl ::std::marker::Sync for StandardUICommand {}
+unsafe impl ::core::marker::Send for StandardUICommand {}
+unsafe impl ::core::marker::Sync for StandardUICommand {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct StandardUICommandKind(pub i32);
@@ -12267,7 +12385,7 @@ impl StandardUICommandKind {
     pub const Undo: StandardUICommandKind = StandardUICommandKind(15i32);
     pub const Redo: StandardUICommandKind = StandardUICommandKind(16i32);
 }
-impl ::std::convert::From<i32> for StandardUICommandKind {
+impl ::core::convert::From<i32> for StandardUICommandKind {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -12286,17 +12404,17 @@ impl ::windows::runtime::DefaultType for StandardUICommandKind {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TappedEventHandler(::windows::runtime::IUnknown);
 impl TappedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<TappedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<TappedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -12307,7 +12425,7 @@ impl TappedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn Invoke<
@@ -12322,7 +12440,7 @@ impl TappedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -12363,8 +12481,8 @@ pub struct TappedEventHandler_abi(
 #[repr(C)]
 struct TappedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<TappedRoutedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<TappedRoutedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -12374,8 +12492,8 @@ struct TappedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<TappedRoutedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<TappedRoutedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > TappedEventHandler_box<F>
@@ -12398,7 +12516,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -12415,7 +12533,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -12431,10 +12549,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TappedRoutedEventArgs(pub ::windows::runtime::IInspectable);
 impl TappedRoutedEventArgs {
@@ -12460,9 +12578,9 @@ impl TappedRoutedEventArgs {
     ) -> ::windows::runtime::Result<super::super::Input::PointerDeviceType> {
         let this = self;
         unsafe {
-            let mut result__: super::super::Input::PointerDeviceType = ::std::mem::zeroed();
+            let mut result__: super::super::Input::PointerDeviceType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::PointerDeviceType>(result__)
@@ -12472,9 +12590,9 @@ impl TappedRoutedEventArgs {
     pub fn Handled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -12484,8 +12602,11 @@ impl TappedRoutedEventArgs {
     pub fn SetHandled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -12495,9 +12616,9 @@ impl TappedRoutedEventArgs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 relativeto.into_param().abi(),
                 &mut result__,
             )
@@ -12508,9 +12629,9 @@ impl TappedRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -12534,12 +12655,12 @@ unsafe impl ::windows::runtime::Interface for TappedRoutedEventArgs {
 impl ::windows::runtime::RuntimeName for TappedRoutedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.TappedRoutedEventArgs";
 }
-impl ::std::convert::From<TappedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TappedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: TappedRoutedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TappedRoutedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TappedRoutedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &TappedRoutedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -12556,12 +12677,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TappedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TappedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: TappedRoutedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TappedRoutedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TappedRoutedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &TappedRoutedEventArgs) -> Self {
         value.0.clone()
     }
@@ -12580,38 +12701,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<TappedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<TappedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: TappedRoutedEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&TappedRoutedEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&TappedRoutedEventArgs> for super::RoutedEventArgs {
     fn from(value: &TappedRoutedEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for TappedRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &TappedRoutedEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for TappedRoutedEventArgs {}
-unsafe impl ::std::marker::Sync for TappedRoutedEventArgs {}
+unsafe impl ::core::marker::Send for TappedRoutedEventArgs {}
+unsafe impl ::core::marker::Sync for TappedRoutedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct XYFocusKeyboardNavigationMode(pub i32);
@@ -12620,7 +12743,7 @@ impl XYFocusKeyboardNavigationMode {
     pub const Enabled: XYFocusKeyboardNavigationMode = XYFocusKeyboardNavigationMode(1i32);
     pub const Disabled: XYFocusKeyboardNavigationMode = XYFocusKeyboardNavigationMode(2i32);
 }
-impl ::std::convert::From<i32> for XYFocusKeyboardNavigationMode {
+impl ::core::convert::From<i32> for XYFocusKeyboardNavigationMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -12638,12 +12761,12 @@ impl ::windows::runtime::DefaultType for XYFocusKeyboardNavigationMode {
 }
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct XYFocusNavigationStrategy(pub i32);
@@ -12654,7 +12777,7 @@ impl XYFocusNavigationStrategy {
         XYFocusNavigationStrategy(2i32);
     pub const RectilinearDistance: XYFocusNavigationStrategy = XYFocusNavigationStrategy(3i32);
 }
-impl ::std::convert::From<i32> for XYFocusNavigationStrategy {
+impl ::core::convert::From<i32> for XYFocusNavigationStrategy {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -12672,12 +12795,12 @@ impl ::windows::runtime::DefaultType for XYFocusNavigationStrategy {
 }
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct XYFocusNavigationStrategyOverride(pub i32);
@@ -12691,7 +12814,7 @@ impl XYFocusNavigationStrategyOverride {
     pub const RectilinearDistance: XYFocusNavigationStrategyOverride =
         XYFocusNavigationStrategyOverride(4i32);
 }
-impl ::std::convert::From<i32> for XYFocusNavigationStrategyOverride {
+impl ::core::convert::From<i32> for XYFocusNavigationStrategyOverride {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -12710,10 +12833,10 @@ impl ::windows::runtime::DefaultType for XYFocusNavigationStrategyOverride {
 #[doc = "*Required features: `UI_Xaml_Input`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct XamlUICommand(pub ::windows::runtime::IInspectable);
 impl XamlUICommand {
@@ -12721,10 +12844,10 @@ impl XamlUICommand {
     pub fn Label(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -12738,7 +12861,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12749,9 +12872,9 @@ impl XamlUICommand {
     pub fn IconSource(&self) -> ::windows::runtime::Result<super::Controls::IconSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Controls::IconSource>(result__)
@@ -12769,7 +12892,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12782,9 +12905,9 @@ impl XamlUICommand {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<KeyboardAccelerator>>(result__)
@@ -12794,10 +12917,10 @@ impl XamlUICommand {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -12814,7 +12937,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12824,10 +12947,10 @@ impl XamlUICommand {
     pub fn Description(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -12844,7 +12967,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12854,9 +12977,9 @@ impl XamlUICommand {
     pub fn Command(&self) -> ::windows::runtime::Result<ICommand> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ICommand>(result__)
@@ -12870,7 +12993,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12889,9 +13012,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -12909,7 +13032,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -12928,9 +13051,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -12948,7 +13071,7 @@ impl XamlUICommand {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -12958,7 +13081,7 @@ impl XamlUICommand {
     pub fn NotifyCanExecuteChanged(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).21)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).21)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Input`*"]
@@ -12974,9 +13097,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -12994,7 +13117,7 @@ impl XamlUICommand {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13010,9 +13133,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 parameter.into_param().abi(),
                 &mut result__,
             )
@@ -13030,7 +13153,7 @@ impl XamlUICommand {
         let this = &::windows::runtime::Interface::cast::<ICommand>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 parameter.into_param().abi(),
             )
             .ok()
@@ -13039,9 +13162,9 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn LabelProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -13050,9 +13173,9 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn IconSourceProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -13061,9 +13184,9 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn KeyboardAcceleratorsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -13072,9 +13195,9 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn AccessKeyProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -13083,9 +13206,9 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn DescriptionProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -13094,9 +13217,9 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn CommandProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlUICommandStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -13105,11 +13228,12 @@ impl XamlUICommand {
     #[doc = "*Required features: `UI_Xaml_Input`*"]
     pub fn new() -> ::windows::runtime::Result<XamlUICommand> {
         Self::IXamlUICommandFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<XamlUICommand>(result__)
@@ -13122,9 +13246,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -13144,7 +13268,7 @@ impl XamlUICommand {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -13159,7 +13283,7 @@ impl XamlUICommand {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -13175,9 +13299,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -13194,9 +13318,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -13215,9 +13339,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -13237,7 +13361,7 @@ impl XamlUICommand {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -13248,9 +13372,9 @@ impl XamlUICommand {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -13263,9 +13387,9 @@ impl XamlUICommand {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -13309,12 +13433,12 @@ unsafe impl ::windows::runtime::Interface for XamlUICommand {
 impl ::windows::runtime::RuntimeName for XamlUICommand {
     const NAME: &'static str = "Microsoft.UI.Xaml.Input.XamlUICommand";
 }
-impl ::std::convert::From<XamlUICommand> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<XamlUICommand> for ::windows::runtime::IUnknown {
     fn from(value: XamlUICommand) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&XamlUICommand> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&XamlUICommand> for ::windows::runtime::IUnknown {
     fn from(value: &XamlUICommand) -> Self {
         value.0 .0.clone()
     }
@@ -13329,12 +13453,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<XamlUICommand> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<XamlUICommand> for ::windows::runtime::IInspectable {
     fn from(value: XamlUICommand) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&XamlUICommand> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&XamlUICommand> for ::windows::runtime::IInspectable {
     fn from(value: &XamlUICommand) -> Self {
         value.0.clone()
     }
@@ -13349,13 +13473,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<XamlUICommand> for ICommand {
+impl ::core::convert::TryFrom<XamlUICommand> for ICommand {
     type Error = ::windows::runtime::Error;
     fn try_from(value: XamlUICommand) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&XamlUICommand> for ICommand {
+impl ::core::convert::TryFrom<&XamlUICommand> for ICommand {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &XamlUICommand) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -13368,34 +13492,34 @@ impl<'a> ::windows::runtime::IntoParam<'a, ICommand> for XamlUICommand {
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ICommand> for &XamlUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, ICommand> {
-        ::std::convert::TryInto::<ICommand>::try_into(self)
+        ::core::convert::TryInto::<ICommand>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<XamlUICommand> for super::DependencyObject {
+impl ::core::convert::From<XamlUICommand> for super::DependencyObject {
     fn from(value: XamlUICommand) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&XamlUICommand> for super::DependencyObject {
+impl ::core::convert::From<&XamlUICommand> for super::DependencyObject {
     fn from(value: &XamlUICommand) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for XamlUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &XamlUICommand {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for XamlUICommand {}
-unsafe impl ::std::marker::Sync for XamlUICommand {}
+unsafe impl ::core::marker::Send for XamlUICommand {}
+unsafe impl ::core::marker::Sync for XamlUICommand {}

@@ -15,12 +15,12 @@ pub mod Imaging;
 pub mod Media3D;
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct AcrylicBackgroundSource(pub i32);
@@ -28,7 +28,7 @@ impl AcrylicBackgroundSource {
     pub const HostBackdrop: AcrylicBackgroundSource = AcrylicBackgroundSource(0i32);
     pub const Backdrop: AcrylicBackgroundSource = AcrylicBackgroundSource(1i32);
 }
-impl ::std::convert::From<i32> for AcrylicBackgroundSource {
+impl ::core::convert::From<i32> for AcrylicBackgroundSource {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -47,10 +47,10 @@ impl ::windows::runtime::DefaultType for AcrylicBackgroundSource {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AcrylicBrush(pub ::windows::runtime::IInspectable);
 impl AcrylicBrush {
@@ -58,9 +58,9 @@ impl AcrylicBrush {
     pub fn TintColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -74,7 +74,7 @@ impl AcrylicBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -84,9 +84,9 @@ impl AcrylicBrush {
     pub fn TintOpacity(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -96,8 +96,11 @@ impl AcrylicBrush {
     pub fn SetTintOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -106,9 +109,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
@@ -125,7 +128,7 @@ impl AcrylicBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -135,9 +138,9 @@ impl AcrylicBrush {
     pub fn AlwaysUseFallback(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -148,7 +151,7 @@ impl AcrylicBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -160,9 +163,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<::windows::Foundation::IReference<f64>> {
         let this = &::windows::runtime::Interface::cast::<IAcrylicBrush2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::IReference<f64>>(result__)
@@ -179,7 +182,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<IAcrylicBrush2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -188,9 +191,9 @@ impl AcrylicBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn TintColorProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -199,9 +202,9 @@ impl AcrylicBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn TintOpacityProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -211,9 +214,9 @@ impl AcrylicBrush {
     pub fn TintTransitionDurationProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::IAcrylicBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -222,9 +225,9 @@ impl AcrylicBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AlwaysUseFallbackProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -234,9 +237,9 @@ impl AcrylicBrush {
     pub fn TintLuminosityOpacityProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::IAcrylicBrushStatics2(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -245,11 +248,12 @@ impl AcrylicBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn new() -> ::windows::runtime::Result<AcrylicBrush> {
         Self::IAcrylicBrushFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<AcrylicBrush>(result__)
@@ -271,7 +275,7 @@ impl AcrylicBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -285,9 +289,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -307,7 +311,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -322,7 +326,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -338,9 +342,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -357,9 +361,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -378,9 +382,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -400,7 +404,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -411,9 +415,9 @@ impl AcrylicBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -426,9 +430,9 @@ impl AcrylicBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -438,9 +442,9 @@ impl AcrylicBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -450,17 +454,20 @@ impl AcrylicBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -474,7 +481,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -484,9 +491,9 @@ impl AcrylicBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -500,7 +507,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -510,9 +517,9 @@ impl AcrylicBrush {
     pub fn FallbackColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = &::windows::runtime::Interface::cast::<IXamlCompositionBrushBase>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -526,7 +533,7 @@ impl AcrylicBrush {
         let this = &::windows::runtime::Interface::cast::<IXamlCompositionBrushBase>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -540,9 +547,9 @@ impl AcrylicBrush {
         let this =
             &::windows::runtime::Interface::cast::<IXamlCompositionBrushBaseProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
@@ -561,7 +568,7 @@ impl AcrylicBrush {
             &::windows::runtime::Interface::cast::<IXamlCompositionBrushBaseProtected>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -615,12 +622,12 @@ unsafe impl ::windows::runtime::Interface for AcrylicBrush {
 impl ::windows::runtime::RuntimeName for AcrylicBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.AcrylicBrush";
 }
-impl ::std::convert::From<AcrylicBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AcrylicBrush> for ::windows::runtime::IUnknown {
     fn from(value: AcrylicBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AcrylicBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AcrylicBrush> for ::windows::runtime::IUnknown {
     fn from(value: &AcrylicBrush) -> Self {
         value.0 .0.clone()
     }
@@ -635,12 +642,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AcrylicBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AcrylicBrush> for ::windows::runtime::IInspectable {
     fn from(value: AcrylicBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AcrylicBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AcrylicBrush> for ::windows::runtime::IInspectable {
     fn from(value: &AcrylicBrush) -> Self {
         value.0.clone()
     }
@@ -656,14 +663,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<AcrylicBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<AcrylicBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: AcrylicBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&AcrylicBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&AcrylicBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &AcrylicBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -686,91 +693,91 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<AcrylicBrush> for XamlCompositionBrushBase {
+impl ::core::convert::From<AcrylicBrush> for XamlCompositionBrushBase {
     fn from(value: AcrylicBrush) -> Self {
-        ::std::convert::Into::<XamlCompositionBrushBase>::into(&value)
+        ::core::convert::Into::<XamlCompositionBrushBase>::into(&value)
     }
 }
-impl ::std::convert::From<&AcrylicBrush> for XamlCompositionBrushBase {
+impl ::core::convert::From<&AcrylicBrush> for XamlCompositionBrushBase {
     fn from(value: &AcrylicBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, XamlCompositionBrushBase> for AcrylicBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, XamlCompositionBrushBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<XamlCompositionBrushBase>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<XamlCompositionBrushBase>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, XamlCompositionBrushBase> for &AcrylicBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, XamlCompositionBrushBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<XamlCompositionBrushBase>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<XamlCompositionBrushBase>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<AcrylicBrush> for Brush {
+impl ::core::convert::From<AcrylicBrush> for Brush {
     fn from(value: AcrylicBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&AcrylicBrush> for Brush {
+impl ::core::convert::From<&AcrylicBrush> for Brush {
     fn from(value: &AcrylicBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for AcrylicBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &AcrylicBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<AcrylicBrush> for super::DependencyObject {
+impl ::core::convert::From<AcrylicBrush> for super::DependencyObject {
     fn from(value: AcrylicBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&AcrylicBrush> for super::DependencyObject {
+impl ::core::convert::From<&AcrylicBrush> for super::DependencyObject {
     fn from(value: &AcrylicBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for AcrylicBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &AcrylicBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for AcrylicBrush {}
-unsafe impl ::std::marker::Sync for AcrylicBrush {}
+unsafe impl ::core::marker::Send for AcrylicBrush {}
+unsafe impl ::core::marker::Sync for AcrylicBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct AlignmentX(pub i32);
@@ -779,7 +786,7 @@ impl AlignmentX {
     pub const Center: AlignmentX = AlignmentX(1i32);
     pub const Right: AlignmentX = AlignmentX(2i32);
 }
-impl ::std::convert::From<i32> for AlignmentX {
+impl ::core::convert::From<i32> for AlignmentX {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -796,12 +803,12 @@ impl ::windows::runtime::DefaultType for AlignmentX {
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct AlignmentY(pub i32);
@@ -810,7 +817,7 @@ impl AlignmentY {
     pub const Center: AlignmentY = AlignmentY(1i32);
     pub const Bottom: AlignmentY = AlignmentY(2i32);
 }
-impl ::std::convert::From<i32> for AlignmentY {
+impl ::core::convert::From<i32> for AlignmentY {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -828,10 +835,10 @@ impl ::windows::runtime::DefaultType for AlignmentY {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ArcSegment(pub ::windows::runtime::IInspectable);
 impl ArcSegment {
@@ -854,9 +861,9 @@ impl ArcSegment {
     pub fn Point(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -870,7 +877,7 @@ impl ArcSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -880,9 +887,9 @@ impl ArcSegment {
     pub fn Size(&self) -> ::windows::runtime::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Size>(result__)
@@ -896,7 +903,7 @@ impl ArcSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -906,9 +913,9 @@ impl ArcSegment {
     pub fn RotationAngle(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -919,7 +926,7 @@ impl ArcSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -929,9 +936,9 @@ impl ArcSegment {
     pub fn IsLargeArc(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -942,7 +949,7 @@ impl ArcSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -952,9 +959,9 @@ impl ArcSegment {
     pub fn SweepDirection(&self) -> ::windows::runtime::Result<SweepDirection> {
         let this = self;
         unsafe {
-            let mut result__: SweepDirection = ::std::mem::zeroed();
+            let mut result__: SweepDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SweepDirection>(result__)
@@ -965,7 +972,7 @@ impl ArcSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -974,9 +981,9 @@ impl ArcSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn PointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -985,9 +992,9 @@ impl ArcSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SizeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -996,9 +1003,9 @@ impl ArcSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RotationAngleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1007,9 +1014,9 @@ impl ArcSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn IsLargeArcProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1018,9 +1025,9 @@ impl ArcSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SweepDirectionProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1033,9 +1040,9 @@ impl ArcSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1055,7 +1062,7 @@ impl ArcSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1070,7 +1077,7 @@ impl ArcSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1086,9 +1093,9 @@ impl ArcSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1105,9 +1112,9 @@ impl ArcSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1126,9 +1133,9 @@ impl ArcSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1148,7 +1155,7 @@ impl ArcSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1159,9 +1166,9 @@ impl ArcSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1174,9 +1181,9 @@ impl ArcSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1210,12 +1217,12 @@ unsafe impl ::windows::runtime::Interface for ArcSegment {
 impl ::windows::runtime::RuntimeName for ArcSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.ArcSegment";
 }
-impl ::std::convert::From<ArcSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ArcSegment> for ::windows::runtime::IUnknown {
     fn from(value: ArcSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ArcSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ArcSegment> for ::windows::runtime::IUnknown {
     fn from(value: &ArcSegment) -> Self {
         value.0 .0.clone()
     }
@@ -1230,12 +1237,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ArcSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ArcSegment> for ::windows::runtime::IInspectable {
     fn from(value: ArcSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ArcSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ArcSegment> for ::windows::runtime::IInspectable {
     fn from(value: &ArcSegment) -> Self {
         value.0.clone()
     }
@@ -1250,61 +1257,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ArcSegment> for PathSegment {
+impl ::core::convert::From<ArcSegment> for PathSegment {
     fn from(value: ArcSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&ArcSegment> for PathSegment {
+impl ::core::convert::From<&ArcSegment> for PathSegment {
     fn from(value: &ArcSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for ArcSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &ArcSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ArcSegment> for super::DependencyObject {
+impl ::core::convert::From<ArcSegment> for super::DependencyObject {
     fn from(value: ArcSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ArcSegment> for super::DependencyObject {
+impl ::core::convert::From<&ArcSegment> for super::DependencyObject {
     fn from(value: &ArcSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for ArcSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &ArcSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ArcSegment {}
-unsafe impl ::std::marker::Sync for ArcSegment {}
+unsafe impl ::core::marker::Send for ArcSegment {}
+unsafe impl ::core::marker::Sync for ArcSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BezierSegment(pub ::windows::runtime::IInspectable);
 impl BezierSegment {
@@ -1327,9 +1334,9 @@ impl BezierSegment {
     pub fn Point1(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -1346,7 +1353,7 @@ impl BezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1356,9 +1363,9 @@ impl BezierSegment {
     pub fn Point2(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -1375,7 +1382,7 @@ impl BezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1385,9 +1392,9 @@ impl BezierSegment {
     pub fn Point3(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -1404,7 +1411,7 @@ impl BezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1413,9 +1420,9 @@ impl BezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Point1Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1424,9 +1431,9 @@ impl BezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Point2Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1435,9 +1442,9 @@ impl BezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Point3Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1450,9 +1457,9 @@ impl BezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1472,7 +1479,7 @@ impl BezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1487,7 +1494,7 @@ impl BezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1503,9 +1510,9 @@ impl BezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1522,9 +1529,9 @@ impl BezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1543,9 +1550,9 @@ impl BezierSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1565,7 +1572,7 @@ impl BezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1576,9 +1583,9 @@ impl BezierSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1591,9 +1598,9 @@ impl BezierSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1627,12 +1634,12 @@ unsafe impl ::windows::runtime::Interface for BezierSegment {
 impl ::windows::runtime::RuntimeName for BezierSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.BezierSegment";
 }
-impl ::std::convert::From<BezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: BezierSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: &BezierSegment) -> Self {
         value.0 .0.clone()
     }
@@ -1647,12 +1654,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: BezierSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: &BezierSegment) -> Self {
         value.0.clone()
     }
@@ -1667,61 +1674,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<BezierSegment> for PathSegment {
+impl ::core::convert::From<BezierSegment> for PathSegment {
     fn from(value: BezierSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&BezierSegment> for PathSegment {
+impl ::core::convert::From<&BezierSegment> for PathSegment {
     fn from(value: &BezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for BezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &BezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<BezierSegment> for super::DependencyObject {
+impl ::core::convert::From<BezierSegment> for super::DependencyObject {
     fn from(value: BezierSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&BezierSegment> for super::DependencyObject {
+impl ::core::convert::From<&BezierSegment> for super::DependencyObject {
     fn from(value: &BezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for BezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &BezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for BezierSegment {}
-unsafe impl ::std::marker::Sync for BezierSegment {}
+unsafe impl ::core::marker::Send for BezierSegment {}
+unsafe impl ::core::marker::Sync for BezierSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BitmapCache(pub ::windows::runtime::IInspectable);
 impl BitmapCache {
@@ -1747,9 +1754,9 @@ impl BitmapCache {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1769,7 +1776,7 @@ impl BitmapCache {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1784,7 +1791,7 @@ impl BitmapCache {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1800,9 +1807,9 @@ impl BitmapCache {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1819,9 +1826,9 @@ impl BitmapCache {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1840,9 +1847,9 @@ impl BitmapCache {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1862,7 +1869,7 @@ impl BitmapCache {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1873,9 +1880,9 @@ impl BitmapCache {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1888,9 +1895,9 @@ impl BitmapCache {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1914,12 +1921,12 @@ unsafe impl ::windows::runtime::Interface for BitmapCache {
 impl ::windows::runtime::RuntimeName for BitmapCache {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.BitmapCache";
 }
-impl ::std::convert::From<BitmapCache> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BitmapCache> for ::windows::runtime::IUnknown {
     fn from(value: BitmapCache) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BitmapCache> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BitmapCache> for ::windows::runtime::IUnknown {
     fn from(value: &BitmapCache) -> Self {
         value.0 .0.clone()
     }
@@ -1934,12 +1941,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BitmapCache> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BitmapCache> for ::windows::runtime::IInspectable {
     fn from(value: BitmapCache) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BitmapCache> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BitmapCache> for ::windows::runtime::IInspectable {
     fn from(value: &BitmapCache) -> Self {
         value.0.clone()
     }
@@ -1954,61 +1961,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<BitmapCache> for CacheMode {
+impl ::core::convert::From<BitmapCache> for CacheMode {
     fn from(value: BitmapCache) -> Self {
-        ::std::convert::Into::<CacheMode>::into(&value)
+        ::core::convert::Into::<CacheMode>::into(&value)
     }
 }
-impl ::std::convert::From<&BitmapCache> for CacheMode {
+impl ::core::convert::From<&BitmapCache> for CacheMode {
     fn from(value: &BitmapCache) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, CacheMode> for BitmapCache {
     fn into_param(self) -> ::windows::runtime::Param<'a, CacheMode> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<CacheMode>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<CacheMode>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, CacheMode> for &BitmapCache {
     fn into_param(self) -> ::windows::runtime::Param<'a, CacheMode> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<CacheMode>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<CacheMode>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<BitmapCache> for super::DependencyObject {
+impl ::core::convert::From<BitmapCache> for super::DependencyObject {
     fn from(value: BitmapCache) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&BitmapCache> for super::DependencyObject {
+impl ::core::convert::From<&BitmapCache> for super::DependencyObject {
     fn from(value: &BitmapCache) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for BitmapCache {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &BitmapCache {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for BitmapCache {}
-unsafe impl ::std::marker::Sync for BitmapCache {}
+unsafe impl ::core::marker::Send for BitmapCache {}
+unsafe impl ::core::marker::Sync for BitmapCache {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Brush(pub ::windows::runtime::IInspectable);
 impl Brush {
@@ -2016,9 +2023,9 @@ impl Brush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -2028,17 +2035,20 @@ impl Brush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -2052,7 +2062,7 @@ impl Brush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2062,9 +2072,9 @@ impl Brush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -2078,7 +2088,7 @@ impl Brush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2100,7 +2110,7 @@ impl Brush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -2110,9 +2120,9 @@ impl Brush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn OpacityProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2121,9 +2131,9 @@ impl Brush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn TransformProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2132,9 +2142,9 @@ impl Brush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RelativeTransformProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2147,9 +2157,9 @@ impl Brush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -2169,7 +2179,7 @@ impl Brush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -2184,7 +2194,7 @@ impl Brush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -2200,9 +2210,9 @@ impl Brush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -2219,9 +2229,9 @@ impl Brush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -2240,9 +2250,9 @@ impl Brush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -2262,7 +2272,7 @@ impl Brush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -2273,9 +2283,9 @@ impl Brush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -2288,9 +2298,9 @@ impl Brush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -2321,12 +2331,12 @@ unsafe impl ::windows::runtime::Interface for Brush {
 impl ::windows::runtime::RuntimeName for Brush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.Brush";
 }
-impl ::std::convert::From<Brush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Brush> for ::windows::runtime::IUnknown {
     fn from(value: Brush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Brush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Brush> for ::windows::runtime::IUnknown {
     fn from(value: &Brush) -> Self {
         value.0 .0.clone()
     }
@@ -2341,12 +2351,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Brush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Brush> for ::windows::runtime::IInspectable {
     fn from(value: Brush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Brush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Brush> for ::windows::runtime::IInspectable {
     fn from(value: &Brush) -> Self {
         value.0.clone()
     }
@@ -2362,14 +2372,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<Brush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<Brush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: Brush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&Brush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&Brush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &Brush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -2388,44 +2398,44 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<Brush> for super::DependencyObject {
+impl ::core::convert::From<Brush> for super::DependencyObject {
     fn from(value: Brush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Brush> for super::DependencyObject {
+impl ::core::convert::From<&Brush> for super::DependencyObject {
     fn from(value: &Brush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Brush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Brush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Brush {}
-unsafe impl ::std::marker::Sync for Brush {}
+unsafe impl ::core::marker::Send for Brush {}
+unsafe impl ::core::marker::Sync for Brush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BrushCollection(pub ::windows::runtime::IInspectable);
 impl BrushCollection {
@@ -2448,9 +2458,9 @@ impl BrushCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -2461,9 +2471,9 @@ impl BrushCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -2475,9 +2485,9 @@ impl BrushCollection {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVectorView<Brush>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Brush>>(result__)
@@ -2491,9 +2501,9 @@ impl BrushCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -2510,7 +2520,7 @@ impl BrushCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -2526,7 +2536,7 @@ impl BrushCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -2538,7 +2548,7 @@ impl BrushCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -2552,7 +2562,7 @@ impl BrushCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2562,14 +2572,14 @@ impl BrushCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -2580,12 +2590,12 @@ impl BrushCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -2599,9 +2609,9 @@ impl BrushCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -2614,9 +2624,9 @@ impl BrushCollection {
             ::windows::Foundation::Collections::IIterable<Brush>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<Brush>>(result__)
@@ -2633,12 +2643,12 @@ unsafe impl ::windows::runtime::Interface for BrushCollection {
 impl ::windows::runtime::RuntimeName for BrushCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.BrushCollection";
 }
-impl ::std::convert::From<BrushCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BrushCollection> for ::windows::runtime::IUnknown {
     fn from(value: BrushCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BrushCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BrushCollection> for ::windows::runtime::IUnknown {
     fn from(value: &BrushCollection) -> Self {
         value.0 .0.clone()
     }
@@ -2653,12 +2663,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BrushCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BrushCollection> for ::windows::runtime::IInspectable {
     fn from(value: BrushCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BrushCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BrushCollection> for ::windows::runtime::IInspectable {
     fn from(value: &BrushCollection) -> Self {
         value.0.clone()
     }
@@ -2675,14 +2685,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<BrushCollection> for ::windows::Foundation::Collections::IVector<Brush> {
+impl ::core::convert::From<BrushCollection> for ::windows::Foundation::Collections::IVector<Brush> {
     fn from(value: BrushCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&BrushCollection> for ::windows::Foundation::Collections::IVector<Brush> {
+impl ::core::convert::From<&BrushCollection>
+    for ::windows::Foundation::Collections::IVector<Brush>
+{
     fn from(value: &BrushCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Brush>>
@@ -2691,7 +2703,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Brush>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Brush>>
@@ -2700,18 +2712,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Brush>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<BrushCollection>
+impl ::core::convert::TryFrom<BrushCollection>
     for ::windows::Foundation::Collections::IIterable<Brush>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: BrushCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&BrushCollection>
+impl ::core::convert::TryFrom<&BrushCollection>
     for ::windows::Foundation::Collections::IIterable<Brush>
 {
     type Error = ::windows::runtime::Error;
@@ -2734,41 +2746,41 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<Brush>> {
-        ::std::convert::TryInto::<::windows::Foundation::Collections::IIterable<Brush>>::try_into(
+        ::core::convert::TryInto::<::windows::Foundation::Collections::IIterable<Brush>>::try_into(
             self,
         )
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for BrushCollection {}
-unsafe impl ::std::marker::Sync for BrushCollection {}
+unsafe impl ::core::marker::Send for BrushCollection {}
+unsafe impl ::core::marker::Sync for BrushCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for BrushCollection {
+impl ::core::iter::IntoIterator for BrushCollection {
     type Item = Brush;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &BrushCollection {
+impl ::core::iter::IntoIterator for &BrushCollection {
     type Item = Brush;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct BrushMappingMode(pub i32);
@@ -2776,7 +2788,7 @@ impl BrushMappingMode {
     pub const Absolute: BrushMappingMode = BrushMappingMode(0i32);
     pub const RelativeToBoundingBox: BrushMappingMode = BrushMappingMode(1i32);
 }
-impl ::std::convert::From<i32> for BrushMappingMode {
+impl ::core::convert::From<i32> for BrushMappingMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -2795,10 +2807,10 @@ impl ::windows::runtime::DefaultType for BrushMappingMode {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CacheMode(pub ::windows::runtime::IInspectable);
 impl CacheMode {
@@ -2809,9 +2821,9 @@ impl CacheMode {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -2831,7 +2843,7 @@ impl CacheMode {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -2846,7 +2858,7 @@ impl CacheMode {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -2862,9 +2874,9 @@ impl CacheMode {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -2881,9 +2893,9 @@ impl CacheMode {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -2902,9 +2914,9 @@ impl CacheMode {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -2924,7 +2936,7 @@ impl CacheMode {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -2935,9 +2947,9 @@ impl CacheMode {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -2950,9 +2962,9 @@ impl CacheMode {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -2976,12 +2988,12 @@ unsafe impl ::windows::runtime::Interface for CacheMode {
 impl ::windows::runtime::RuntimeName for CacheMode {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.CacheMode";
 }
-impl ::std::convert::From<CacheMode> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CacheMode> for ::windows::runtime::IUnknown {
     fn from(value: CacheMode) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CacheMode> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CacheMode> for ::windows::runtime::IUnknown {
     fn from(value: &CacheMode) -> Self {
         value.0 .0.clone()
     }
@@ -2996,12 +3008,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CacheMode> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CacheMode> for ::windows::runtime::IInspectable {
     fn from(value: CacheMode) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CacheMode> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CacheMode> for ::windows::runtime::IInspectable {
     fn from(value: &CacheMode) -> Self {
         value.0.clone()
     }
@@ -3016,40 +3028,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<CacheMode> for super::DependencyObject {
+impl ::core::convert::From<CacheMode> for super::DependencyObject {
     fn from(value: CacheMode) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&CacheMode> for super::DependencyObject {
+impl ::core::convert::From<&CacheMode> for super::DependencyObject {
     fn from(value: &CacheMode) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for CacheMode {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &CacheMode {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for CacheMode {}
-unsafe impl ::std::marker::Sync for CacheMode {}
+unsafe impl ::core::marker::Send for CacheMode {}
+unsafe impl ::core::marker::Sync for CacheMode {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct ColorInterpolationMode(pub i32);
@@ -3057,7 +3069,7 @@ impl ColorInterpolationMode {
     pub const ScRgbLinearInterpolation: ColorInterpolationMode = ColorInterpolationMode(0i32);
     pub const SRgbLinearInterpolation: ColorInterpolationMode = ColorInterpolationMode(1i32);
 }
-impl ::std::convert::From<i32> for ColorInterpolationMode {
+impl ::core::convert::From<i32> for ColorInterpolationMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -3076,10 +3088,10 @@ impl ::windows::runtime::DefaultType for ColorInterpolationMode {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositeTransform(pub ::windows::runtime::IInspectable);
 impl CompositeTransform {
@@ -3102,9 +3114,9 @@ impl CompositeTransform {
     pub fn CenterX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3114,17 +3126,20 @@ impl CompositeTransform {
     pub fn SetCenterX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3134,17 +3149,20 @@ impl CompositeTransform {
     pub fn SetCenterY(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ScaleX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3155,7 +3173,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3165,9 +3183,9 @@ impl CompositeTransform {
     pub fn ScaleY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3178,7 +3196,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3188,9 +3206,9 @@ impl CompositeTransform {
     pub fn SkewX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3201,7 +3219,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3211,9 +3229,9 @@ impl CompositeTransform {
     pub fn SkewY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3224,7 +3242,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3234,9 +3252,9 @@ impl CompositeTransform {
     pub fn Rotation(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3247,7 +3265,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3257,9 +3275,9 @@ impl CompositeTransform {
     pub fn TranslateX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3270,7 +3288,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3280,9 +3298,9 @@ impl CompositeTransform {
     pub fn TranslateY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3293,7 +3311,7 @@ impl CompositeTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3302,9 +3320,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3313,9 +3331,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3324,9 +3342,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ScaleXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3335,9 +3353,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ScaleYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3346,9 +3364,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SkewXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3357,9 +3375,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SkewYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3368,9 +3386,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RotationProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3379,9 +3397,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn TranslateXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3390,9 +3408,9 @@ impl CompositeTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn TranslateYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -3405,9 +3423,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -3427,7 +3445,7 @@ impl CompositeTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -3442,7 +3460,7 @@ impl CompositeTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -3458,9 +3476,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -3477,9 +3495,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -3498,9 +3516,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -3520,7 +3538,7 @@ impl CompositeTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -3531,9 +3549,9 @@ impl CompositeTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -3546,9 +3564,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -3558,9 +3576,9 @@ impl CompositeTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -3576,9 +3594,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -3596,9 +3614,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -3616,9 +3634,9 @@ impl CompositeTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -3655,12 +3673,12 @@ unsafe impl ::windows::runtime::Interface for CompositeTransform {
 impl ::windows::runtime::RuntimeName for CompositeTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.CompositeTransform";
 }
-impl ::std::convert::From<CompositeTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositeTransform> for ::windows::runtime::IUnknown {
     fn from(value: CompositeTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositeTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CompositeTransform> for ::windows::runtime::IUnknown {
     fn from(value: &CompositeTransform) -> Self {
         value.0 .0.clone()
     }
@@ -3677,12 +3695,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositeTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CompositeTransform> for ::windows::runtime::IInspectable {
     fn from(value: CompositeTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositeTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CompositeTransform> for ::windows::runtime::IInspectable {
     fn from(value: &CompositeTransform) -> Self {
         value.0.clone()
     }
@@ -3701,83 +3719,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<CompositeTransform> for Transform {
+impl ::core::convert::From<CompositeTransform> for Transform {
     fn from(value: CompositeTransform) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&CompositeTransform> for Transform {
+impl ::core::convert::From<&CompositeTransform> for Transform {
     fn from(value: &CompositeTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for CompositeTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &CompositeTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<CompositeTransform> for GeneralTransform {
+impl ::core::convert::From<CompositeTransform> for GeneralTransform {
     fn from(value: CompositeTransform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&CompositeTransform> for GeneralTransform {
+impl ::core::convert::From<&CompositeTransform> for GeneralTransform {
     fn from(value: &CompositeTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for CompositeTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &CompositeTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<CompositeTransform> for super::DependencyObject {
+impl ::core::convert::From<CompositeTransform> for super::DependencyObject {
     fn from(value: CompositeTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&CompositeTransform> for super::DependencyObject {
+impl ::core::convert::From<&CompositeTransform> for super::DependencyObject {
     fn from(value: &CompositeTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for CompositeTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &CompositeTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for CompositeTransform {}
-unsafe impl ::std::marker::Sync for CompositeTransform {}
+unsafe impl ::core::marker::Send for CompositeTransform {}
+unsafe impl ::core::marker::Sync for CompositeTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositionTarget(pub ::windows::runtime::IInspectable);
 impl CompositionTarget {
@@ -3792,9 +3810,9 @@ impl CompositionTarget {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::ICompositionTargetStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3810,7 +3828,7 @@ impl CompositionTarget {
     ) -> ::windows::runtime::Result<()> {
         Self::ICompositionTargetStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3824,9 +3842,9 @@ impl CompositionTarget {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::ICompositionTargetStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3842,7 +3860,7 @@ impl CompositionTarget {
     ) -> ::windows::runtime::Result<()> {
         Self::ICompositionTargetStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3859,9 +3877,9 @@ impl CompositionTarget {
         handler: Param0,
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         Self::ICompositionTargetStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3877,7 +3895,7 @@ impl CompositionTarget {
     ) -> ::windows::runtime::Result<()> {
         Self::ICompositionTargetStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3888,9 +3906,9 @@ impl CompositionTarget {
     pub fn GetCompositorForCurrentThread(
     ) -> ::windows::runtime::Result<super::super::Composition::Compositor> {
         Self::ICompositionTargetStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::Compositor>(result__)
@@ -3926,12 +3944,12 @@ unsafe impl ::windows::runtime::Interface for CompositionTarget {
 impl ::windows::runtime::RuntimeName for CompositionTarget {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.CompositionTarget";
 }
-impl ::std::convert::From<CompositionTarget> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositionTarget> for ::windows::runtime::IUnknown {
     fn from(value: CompositionTarget) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositionTarget> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CompositionTarget> for ::windows::runtime::IUnknown {
     fn from(value: &CompositionTarget) -> Self {
         value.0 .0.clone()
     }
@@ -3946,12 +3964,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositionTarget> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CompositionTarget> for ::windows::runtime::IInspectable {
     fn from(value: CompositionTarget) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositionTarget> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CompositionTarget> for ::windows::runtime::IInspectable {
     fn from(value: &CompositionTarget) -> Self {
         value.0.clone()
     }
@@ -3968,15 +3986,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for CompositionTarget {}
-unsafe impl ::std::marker::Sync for CompositionTarget {}
+unsafe impl ::core::marker::Send for CompositionTarget {}
+unsafe impl ::core::marker::Sync for CompositionTarget {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DoubleCollection(pub ::windows::runtime::IInspectable);
 impl DoubleCollection {
@@ -3999,9 +4017,9 @@ impl DoubleCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -4012,9 +4030,9 @@ impl DoubleCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -4026,9 +4044,9 @@ impl DoubleCollection {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVectorView<f64>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<f64>>(result__)
@@ -4038,9 +4056,9 @@ impl DoubleCollection {
     pub fn IndexOf(&self, value: f64, index: &mut u32) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
                 index,
                 &mut result__,
@@ -4053,7 +4071,7 @@ impl DoubleCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value,
             )
@@ -4065,7 +4083,7 @@ impl DoubleCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value,
             )
@@ -4077,7 +4095,7 @@ impl DoubleCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -4088,7 +4106,7 @@ impl DoubleCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4098,14 +4116,14 @@ impl DoubleCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -4116,12 +4134,12 @@ impl DoubleCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -4135,9 +4153,9 @@ impl DoubleCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -4150,9 +4168,9 @@ impl DoubleCollection {
             ::windows::Foundation::Collections::IIterable<f64>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<f64>>(result__)
@@ -4169,12 +4187,12 @@ unsafe impl ::windows::runtime::Interface for DoubleCollection {
 impl ::windows::runtime::RuntimeName for DoubleCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.DoubleCollection";
 }
-impl ::std::convert::From<DoubleCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DoubleCollection> for ::windows::runtime::IUnknown {
     fn from(value: DoubleCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DoubleCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DoubleCollection> for ::windows::runtime::IUnknown {
     fn from(value: &DoubleCollection) -> Self {
         value.0 .0.clone()
     }
@@ -4189,12 +4207,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DoubleCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DoubleCollection> for ::windows::runtime::IInspectable {
     fn from(value: DoubleCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DoubleCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DoubleCollection> for ::windows::runtime::IInspectable {
     fn from(value: &DoubleCollection) -> Self {
         value.0.clone()
     }
@@ -4211,14 +4229,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<DoubleCollection> for ::windows::Foundation::Collections::IVector<f64> {
+impl ::core::convert::From<DoubleCollection> for ::windows::Foundation::Collections::IVector<f64> {
     fn from(value: DoubleCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&DoubleCollection> for ::windows::Foundation::Collections::IVector<f64> {
+impl ::core::convert::From<&DoubleCollection> for ::windows::Foundation::Collections::IVector<f64> {
     fn from(value: &DoubleCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<f64>>
@@ -4227,7 +4245,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<f64>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<f64>>
@@ -4236,18 +4254,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<f64>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<DoubleCollection>
+impl ::core::convert::TryFrom<DoubleCollection>
     for ::windows::Foundation::Collections::IIterable<f64>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: DoubleCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&DoubleCollection>
+impl ::core::convert::TryFrom<&DoubleCollection>
     for ::windows::Foundation::Collections::IIterable<f64>
 {
     type Error = ::windows::runtime::Error;
@@ -4270,30 +4288,30 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<f64>> {
-        ::std::convert::TryInto::<::windows::Foundation::Collections::IIterable<f64>>::try_into(
+        ::core::convert::TryInto::<::windows::Foundation::Collections::IIterable<f64>>::try_into(
             self,
         )
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for DoubleCollection {}
-unsafe impl ::std::marker::Sync for DoubleCollection {}
+unsafe impl ::core::marker::Send for DoubleCollection {}
+unsafe impl ::core::marker::Sync for DoubleCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for DoubleCollection {
+impl ::core::iter::IntoIterator for DoubleCollection {
     type Item = f64;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &DoubleCollection {
+impl ::core::iter::IntoIterator for &DoubleCollection {
     type Item = f64;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
@@ -4301,12 +4319,12 @@ impl ::std::iter::IntoIterator for &DoubleCollection {
 pub const E_SURFACE_CONTENTS_LOST: u32 = 2150301728u32;
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct ElementCompositeMode(pub i32);
@@ -4315,7 +4333,7 @@ impl ElementCompositeMode {
     pub const SourceOver: ElementCompositeMode = ElementCompositeMode(1i32);
     pub const MinBlend: ElementCompositeMode = ElementCompositeMode(2i32);
 }
-impl ::std::convert::From<i32> for ElementCompositeMode {
+impl ::core::convert::From<i32> for ElementCompositeMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -4334,10 +4352,10 @@ impl ::windows::runtime::DefaultType for ElementCompositeMode {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct EllipseGeometry(pub ::windows::runtime::IInspectable);
 impl EllipseGeometry {
@@ -4360,9 +4378,9 @@ impl EllipseGeometry {
     pub fn Center(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -4379,7 +4397,7 @@ impl EllipseGeometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4389,9 +4407,9 @@ impl EllipseGeometry {
     pub fn RadiusX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -4401,17 +4419,20 @@ impl EllipseGeometry {
     pub fn SetRadiusX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RadiusY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -4422,7 +4443,7 @@ impl EllipseGeometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4431,9 +4452,9 @@ impl EllipseGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IEllipseGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -4442,9 +4463,9 @@ impl EllipseGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RadiusXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IEllipseGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -4453,9 +4474,9 @@ impl EllipseGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RadiusYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IEllipseGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -4468,9 +4489,9 @@ impl EllipseGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -4490,7 +4511,7 @@ impl EllipseGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -4505,7 +4526,7 @@ impl EllipseGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -4521,9 +4542,9 @@ impl EllipseGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -4540,9 +4561,9 @@ impl EllipseGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -4561,9 +4582,9 @@ impl EllipseGeometry {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -4583,7 +4604,7 @@ impl EllipseGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -4594,9 +4615,9 @@ impl EllipseGeometry {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -4609,9 +4630,9 @@ impl EllipseGeometry {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -4621,9 +4642,9 @@ impl EllipseGeometry {
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -4637,7 +4658,7 @@ impl EllipseGeometry {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4647,9 +4668,9 @@ impl EllipseGeometry {
     pub fn Bounds(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -4685,12 +4706,12 @@ unsafe impl ::windows::runtime::Interface for EllipseGeometry {
 impl ::windows::runtime::RuntimeName for EllipseGeometry {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.EllipseGeometry";
 }
-impl ::std::convert::From<EllipseGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<EllipseGeometry> for ::windows::runtime::IUnknown {
     fn from(value: EllipseGeometry) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&EllipseGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&EllipseGeometry> for ::windows::runtime::IUnknown {
     fn from(value: &EllipseGeometry) -> Self {
         value.0 .0.clone()
     }
@@ -4705,12 +4726,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<EllipseGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<EllipseGeometry> for ::windows::runtime::IInspectable {
     fn from(value: EllipseGeometry) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&EllipseGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&EllipseGeometry> for ::windows::runtime::IInspectable {
     fn from(value: &EllipseGeometry) -> Self {
         value.0.clone()
     }
@@ -4727,62 +4748,62 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<EllipseGeometry> for Geometry {
+impl ::core::convert::From<EllipseGeometry> for Geometry {
     fn from(value: EllipseGeometry) -> Self {
-        ::std::convert::Into::<Geometry>::into(&value)
+        ::core::convert::Into::<Geometry>::into(&value)
     }
 }
-impl ::std::convert::From<&EllipseGeometry> for Geometry {
+impl ::core::convert::From<&EllipseGeometry> for Geometry {
     fn from(value: &EllipseGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for EllipseGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for &EllipseGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<EllipseGeometry> for super::DependencyObject {
+impl ::core::convert::From<EllipseGeometry> for super::DependencyObject {
     fn from(value: EllipseGeometry) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&EllipseGeometry> for super::DependencyObject {
+impl ::core::convert::From<&EllipseGeometry> for super::DependencyObject {
     fn from(value: &EllipseGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for EllipseGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &EllipseGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for EllipseGeometry {}
-unsafe impl ::std::marker::Sync for EllipseGeometry {}
+unsafe impl ::core::marker::Send for EllipseGeometry {}
+unsafe impl ::core::marker::Sync for EllipseGeometry {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct FillRule(pub i32);
@@ -4790,7 +4811,7 @@ impl FillRule {
     pub const EvenOdd: FillRule = FillRule(0i32);
     pub const Nonzero: FillRule = FillRule(1i32);
 }
-impl ::std::convert::From<i32> for FillRule {
+impl ::core::convert::From<i32> for FillRule {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -4808,10 +4829,10 @@ impl ::windows::runtime::DefaultType for FillRule {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct FontFamily(pub ::windows::runtime::IInspectable);
 impl FontFamily {
@@ -4819,10 +4840,10 @@ impl FontFamily {
     pub fn Source(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -4831,9 +4852,9 @@ impl FontFamily {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn XamlAutoFontFamily() -> ::windows::runtime::Result<FontFamily> {
         Self::IFontFamilyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FontFamily>(result__)
@@ -4847,12 +4868,13 @@ impl FontFamily {
         familyname: Param0,
     ) -> ::windows::runtime::Result<FontFamily> {
         Self::IFontFamilyFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 familyname.into_param().abi(),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<FontFamily>(result__)
@@ -4896,12 +4918,12 @@ unsafe impl ::windows::runtime::Interface for FontFamily {
 impl ::windows::runtime::RuntimeName for FontFamily {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.FontFamily";
 }
-impl ::std::convert::From<FontFamily> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<FontFamily> for ::windows::runtime::IUnknown {
     fn from(value: FontFamily) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&FontFamily> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&FontFamily> for ::windows::runtime::IUnknown {
     fn from(value: &FontFamily) -> Self {
         value.0 .0.clone()
     }
@@ -4916,12 +4938,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<FontFamily> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<FontFamily> for ::windows::runtime::IInspectable {
     fn from(value: FontFamily) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&FontFamily> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&FontFamily> for ::windows::runtime::IInspectable {
     fn from(value: &FontFamily) -> Self {
         value.0.clone()
     }
@@ -4936,15 +4958,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for FontFamily {}
-unsafe impl ::std::marker::Sync for FontFamily {}
+unsafe impl ::core::marker::Send for FontFamily {}
+unsafe impl ::core::marker::Sync for FontFamily {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GeneralTransform(pub ::windows::runtime::IInspectable);
 impl GeneralTransform {
@@ -4952,9 +4974,9 @@ impl GeneralTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -4970,9 +4992,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -4990,9 +5012,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -5010,9 +5032,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -5026,9 +5048,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -5048,7 +5070,7 @@ impl GeneralTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -5063,7 +5085,7 @@ impl GeneralTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -5079,9 +5101,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -5098,9 +5120,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -5119,9 +5141,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -5141,7 +5163,7 @@ impl GeneralTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -5152,9 +5174,9 @@ impl GeneralTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -5167,9 +5189,9 @@ impl GeneralTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -5193,12 +5215,12 @@ unsafe impl ::windows::runtime::Interface for GeneralTransform {
 impl ::windows::runtime::RuntimeName for GeneralTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.GeneralTransform";
 }
-impl ::std::convert::From<GeneralTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GeneralTransform> for ::windows::runtime::IUnknown {
     fn from(value: GeneralTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GeneralTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GeneralTransform> for ::windows::runtime::IUnknown {
     fn from(value: &GeneralTransform) -> Self {
         value.0 .0.clone()
     }
@@ -5213,12 +5235,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GeneralTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GeneralTransform> for ::windows::runtime::IInspectable {
     fn from(value: GeneralTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GeneralTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GeneralTransform> for ::windows::runtime::IInspectable {
     fn from(value: &GeneralTransform) -> Self {
         value.0.clone()
     }
@@ -5235,39 +5257,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<GeneralTransform> for super::DependencyObject {
+impl ::core::convert::From<GeneralTransform> for super::DependencyObject {
     fn from(value: GeneralTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&GeneralTransform> for super::DependencyObject {
+impl ::core::convert::From<&GeneralTransform> for super::DependencyObject {
     fn from(value: &GeneralTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for GeneralTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &GeneralTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for GeneralTransform {}
-unsafe impl ::std::marker::Sync for GeneralTransform {}
+unsafe impl ::core::marker::Send for GeneralTransform {}
+unsafe impl ::core::marker::Sync for GeneralTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Geometry(pub ::windows::runtime::IInspectable);
 impl Geometry {
@@ -5275,9 +5297,9 @@ impl Geometry {
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -5291,7 +5313,7 @@ impl Geometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5301,9 +5323,9 @@ impl Geometry {
     pub fn Bounds(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -5312,9 +5334,9 @@ impl Geometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Empty() -> ::windows::runtime::Result<Geometry> {
         Self::IGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Geometry>(result__)
@@ -5323,9 +5345,9 @@ impl Geometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn StandardFlatteningTolerance() -> ::windows::runtime::Result<f64> {
         Self::IGeometryStatics(|this| unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -5334,9 +5356,9 @@ impl Geometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn TransformProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -5349,9 +5371,9 @@ impl Geometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -5371,7 +5393,7 @@ impl Geometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -5386,7 +5408,7 @@ impl Geometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -5402,9 +5424,9 @@ impl Geometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -5421,9 +5443,9 @@ impl Geometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -5442,9 +5464,9 @@ impl Geometry {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -5464,7 +5486,7 @@ impl Geometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -5475,9 +5497,9 @@ impl Geometry {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -5490,9 +5512,9 @@ impl Geometry {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -5523,12 +5545,12 @@ unsafe impl ::windows::runtime::Interface for Geometry {
 impl ::windows::runtime::RuntimeName for Geometry {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.Geometry";
 }
-impl ::std::convert::From<Geometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Geometry> for ::windows::runtime::IUnknown {
     fn from(value: Geometry) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Geometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Geometry> for ::windows::runtime::IUnknown {
     fn from(value: &Geometry) -> Self {
         value.0 .0.clone()
     }
@@ -5543,12 +5565,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Geometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Geometry> for ::windows::runtime::IInspectable {
     fn from(value: Geometry) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Geometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Geometry> for ::windows::runtime::IInspectable {
     fn from(value: &Geometry) -> Self {
         value.0.clone()
     }
@@ -5563,39 +5585,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Geometry> for super::DependencyObject {
+impl ::core::convert::From<Geometry> for super::DependencyObject {
     fn from(value: Geometry) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Geometry> for super::DependencyObject {
+impl ::core::convert::From<&Geometry> for super::DependencyObject {
     fn from(value: &Geometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Geometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Geometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Geometry {}
-unsafe impl ::std::marker::Sync for Geometry {}
+unsafe impl ::core::marker::Send for Geometry {}
+unsafe impl ::core::marker::Sync for Geometry {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GeometryCollection(pub ::windows::runtime::IInspectable);
 impl GeometryCollection {
@@ -5618,9 +5640,9 @@ impl GeometryCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<Geometry> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -5631,9 +5653,9 @@ impl GeometryCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -5645,9 +5667,9 @@ impl GeometryCollection {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVectorView<Geometry>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Geometry>>(result__)
@@ -5661,9 +5683,9 @@ impl GeometryCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -5680,7 +5702,7 @@ impl GeometryCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -5696,7 +5718,7 @@ impl GeometryCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -5708,7 +5730,7 @@ impl GeometryCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -5722,7 +5744,7 @@ impl GeometryCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5732,14 +5754,14 @@ impl GeometryCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -5750,12 +5772,12 @@ impl GeometryCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -5769,9 +5791,9 @@ impl GeometryCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -5784,9 +5806,9 @@ impl GeometryCollection {
             ::windows::Foundation::Collections::IIterable<Geometry>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<Geometry>>(result__)
@@ -5803,12 +5825,12 @@ unsafe impl ::windows::runtime::Interface for GeometryCollection {
 impl ::windows::runtime::RuntimeName for GeometryCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.GeometryCollection";
 }
-impl ::std::convert::From<GeometryCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GeometryCollection> for ::windows::runtime::IUnknown {
     fn from(value: GeometryCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GeometryCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GeometryCollection> for ::windows::runtime::IUnknown {
     fn from(value: &GeometryCollection) -> Self {
         value.0 .0.clone()
     }
@@ -5825,12 +5847,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GeometryCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GeometryCollection> for ::windows::runtime::IInspectable {
     fn from(value: GeometryCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GeometryCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GeometryCollection> for ::windows::runtime::IInspectable {
     fn from(value: &GeometryCollection) -> Self {
         value.0.clone()
     }
@@ -5849,18 +5871,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<GeometryCollection>
+impl ::core::convert::From<GeometryCollection>
     for ::windows::Foundation::Collections::IVector<Geometry>
 {
     fn from(value: GeometryCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&GeometryCollection>
+impl ::core::convert::From<&GeometryCollection>
     for ::windows::Foundation::Collections::IVector<Geometry>
 {
     fn from(value: &GeometryCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Geometry>>
@@ -5869,7 +5891,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Geometry>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Geometry>>
@@ -5878,18 +5900,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Geometry>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<GeometryCollection>
+impl ::core::convert::TryFrom<GeometryCollection>
     for ::windows::Foundation::Collections::IIterable<Geometry>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: GeometryCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&GeometryCollection>
+impl ::core::convert::TryFrom<&GeometryCollection>
     for ::windows::Foundation::Collections::IIterable<Geometry>
 {
     type Error = ::windows::runtime::Error;
@@ -5914,36 +5936,36 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<Geometry>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < Geometry > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < Geometry > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-unsafe impl ::std::marker::Send for GeometryCollection {}
-unsafe impl ::std::marker::Sync for GeometryCollection {}
+unsafe impl ::core::marker::Send for GeometryCollection {}
+unsafe impl ::core::marker::Sync for GeometryCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for GeometryCollection {
+impl ::core::iter::IntoIterator for GeometryCollection {
     type Item = Geometry;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &GeometryCollection {
+impl ::core::iter::IntoIterator for &GeometryCollection {
     type Item = Geometry;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GeometryGroup(pub ::windows::runtime::IInspectable);
 impl GeometryGroup {
@@ -5966,9 +5988,9 @@ impl GeometryGroup {
     pub fn FillRule(&self) -> ::windows::runtime::Result<FillRule> {
         let this = self;
         unsafe {
-            let mut result__: FillRule = ::std::mem::zeroed();
+            let mut result__: FillRule = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FillRule>(result__)
@@ -5978,17 +6000,20 @@ impl GeometryGroup {
     pub fn SetFillRule(&self, value: FillRule) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Children(&self) -> ::windows::runtime::Result<GeometryCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeometryCollection>(result__)
@@ -6002,7 +6027,7 @@ impl GeometryGroup {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6011,9 +6036,9 @@ impl GeometryGroup {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn FillRuleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGeometryGroupStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -6022,9 +6047,9 @@ impl GeometryGroup {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ChildrenProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGeometryGroupStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -6037,9 +6062,9 @@ impl GeometryGroup {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6059,7 +6084,7 @@ impl GeometryGroup {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -6074,7 +6099,7 @@ impl GeometryGroup {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -6090,9 +6115,9 @@ impl GeometryGroup {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6109,9 +6134,9 @@ impl GeometryGroup {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6130,9 +6155,9 @@ impl GeometryGroup {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -6152,7 +6177,7 @@ impl GeometryGroup {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -6163,9 +6188,9 @@ impl GeometryGroup {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -6178,9 +6203,9 @@ impl GeometryGroup {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6190,9 +6215,9 @@ impl GeometryGroup {
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -6206,7 +6231,7 @@ impl GeometryGroup {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6216,9 +6241,9 @@ impl GeometryGroup {
     pub fn Bounds(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -6252,12 +6277,12 @@ unsafe impl ::windows::runtime::Interface for GeometryGroup {
 impl ::windows::runtime::RuntimeName for GeometryGroup {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.GeometryGroup";
 }
-impl ::std::convert::From<GeometryGroup> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GeometryGroup> for ::windows::runtime::IUnknown {
     fn from(value: GeometryGroup) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GeometryGroup> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GeometryGroup> for ::windows::runtime::IUnknown {
     fn from(value: &GeometryGroup) -> Self {
         value.0 .0.clone()
     }
@@ -6272,12 +6297,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GeometryGroup> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GeometryGroup> for ::windows::runtime::IInspectable {
     fn from(value: GeometryGroup) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GeometryGroup> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GeometryGroup> for ::windows::runtime::IInspectable {
     fn from(value: &GeometryGroup) -> Self {
         value.0.clone()
     }
@@ -6292,61 +6317,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<GeometryGroup> for Geometry {
+impl ::core::convert::From<GeometryGroup> for Geometry {
     fn from(value: GeometryGroup) -> Self {
-        ::std::convert::Into::<Geometry>::into(&value)
+        ::core::convert::Into::<Geometry>::into(&value)
     }
 }
-impl ::std::convert::From<&GeometryGroup> for Geometry {
+impl ::core::convert::From<&GeometryGroup> for Geometry {
     fn from(value: &GeometryGroup) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for GeometryGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for &GeometryGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<GeometryGroup> for super::DependencyObject {
+impl ::core::convert::From<GeometryGroup> for super::DependencyObject {
     fn from(value: GeometryGroup) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&GeometryGroup> for super::DependencyObject {
+impl ::core::convert::From<&GeometryGroup> for super::DependencyObject {
     fn from(value: &GeometryGroup) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for GeometryGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &GeometryGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for GeometryGroup {}
-unsafe impl ::std::marker::Sync for GeometryGroup {}
+unsafe impl ::core::marker::Send for GeometryGroup {}
+unsafe impl ::core::marker::Sync for GeometryGroup {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GradientBrush(pub ::windows::runtime::IInspectable);
 impl GradientBrush {
@@ -6354,9 +6379,9 @@ impl GradientBrush {
     pub fn SpreadMethod(&self) -> ::windows::runtime::Result<GradientSpreadMethod> {
         let this = self;
         unsafe {
-            let mut result__: GradientSpreadMethod = ::std::mem::zeroed();
+            let mut result__: GradientSpreadMethod = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GradientSpreadMethod>(result__)
@@ -6366,17 +6391,20 @@ impl GradientBrush {
     pub fn SetSpreadMethod(&self, value: GradientSpreadMethod) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn MappingMode(&self) -> ::windows::runtime::Result<BrushMappingMode> {
         let this = self;
         unsafe {
-            let mut result__: BrushMappingMode = ::std::mem::zeroed();
+            let mut result__: BrushMappingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<BrushMappingMode>(result__)
@@ -6386,17 +6414,20 @@ impl GradientBrush {
     pub fn SetMappingMode(&self, value: BrushMappingMode) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ColorInterpolationMode(&self) -> ::windows::runtime::Result<ColorInterpolationMode> {
         let this = self;
         unsafe {
-            let mut result__: ColorInterpolationMode = ::std::mem::zeroed();
+            let mut result__: ColorInterpolationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ColorInterpolationMode>(result__)
@@ -6410,7 +6441,7 @@ impl GradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -6420,9 +6451,9 @@ impl GradientBrush {
     pub fn GradientStops(&self) -> ::windows::runtime::Result<GradientStopCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GradientStopCollection>(result__)
@@ -6439,7 +6470,7 @@ impl GradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6448,9 +6479,9 @@ impl GradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SpreadMethodProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -6459,9 +6490,9 @@ impl GradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn MappingModeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -6471,9 +6502,9 @@ impl GradientBrush {
     pub fn ColorInterpolationModeProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::IGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -6482,9 +6513,9 @@ impl GradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn GradientStopsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -6506,7 +6537,7 @@ impl GradientBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -6520,9 +6551,9 @@ impl GradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6542,7 +6573,7 @@ impl GradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -6557,7 +6588,7 @@ impl GradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -6573,9 +6604,9 @@ impl GradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6592,9 +6623,9 @@ impl GradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -6613,9 +6644,9 @@ impl GradientBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -6635,7 +6666,7 @@ impl GradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -6646,9 +6677,9 @@ impl GradientBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -6661,9 +6692,9 @@ impl GradientBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6673,9 +6704,9 @@ impl GradientBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -6685,17 +6716,20 @@ impl GradientBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -6709,7 +6743,7 @@ impl GradientBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6719,9 +6753,9 @@ impl GradientBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -6735,7 +6769,7 @@ impl GradientBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6769,12 +6803,12 @@ unsafe impl ::windows::runtime::Interface for GradientBrush {
 impl ::windows::runtime::RuntimeName for GradientBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.GradientBrush";
 }
-impl ::std::convert::From<GradientBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GradientBrush> for ::windows::runtime::IUnknown {
     fn from(value: GradientBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GradientBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GradientBrush> for ::windows::runtime::IUnknown {
     fn from(value: &GradientBrush) -> Self {
         value.0 .0.clone()
     }
@@ -6789,12 +6823,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GradientBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GradientBrush> for ::windows::runtime::IInspectable {
     fn from(value: GradientBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GradientBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GradientBrush> for ::windows::runtime::IInspectable {
     fn from(value: &GradientBrush) -> Self {
         value.0.clone()
     }
@@ -6810,14 +6844,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<GradientBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<GradientBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: GradientBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&GradientBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&GradientBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &GradientBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -6840,67 +6874,67 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<GradientBrush> for Brush {
+impl ::core::convert::From<GradientBrush> for Brush {
     fn from(value: GradientBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&GradientBrush> for Brush {
+impl ::core::convert::From<&GradientBrush> for Brush {
     fn from(value: &GradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for GradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &GradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<GradientBrush> for super::DependencyObject {
+impl ::core::convert::From<GradientBrush> for super::DependencyObject {
     fn from(value: GradientBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&GradientBrush> for super::DependencyObject {
+impl ::core::convert::From<&GradientBrush> for super::DependencyObject {
     fn from(value: &GradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for GradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &GradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for GradientBrush {}
-unsafe impl ::std::marker::Sync for GradientBrush {}
+unsafe impl ::core::marker::Send for GradientBrush {}
+unsafe impl ::core::marker::Sync for GradientBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct GradientSpreadMethod(pub i32);
@@ -6909,7 +6943,7 @@ impl GradientSpreadMethod {
     pub const Reflect: GradientSpreadMethod = GradientSpreadMethod(1i32);
     pub const Repeat: GradientSpreadMethod = GradientSpreadMethod(2i32);
 }
-impl ::std::convert::From<i32> for GradientSpreadMethod {
+impl ::core::convert::From<i32> for GradientSpreadMethod {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -6928,10 +6962,10 @@ impl ::windows::runtime::DefaultType for GradientSpreadMethod {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GradientStop(pub ::windows::runtime::IInspectable);
 impl GradientStop {
@@ -6954,9 +6988,9 @@ impl GradientStop {
     pub fn Color(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -6970,7 +7004,7 @@ impl GradientStop {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6980,9 +7014,9 @@ impl GradientStop {
     pub fn Offset(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -6992,16 +7026,19 @@ impl GradientStop {
     pub fn SetOffset(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ColorProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGradientStopStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -7010,9 +7047,9 @@ impl GradientStop {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn OffsetProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGradientStopStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -7025,9 +7062,9 @@ impl GradientStop {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -7047,7 +7084,7 @@ impl GradientStop {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -7062,7 +7099,7 @@ impl GradientStop {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -7078,9 +7115,9 @@ impl GradientStop {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -7097,9 +7134,9 @@ impl GradientStop {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -7118,9 +7155,9 @@ impl GradientStop {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -7140,7 +7177,7 @@ impl GradientStop {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -7151,9 +7188,9 @@ impl GradientStop {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -7166,9 +7203,9 @@ impl GradientStop {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -7202,12 +7239,12 @@ unsafe impl ::windows::runtime::Interface for GradientStop {
 impl ::windows::runtime::RuntimeName for GradientStop {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.GradientStop";
 }
-impl ::std::convert::From<GradientStop> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GradientStop> for ::windows::runtime::IUnknown {
     fn from(value: GradientStop) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GradientStop> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GradientStop> for ::windows::runtime::IUnknown {
     fn from(value: &GradientStop) -> Self {
         value.0 .0.clone()
     }
@@ -7222,12 +7259,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GradientStop> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GradientStop> for ::windows::runtime::IInspectable {
     fn from(value: GradientStop) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GradientStop> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GradientStop> for ::windows::runtime::IInspectable {
     fn from(value: &GradientStop) -> Self {
         value.0.clone()
     }
@@ -7242,39 +7279,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<GradientStop> for super::DependencyObject {
+impl ::core::convert::From<GradientStop> for super::DependencyObject {
     fn from(value: GradientStop) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&GradientStop> for super::DependencyObject {
+impl ::core::convert::From<&GradientStop> for super::DependencyObject {
     fn from(value: &GradientStop) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for GradientStop {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &GradientStop {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for GradientStop {}
-unsafe impl ::std::marker::Sync for GradientStop {}
+unsafe impl ::core::marker::Send for GradientStop {}
+unsafe impl ::core::marker::Sync for GradientStop {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GradientStopCollection(pub ::windows::runtime::IInspectable);
 impl GradientStopCollection {
@@ -7297,9 +7334,9 @@ impl GradientStopCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<GradientStop> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -7310,9 +7347,9 @@ impl GradientStopCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -7325,9 +7362,9 @@ impl GradientStopCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<GradientStop>>(result__)
@@ -7341,9 +7378,9 @@ impl GradientStopCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -7360,7 +7397,7 @@ impl GradientStopCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -7376,7 +7413,7 @@ impl GradientStopCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -7388,7 +7425,7 @@ impl GradientStopCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -7402,7 +7439,7 @@ impl GradientStopCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7412,14 +7449,14 @@ impl GradientStopCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -7430,12 +7467,12 @@ impl GradientStopCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -7449,9 +7486,9 @@ impl GradientStopCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -7465,9 +7502,9 @@ impl GradientStopCollection {
             ::windows::Foundation::Collections::IIterable<GradientStop>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<GradientStop>>(result__)
@@ -7484,12 +7521,12 @@ unsafe impl ::windows::runtime::Interface for GradientStopCollection {
 impl ::windows::runtime::RuntimeName for GradientStopCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.GradientStopCollection";
 }
-impl ::std::convert::From<GradientStopCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GradientStopCollection> for ::windows::runtime::IUnknown {
     fn from(value: GradientStopCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GradientStopCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GradientStopCollection> for ::windows::runtime::IUnknown {
     fn from(value: &GradientStopCollection) -> Self {
         value.0 .0.clone()
     }
@@ -7508,12 +7545,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GradientStopCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GradientStopCollection> for ::windows::runtime::IInspectable {
     fn from(value: GradientStopCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GradientStopCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GradientStopCollection> for ::windows::runtime::IInspectable {
     fn from(value: &GradientStopCollection) -> Self {
         value.0.clone()
     }
@@ -7532,18 +7569,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<GradientStopCollection>
+impl ::core::convert::From<GradientStopCollection>
     for ::windows::Foundation::Collections::IVector<GradientStop>
 {
     fn from(value: GradientStopCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&GradientStopCollection>
+impl ::core::convert::From<&GradientStopCollection>
     for ::windows::Foundation::Collections::IVector<GradientStop>
 {
     fn from(value: &GradientStopCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a>
@@ -7554,7 +7591,7 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<GradientStop>>
     {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a>
@@ -7565,18 +7602,18 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<GradientStop>>
     {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<GradientStopCollection>
+impl ::core::convert::TryFrom<GradientStopCollection>
     for ::windows::Foundation::Collections::IIterable<GradientStop>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: GradientStopCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&GradientStopCollection>
+impl ::core::convert::TryFrom<&GradientStopCollection>
     for ::windows::Foundation::Collections::IIterable<GradientStop>
 {
     type Error = ::windows::runtime::Error;
@@ -7603,26 +7640,26 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<GradientStop>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < GradientStop > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < GradientStop > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-unsafe impl ::std::marker::Send for GradientStopCollection {}
-unsafe impl ::std::marker::Sync for GradientStopCollection {}
+unsafe impl ::core::marker::Send for GradientStopCollection {}
+unsafe impl ::core::marker::Sync for GradientStopCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for GradientStopCollection {
+impl ::core::iter::IntoIterator for GradientStopCollection {
     type Item = GradientStop;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &GradientStopCollection {
+impl ::core::iter::IntoIterator for &GradientStopCollection {
     type Item = GradientStop;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
@@ -8288,7 +8325,7 @@ pub struct IBrushOverrides_abi(
     #[cfg(feature = "UI_Composition")]
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        propertyname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        propertyname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         animationpropertyinfo: ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     #[cfg(not(feature = "UI_Composition"))] usize,
@@ -8849,7 +8886,7 @@ pub struct IFontFamily_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -8889,7 +8926,7 @@ pub struct IFontFamilyFactory_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        familyname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        familyname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         baseinterface: ::windows::runtime::RawPtr,
         innerinterface: *mut ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
@@ -12344,10 +12381,10 @@ pub struct ISolidColorBrushStatics_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ISurfaceImageSourceManagerNative(pub ::windows::runtime::IUnknown);
 impl ISurfaceImageSourceManagerNative {
@@ -12360,7 +12397,7 @@ impl ISurfaceImageSourceManagerNative {
         device: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             device.into_param().abi(),
         )
         .ok()
@@ -12375,12 +12412,12 @@ unsafe impl ::windows::runtime::Interface for ISurfaceImageSourceManagerNative {
         [130, 137, 68, 191, 209, 28, 240, 204],
     );
 }
-impl ::std::convert::From<ISurfaceImageSourceManagerNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISurfaceImageSourceManagerNative> for ::windows::runtime::IUnknown {
     fn from(value: ISurfaceImageSourceManagerNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISurfaceImageSourceManagerNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISurfaceImageSourceManagerNative> for ::windows::runtime::IUnknown {
     fn from(value: &ISurfaceImageSourceManagerNative) -> Self {
         value.0.clone()
     }
@@ -12417,10 +12454,10 @@ pub struct ISurfaceImageSourceManagerNative_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ISurfaceImageSourceNative(pub ::windows::runtime::IUnknown);
 impl ISurfaceImageSourceNative {
@@ -12433,7 +12470,7 @@ impl ISurfaceImageSourceNative {
         device: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             device.into_param().abi(),
         )
         .ok()
@@ -12445,20 +12482,20 @@ impl ISurfaceImageSourceNative {
     >(
         &self,
         updaterect: Param0,
-        surface: *mut ::std::option::Option<::windows::Win32::Graphics::Dxgi::IDXGISurface>,
+        surface: *mut ::core::option::Option<::windows::Win32::Graphics::Dxgi::IDXGISurface>,
         offset: *mut ::windows::Win32::Foundation::POINT,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             updaterect.into_param().abi(),
-            ::std::mem::transmute(surface),
-            ::std::mem::transmute(offset),
+            ::core::mem::transmute(surface),
+            ::core::mem::transmute(offset),
         )
         .ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).5)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).5)(::core::mem::transmute_copy(self)).ok()
     }
 }
 unsafe impl ::windows::runtime::Interface for ISurfaceImageSourceNative {
@@ -12470,12 +12507,12 @@ unsafe impl ::windows::runtime::Interface for ISurfaceImageSourceNative {
         [131, 195, 139, 189, 162, 124, 101, 4],
     );
 }
-impl ::std::convert::From<ISurfaceImageSourceNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISurfaceImageSourceNative> for ::windows::runtime::IUnknown {
     fn from(value: ISurfaceImageSourceNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISurfaceImageSourceNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISurfaceImageSourceNative> for ::windows::runtime::IUnknown {
     fn from(value: &ISurfaceImageSourceNative) -> Self {
         value.0.clone()
     }
@@ -12519,10 +12556,10 @@ pub struct ISurfaceImageSourceNative_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ISurfaceImageSourceNativeWithD2D(pub ::windows::runtime::IUnknown);
 impl ISurfaceImageSourceNativeWithD2D {
@@ -12535,7 +12572,7 @@ impl ISurfaceImageSourceNativeWithD2D {
         device: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             device.into_param().abi(),
         )
         .ok()
@@ -12545,29 +12582,29 @@ impl ISurfaceImageSourceNativeWithD2D {
         &self,
         updaterect: *const ::windows::Win32::Foundation::RECT,
         iid: *const ::windows::runtime::GUID,
-        updateobject: *mut *mut ::std::ffi::c_void,
+        updateobject: *mut *mut ::core::ffi::c_void,
         offset: *mut ::windows::Win32::Foundation::POINT,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(updaterect),
-            ::std::mem::transmute(iid),
-            ::std::mem::transmute(updateobject),
-            ::std::mem::transmute(offset),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(updaterect),
+            ::core::mem::transmute(iid),
+            ::core::mem::transmute(updateobject),
+            ::core::mem::transmute(offset),
         )
         .ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).5)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).5)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn SuspendDraw(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).6)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).6)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn ResumeDraw(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).7)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).7)(::core::mem::transmute_copy(self)).ok()
     }
 }
 unsafe impl ::windows::runtime::Interface for ISurfaceImageSourceNativeWithD2D {
@@ -12579,12 +12616,12 @@ unsafe impl ::windows::runtime::Interface for ISurfaceImageSourceNativeWithD2D {
         [163, 26, 82, 169, 80, 159, 36, 230],
     );
 }
-impl ::std::convert::From<ISurfaceImageSourceNativeWithD2D> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISurfaceImageSourceNativeWithD2D> for ::windows::runtime::IUnknown {
     fn from(value: ISurfaceImageSourceNativeWithD2D) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISurfaceImageSourceNativeWithD2D> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISurfaceImageSourceNativeWithD2D> for ::windows::runtime::IUnknown {
     fn from(value: &ISurfaceImageSourceNativeWithD2D) -> Self {
         value.0.clone()
     }
@@ -12621,7 +12658,7 @@ pub struct ISurfaceImageSourceNativeWithD2D_abi(
         this: ::windows::runtime::RawPtr,
         updaterect: *const ::windows::Win32::Foundation::RECT,
         iid: *const ::windows::runtime::GUID,
-        updateobject: *mut *mut ::std::ffi::c_void,
+        updateobject: *mut *mut ::core::ffi::c_void,
         offset: *mut ::windows::Win32::Foundation::POINT,
     ) -> ::windows::runtime::HRESULT,
     pub unsafe extern "system" fn(this: ::windows::runtime::RawPtr) -> ::windows::runtime::HRESULT,
@@ -12631,10 +12668,10 @@ pub struct ISurfaceImageSourceNativeWithD2D_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ISwapChainBackgroundPanelNative(pub ::windows::runtime::IUnknown);
 impl ISwapChainBackgroundPanelNative {
@@ -12647,7 +12684,7 @@ impl ISwapChainBackgroundPanelNative {
         swapchain: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             swapchain.into_param().abi(),
         )
         .ok()
@@ -12662,12 +12699,12 @@ unsafe impl ::windows::runtime::Interface for ISwapChainBackgroundPanelNative {
         [151, 116, 134, 4, 203, 115, 217, 13],
     );
 }
-impl ::std::convert::From<ISwapChainBackgroundPanelNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISwapChainBackgroundPanelNative> for ::windows::runtime::IUnknown {
     fn from(value: ISwapChainBackgroundPanelNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISwapChainBackgroundPanelNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISwapChainBackgroundPanelNative> for ::windows::runtime::IUnknown {
     fn from(value: &ISwapChainBackgroundPanelNative) -> Self {
         value.0.clone()
     }
@@ -12704,10 +12741,10 @@ pub struct ISwapChainBackgroundPanelNative_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ISwapChainPanelNative(pub ::windows::runtime::IUnknown);
 impl ISwapChainPanelNative {
@@ -12720,7 +12757,7 @@ impl ISwapChainPanelNative {
         swapchain: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             swapchain.into_param().abi(),
         )
         .ok()
@@ -12735,12 +12772,12 @@ unsafe impl ::windows::runtime::Interface for ISwapChainPanelNative {
         [133, 168, 100, 13, 148, 76, 195, 37],
     );
 }
-impl ::std::convert::From<ISwapChainPanelNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISwapChainPanelNative> for ::windows::runtime::IUnknown {
     fn from(value: ISwapChainPanelNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISwapChainPanelNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISwapChainPanelNative> for ::windows::runtime::IUnknown {
     fn from(value: &ISwapChainPanelNative) -> Self {
         value.0.clone()
     }
@@ -12775,10 +12812,10 @@ pub struct ISwapChainPanelNative_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ISwapChainPanelNative2(pub ::windows::runtime::IUnknown);
 impl ISwapChainPanelNative2 {
@@ -12791,7 +12828,7 @@ impl ISwapChainPanelNative2 {
         swapchain: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             swapchain.into_param().abi(),
         )
         .ok()
@@ -12805,7 +12842,7 @@ impl ISwapChainPanelNative2 {
         swapchainhandle: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             swapchainhandle.into_param().abi(),
         )
         .ok()
@@ -12820,12 +12857,12 @@ unsafe impl ::windows::runtime::Interface for ISwapChainPanelNative2 {
         [187, 76, 1, 13, 210, 127, 174, 169],
     );
 }
-impl ::std::convert::From<ISwapChainPanelNative2> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISwapChainPanelNative2> for ::windows::runtime::IUnknown {
     fn from(value: ISwapChainPanelNative2) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISwapChainPanelNative2> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISwapChainPanelNative2> for ::windows::runtime::IUnknown {
     fn from(value: &ISwapChainPanelNative2) -> Self {
         value.0.clone()
     }
@@ -12844,24 +12881,24 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ISwapChainPanelNative2> for ISwapChainPanelNative {
+impl ::core::convert::From<ISwapChainPanelNative2> for ISwapChainPanelNative {
     fn from(value: ISwapChainPanelNative2) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&ISwapChainPanelNative2> for ISwapChainPanelNative {
+impl ::core::convert::From<&ISwapChainPanelNative2> for ISwapChainPanelNative {
     fn from(value: &ISwapChainPanelNative2) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ISwapChainPanelNative> for ISwapChainPanelNative2 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ISwapChainPanelNative> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ISwapChainPanelNative> for &ISwapChainPanelNative2 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ISwapChainPanelNative> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 #[repr(C)]
@@ -13374,10 +13411,10 @@ pub struct ITranslateTransformStatics_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IVirtualSurfaceImageSourceNative(pub ::windows::runtime::IUnknown);
 impl IVirtualSurfaceImageSourceNative {
@@ -13390,7 +13427,7 @@ impl IVirtualSurfaceImageSourceNative {
         device: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             device.into_param().abi(),
         )
         .ok()
@@ -13402,20 +13439,20 @@ impl IVirtualSurfaceImageSourceNative {
     >(
         &self,
         updaterect: Param0,
-        surface: *mut ::std::option::Option<::windows::Win32::Graphics::Dxgi::IDXGISurface>,
+        surface: *mut ::core::option::Option<::windows::Win32::Graphics::Dxgi::IDXGISurface>,
         offset: *mut ::windows::Win32::Foundation::POINT,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             updaterect.into_param().abi(),
-            ::std::mem::transmute(surface),
-            ::std::mem::transmute(offset),
+            ::core::mem::transmute(surface),
+            ::core::mem::transmute(offset),
         )
         .ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).5)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).5)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn Invalidate<
@@ -13426,16 +13463,16 @@ impl IVirtualSurfaceImageSourceNative {
         updaterect: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).6)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             updaterect.into_param().abi(),
         )
         .ok()
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn GetUpdateRectCount(&self) -> ::windows::runtime::Result<u32> {
-        let mut result__: <u32 as ::windows::runtime::Abi>::Abi = ::std::mem::zeroed();
+        let mut result__: <u32 as ::windows::runtime::Abi>::Abi = ::core::mem::zeroed();
         (::windows::runtime::Interface::vtable(self).7)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             &mut result__,
         )
         .from_abi::<u32>(result__)
@@ -13447,9 +13484,9 @@ impl IVirtualSurfaceImageSourceNative {
         count: u32,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).8)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(updates),
-            ::std::mem::transmute(count),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(updates),
+            ::core::mem::transmute(count),
         )
         .ok()
     }
@@ -13458,9 +13495,9 @@ impl IVirtualSurfaceImageSourceNative {
         &self,
     ) -> ::windows::runtime::Result<::windows::Win32::Foundation::RECT> {
         let mut result__: <::windows::Win32::Foundation::RECT as ::windows::runtime::Abi>::Abi =
-            ::std::mem::zeroed();
+            ::core::mem::zeroed();
         (::windows::runtime::Interface::vtable(self).9)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             &mut result__,
         )
         .from_abi::<::windows::Win32::Foundation::RECT>(result__)
@@ -13474,7 +13511,7 @@ impl IVirtualSurfaceImageSourceNative {
         callback: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).10)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             callback.into_param().abi(),
         )
         .ok()
@@ -13482,9 +13519,9 @@ impl IVirtualSurfaceImageSourceNative {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn Resize(&self, newwidth: i32, newheight: i32) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).11)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(newwidth),
-            ::std::mem::transmute(newheight),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(newwidth),
+            ::core::mem::transmute(newheight),
         )
         .ok()
     }
@@ -13498,12 +13535,12 @@ unsafe impl ::windows::runtime::Interface for IVirtualSurfaceImageSourceNative {
         [132, 15, 92, 156, 139, 14, 34, 7],
     );
 }
-impl ::std::convert::From<IVirtualSurfaceImageSourceNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IVirtualSurfaceImageSourceNative> for ::windows::runtime::IUnknown {
     fn from(value: IVirtualSurfaceImageSourceNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IVirtualSurfaceImageSourceNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IVirtualSurfaceImageSourceNative> for ::windows::runtime::IUnknown {
     fn from(value: &IVirtualSurfaceImageSourceNative) -> Self {
         value.0.clone()
     }
@@ -13522,28 +13559,28 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<IVirtualSurfaceImageSourceNative> for ISurfaceImageSourceNative {
+impl ::core::convert::From<IVirtualSurfaceImageSourceNative> for ISurfaceImageSourceNative {
     fn from(value: IVirtualSurfaceImageSourceNative) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&IVirtualSurfaceImageSourceNative> for ISurfaceImageSourceNative {
+impl ::core::convert::From<&IVirtualSurfaceImageSourceNative> for ISurfaceImageSourceNative {
     fn from(value: &IVirtualSurfaceImageSourceNative) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ISurfaceImageSourceNative>
     for IVirtualSurfaceImageSourceNative
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ISurfaceImageSourceNative> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ISurfaceImageSourceNative>
     for &IVirtualSurfaceImageSourceNative
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ISurfaceImageSourceNative> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 #[repr(C)]
@@ -13597,16 +13634,16 @@ pub struct IVirtualSurfaceImageSourceNative_abi(
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IVirtualSurfaceUpdatesCallbackNative(pub ::windows::runtime::IUnknown);
 impl IVirtualSurfaceUpdatesCallbackNative {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub unsafe fn UpdatesNeeded(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).3)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).3)(::core::mem::transmute_copy(self)).ok()
     }
 }
 unsafe impl ::windows::runtime::Interface for IVirtualSurfaceUpdatesCallbackNative {
@@ -13618,12 +13655,12 @@ unsafe impl ::windows::runtime::Interface for IVirtualSurfaceUpdatesCallbackNati
         [176, 51, 248, 119, 167, 86, 197, 43],
     );
 }
-impl ::std::convert::From<IVirtualSurfaceUpdatesCallbackNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IVirtualSurfaceUpdatesCallbackNative> for ::windows::runtime::IUnknown {
     fn from(value: IVirtualSurfaceUpdatesCallbackNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IVirtualSurfaceUpdatesCallbackNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IVirtualSurfaceUpdatesCallbackNative> for ::windows::runtime::IUnknown {
     fn from(value: &IVirtualSurfaceUpdatesCallbackNative) -> Self {
         value.0.clone()
     }
@@ -14113,7 +14150,7 @@ pub struct IXamlLightOverrides_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -14209,32 +14246,32 @@ pub struct IXamlLightStatics_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        lightid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        lightid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         element: ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        lightid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        lightid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         element: ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        lightid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        lightid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         brush: ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        lightid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        lightid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         brush: ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ImageBrush(pub ::windows::runtime::IInspectable);
 impl ImageBrush {
@@ -14257,9 +14294,9 @@ impl ImageBrush {
     pub fn ImageSource(&self) -> ::windows::runtime::Result<ImageSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ImageSource>(result__)
@@ -14273,7 +14310,7 @@ impl ImageBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14289,9 +14326,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -14309,7 +14346,7 @@ impl ImageBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14322,9 +14359,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -14342,7 +14379,7 @@ impl ImageBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14351,9 +14388,9 @@ impl ImageBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ImageSourceProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IImageBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -14375,7 +14412,7 @@ impl ImageBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -14389,9 +14426,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14411,7 +14448,7 @@ impl ImageBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -14426,7 +14463,7 @@ impl ImageBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -14442,9 +14479,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14461,9 +14498,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14482,9 +14519,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -14504,7 +14541,7 @@ impl ImageBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -14515,9 +14552,9 @@ impl ImageBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -14530,9 +14567,9 @@ impl ImageBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -14542,9 +14579,9 @@ impl ImageBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -14554,17 +14591,20 @@ impl ImageBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -14578,7 +14618,7 @@ impl ImageBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14588,9 +14628,9 @@ impl ImageBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -14604,7 +14644,7 @@ impl ImageBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14614,9 +14654,9 @@ impl ImageBrush {
     pub fn AlignmentX(&self) -> ::windows::runtime::Result<AlignmentX> {
         let this = &::windows::runtime::Interface::cast::<ITileBrush>(self)?;
         unsafe {
-            let mut result__: AlignmentX = ::std::mem::zeroed();
+            let mut result__: AlignmentX = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<AlignmentX>(result__)
@@ -14626,17 +14666,20 @@ impl ImageBrush {
     pub fn SetAlignmentX(&self, value: AlignmentX) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITileBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AlignmentY(&self) -> ::windows::runtime::Result<AlignmentY> {
         let this = &::windows::runtime::Interface::cast::<ITileBrush>(self)?;
         unsafe {
-            let mut result__: AlignmentY = ::std::mem::zeroed();
+            let mut result__: AlignmentY = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<AlignmentY>(result__)
@@ -14646,17 +14689,20 @@ impl ImageBrush {
     pub fn SetAlignmentY(&self, value: AlignmentY) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITileBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Stretch(&self) -> ::windows::runtime::Result<Stretch> {
         let this = &::windows::runtime::Interface::cast::<ITileBrush>(self)?;
         unsafe {
-            let mut result__: Stretch = ::std::mem::zeroed();
+            let mut result__: Stretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Stretch>(result__)
@@ -14667,7 +14713,7 @@ impl ImageBrush {
         let this = &::windows::runtime::Interface::cast::<ITileBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14701,12 +14747,12 @@ unsafe impl ::windows::runtime::Interface for ImageBrush {
 impl ::windows::runtime::RuntimeName for ImageBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.ImageBrush";
 }
-impl ::std::convert::From<ImageBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ImageBrush> for ::windows::runtime::IUnknown {
     fn from(value: ImageBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ImageBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ImageBrush> for ::windows::runtime::IUnknown {
     fn from(value: &ImageBrush) -> Self {
         value.0 .0.clone()
     }
@@ -14721,12 +14767,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ImageBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ImageBrush> for ::windows::runtime::IInspectable {
     fn from(value: ImageBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ImageBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ImageBrush> for ::windows::runtime::IInspectable {
     fn from(value: &ImageBrush) -> Self {
         value.0.clone()
     }
@@ -14742,14 +14788,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<ImageBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<ImageBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ImageBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&ImageBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&ImageBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &ImageBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -14772,88 +14818,88 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<ImageBrush> for TileBrush {
+impl ::core::convert::From<ImageBrush> for TileBrush {
     fn from(value: ImageBrush) -> Self {
-        ::std::convert::Into::<TileBrush>::into(&value)
+        ::core::convert::Into::<TileBrush>::into(&value)
     }
 }
-impl ::std::convert::From<&ImageBrush> for TileBrush {
+impl ::core::convert::From<&ImageBrush> for TileBrush {
     fn from(value: &ImageBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TileBrush> for ImageBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, TileBrush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TileBrush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TileBrush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TileBrush> for &ImageBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, TileBrush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TileBrush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TileBrush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ImageBrush> for Brush {
+impl ::core::convert::From<ImageBrush> for Brush {
     fn from(value: ImageBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&ImageBrush> for Brush {
+impl ::core::convert::From<&ImageBrush> for Brush {
     fn from(value: &ImageBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for ImageBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &ImageBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ImageBrush> for super::DependencyObject {
+impl ::core::convert::From<ImageBrush> for super::DependencyObject {
     fn from(value: ImageBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ImageBrush> for super::DependencyObject {
+impl ::core::convert::From<&ImageBrush> for super::DependencyObject {
     fn from(value: &ImageBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for ImageBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &ImageBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ImageBrush {}
-unsafe impl ::std::marker::Sync for ImageBrush {}
+unsafe impl ::core::marker::Send for ImageBrush {}
+unsafe impl ::core::marker::Sync for ImageBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ImageSource(pub ::windows::runtime::IInspectable);
 impl ImageSource {
@@ -14864,9 +14910,9 @@ impl ImageSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14886,7 +14932,7 @@ impl ImageSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -14901,7 +14947,7 @@ impl ImageSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -14917,9 +14963,9 @@ impl ImageSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14936,9 +14982,9 @@ impl ImageSource {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14957,9 +15003,9 @@ impl ImageSource {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -14979,7 +15025,7 @@ impl ImageSource {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -14990,9 +15036,9 @@ impl ImageSource {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -15005,9 +15051,9 @@ impl ImageSource {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -15031,12 +15077,12 @@ unsafe impl ::windows::runtime::Interface for ImageSource {
 impl ::windows::runtime::RuntimeName for ImageSource {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.ImageSource";
 }
-impl ::std::convert::From<ImageSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ImageSource> for ::windows::runtime::IUnknown {
     fn from(value: ImageSource) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ImageSource> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ImageSource> for ::windows::runtime::IUnknown {
     fn from(value: &ImageSource) -> Self {
         value.0 .0.clone()
     }
@@ -15051,12 +15097,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ImageSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ImageSource> for ::windows::runtime::IInspectable {
     fn from(value: ImageSource) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ImageSource> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ImageSource> for ::windows::runtime::IInspectable {
     fn from(value: &ImageSource) -> Self {
         value.0.clone()
     }
@@ -15071,39 +15117,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ImageSource> for super::DependencyObject {
+impl ::core::convert::From<ImageSource> for super::DependencyObject {
     fn from(value: ImageSource) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ImageSource> for super::DependencyObject {
+impl ::core::convert::From<&ImageSource> for super::DependencyObject {
     fn from(value: &ImageSource) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for ImageSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &ImageSource {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ImageSource {}
-unsafe impl ::std::marker::Sync for ImageSource {}
+unsafe impl ::core::marker::Send for ImageSource {}
+unsafe impl ::core::marker::Sync for ImageSource {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LineGeometry(pub ::windows::runtime::IInspectable);
 impl LineGeometry {
@@ -15126,9 +15172,9 @@ impl LineGeometry {
     pub fn StartPoint(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -15145,7 +15191,7 @@ impl LineGeometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15155,9 +15201,9 @@ impl LineGeometry {
     pub fn EndPoint(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -15174,7 +15220,7 @@ impl LineGeometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15183,9 +15229,9 @@ impl LineGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn StartPointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ILineGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -15194,9 +15240,9 @@ impl LineGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn EndPointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ILineGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -15209,9 +15255,9 @@ impl LineGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15231,7 +15277,7 @@ impl LineGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -15246,7 +15292,7 @@ impl LineGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -15262,9 +15308,9 @@ impl LineGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15281,9 +15327,9 @@ impl LineGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15302,9 +15348,9 @@ impl LineGeometry {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -15324,7 +15370,7 @@ impl LineGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -15335,9 +15381,9 @@ impl LineGeometry {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -15350,9 +15396,9 @@ impl LineGeometry {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -15362,9 +15408,9 @@ impl LineGeometry {
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -15378,7 +15424,7 @@ impl LineGeometry {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15388,9 +15434,9 @@ impl LineGeometry {
     pub fn Bounds(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -15424,12 +15470,12 @@ unsafe impl ::windows::runtime::Interface for LineGeometry {
 impl ::windows::runtime::RuntimeName for LineGeometry {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.LineGeometry";
 }
-impl ::std::convert::From<LineGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<LineGeometry> for ::windows::runtime::IUnknown {
     fn from(value: LineGeometry) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LineGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&LineGeometry> for ::windows::runtime::IUnknown {
     fn from(value: &LineGeometry) -> Self {
         value.0 .0.clone()
     }
@@ -15444,12 +15490,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LineGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<LineGeometry> for ::windows::runtime::IInspectable {
     fn from(value: LineGeometry) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LineGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&LineGeometry> for ::windows::runtime::IInspectable {
     fn from(value: &LineGeometry) -> Self {
         value.0.clone()
     }
@@ -15464,61 +15510,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<LineGeometry> for Geometry {
+impl ::core::convert::From<LineGeometry> for Geometry {
     fn from(value: LineGeometry) -> Self {
-        ::std::convert::Into::<Geometry>::into(&value)
+        ::core::convert::Into::<Geometry>::into(&value)
     }
 }
-impl ::std::convert::From<&LineGeometry> for Geometry {
+impl ::core::convert::From<&LineGeometry> for Geometry {
     fn from(value: &LineGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for LineGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for &LineGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<LineGeometry> for super::DependencyObject {
+impl ::core::convert::From<LineGeometry> for super::DependencyObject {
     fn from(value: LineGeometry) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&LineGeometry> for super::DependencyObject {
+impl ::core::convert::From<&LineGeometry> for super::DependencyObject {
     fn from(value: &LineGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for LineGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &LineGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for LineGeometry {}
-unsafe impl ::std::marker::Sync for LineGeometry {}
+unsafe impl ::core::marker::Send for LineGeometry {}
+unsafe impl ::core::marker::Sync for LineGeometry {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LineSegment(pub ::windows::runtime::IInspectable);
 impl LineSegment {
@@ -15541,9 +15587,9 @@ impl LineSegment {
     pub fn Point(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -15557,7 +15603,7 @@ impl LineSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15566,9 +15612,9 @@ impl LineSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn PointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ILineSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -15581,9 +15627,9 @@ impl LineSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15603,7 +15649,7 @@ impl LineSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -15618,7 +15664,7 @@ impl LineSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -15634,9 +15680,9 @@ impl LineSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15653,9 +15699,9 @@ impl LineSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15674,9 +15720,9 @@ impl LineSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -15696,7 +15742,7 @@ impl LineSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -15707,9 +15753,9 @@ impl LineSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -15722,9 +15768,9 @@ impl LineSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -15758,12 +15804,12 @@ unsafe impl ::windows::runtime::Interface for LineSegment {
 impl ::windows::runtime::RuntimeName for LineSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.LineSegment";
 }
-impl ::std::convert::From<LineSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<LineSegment> for ::windows::runtime::IUnknown {
     fn from(value: LineSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LineSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&LineSegment> for ::windows::runtime::IUnknown {
     fn from(value: &LineSegment) -> Self {
         value.0 .0.clone()
     }
@@ -15778,12 +15824,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LineSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<LineSegment> for ::windows::runtime::IInspectable {
     fn from(value: LineSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LineSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&LineSegment> for ::windows::runtime::IInspectable {
     fn from(value: &LineSegment) -> Self {
         value.0.clone()
     }
@@ -15798,61 +15844,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<LineSegment> for PathSegment {
+impl ::core::convert::From<LineSegment> for PathSegment {
     fn from(value: LineSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&LineSegment> for PathSegment {
+impl ::core::convert::From<&LineSegment> for PathSegment {
     fn from(value: &LineSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for LineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &LineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<LineSegment> for super::DependencyObject {
+impl ::core::convert::From<LineSegment> for super::DependencyObject {
     fn from(value: LineSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&LineSegment> for super::DependencyObject {
+impl ::core::convert::From<&LineSegment> for super::DependencyObject {
     fn from(value: &LineSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for LineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &LineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for LineSegment {}
-unsafe impl ::std::marker::Sync for LineSegment {}
+unsafe impl ::core::marker::Send for LineSegment {}
+unsafe impl ::core::marker::Sync for LineSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LinearGradientBrush(pub ::windows::runtime::IInspectable);
 impl LinearGradientBrush {
@@ -15875,9 +15921,9 @@ impl LinearGradientBrush {
     pub fn StartPoint(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -15894,7 +15940,7 @@ impl LinearGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15904,9 +15950,9 @@ impl LinearGradientBrush {
     pub fn EndPoint(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -15923,7 +15969,7 @@ impl LinearGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15938,9 +15984,9 @@ impl LinearGradientBrush {
         angle: f64,
     ) -> ::windows::runtime::Result<LinearGradientBrush> {
         Self::ILinearGradientBrushFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 gradientstopcollection.into_param().abi(),
                 angle,
                 &mut result__,
@@ -15951,9 +15997,9 @@ impl LinearGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn StartPointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ILinearGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -15962,9 +16008,9 @@ impl LinearGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn EndPointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ILinearGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -15986,7 +16032,7 @@ impl LinearGradientBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -16000,9 +16046,9 @@ impl LinearGradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -16022,7 +16068,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -16037,7 +16083,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -16053,9 +16099,9 @@ impl LinearGradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -16072,9 +16118,9 @@ impl LinearGradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -16093,9 +16139,9 @@ impl LinearGradientBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -16115,7 +16161,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -16126,9 +16172,9 @@ impl LinearGradientBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -16141,9 +16187,9 @@ impl LinearGradientBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -16153,9 +16199,9 @@ impl LinearGradientBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -16165,17 +16211,20 @@ impl LinearGradientBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -16189,7 +16238,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16199,9 +16248,9 @@ impl LinearGradientBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -16215,7 +16264,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16225,9 +16274,9 @@ impl LinearGradientBrush {
     pub fn SpreadMethod(&self) -> ::windows::runtime::Result<GradientSpreadMethod> {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
-            let mut result__: GradientSpreadMethod = ::std::mem::zeroed();
+            let mut result__: GradientSpreadMethod = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GradientSpreadMethod>(result__)
@@ -16237,17 +16286,20 @@ impl LinearGradientBrush {
     pub fn SetSpreadMethod(&self, value: GradientSpreadMethod) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn MappingMode(&self) -> ::windows::runtime::Result<BrushMappingMode> {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
-            let mut result__: BrushMappingMode = ::std::mem::zeroed();
+            let mut result__: BrushMappingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<BrushMappingMode>(result__)
@@ -16257,17 +16309,20 @@ impl LinearGradientBrush {
     pub fn SetMappingMode(&self, value: BrushMappingMode) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ColorInterpolationMode(&self) -> ::windows::runtime::Result<ColorInterpolationMode> {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
-            let mut result__: ColorInterpolationMode = ::std::mem::zeroed();
+            let mut result__: ColorInterpolationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ColorInterpolationMode>(result__)
@@ -16281,7 +16336,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16291,9 +16346,9 @@ impl LinearGradientBrush {
     pub fn GradientStops(&self) -> ::windows::runtime::Result<GradientStopCollection> {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GradientStopCollection>(result__)
@@ -16310,7 +16365,7 @@ impl LinearGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16358,12 +16413,12 @@ unsafe impl ::windows::runtime::Interface for LinearGradientBrush {
 impl ::windows::runtime::RuntimeName for LinearGradientBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.LinearGradientBrush";
 }
-impl ::std::convert::From<LinearGradientBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<LinearGradientBrush> for ::windows::runtime::IUnknown {
     fn from(value: LinearGradientBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LinearGradientBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&LinearGradientBrush> for ::windows::runtime::IUnknown {
     fn from(value: &LinearGradientBrush) -> Self {
         value.0 .0.clone()
     }
@@ -16380,12 +16435,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LinearGradientBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<LinearGradientBrush> for ::windows::runtime::IInspectable {
     fn from(value: LinearGradientBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LinearGradientBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&LinearGradientBrush> for ::windows::runtime::IInspectable {
     fn from(value: &LinearGradientBrush) -> Self {
         value.0.clone()
     }
@@ -16405,14 +16460,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<LinearGradientBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<LinearGradientBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: LinearGradientBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&LinearGradientBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&LinearGradientBrush>
+    for super::super::Composition::IAnimationObject
+{
     type Error = ::windows::runtime::Error;
     fn try_from(value: &LinearGradientBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -16435,88 +16492,88 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<LinearGradientBrush> for GradientBrush {
+impl ::core::convert::From<LinearGradientBrush> for GradientBrush {
     fn from(value: LinearGradientBrush) -> Self {
-        ::std::convert::Into::<GradientBrush>::into(&value)
+        ::core::convert::Into::<GradientBrush>::into(&value)
     }
 }
-impl ::std::convert::From<&LinearGradientBrush> for GradientBrush {
+impl ::core::convert::From<&LinearGradientBrush> for GradientBrush {
     fn from(value: &LinearGradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GradientBrush> for LinearGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, GradientBrush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GradientBrush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GradientBrush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GradientBrush> for &LinearGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, GradientBrush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GradientBrush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GradientBrush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<LinearGradientBrush> for Brush {
+impl ::core::convert::From<LinearGradientBrush> for Brush {
     fn from(value: LinearGradientBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&LinearGradientBrush> for Brush {
+impl ::core::convert::From<&LinearGradientBrush> for Brush {
     fn from(value: &LinearGradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for LinearGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &LinearGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<LinearGradientBrush> for super::DependencyObject {
+impl ::core::convert::From<LinearGradientBrush> for super::DependencyObject {
     fn from(value: LinearGradientBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&LinearGradientBrush> for super::DependencyObject {
+impl ::core::convert::From<&LinearGradientBrush> for super::DependencyObject {
     fn from(value: &LinearGradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for LinearGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &LinearGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for LinearGradientBrush {}
-unsafe impl ::std::marker::Sync for LinearGradientBrush {}
+unsafe impl ::core::marker::Send for LinearGradientBrush {}
+unsafe impl ::core::marker::Sync for LinearGradientBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LoadedImageSourceLoadCompletedEventArgs(pub ::windows::runtime::IInspectable);
 impl LoadedImageSourceLoadCompletedEventArgs {
@@ -16524,9 +16581,9 @@ impl LoadedImageSourceLoadCompletedEventArgs {
     pub fn Status(&self) -> ::windows::runtime::Result<LoadedImageSourceLoadStatus> {
         let this = self;
         unsafe {
-            let mut result__: LoadedImageSourceLoadStatus = ::std::mem::zeroed();
+            let mut result__: LoadedImageSourceLoadStatus = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<LoadedImageSourceLoadStatus>(result__)
@@ -16548,14 +16605,14 @@ unsafe impl ::windows::runtime::Interface for LoadedImageSourceLoadCompletedEven
 impl ::windows::runtime::RuntimeName for LoadedImageSourceLoadCompletedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs";
 }
-impl ::std::convert::From<LoadedImageSourceLoadCompletedEventArgs>
+impl ::core::convert::From<LoadedImageSourceLoadCompletedEventArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: LoadedImageSourceLoadCompletedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LoadedImageSourceLoadCompletedEventArgs>
+impl ::core::convert::From<&LoadedImageSourceLoadCompletedEventArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &LoadedImageSourceLoadCompletedEventArgs) -> Self {
@@ -16576,14 +16633,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LoadedImageSourceLoadCompletedEventArgs>
+impl ::core::convert::From<LoadedImageSourceLoadCompletedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: LoadedImageSourceLoadCompletedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LoadedImageSourceLoadCompletedEventArgs>
+impl ::core::convert::From<&LoadedImageSourceLoadCompletedEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &LoadedImageSourceLoadCompletedEventArgs) -> Self {
@@ -16604,16 +16661,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for LoadedImageSourceLoadCompletedEventArgs {}
-unsafe impl ::std::marker::Sync for LoadedImageSourceLoadCompletedEventArgs {}
+unsafe impl ::core::marker::Send for LoadedImageSourceLoadCompletedEventArgs {}
+unsafe impl ::core::marker::Sync for LoadedImageSourceLoadCompletedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct LoadedImageSourceLoadStatus(pub i32);
@@ -16623,7 +16680,7 @@ impl LoadedImageSourceLoadStatus {
     pub const InvalidFormat: LoadedImageSourceLoadStatus = LoadedImageSourceLoadStatus(2i32);
     pub const Other: LoadedImageSourceLoadStatus = LoadedImageSourceLoadStatus(3i32);
 }
-impl ::std::convert::From<i32> for LoadedImageSourceLoadStatus {
+impl ::core::convert::From<i32> for LoadedImageSourceLoadStatus {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -16642,10 +16699,10 @@ impl ::windows::runtime::DefaultType for LoadedImageSourceLoadStatus {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LoadedImageSurface(pub ::windows::runtime::IInspectable);
 impl LoadedImageSurface {
@@ -16653,9 +16710,9 @@ impl LoadedImageSurface {
     pub fn DecodedPhysicalSize(&self) -> ::windows::runtime::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Size>(result__)
@@ -16665,9 +16722,9 @@ impl LoadedImageSurface {
     pub fn DecodedSize(&self) -> ::windows::runtime::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Size>(result__)
@@ -16677,9 +16734,9 @@ impl LoadedImageSurface {
     pub fn NaturalSize(&self) -> ::windows::runtime::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Size>(result__)
@@ -16701,9 +16758,9 @@ impl LoadedImageSurface {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -16721,7 +16778,7 @@ impl LoadedImageSurface {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -16731,7 +16788,7 @@ impl LoadedImageSurface {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -16744,9 +16801,9 @@ impl LoadedImageSurface {
         desiredmaxsize: Param1,
     ) -> ::windows::runtime::Result<LoadedImageSurface> {
         Self::ILoadedImageSurfaceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 uri.into_param().abi(),
                 desiredmaxsize.into_param().abi(),
                 &mut result__,
@@ -16762,9 +16819,9 @@ impl LoadedImageSurface {
         uri: Param0,
     ) -> ::windows::runtime::Result<LoadedImageSurface> {
         Self::ILoadedImageSurfaceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 uri.into_param().abi(),
                 &mut result__,
             )
@@ -16781,9 +16838,9 @@ impl LoadedImageSurface {
         desiredmaxsize: Param1,
     ) -> ::windows::runtime::Result<LoadedImageSurface> {
         Self::ILoadedImageSurfaceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 stream.into_param().abi(),
                 desiredmaxsize.into_param().abi(),
                 &mut result__,
@@ -16799,9 +16856,9 @@ impl LoadedImageSurface {
         stream: Param0,
     ) -> ::windows::runtime::Result<LoadedImageSurface> {
         Self::ILoadedImageSurfaceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 stream.into_param().abi(),
                 &mut result__,
             )
@@ -16838,12 +16895,12 @@ unsafe impl ::windows::runtime::Interface for LoadedImageSurface {
 impl ::windows::runtime::RuntimeName for LoadedImageSurface {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.LoadedImageSurface";
 }
-impl ::std::convert::From<LoadedImageSurface> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<LoadedImageSurface> for ::windows::runtime::IUnknown {
     fn from(value: LoadedImageSurface) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LoadedImageSurface> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&LoadedImageSurface> for ::windows::runtime::IUnknown {
     fn from(value: &LoadedImageSurface) -> Self {
         value.0 .0.clone()
     }
@@ -16860,12 +16917,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LoadedImageSurface> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<LoadedImageSurface> for ::windows::runtime::IInspectable {
     fn from(value: LoadedImageSurface) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LoadedImageSurface> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&LoadedImageSurface> for ::windows::runtime::IInspectable {
     fn from(value: &LoadedImageSurface) -> Self {
         value.0.clone()
     }
@@ -16885,16 +16942,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<LoadedImageSurface>
+impl ::core::convert::TryFrom<LoadedImageSurface>
     for super::super::Composition::ICompositionSurface
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: LoadedImageSurface) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&LoadedImageSurface>
+impl ::core::convert::TryFrom<&LoadedImageSurface>
     for super::super::Composition::ICompositionSurface
 {
     type Error = ::windows::runtime::Error;
@@ -16919,18 +16976,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::ICompositi
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::ICompositionSurface> {
-        ::std::convert::TryInto::<super::super::Composition::ICompositionSurface>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::ICompositionSurface>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<LoadedImageSurface> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<LoadedImageSurface> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: LoadedImageSurface) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&LoadedImageSurface> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&LoadedImageSurface> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &LoadedImageSurface) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -16947,14 +17004,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &LoadedImageSurface
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for LoadedImageSurface {}
-unsafe impl ::std::marker::Sync for LoadedImageSurface {}
-#[derive(:: std :: clone :: Clone, :: std :: marker :: Copy)]
+unsafe impl ::core::marker::Send for LoadedImageSurface {}
+unsafe impl ::core::marker::Sync for LoadedImageSurface {}
+#[derive(:: core :: clone :: Clone, :: core :: marker :: Copy)]
 #[repr(C)]
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 pub struct Matrix {
@@ -16966,13 +17023,13 @@ pub struct Matrix {
     pub OffsetY: f64,
 }
 impl Matrix {}
-impl ::std::default::Default for Matrix {
+impl ::core::default::Default for Matrix {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        unsafe { ::core::mem::zeroed() }
     }
 }
-impl ::std::fmt::Debug for Matrix {
-    fn fmt(&self, fmt: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
+impl ::core::fmt::Debug for Matrix {
+    fn fmt(&self, fmt: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
         fmt.debug_struct("Matrix")
             .field("M11", &self.M11)
             .field("M12", &self.M12)
@@ -16983,7 +17040,7 @@ impl ::std::fmt::Debug for Matrix {
             .finish()
     }
 }
-impl ::std::cmp::PartialEq for Matrix {
+impl ::core::cmp::PartialEq for Matrix {
     fn eq(&self, other: &Self) -> bool {
         self.M11 == other.M11
             && self.M12 == other.M12
@@ -16993,7 +17050,7 @@ impl ::std::cmp::PartialEq for Matrix {
             && self.OffsetY == other.OffsetY
     }
 }
-impl ::std::cmp::Eq for Matrix {}
+impl ::core::cmp::Eq for Matrix {}
 unsafe impl ::windows::runtime::Abi for Matrix {
     type Abi = Self;
 }
@@ -17008,10 +17065,10 @@ impl ::windows::runtime::DefaultType for Matrix {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Matrix3DProjection(pub ::windows::runtime::IInspectable);
 impl Matrix3DProjection {
@@ -17035,9 +17092,9 @@ impl Matrix3DProjection {
     pub fn ProjectionMatrix(&self) -> ::windows::runtime::Result<Media3D::Matrix3D> {
         let this = self;
         unsafe {
-            let mut result__: Media3D::Matrix3D = ::std::mem::zeroed();
+            let mut result__: Media3D::Matrix3D = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Media3D::Matrix3D>(result__)
@@ -17052,7 +17109,7 @@ impl Matrix3DProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17061,9 +17118,9 @@ impl Matrix3DProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ProjectionMatrixProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IMatrix3DProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -17076,9 +17133,9 @@ impl Matrix3DProjection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17098,7 +17155,7 @@ impl Matrix3DProjection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -17113,7 +17170,7 @@ impl Matrix3DProjection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -17129,9 +17186,9 @@ impl Matrix3DProjection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17148,9 +17205,9 @@ impl Matrix3DProjection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17169,9 +17226,9 @@ impl Matrix3DProjection {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -17191,7 +17248,7 @@ impl Matrix3DProjection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -17202,9 +17259,9 @@ impl Matrix3DProjection {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -17217,9 +17274,9 @@ impl Matrix3DProjection {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -17255,12 +17312,12 @@ unsafe impl ::windows::runtime::Interface for Matrix3DProjection {
 impl ::windows::runtime::RuntimeName for Matrix3DProjection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.Matrix3DProjection";
 }
-impl ::std::convert::From<Matrix3DProjection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Matrix3DProjection> for ::windows::runtime::IUnknown {
     fn from(value: Matrix3DProjection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Matrix3DProjection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Matrix3DProjection> for ::windows::runtime::IUnknown {
     fn from(value: &Matrix3DProjection) -> Self {
         value.0 .0.clone()
     }
@@ -17277,12 +17334,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Matrix3DProjection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Matrix3DProjection> for ::windows::runtime::IInspectable {
     fn from(value: Matrix3DProjection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Matrix3DProjection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Matrix3DProjection> for ::windows::runtime::IInspectable {
     fn from(value: &Matrix3DProjection) -> Self {
         value.0.clone()
     }
@@ -17301,70 +17358,70 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Matrix3DProjection> for Projection {
+impl ::core::convert::From<Matrix3DProjection> for Projection {
     fn from(value: Matrix3DProjection) -> Self {
-        ::std::convert::Into::<Projection>::into(&value)
+        ::core::convert::Into::<Projection>::into(&value)
     }
 }
-impl ::std::convert::From<&Matrix3DProjection> for Projection {
+impl ::core::convert::From<&Matrix3DProjection> for Projection {
     fn from(value: &Matrix3DProjection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Projection> for Matrix3DProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, Projection> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Projection>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Projection>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Projection> for &Matrix3DProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, Projection> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Projection>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Projection>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Matrix3DProjection> for super::DependencyObject {
+impl ::core::convert::From<Matrix3DProjection> for super::DependencyObject {
     fn from(value: Matrix3DProjection) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Matrix3DProjection> for super::DependencyObject {
+impl ::core::convert::From<&Matrix3DProjection> for super::DependencyObject {
     fn from(value: &Matrix3DProjection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Matrix3DProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Matrix3DProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Matrix3DProjection {}
-unsafe impl ::std::marker::Sync for Matrix3DProjection {}
+unsafe impl ::core::marker::Send for Matrix3DProjection {}
+unsafe impl ::core::marker::Sync for Matrix3DProjection {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct MatrixHelper(pub ::windows::runtime::IInspectable);
 impl MatrixHelper {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Identity() -> ::windows::runtime::Result<Matrix> {
         Self::IMatrixHelperStatics(|this| unsafe {
-            let mut result__: Matrix = ::std::mem::zeroed();
+            let mut result__: Matrix = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Matrix>(result__)
@@ -17380,9 +17437,9 @@ impl MatrixHelper {
         offsety: f64,
     ) -> ::windows::runtime::Result<Matrix> {
         Self::IMatrixHelperStatics(|this| unsafe {
-            let mut result__: Matrix = ::std::mem::zeroed();
+            let mut result__: Matrix = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 m11,
                 m12,
                 m21,
@@ -17399,9 +17456,9 @@ impl MatrixHelper {
         target: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::IMatrixHelperStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 &mut result__,
             )
@@ -17418,9 +17475,9 @@ impl MatrixHelper {
         point: Param1,
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         Self::IMatrixHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 target.into_param().abi(),
                 point.into_param().abi(),
                 &mut result__,
@@ -17456,12 +17513,12 @@ unsafe impl ::windows::runtime::Interface for MatrixHelper {
 impl ::windows::runtime::RuntimeName for MatrixHelper {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.MatrixHelper";
 }
-impl ::std::convert::From<MatrixHelper> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<MatrixHelper> for ::windows::runtime::IUnknown {
     fn from(value: MatrixHelper) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&MatrixHelper> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&MatrixHelper> for ::windows::runtime::IUnknown {
     fn from(value: &MatrixHelper) -> Self {
         value.0 .0.clone()
     }
@@ -17476,12 +17533,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<MatrixHelper> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<MatrixHelper> for ::windows::runtime::IInspectable {
     fn from(value: MatrixHelper) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&MatrixHelper> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&MatrixHelper> for ::windows::runtime::IInspectable {
     fn from(value: &MatrixHelper) -> Self {
         value.0.clone()
     }
@@ -17496,15 +17553,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for MatrixHelper {}
-unsafe impl ::std::marker::Sync for MatrixHelper {}
+unsafe impl ::core::marker::Send for MatrixHelper {}
+unsafe impl ::core::marker::Sync for MatrixHelper {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct MatrixTransform(pub ::windows::runtime::IInspectable);
 impl MatrixTransform {
@@ -17527,9 +17584,9 @@ impl MatrixTransform {
     pub fn Matrix(&self) -> ::windows::runtime::Result<Matrix> {
         let this = self;
         unsafe {
-            let mut result__: Matrix = ::std::mem::zeroed();
+            let mut result__: Matrix = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Matrix>(result__)
@@ -17543,7 +17600,7 @@ impl MatrixTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17552,9 +17609,9 @@ impl MatrixTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn MatrixProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IMatrixTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -17567,9 +17624,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17589,7 +17646,7 @@ impl MatrixTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -17604,7 +17661,7 @@ impl MatrixTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -17620,9 +17677,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17639,9 +17696,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17660,9 +17717,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -17682,7 +17739,7 @@ impl MatrixTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -17693,9 +17750,9 @@ impl MatrixTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -17708,9 +17765,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -17720,9 +17777,9 @@ impl MatrixTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -17738,9 +17795,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -17758,9 +17815,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -17778,9 +17835,9 @@ impl MatrixTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -17817,12 +17874,12 @@ unsafe impl ::windows::runtime::Interface for MatrixTransform {
 impl ::windows::runtime::RuntimeName for MatrixTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.MatrixTransform";
 }
-impl ::std::convert::From<MatrixTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<MatrixTransform> for ::windows::runtime::IUnknown {
     fn from(value: MatrixTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&MatrixTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&MatrixTransform> for ::windows::runtime::IUnknown {
     fn from(value: &MatrixTransform) -> Self {
         value.0 .0.clone()
     }
@@ -17837,12 +17894,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<MatrixTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<MatrixTransform> for ::windows::runtime::IInspectable {
     fn from(value: MatrixTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&MatrixTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&MatrixTransform> for ::windows::runtime::IInspectable {
     fn from(value: &MatrixTransform) -> Self {
         value.0.clone()
     }
@@ -17859,83 +17916,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<MatrixTransform> for Transform {
+impl ::core::convert::From<MatrixTransform> for Transform {
     fn from(value: MatrixTransform) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&MatrixTransform> for Transform {
+impl ::core::convert::From<&MatrixTransform> for Transform {
     fn from(value: &MatrixTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for MatrixTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &MatrixTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<MatrixTransform> for GeneralTransform {
+impl ::core::convert::From<MatrixTransform> for GeneralTransform {
     fn from(value: MatrixTransform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&MatrixTransform> for GeneralTransform {
+impl ::core::convert::From<&MatrixTransform> for GeneralTransform {
     fn from(value: &MatrixTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for MatrixTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &MatrixTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<MatrixTransform> for super::DependencyObject {
+impl ::core::convert::From<MatrixTransform> for super::DependencyObject {
     fn from(value: MatrixTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&MatrixTransform> for super::DependencyObject {
+impl ::core::convert::From<&MatrixTransform> for super::DependencyObject {
     fn from(value: &MatrixTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for MatrixTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &MatrixTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for MatrixTransform {}
-unsafe impl ::std::marker::Sync for MatrixTransform {}
+unsafe impl ::core::marker::Send for MatrixTransform {}
+unsafe impl ::core::marker::Sync for MatrixTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PathFigure(pub ::windows::runtime::IInspectable);
 impl PathFigure {
@@ -17958,9 +18015,9 @@ impl PathFigure {
     pub fn Segments(&self) -> ::windows::runtime::Result<PathSegmentCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PathSegmentCollection>(result__)
@@ -17974,7 +18031,7 @@ impl PathFigure {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17984,9 +18041,9 @@ impl PathFigure {
     pub fn StartPoint(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -18003,7 +18060,7 @@ impl PathFigure {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18013,9 +18070,9 @@ impl PathFigure {
     pub fn IsClosed(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -18026,7 +18083,7 @@ impl PathFigure {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18036,9 +18093,9 @@ impl PathFigure {
     pub fn IsFilled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -18049,7 +18106,7 @@ impl PathFigure {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18058,9 +18115,9 @@ impl PathFigure {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SegmentsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18069,9 +18126,9 @@ impl PathFigure {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn StartPointProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18080,9 +18137,9 @@ impl PathFigure {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn IsClosedProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18091,9 +18148,9 @@ impl PathFigure {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn IsFilledProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18106,9 +18163,9 @@ impl PathFigure {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18128,7 +18185,7 @@ impl PathFigure {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -18143,7 +18200,7 @@ impl PathFigure {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -18159,9 +18216,9 @@ impl PathFigure {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18178,9 +18235,9 @@ impl PathFigure {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18199,9 +18256,9 @@ impl PathFigure {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -18221,7 +18278,7 @@ impl PathFigure {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -18232,9 +18289,9 @@ impl PathFigure {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -18247,9 +18304,9 @@ impl PathFigure {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -18283,12 +18340,12 @@ unsafe impl ::windows::runtime::Interface for PathFigure {
 impl ::windows::runtime::RuntimeName for PathFigure {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PathFigure";
 }
-impl ::std::convert::From<PathFigure> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PathFigure> for ::windows::runtime::IUnknown {
     fn from(value: PathFigure) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PathFigure> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PathFigure> for ::windows::runtime::IUnknown {
     fn from(value: &PathFigure) -> Self {
         value.0 .0.clone()
     }
@@ -18303,12 +18360,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PathFigure> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PathFigure> for ::windows::runtime::IInspectable {
     fn from(value: PathFigure) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PathFigure> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PathFigure> for ::windows::runtime::IInspectable {
     fn from(value: &PathFigure) -> Self {
         value.0.clone()
     }
@@ -18323,39 +18380,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PathFigure> for super::DependencyObject {
+impl ::core::convert::From<PathFigure> for super::DependencyObject {
     fn from(value: PathFigure) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PathFigure> for super::DependencyObject {
+impl ::core::convert::From<&PathFigure> for super::DependencyObject {
     fn from(value: &PathFigure) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PathFigure {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PathFigure {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PathFigure {}
-unsafe impl ::std::marker::Sync for PathFigure {}
+unsafe impl ::core::marker::Send for PathFigure {}
+unsafe impl ::core::marker::Sync for PathFigure {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PathFigureCollection(pub ::windows::runtime::IInspectable);
 impl PathFigureCollection {
@@ -18378,9 +18435,9 @@ impl PathFigureCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<PathFigure> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -18391,9 +18448,9 @@ impl PathFigureCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -18406,9 +18463,9 @@ impl PathFigureCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<PathFigure>>(result__)
@@ -18422,9 +18479,9 @@ impl PathFigureCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -18441,7 +18498,7 @@ impl PathFigureCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -18457,7 +18514,7 @@ impl PathFigureCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -18469,7 +18526,7 @@ impl PathFigureCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -18483,7 +18540,7 @@ impl PathFigureCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18493,14 +18550,14 @@ impl PathFigureCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -18511,12 +18568,12 @@ impl PathFigureCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -18530,9 +18587,9 @@ impl PathFigureCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -18545,9 +18602,9 @@ impl PathFigureCollection {
             ::windows::Foundation::Collections::IIterable<PathFigure>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<PathFigure>>(result__)
@@ -18564,12 +18621,12 @@ unsafe impl ::windows::runtime::Interface for PathFigureCollection {
 impl ::windows::runtime::RuntimeName for PathFigureCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PathFigureCollection";
 }
-impl ::std::convert::From<PathFigureCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PathFigureCollection> for ::windows::runtime::IUnknown {
     fn from(value: PathFigureCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PathFigureCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PathFigureCollection> for ::windows::runtime::IUnknown {
     fn from(value: &PathFigureCollection) -> Self {
         value.0 .0.clone()
     }
@@ -18586,12 +18643,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PathFigureCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PathFigureCollection> for ::windows::runtime::IInspectable {
     fn from(value: PathFigureCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PathFigureCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PathFigureCollection> for ::windows::runtime::IInspectable {
     fn from(value: &PathFigureCollection) -> Self {
         value.0.clone()
     }
@@ -18610,18 +18667,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PathFigureCollection>
+impl ::core::convert::From<PathFigureCollection>
     for ::windows::Foundation::Collections::IVector<PathFigure>
 {
     fn from(value: PathFigureCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&PathFigureCollection>
+impl ::core::convert::From<&PathFigureCollection>
     for ::windows::Foundation::Collections::IVector<PathFigure>
 {
     fn from(value: &PathFigureCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<PathFigure>>
@@ -18631,7 +18688,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<PathFigure>>
     {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<PathFigure>>
@@ -18641,18 +18698,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<PathFigure>>
     {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<PathFigureCollection>
+impl ::core::convert::TryFrom<PathFigureCollection>
     for ::windows::Foundation::Collections::IIterable<PathFigure>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: PathFigureCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&PathFigureCollection>
+impl ::core::convert::TryFrom<&PathFigureCollection>
     for ::windows::Foundation::Collections::IIterable<PathFigure>
 {
     type Error = ::windows::runtime::Error;
@@ -18679,36 +18736,36 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<PathFigure>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < PathFigure > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < PathFigure > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-unsafe impl ::std::marker::Send for PathFigureCollection {}
-unsafe impl ::std::marker::Sync for PathFigureCollection {}
+unsafe impl ::core::marker::Send for PathFigureCollection {}
+unsafe impl ::core::marker::Sync for PathFigureCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for PathFigureCollection {
+impl ::core::iter::IntoIterator for PathFigureCollection {
     type Item = PathFigure;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &PathFigureCollection {
+impl ::core::iter::IntoIterator for &PathFigureCollection {
     type Item = PathFigure;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PathGeometry(pub ::windows::runtime::IInspectable);
 impl PathGeometry {
@@ -18731,9 +18788,9 @@ impl PathGeometry {
     pub fn FillRule(&self) -> ::windows::runtime::Result<FillRule> {
         let this = self;
         unsafe {
-            let mut result__: FillRule = ::std::mem::zeroed();
+            let mut result__: FillRule = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<FillRule>(result__)
@@ -18743,17 +18800,20 @@ impl PathGeometry {
     pub fn SetFillRule(&self, value: FillRule) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Figures(&self) -> ::windows::runtime::Result<PathFigureCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PathFigureCollection>(result__)
@@ -18767,7 +18827,7 @@ impl PathGeometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18776,9 +18836,9 @@ impl PathGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn FillRuleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPathGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18787,9 +18847,9 @@ impl PathGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn FiguresProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPathGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18802,9 +18862,9 @@ impl PathGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18824,7 +18884,7 @@ impl PathGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -18839,7 +18899,7 @@ impl PathGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -18855,9 +18915,9 @@ impl PathGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18874,9 +18934,9 @@ impl PathGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18895,9 +18955,9 @@ impl PathGeometry {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -18917,7 +18977,7 @@ impl PathGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -18928,9 +18988,9 @@ impl PathGeometry {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -18943,9 +19003,9 @@ impl PathGeometry {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -18955,9 +19015,9 @@ impl PathGeometry {
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -18971,7 +19031,7 @@ impl PathGeometry {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18981,9 +19041,9 @@ impl PathGeometry {
     pub fn Bounds(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -19017,12 +19077,12 @@ unsafe impl ::windows::runtime::Interface for PathGeometry {
 impl ::windows::runtime::RuntimeName for PathGeometry {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PathGeometry";
 }
-impl ::std::convert::From<PathGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PathGeometry> for ::windows::runtime::IUnknown {
     fn from(value: PathGeometry) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PathGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PathGeometry> for ::windows::runtime::IUnknown {
     fn from(value: &PathGeometry) -> Self {
         value.0 .0.clone()
     }
@@ -19037,12 +19097,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PathGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PathGeometry> for ::windows::runtime::IInspectable {
     fn from(value: PathGeometry) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PathGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PathGeometry> for ::windows::runtime::IInspectable {
     fn from(value: &PathGeometry) -> Self {
         value.0.clone()
     }
@@ -19057,61 +19117,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PathGeometry> for Geometry {
+impl ::core::convert::From<PathGeometry> for Geometry {
     fn from(value: PathGeometry) -> Self {
-        ::std::convert::Into::<Geometry>::into(&value)
+        ::core::convert::Into::<Geometry>::into(&value)
     }
 }
-impl ::std::convert::From<&PathGeometry> for Geometry {
+impl ::core::convert::From<&PathGeometry> for Geometry {
     fn from(value: &PathGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for PathGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for &PathGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<PathGeometry> for super::DependencyObject {
+impl ::core::convert::From<PathGeometry> for super::DependencyObject {
     fn from(value: PathGeometry) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PathGeometry> for super::DependencyObject {
+impl ::core::convert::From<&PathGeometry> for super::DependencyObject {
     fn from(value: &PathGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PathGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PathGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PathGeometry {}
-unsafe impl ::std::marker::Sync for PathGeometry {}
+unsafe impl ::core::marker::Send for PathGeometry {}
+unsafe impl ::core::marker::Sync for PathGeometry {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PathSegment(pub ::windows::runtime::IInspectable);
 impl PathSegment {
@@ -19122,9 +19182,9 @@ impl PathSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -19144,7 +19204,7 @@ impl PathSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -19159,7 +19219,7 @@ impl PathSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -19175,9 +19235,9 @@ impl PathSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -19194,9 +19254,9 @@ impl PathSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -19215,9 +19275,9 @@ impl PathSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -19237,7 +19297,7 @@ impl PathSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -19248,9 +19308,9 @@ impl PathSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -19263,9 +19323,9 @@ impl PathSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -19289,12 +19349,12 @@ unsafe impl ::windows::runtime::Interface for PathSegment {
 impl ::windows::runtime::RuntimeName for PathSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PathSegment";
 }
-impl ::std::convert::From<PathSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PathSegment> for ::windows::runtime::IUnknown {
     fn from(value: PathSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PathSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PathSegment> for ::windows::runtime::IUnknown {
     fn from(value: &PathSegment) -> Self {
         value.0 .0.clone()
     }
@@ -19309,12 +19369,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PathSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PathSegment> for ::windows::runtime::IInspectable {
     fn from(value: PathSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PathSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PathSegment> for ::windows::runtime::IInspectable {
     fn from(value: &PathSegment) -> Self {
         value.0.clone()
     }
@@ -19329,39 +19389,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PathSegment> for super::DependencyObject {
+impl ::core::convert::From<PathSegment> for super::DependencyObject {
     fn from(value: PathSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PathSegment> for super::DependencyObject {
+impl ::core::convert::From<&PathSegment> for super::DependencyObject {
     fn from(value: &PathSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PathSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PathSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PathSegment {}
-unsafe impl ::std::marker::Sync for PathSegment {}
+unsafe impl ::core::marker::Send for PathSegment {}
+unsafe impl ::core::marker::Sync for PathSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PathSegmentCollection(pub ::windows::runtime::IInspectable);
 impl PathSegmentCollection {
@@ -19384,9 +19444,9 @@ impl PathSegmentCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<PathSegment> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -19397,9 +19457,9 @@ impl PathSegmentCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -19412,9 +19472,9 @@ impl PathSegmentCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<PathSegment>>(result__)
@@ -19428,9 +19488,9 @@ impl PathSegmentCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -19447,7 +19507,7 @@ impl PathSegmentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -19463,7 +19523,7 @@ impl PathSegmentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -19475,7 +19535,7 @@ impl PathSegmentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -19489,7 +19549,7 @@ impl PathSegmentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19499,14 +19559,14 @@ impl PathSegmentCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -19517,12 +19577,12 @@ impl PathSegmentCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -19536,9 +19596,9 @@ impl PathSegmentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -19552,9 +19612,9 @@ impl PathSegmentCollection {
             ::windows::Foundation::Collections::IIterable<PathSegment>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<PathSegment>>(result__)
@@ -19571,12 +19631,12 @@ unsafe impl ::windows::runtime::Interface for PathSegmentCollection {
 impl ::windows::runtime::RuntimeName for PathSegmentCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PathSegmentCollection";
 }
-impl ::std::convert::From<PathSegmentCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PathSegmentCollection> for ::windows::runtime::IUnknown {
     fn from(value: PathSegmentCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PathSegmentCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PathSegmentCollection> for ::windows::runtime::IUnknown {
     fn from(value: &PathSegmentCollection) -> Self {
         value.0 .0.clone()
     }
@@ -19593,12 +19653,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PathSegmentCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PathSegmentCollection> for ::windows::runtime::IInspectable {
     fn from(value: PathSegmentCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PathSegmentCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PathSegmentCollection> for ::windows::runtime::IInspectable {
     fn from(value: &PathSegmentCollection) -> Self {
         value.0.clone()
     }
@@ -19617,18 +19677,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PathSegmentCollection>
+impl ::core::convert::From<PathSegmentCollection>
     for ::windows::Foundation::Collections::IVector<PathSegment>
 {
     fn from(value: PathSegmentCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&PathSegmentCollection>
+impl ::core::convert::From<&PathSegmentCollection>
     for ::windows::Foundation::Collections::IVector<PathSegment>
 {
     fn from(value: &PathSegmentCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<PathSegment>>
@@ -19638,7 +19698,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<PathSegment>>
     {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<PathSegment>>
@@ -19648,18 +19708,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<PathSegment>>
     {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<PathSegmentCollection>
+impl ::core::convert::TryFrom<PathSegmentCollection>
     for ::windows::Foundation::Collections::IIterable<PathSegment>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: PathSegmentCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&PathSegmentCollection>
+impl ::core::convert::TryFrom<&PathSegmentCollection>
     for ::windows::Foundation::Collections::IIterable<PathSegment>
 {
     type Error = ::windows::runtime::Error;
@@ -19686,37 +19746,37 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<PathSegment>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < PathSegment > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < PathSegment > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-unsafe impl ::std::marker::Send for PathSegmentCollection {}
-unsafe impl ::std::marker::Sync for PathSegmentCollection {}
+unsafe impl ::core::marker::Send for PathSegmentCollection {}
+unsafe impl ::core::marker::Sync for PathSegmentCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for PathSegmentCollection {
+impl ::core::iter::IntoIterator for PathSegmentCollection {
     type Item = PathSegment;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &PathSegmentCollection {
+impl ::core::iter::IntoIterator for &PathSegmentCollection {
     type Item = PathSegment;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct PenLineCap(pub i32);
@@ -19726,7 +19786,7 @@ impl PenLineCap {
     pub const Round: PenLineCap = PenLineCap(2i32);
     pub const Triangle: PenLineCap = PenLineCap(3i32);
 }
-impl ::std::convert::From<i32> for PenLineCap {
+impl ::core::convert::From<i32> for PenLineCap {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -19743,12 +19803,12 @@ impl ::windows::runtime::DefaultType for PenLineCap {
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct PenLineJoin(pub i32);
@@ -19757,7 +19817,7 @@ impl PenLineJoin {
     pub const Bevel: PenLineJoin = PenLineJoin(1i32);
     pub const Round: PenLineJoin = PenLineJoin(2i32);
 }
-impl ::std::convert::From<i32> for PenLineJoin {
+impl ::core::convert::From<i32> for PenLineJoin {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -19776,10 +19836,10 @@ impl ::windows::runtime::DefaultType for PenLineJoin {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PlaneProjection(pub ::windows::runtime::IInspectable);
 impl PlaneProjection {
@@ -19802,9 +19862,9 @@ impl PlaneProjection {
     pub fn LocalOffsetX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19814,17 +19874,20 @@ impl PlaneProjection {
     pub fn SetLocalOffsetX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn LocalOffsetY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19834,17 +19897,20 @@ impl PlaneProjection {
     pub fn SetLocalOffsetY(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn LocalOffsetZ(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19855,7 +19921,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19865,9 +19931,9 @@ impl PlaneProjection {
     pub fn RotationX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19878,7 +19944,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19888,9 +19954,9 @@ impl PlaneProjection {
     pub fn RotationY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19901,7 +19967,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19911,9 +19977,9 @@ impl PlaneProjection {
     pub fn RotationZ(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19924,7 +19990,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19934,9 +20000,9 @@ impl PlaneProjection {
     pub fn CenterOfRotationX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19947,7 +20013,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19957,9 +20023,9 @@ impl PlaneProjection {
     pub fn CenterOfRotationY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19970,7 +20036,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19980,9 +20046,9 @@ impl PlaneProjection {
     pub fn CenterOfRotationZ(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19993,7 +20059,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20003,9 +20069,9 @@ impl PlaneProjection {
     pub fn GlobalOffsetX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -20016,7 +20082,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20026,9 +20092,9 @@ impl PlaneProjection {
     pub fn GlobalOffsetY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -20039,7 +20105,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20049,9 +20115,9 @@ impl PlaneProjection {
     pub fn GlobalOffsetZ(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -20062,7 +20128,7 @@ impl PlaneProjection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20073,9 +20139,9 @@ impl PlaneProjection {
     pub fn ProjectionMatrix(&self) -> ::windows::runtime::Result<Media3D::Matrix3D> {
         let this = self;
         unsafe {
-            let mut result__: Media3D::Matrix3D = ::std::mem::zeroed();
+            let mut result__: Media3D::Matrix3D = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Media3D::Matrix3D>(result__)
@@ -20084,9 +20150,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn LocalOffsetXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20095,9 +20161,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn LocalOffsetYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20106,9 +20172,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn LocalOffsetZProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20117,9 +20183,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RotationXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20128,9 +20194,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RotationYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20139,9 +20205,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RotationZProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20150,9 +20216,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterOfRotationXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20161,9 +20227,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterOfRotationYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20172,9 +20238,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterOfRotationZProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20183,9 +20249,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn GlobalOffsetXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20194,9 +20260,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn GlobalOffsetYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20205,9 +20271,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn GlobalOffsetZProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20216,9 +20282,9 @@ impl PlaneProjection {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ProjectionMatrixProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20231,9 +20297,9 @@ impl PlaneProjection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -20253,7 +20319,7 @@ impl PlaneProjection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -20268,7 +20334,7 @@ impl PlaneProjection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -20284,9 +20350,9 @@ impl PlaneProjection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -20303,9 +20369,9 @@ impl PlaneProjection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -20324,9 +20390,9 @@ impl PlaneProjection {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -20346,7 +20412,7 @@ impl PlaneProjection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -20357,9 +20423,9 @@ impl PlaneProjection {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -20372,9 +20438,9 @@ impl PlaneProjection {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -20410,12 +20476,12 @@ unsafe impl ::windows::runtime::Interface for PlaneProjection {
 impl ::windows::runtime::RuntimeName for PlaneProjection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PlaneProjection";
 }
-impl ::std::convert::From<PlaneProjection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PlaneProjection> for ::windows::runtime::IUnknown {
     fn from(value: PlaneProjection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PlaneProjection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PlaneProjection> for ::windows::runtime::IUnknown {
     fn from(value: &PlaneProjection) -> Self {
         value.0 .0.clone()
     }
@@ -20430,12 +20496,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PlaneProjection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PlaneProjection> for ::windows::runtime::IInspectable {
     fn from(value: PlaneProjection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PlaneProjection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PlaneProjection> for ::windows::runtime::IInspectable {
     fn from(value: &PlaneProjection) -> Self {
         value.0.clone()
     }
@@ -20452,61 +20518,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PlaneProjection> for Projection {
+impl ::core::convert::From<PlaneProjection> for Projection {
     fn from(value: PlaneProjection) -> Self {
-        ::std::convert::Into::<Projection>::into(&value)
+        ::core::convert::Into::<Projection>::into(&value)
     }
 }
-impl ::std::convert::From<&PlaneProjection> for Projection {
+impl ::core::convert::From<&PlaneProjection> for Projection {
     fn from(value: &PlaneProjection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Projection> for PlaneProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, Projection> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Projection>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Projection>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Projection> for &PlaneProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, Projection> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Projection>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Projection>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<PlaneProjection> for super::DependencyObject {
+impl ::core::convert::From<PlaneProjection> for super::DependencyObject {
     fn from(value: PlaneProjection) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PlaneProjection> for super::DependencyObject {
+impl ::core::convert::From<&PlaneProjection> for super::DependencyObject {
     fn from(value: &PlaneProjection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PlaneProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PlaneProjection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PlaneProjection {}
-unsafe impl ::std::marker::Sync for PlaneProjection {}
+unsafe impl ::core::marker::Send for PlaneProjection {}
+unsafe impl ::core::marker::Sync for PlaneProjection {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PointCollection(pub ::windows::runtime::IInspectable);
 impl PointCollection {
@@ -20529,9 +20595,9 @@ impl PointCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -20542,9 +20608,9 @@ impl PointCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -20558,9 +20624,9 @@ impl PointCollection {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<
@@ -20576,9 +20642,9 @@ impl PointCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -20595,7 +20661,7 @@ impl PointCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -20611,7 +20677,7 @@ impl PointCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -20623,7 +20689,7 @@ impl PointCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -20637,7 +20703,7 @@ impl PointCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20647,14 +20713,14 @@ impl PointCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -20665,12 +20731,12 @@ impl PointCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -20684,9 +20750,9 @@ impl PointCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -20701,8 +20767,8 @@ impl PointCollection {
             ::windows::Foundation::Collections::IIterable<::windows::Foundation::Point>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
-            ( :: windows :: runtime :: Interface :: vtable ( this ) .6 ) ( :: std :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IIterator :: < ::windows::Foundation:: Point > > ( result__ )
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
+            ( :: windows :: runtime :: Interface :: vtable ( this ) .6 ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IIterator :: < ::windows::Foundation:: Point > > ( result__ )
         }
     }
 }
@@ -20716,12 +20782,12 @@ unsafe impl ::windows::runtime::Interface for PointCollection {
 impl ::windows::runtime::RuntimeName for PointCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PointCollection";
 }
-impl ::std::convert::From<PointCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PointCollection> for ::windows::runtime::IUnknown {
     fn from(value: PointCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PointCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PointCollection> for ::windows::runtime::IUnknown {
     fn from(value: &PointCollection) -> Self {
         value.0 .0.clone()
     }
@@ -20736,12 +20802,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PointCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PointCollection> for ::windows::runtime::IInspectable {
     fn from(value: PointCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PointCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PointCollection> for ::windows::runtime::IInspectable {
     fn from(value: &PointCollection) -> Self {
         value.0.clone()
     }
@@ -20758,18 +20824,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PointCollection>
+impl ::core::convert::From<PointCollection>
     for ::windows::Foundation::Collections::IVector<::windows::Foundation::Point>
 {
     fn from(value: PointCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&PointCollection>
+impl ::core::convert::From<&PointCollection>
     for ::windows::Foundation::Collections::IVector<::windows::Foundation::Point>
 {
     fn from(value: &PointCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a>
@@ -20784,7 +20850,7 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IVector<::windows::Foundation::Point>,
     > {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a>
@@ -20799,18 +20865,18 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IVector<::windows::Foundation::Point>,
     > {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<PointCollection>
+impl ::core::convert::TryFrom<PointCollection>
     for ::windows::Foundation::Collections::IIterable<::windows::Foundation::Point>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: PointCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&PointCollection>
+impl ::core::convert::TryFrom<&PointCollection>
     for ::windows::Foundation::Collections::IIterable<::windows::Foundation::Point>
 {
     type Error = ::windows::runtime::Error;
@@ -20845,40 +20911,40 @@ impl<'a>
         'a,
         ::windows::Foundation::Collections::IIterable<::windows::Foundation::Point>,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IIterable<::windows::Foundation::Point>,
         >::try_into(self)
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for PointCollection {}
-unsafe impl ::std::marker::Sync for PointCollection {}
+unsafe impl ::core::marker::Send for PointCollection {}
+unsafe impl ::core::marker::Sync for PointCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for PointCollection {
+impl ::core::iter::IntoIterator for PointCollection {
     type Item = ::windows::Foundation::Point;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &PointCollection {
+impl ::core::iter::IntoIterator for &PointCollection {
     type Item = ::windows::Foundation::Point;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PolyBezierSegment(pub ::windows::runtime::IInspectable);
 impl PolyBezierSegment {
@@ -20901,9 +20967,9 @@ impl PolyBezierSegment {
     pub fn Points(&self) -> ::windows::runtime::Result<PointCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PointCollection>(result__)
@@ -20917,7 +20983,7 @@ impl PolyBezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20926,9 +20992,9 @@ impl PolyBezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn PointsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPolyBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20941,9 +21007,9 @@ impl PolyBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -20963,7 +21029,7 @@ impl PolyBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -20978,7 +21044,7 @@ impl PolyBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -20994,9 +21060,9 @@ impl PolyBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21013,9 +21079,9 @@ impl PolyBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21034,9 +21100,9 @@ impl PolyBezierSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -21056,7 +21122,7 @@ impl PolyBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -21067,9 +21133,9 @@ impl PolyBezierSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -21082,9 +21148,9 @@ impl PolyBezierSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -21120,12 +21186,12 @@ unsafe impl ::windows::runtime::Interface for PolyBezierSegment {
 impl ::windows::runtime::RuntimeName for PolyBezierSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PolyBezierSegment";
 }
-impl ::std::convert::From<PolyBezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PolyBezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: PolyBezierSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PolyBezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PolyBezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: &PolyBezierSegment) -> Self {
         value.0 .0.clone()
     }
@@ -21140,12 +21206,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PolyBezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PolyBezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: PolyBezierSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PolyBezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PolyBezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: &PolyBezierSegment) -> Self {
         value.0.clone()
     }
@@ -21162,61 +21228,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PolyBezierSegment> for PathSegment {
+impl ::core::convert::From<PolyBezierSegment> for PathSegment {
     fn from(value: PolyBezierSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&PolyBezierSegment> for PathSegment {
+impl ::core::convert::From<&PolyBezierSegment> for PathSegment {
     fn from(value: &PolyBezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for PolyBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &PolyBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<PolyBezierSegment> for super::DependencyObject {
+impl ::core::convert::From<PolyBezierSegment> for super::DependencyObject {
     fn from(value: PolyBezierSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PolyBezierSegment> for super::DependencyObject {
+impl ::core::convert::From<&PolyBezierSegment> for super::DependencyObject {
     fn from(value: &PolyBezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PolyBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PolyBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PolyBezierSegment {}
-unsafe impl ::std::marker::Sync for PolyBezierSegment {}
+unsafe impl ::core::marker::Send for PolyBezierSegment {}
+unsafe impl ::core::marker::Sync for PolyBezierSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PolyLineSegment(pub ::windows::runtime::IInspectable);
 impl PolyLineSegment {
@@ -21239,9 +21305,9 @@ impl PolyLineSegment {
     pub fn Points(&self) -> ::windows::runtime::Result<PointCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PointCollection>(result__)
@@ -21255,7 +21321,7 @@ impl PolyLineSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -21264,9 +21330,9 @@ impl PolyLineSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn PointsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPolyLineSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21279,9 +21345,9 @@ impl PolyLineSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21301,7 +21367,7 @@ impl PolyLineSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -21316,7 +21382,7 @@ impl PolyLineSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -21332,9 +21398,9 @@ impl PolyLineSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21351,9 +21417,9 @@ impl PolyLineSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21372,9 +21438,9 @@ impl PolyLineSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -21394,7 +21460,7 @@ impl PolyLineSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -21405,9 +21471,9 @@ impl PolyLineSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -21420,9 +21486,9 @@ impl PolyLineSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -21458,12 +21524,12 @@ unsafe impl ::windows::runtime::Interface for PolyLineSegment {
 impl ::windows::runtime::RuntimeName for PolyLineSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PolyLineSegment";
 }
-impl ::std::convert::From<PolyLineSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PolyLineSegment> for ::windows::runtime::IUnknown {
     fn from(value: PolyLineSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PolyLineSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PolyLineSegment> for ::windows::runtime::IUnknown {
     fn from(value: &PolyLineSegment) -> Self {
         value.0 .0.clone()
     }
@@ -21478,12 +21544,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PolyLineSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PolyLineSegment> for ::windows::runtime::IInspectable {
     fn from(value: PolyLineSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PolyLineSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PolyLineSegment> for ::windows::runtime::IInspectable {
     fn from(value: &PolyLineSegment) -> Self {
         value.0.clone()
     }
@@ -21500,61 +21566,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PolyLineSegment> for PathSegment {
+impl ::core::convert::From<PolyLineSegment> for PathSegment {
     fn from(value: PolyLineSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&PolyLineSegment> for PathSegment {
+impl ::core::convert::From<&PolyLineSegment> for PathSegment {
     fn from(value: &PolyLineSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for PolyLineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &PolyLineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<PolyLineSegment> for super::DependencyObject {
+impl ::core::convert::From<PolyLineSegment> for super::DependencyObject {
     fn from(value: PolyLineSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PolyLineSegment> for super::DependencyObject {
+impl ::core::convert::From<&PolyLineSegment> for super::DependencyObject {
     fn from(value: &PolyLineSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PolyLineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PolyLineSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PolyLineSegment {}
-unsafe impl ::std::marker::Sync for PolyLineSegment {}
+unsafe impl ::core::marker::Send for PolyLineSegment {}
+unsafe impl ::core::marker::Sync for PolyLineSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PolyQuadraticBezierSegment(pub ::windows::runtime::IInspectable);
 impl PolyQuadraticBezierSegment {
@@ -21577,9 +21643,9 @@ impl PolyQuadraticBezierSegment {
     pub fn Points(&self) -> ::windows::runtime::Result<PointCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PointCollection>(result__)
@@ -21593,7 +21659,7 @@ impl PolyQuadraticBezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -21602,9 +21668,9 @@ impl PolyQuadraticBezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn PointsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPolyQuadraticBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21617,9 +21683,9 @@ impl PolyQuadraticBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21639,7 +21705,7 @@ impl PolyQuadraticBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -21654,7 +21720,7 @@ impl PolyQuadraticBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -21670,9 +21736,9 @@ impl PolyQuadraticBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21689,9 +21755,9 @@ impl PolyQuadraticBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21710,9 +21776,9 @@ impl PolyQuadraticBezierSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -21732,7 +21798,7 @@ impl PolyQuadraticBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -21743,9 +21809,9 @@ impl PolyQuadraticBezierSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -21758,9 +21824,9 @@ impl PolyQuadraticBezierSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -21794,12 +21860,12 @@ unsafe impl ::windows::runtime::Interface for PolyQuadraticBezierSegment {
 impl ::windows::runtime::RuntimeName for PolyQuadraticBezierSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.PolyQuadraticBezierSegment";
 }
-impl ::std::convert::From<PolyQuadraticBezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PolyQuadraticBezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: PolyQuadraticBezierSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PolyQuadraticBezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PolyQuadraticBezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: &PolyQuadraticBezierSegment) -> Self {
         value.0 .0.clone()
     }
@@ -21818,12 +21884,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PolyQuadraticBezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PolyQuadraticBezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: PolyQuadraticBezierSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PolyQuadraticBezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PolyQuadraticBezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: &PolyQuadraticBezierSegment) -> Self {
         value.0.clone()
     }
@@ -21842,41 +21908,41 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PolyQuadraticBezierSegment> for PathSegment {
+impl ::core::convert::From<PolyQuadraticBezierSegment> for PathSegment {
     fn from(value: PolyQuadraticBezierSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&PolyQuadraticBezierSegment> for PathSegment {
+impl ::core::convert::From<&PolyQuadraticBezierSegment> for PathSegment {
     fn from(value: &PolyQuadraticBezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for PolyQuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &PolyQuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<PolyQuadraticBezierSegment> for super::DependencyObject {
+impl ::core::convert::From<PolyQuadraticBezierSegment> for super::DependencyObject {
     fn from(value: PolyQuadraticBezierSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PolyQuadraticBezierSegment> for super::DependencyObject {
+impl ::core::convert::From<&PolyQuadraticBezierSegment> for super::DependencyObject {
     fn from(value: &PolyQuadraticBezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PolyQuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
@@ -21885,20 +21951,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject>
     for &PolyQuadraticBezierSegment
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PolyQuadraticBezierSegment {}
-unsafe impl ::std::marker::Sync for PolyQuadraticBezierSegment {}
+unsafe impl ::core::marker::Send for PolyQuadraticBezierSegment {}
+unsafe impl ::core::marker::Sync for PolyQuadraticBezierSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Projection(pub ::windows::runtime::IInspectable);
 impl Projection {
@@ -21909,9 +21975,9 @@ impl Projection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21931,7 +21997,7 @@ impl Projection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -21946,7 +22012,7 @@ impl Projection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -21962,9 +22028,9 @@ impl Projection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21981,9 +22047,9 @@ impl Projection {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22002,9 +22068,9 @@ impl Projection {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -22024,7 +22090,7 @@ impl Projection {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -22035,9 +22101,9 @@ impl Projection {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -22050,9 +22116,9 @@ impl Projection {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -22076,12 +22142,12 @@ unsafe impl ::windows::runtime::Interface for Projection {
 impl ::windows::runtime::RuntimeName for Projection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.Projection";
 }
-impl ::std::convert::From<Projection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Projection> for ::windows::runtime::IUnknown {
     fn from(value: Projection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Projection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Projection> for ::windows::runtime::IUnknown {
     fn from(value: &Projection) -> Self {
         value.0 .0.clone()
     }
@@ -22096,12 +22162,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Projection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Projection> for ::windows::runtime::IInspectable {
     fn from(value: Projection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Projection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Projection> for ::windows::runtime::IInspectable {
     fn from(value: &Projection) -> Self {
         value.0.clone()
     }
@@ -22116,39 +22182,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Projection> for super::DependencyObject {
+impl ::core::convert::From<Projection> for super::DependencyObject {
     fn from(value: Projection) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Projection> for super::DependencyObject {
+impl ::core::convert::From<&Projection> for super::DependencyObject {
     fn from(value: &Projection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Projection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Projection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Projection {}
-unsafe impl ::std::marker::Sync for Projection {}
+unsafe impl ::core::marker::Send for Projection {}
+unsafe impl ::core::marker::Sync for Projection {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct QuadraticBezierSegment(pub ::windows::runtime::IInspectable);
 impl QuadraticBezierSegment {
@@ -22171,9 +22237,9 @@ impl QuadraticBezierSegment {
     pub fn Point1(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -22190,7 +22256,7 @@ impl QuadraticBezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -22200,9 +22266,9 @@ impl QuadraticBezierSegment {
     pub fn Point2(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -22219,7 +22285,7 @@ impl QuadraticBezierSegment {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -22228,9 +22294,9 @@ impl QuadraticBezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Point1Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IQuadraticBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22239,9 +22305,9 @@ impl QuadraticBezierSegment {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Point2Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IQuadraticBezierSegmentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22254,9 +22320,9 @@ impl QuadraticBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22276,7 +22342,7 @@ impl QuadraticBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -22291,7 +22357,7 @@ impl QuadraticBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -22307,9 +22373,9 @@ impl QuadraticBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22326,9 +22392,9 @@ impl QuadraticBezierSegment {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22347,9 +22413,9 @@ impl QuadraticBezierSegment {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -22369,7 +22435,7 @@ impl QuadraticBezierSegment {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -22380,9 +22446,9 @@ impl QuadraticBezierSegment {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -22395,9 +22461,9 @@ impl QuadraticBezierSegment {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -22431,12 +22497,12 @@ unsafe impl ::windows::runtime::Interface for QuadraticBezierSegment {
 impl ::windows::runtime::RuntimeName for QuadraticBezierSegment {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.QuadraticBezierSegment";
 }
-impl ::std::convert::From<QuadraticBezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<QuadraticBezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: QuadraticBezierSegment) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&QuadraticBezierSegment> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&QuadraticBezierSegment> for ::windows::runtime::IUnknown {
     fn from(value: &QuadraticBezierSegment) -> Self {
         value.0 .0.clone()
     }
@@ -22455,12 +22521,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<QuadraticBezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<QuadraticBezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: QuadraticBezierSegment) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&QuadraticBezierSegment> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&QuadraticBezierSegment> for ::windows::runtime::IInspectable {
     fn from(value: &QuadraticBezierSegment) -> Self {
         value.0.clone()
     }
@@ -22479,61 +22545,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<QuadraticBezierSegment> for PathSegment {
+impl ::core::convert::From<QuadraticBezierSegment> for PathSegment {
     fn from(value: QuadraticBezierSegment) -> Self {
-        ::std::convert::Into::<PathSegment>::into(&value)
+        ::core::convert::Into::<PathSegment>::into(&value)
     }
 }
-impl ::std::convert::From<&QuadraticBezierSegment> for PathSegment {
+impl ::core::convert::From<&QuadraticBezierSegment> for PathSegment {
     fn from(value: &QuadraticBezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for QuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, PathSegment> for &QuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, PathSegment> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<PathSegment>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<PathSegment>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<QuadraticBezierSegment> for super::DependencyObject {
+impl ::core::convert::From<QuadraticBezierSegment> for super::DependencyObject {
     fn from(value: QuadraticBezierSegment) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&QuadraticBezierSegment> for super::DependencyObject {
+impl ::core::convert::From<&QuadraticBezierSegment> for super::DependencyObject {
     fn from(value: &QuadraticBezierSegment) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for QuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &QuadraticBezierSegment {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for QuadraticBezierSegment {}
-unsafe impl ::std::marker::Sync for QuadraticBezierSegment {}
+unsafe impl ::core::marker::Send for QuadraticBezierSegment {}
+unsafe impl ::core::marker::Sync for QuadraticBezierSegment {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RadialGradientBrush(pub ::windows::runtime::IInspectable);
 impl RadialGradientBrush {
@@ -22541,9 +22607,9 @@ impl RadialGradientBrush {
     pub fn Center(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -22560,7 +22626,7 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -22570,9 +22636,9 @@ impl RadialGradientBrush {
     pub fn RadiusX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -22582,17 +22648,20 @@ impl RadialGradientBrush {
     pub fn SetRadiusX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RadiusY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -22603,7 +22672,7 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -22613,9 +22682,9 @@ impl RadialGradientBrush {
     pub fn GradientOrigin(&self) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -22632,7 +22701,7 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -22642,9 +22711,9 @@ impl RadialGradientBrush {
     pub fn MappingMode(&self) -> ::windows::runtime::Result<BrushMappingMode> {
         let this = self;
         unsafe {
-            let mut result__: BrushMappingMode = ::std::mem::zeroed();
+            let mut result__: BrushMappingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<BrushMappingMode>(result__)
@@ -22655,7 +22724,7 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -22669,9 +22738,9 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             let mut result__: super::super::Composition::CompositionColorSpace =
-                ::std::mem::zeroed();
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::CompositionColorSpace>(result__)
@@ -22686,7 +22755,7 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -22696,9 +22765,9 @@ impl RadialGradientBrush {
     pub fn SpreadMethod(&self) -> ::windows::runtime::Result<GradientSpreadMethod> {
         let this = self;
         unsafe {
-            let mut result__: GradientSpreadMethod = ::std::mem::zeroed();
+            let mut result__: GradientSpreadMethod = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GradientSpreadMethod>(result__)
@@ -22709,7 +22778,7 @@ impl RadialGradientBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -22723,9 +22792,9 @@ impl RadialGradientBrush {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IObservableVector<GradientStop>>(
@@ -22736,9 +22805,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22747,9 +22816,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RadiusXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22758,9 +22827,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RadiusYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22769,9 +22838,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn GradientOriginProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22780,9 +22849,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn InterpolationSpaceProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22791,9 +22860,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn MappingModeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22802,9 +22871,9 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn SpreadMethodProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22813,11 +22882,12 @@ impl RadialGradientBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn new() -> ::windows::runtime::Result<RadialGradientBrush> {
         Self::IRadialGradientBrushFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<RadialGradientBrush>(result__)
@@ -22839,7 +22909,7 @@ impl RadialGradientBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -22853,9 +22923,9 @@ impl RadialGradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22875,7 +22945,7 @@ impl RadialGradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -22890,7 +22960,7 @@ impl RadialGradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -22906,9 +22976,9 @@ impl RadialGradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22925,9 +22995,9 @@ impl RadialGradientBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -22946,9 +23016,9 @@ impl RadialGradientBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -22968,7 +23038,7 @@ impl RadialGradientBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -22979,9 +23049,9 @@ impl RadialGradientBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -22994,9 +23064,9 @@ impl RadialGradientBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -23006,9 +23076,9 @@ impl RadialGradientBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -23018,17 +23088,20 @@ impl RadialGradientBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -23042,7 +23115,7 @@ impl RadialGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -23052,9 +23125,9 @@ impl RadialGradientBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -23068,7 +23141,7 @@ impl RadialGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -23078,9 +23151,9 @@ impl RadialGradientBrush {
     pub fn FallbackColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = &::windows::runtime::Interface::cast::<IXamlCompositionBrushBase>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -23094,7 +23167,7 @@ impl RadialGradientBrush {
         let this = &::windows::runtime::Interface::cast::<IXamlCompositionBrushBase>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -23108,9 +23181,9 @@ impl RadialGradientBrush {
         let this =
             &::windows::runtime::Interface::cast::<IXamlCompositionBrushBaseProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
@@ -23129,7 +23202,7 @@ impl RadialGradientBrush {
             &::windows::runtime::Interface::cast::<IXamlCompositionBrushBaseProtected>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -23177,12 +23250,12 @@ unsafe impl ::windows::runtime::Interface for RadialGradientBrush {
 impl ::windows::runtime::RuntimeName for RadialGradientBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.RadialGradientBrush";
 }
-impl ::std::convert::From<RadialGradientBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RadialGradientBrush> for ::windows::runtime::IUnknown {
     fn from(value: RadialGradientBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RadialGradientBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RadialGradientBrush> for ::windows::runtime::IUnknown {
     fn from(value: &RadialGradientBrush) -> Self {
         value.0 .0.clone()
     }
@@ -23199,12 +23272,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RadialGradientBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RadialGradientBrush> for ::windows::runtime::IInspectable {
     fn from(value: RadialGradientBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RadialGradientBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RadialGradientBrush> for ::windows::runtime::IInspectable {
     fn from(value: &RadialGradientBrush) -> Self {
         value.0.clone()
     }
@@ -23224,14 +23297,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<RadialGradientBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<RadialGradientBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: RadialGradientBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&RadialGradientBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&RadialGradientBrush>
+    for super::super::Composition::IAnimationObject
+{
     type Error = ::windows::runtime::Error;
     fn try_from(value: &RadialGradientBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -23254,90 +23329,90 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<RadialGradientBrush> for XamlCompositionBrushBase {
+impl ::core::convert::From<RadialGradientBrush> for XamlCompositionBrushBase {
     fn from(value: RadialGradientBrush) -> Self {
-        ::std::convert::Into::<XamlCompositionBrushBase>::into(&value)
+        ::core::convert::Into::<XamlCompositionBrushBase>::into(&value)
     }
 }
-impl ::std::convert::From<&RadialGradientBrush> for XamlCompositionBrushBase {
+impl ::core::convert::From<&RadialGradientBrush> for XamlCompositionBrushBase {
     fn from(value: &RadialGradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, XamlCompositionBrushBase> for RadialGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, XamlCompositionBrushBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<XamlCompositionBrushBase>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<XamlCompositionBrushBase>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, XamlCompositionBrushBase> for &RadialGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, XamlCompositionBrushBase> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<XamlCompositionBrushBase>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<XamlCompositionBrushBase>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<RadialGradientBrush> for Brush {
+impl ::core::convert::From<RadialGradientBrush> for Brush {
     fn from(value: RadialGradientBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&RadialGradientBrush> for Brush {
+impl ::core::convert::From<&RadialGradientBrush> for Brush {
     fn from(value: &RadialGradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for RadialGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &RadialGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<RadialGradientBrush> for super::DependencyObject {
+impl ::core::convert::From<RadialGradientBrush> for super::DependencyObject {
     fn from(value: RadialGradientBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&RadialGradientBrush> for super::DependencyObject {
+impl ::core::convert::From<&RadialGradientBrush> for super::DependencyObject {
     fn from(value: &RadialGradientBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for RadialGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &RadialGradientBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for RadialGradientBrush {}
-unsafe impl ::std::marker::Sync for RadialGradientBrush {}
+unsafe impl ::core::marker::Send for RadialGradientBrush {}
+unsafe impl ::core::marker::Sync for RadialGradientBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RectangleGeometry(pub ::windows::runtime::IInspectable);
 impl RectangleGeometry {
@@ -23360,9 +23435,9 @@ impl RectangleGeometry {
     pub fn Rect(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -23376,7 +23451,7 @@ impl RectangleGeometry {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -23385,9 +23460,9 @@ impl RectangleGeometry {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn RectProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRectangleGeometryStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23400,9 +23475,9 @@ impl RectangleGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -23422,7 +23497,7 @@ impl RectangleGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -23437,7 +23512,7 @@ impl RectangleGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -23453,9 +23528,9 @@ impl RectangleGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -23472,9 +23547,9 @@ impl RectangleGeometry {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -23493,9 +23568,9 @@ impl RectangleGeometry {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -23515,7 +23590,7 @@ impl RectangleGeometry {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -23526,9 +23601,9 @@ impl RectangleGeometry {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -23541,9 +23616,9 @@ impl RectangleGeometry {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -23553,9 +23628,9 @@ impl RectangleGeometry {
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -23569,7 +23644,7 @@ impl RectangleGeometry {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -23579,9 +23654,9 @@ impl RectangleGeometry {
     pub fn Bounds(&self) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeometry>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
@@ -23617,12 +23692,12 @@ unsafe impl ::windows::runtime::Interface for RectangleGeometry {
 impl ::windows::runtime::RuntimeName for RectangleGeometry {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.RectangleGeometry";
 }
-impl ::std::convert::From<RectangleGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RectangleGeometry> for ::windows::runtime::IUnknown {
     fn from(value: RectangleGeometry) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RectangleGeometry> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RectangleGeometry> for ::windows::runtime::IUnknown {
     fn from(value: &RectangleGeometry) -> Self {
         value.0 .0.clone()
     }
@@ -23637,12 +23712,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RectangleGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RectangleGeometry> for ::windows::runtime::IInspectable {
     fn from(value: RectangleGeometry) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RectangleGeometry> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RectangleGeometry> for ::windows::runtime::IInspectable {
     fn from(value: &RectangleGeometry) -> Self {
         value.0.clone()
     }
@@ -23659,61 +23734,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<RectangleGeometry> for Geometry {
+impl ::core::convert::From<RectangleGeometry> for Geometry {
     fn from(value: RectangleGeometry) -> Self {
-        ::std::convert::Into::<Geometry>::into(&value)
+        ::core::convert::Into::<Geometry>::into(&value)
     }
 }
-impl ::std::convert::From<&RectangleGeometry> for Geometry {
+impl ::core::convert::From<&RectangleGeometry> for Geometry {
     fn from(value: &RectangleGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for RectangleGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Geometry> for &RectangleGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, Geometry> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Geometry>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Geometry>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<RectangleGeometry> for super::DependencyObject {
+impl ::core::convert::From<RectangleGeometry> for super::DependencyObject {
     fn from(value: RectangleGeometry) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&RectangleGeometry> for super::DependencyObject {
+impl ::core::convert::From<&RectangleGeometry> for super::DependencyObject {
     fn from(value: &RectangleGeometry) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for RectangleGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &RectangleGeometry {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for RectangleGeometry {}
-unsafe impl ::std::marker::Sync for RectangleGeometry {}
+unsafe impl ::core::marker::Send for RectangleGeometry {}
+unsafe impl ::core::marker::Sync for RectangleGeometry {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RenderedEventArgs(pub ::windows::runtime::IInspectable);
 impl RenderedEventArgs {
@@ -23721,9 +23796,9 @@ impl RenderedEventArgs {
     pub fn FrameDuration(&self) -> ::windows::runtime::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
@@ -23747,12 +23822,12 @@ unsafe impl ::windows::runtime::Interface for RenderedEventArgs {
 impl ::windows::runtime::RuntimeName for RenderedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.RenderedEventArgs";
 }
-impl ::std::convert::From<RenderedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RenderedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: RenderedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RenderedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RenderedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &RenderedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -23767,12 +23842,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RenderedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RenderedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: RenderedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RenderedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RenderedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &RenderedEventArgs) -> Self {
         value.0.clone()
     }
@@ -23789,15 +23864,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for RenderedEventArgs {}
-unsafe impl ::std::marker::Sync for RenderedEventArgs {}
+unsafe impl ::core::marker::Send for RenderedEventArgs {}
+unsafe impl ::core::marker::Sync for RenderedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RenderingEventArgs(pub ::windows::runtime::IInspectable);
 impl RenderingEventArgs {
@@ -23805,9 +23880,9 @@ impl RenderingEventArgs {
     pub fn RenderingTime(&self) -> ::windows::runtime::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
@@ -23831,12 +23906,12 @@ unsafe impl ::windows::runtime::Interface for RenderingEventArgs {
 impl ::windows::runtime::RuntimeName for RenderingEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.RenderingEventArgs";
 }
-impl ::std::convert::From<RenderingEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RenderingEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: RenderingEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RenderingEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RenderingEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &RenderingEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -23853,12 +23928,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RenderingEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RenderingEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: RenderingEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RenderingEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RenderingEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &RenderingEventArgs) -> Self {
         value.0.clone()
     }
@@ -23877,15 +23952,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for RenderingEventArgs {}
-unsafe impl ::std::marker::Sync for RenderingEventArgs {}
+unsafe impl ::core::marker::Send for RenderingEventArgs {}
+unsafe impl ::core::marker::Sync for RenderingEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct RotateTransform(pub ::windows::runtime::IInspectable);
 impl RotateTransform {
@@ -23908,9 +23983,9 @@ impl RotateTransform {
     pub fn CenterX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -23920,17 +23995,20 @@ impl RotateTransform {
     pub fn SetCenterX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -23940,17 +24018,20 @@ impl RotateTransform {
     pub fn SetCenterY(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Angle(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -23961,7 +24042,7 @@ impl RotateTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -23970,9 +24051,9 @@ impl RotateTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRotateTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23981,9 +24062,9 @@ impl RotateTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRotateTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23992,9 +24073,9 @@ impl RotateTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AngleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRotateTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -24007,9 +24088,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24029,7 +24110,7 @@ impl RotateTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -24044,7 +24125,7 @@ impl RotateTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -24060,9 +24141,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24079,9 +24160,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24100,9 +24181,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -24122,7 +24203,7 @@ impl RotateTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -24133,9 +24214,9 @@ impl RotateTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -24148,9 +24229,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -24160,9 +24241,9 @@ impl RotateTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -24178,9 +24259,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -24198,9 +24279,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -24218,9 +24299,9 @@ impl RotateTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -24257,12 +24338,12 @@ unsafe impl ::windows::runtime::Interface for RotateTransform {
 impl ::windows::runtime::RuntimeName for RotateTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.RotateTransform";
 }
-impl ::std::convert::From<RotateTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<RotateTransform> for ::windows::runtime::IUnknown {
     fn from(value: RotateTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&RotateTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&RotateTransform> for ::windows::runtime::IUnknown {
     fn from(value: &RotateTransform) -> Self {
         value.0 .0.clone()
     }
@@ -24277,12 +24358,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<RotateTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<RotateTransform> for ::windows::runtime::IInspectable {
     fn from(value: RotateTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&RotateTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&RotateTransform> for ::windows::runtime::IInspectable {
     fn from(value: &RotateTransform) -> Self {
         value.0.clone()
     }
@@ -24299,83 +24380,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<RotateTransform> for Transform {
+impl ::core::convert::From<RotateTransform> for Transform {
     fn from(value: RotateTransform) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&RotateTransform> for Transform {
+impl ::core::convert::From<&RotateTransform> for Transform {
     fn from(value: &RotateTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for RotateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &RotateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<RotateTransform> for GeneralTransform {
+impl ::core::convert::From<RotateTransform> for GeneralTransform {
     fn from(value: RotateTransform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&RotateTransform> for GeneralTransform {
+impl ::core::convert::From<&RotateTransform> for GeneralTransform {
     fn from(value: &RotateTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for RotateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &RotateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<RotateTransform> for super::DependencyObject {
+impl ::core::convert::From<RotateTransform> for super::DependencyObject {
     fn from(value: RotateTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&RotateTransform> for super::DependencyObject {
+impl ::core::convert::From<&RotateTransform> for super::DependencyObject {
     fn from(value: &RotateTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for RotateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &RotateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for RotateTransform {}
-unsafe impl ::std::marker::Sync for RotateTransform {}
+unsafe impl ::core::marker::Send for RotateTransform {}
+unsafe impl ::core::marker::Sync for RotateTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ScaleTransform(pub ::windows::runtime::IInspectable);
 impl ScaleTransform {
@@ -24398,9 +24479,9 @@ impl ScaleTransform {
     pub fn CenterX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24410,17 +24491,20 @@ impl ScaleTransform {
     pub fn SetCenterX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24430,17 +24514,20 @@ impl ScaleTransform {
     pub fn SetCenterY(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ScaleX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24451,7 +24538,7 @@ impl ScaleTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24461,9 +24548,9 @@ impl ScaleTransform {
     pub fn ScaleY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24474,7 +24561,7 @@ impl ScaleTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24483,9 +24570,9 @@ impl ScaleTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -24494,9 +24581,9 @@ impl ScaleTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -24505,9 +24592,9 @@ impl ScaleTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ScaleXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -24516,9 +24603,9 @@ impl ScaleTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ScaleYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -24531,9 +24618,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24553,7 +24640,7 @@ impl ScaleTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -24568,7 +24655,7 @@ impl ScaleTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -24584,9 +24671,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24603,9 +24690,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24624,9 +24711,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -24646,7 +24733,7 @@ impl ScaleTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -24657,9 +24744,9 @@ impl ScaleTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -24672,9 +24759,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -24684,9 +24771,9 @@ impl ScaleTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -24702,9 +24789,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -24722,9 +24809,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -24742,9 +24829,9 @@ impl ScaleTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -24781,12 +24868,12 @@ unsafe impl ::windows::runtime::Interface for ScaleTransform {
 impl ::windows::runtime::RuntimeName for ScaleTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.ScaleTransform";
 }
-impl ::std::convert::From<ScaleTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ScaleTransform> for ::windows::runtime::IUnknown {
     fn from(value: ScaleTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ScaleTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ScaleTransform> for ::windows::runtime::IUnknown {
     fn from(value: &ScaleTransform) -> Self {
         value.0 .0.clone()
     }
@@ -24801,12 +24888,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ScaleTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ScaleTransform> for ::windows::runtime::IInspectable {
     fn from(value: ScaleTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ScaleTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ScaleTransform> for ::windows::runtime::IInspectable {
     fn from(value: &ScaleTransform) -> Self {
         value.0.clone()
     }
@@ -24823,83 +24910,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ScaleTransform> for Transform {
+impl ::core::convert::From<ScaleTransform> for Transform {
     fn from(value: ScaleTransform) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&ScaleTransform> for Transform {
+impl ::core::convert::From<&ScaleTransform> for Transform {
     fn from(value: &ScaleTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for ScaleTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &ScaleTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ScaleTransform> for GeneralTransform {
+impl ::core::convert::From<ScaleTransform> for GeneralTransform {
     fn from(value: ScaleTransform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&ScaleTransform> for GeneralTransform {
+impl ::core::convert::From<&ScaleTransform> for GeneralTransform {
     fn from(value: &ScaleTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for ScaleTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &ScaleTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ScaleTransform> for super::DependencyObject {
+impl ::core::convert::From<ScaleTransform> for super::DependencyObject {
     fn from(value: ScaleTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ScaleTransform> for super::DependencyObject {
+impl ::core::convert::From<&ScaleTransform> for super::DependencyObject {
     fn from(value: &ScaleTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for ScaleTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &ScaleTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ScaleTransform {}
-unsafe impl ::std::marker::Sync for ScaleTransform {}
+unsafe impl ::core::marker::Send for ScaleTransform {}
+unsafe impl ::core::marker::Sync for ScaleTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Shadow(pub ::windows::runtime::IInspectable);
 impl Shadow {
@@ -24910,9 +24997,9 @@ impl Shadow {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24932,7 +25019,7 @@ impl Shadow {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -24947,7 +25034,7 @@ impl Shadow {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -24963,9 +25050,9 @@ impl Shadow {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24982,9 +25069,9 @@ impl Shadow {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25003,9 +25090,9 @@ impl Shadow {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -25025,7 +25112,7 @@ impl Shadow {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -25036,9 +25123,9 @@ impl Shadow {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -25051,9 +25138,9 @@ impl Shadow {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -25077,12 +25164,12 @@ unsafe impl ::windows::runtime::Interface for Shadow {
 impl ::windows::runtime::RuntimeName for Shadow {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.Shadow";
 }
-impl ::std::convert::From<Shadow> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Shadow> for ::windows::runtime::IUnknown {
     fn from(value: Shadow) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Shadow> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Shadow> for ::windows::runtime::IUnknown {
     fn from(value: &Shadow) -> Self {
         value.0 .0.clone()
     }
@@ -25097,12 +25184,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Shadow> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Shadow> for ::windows::runtime::IInspectable {
     fn from(value: Shadow) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Shadow> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Shadow> for ::windows::runtime::IInspectable {
     fn from(value: &Shadow) -> Self {
         value.0.clone()
     }
@@ -25117,39 +25204,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Shadow> for super::DependencyObject {
+impl ::core::convert::From<Shadow> for super::DependencyObject {
     fn from(value: Shadow) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Shadow> for super::DependencyObject {
+impl ::core::convert::From<&Shadow> for super::DependencyObject {
     fn from(value: &Shadow) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Shadow {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Shadow {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Shadow {}
-unsafe impl ::std::marker::Sync for Shadow {}
+unsafe impl ::core::marker::Send for Shadow {}
+unsafe impl ::core::marker::Sync for Shadow {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SkewTransform(pub ::windows::runtime::IInspectable);
 impl SkewTransform {
@@ -25172,9 +25259,9 @@ impl SkewTransform {
     pub fn CenterX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -25184,17 +25271,20 @@ impl SkewTransform {
     pub fn SetCenterX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -25204,17 +25294,20 @@ impl SkewTransform {
     pub fn SetCenterY(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AngleX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -25225,7 +25318,7 @@ impl SkewTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -25235,9 +25328,9 @@ impl SkewTransform {
     pub fn AngleY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -25248,7 +25341,7 @@ impl SkewTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -25257,9 +25350,9 @@ impl SkewTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -25268,9 +25361,9 @@ impl SkewTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn CenterYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -25279,9 +25372,9 @@ impl SkewTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AngleXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -25290,9 +25383,9 @@ impl SkewTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AngleYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -25305,9 +25398,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25327,7 +25420,7 @@ impl SkewTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -25342,7 +25435,7 @@ impl SkewTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -25358,9 +25451,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25377,9 +25470,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25398,9 +25491,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -25420,7 +25513,7 @@ impl SkewTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -25431,9 +25524,9 @@ impl SkewTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -25446,9 +25539,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -25458,9 +25551,9 @@ impl SkewTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -25476,9 +25569,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -25496,9 +25589,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -25516,9 +25609,9 @@ impl SkewTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -25553,12 +25646,12 @@ unsafe impl ::windows::runtime::Interface for SkewTransform {
 impl ::windows::runtime::RuntimeName for SkewTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.SkewTransform";
 }
-impl ::std::convert::From<SkewTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SkewTransform> for ::windows::runtime::IUnknown {
     fn from(value: SkewTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SkewTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SkewTransform> for ::windows::runtime::IUnknown {
     fn from(value: &SkewTransform) -> Self {
         value.0 .0.clone()
     }
@@ -25573,12 +25666,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SkewTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SkewTransform> for ::windows::runtime::IInspectable {
     fn from(value: SkewTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SkewTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SkewTransform> for ::windows::runtime::IInspectable {
     fn from(value: &SkewTransform) -> Self {
         value.0.clone()
     }
@@ -25593,83 +25686,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<SkewTransform> for Transform {
+impl ::core::convert::From<SkewTransform> for Transform {
     fn from(value: SkewTransform) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&SkewTransform> for Transform {
+impl ::core::convert::From<&SkewTransform> for Transform {
     fn from(value: &SkewTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for SkewTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &SkewTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SkewTransform> for GeneralTransform {
+impl ::core::convert::From<SkewTransform> for GeneralTransform {
     fn from(value: SkewTransform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&SkewTransform> for GeneralTransform {
+impl ::core::convert::From<&SkewTransform> for GeneralTransform {
     fn from(value: &SkewTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for SkewTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &SkewTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SkewTransform> for super::DependencyObject {
+impl ::core::convert::From<SkewTransform> for super::DependencyObject {
     fn from(value: SkewTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SkewTransform> for super::DependencyObject {
+impl ::core::convert::From<&SkewTransform> for super::DependencyObject {
     fn from(value: &SkewTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for SkewTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &SkewTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SkewTransform {}
-unsafe impl ::std::marker::Sync for SkewTransform {}
+unsafe impl ::core::marker::Send for SkewTransform {}
+unsafe impl ::core::marker::Sync for SkewTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SolidColorBrush(pub ::windows::runtime::IInspectable);
 impl SolidColorBrush {
@@ -25692,9 +25785,9 @@ impl SolidColorBrush {
     pub fn Color(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -25708,7 +25801,7 @@ impl SolidColorBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -25722,9 +25815,9 @@ impl SolidColorBrush {
         color: Param0,
     ) -> ::windows::runtime::Result<SolidColorBrush> {
         Self::ISolidColorBrushFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 color.into_param().abi(),
                 &mut result__,
             )
@@ -25734,9 +25827,9 @@ impl SolidColorBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ColorProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ISolidColorBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -25758,7 +25851,7 @@ impl SolidColorBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -25772,9 +25865,9 @@ impl SolidColorBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25794,7 +25887,7 @@ impl SolidColorBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -25809,7 +25902,7 @@ impl SolidColorBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -25825,9 +25918,9 @@ impl SolidColorBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25844,9 +25937,9 @@ impl SolidColorBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -25865,9 +25958,9 @@ impl SolidColorBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -25887,7 +25980,7 @@ impl SolidColorBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -25898,9 +25991,9 @@ impl SolidColorBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -25913,9 +26006,9 @@ impl SolidColorBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -25925,9 +26018,9 @@ impl SolidColorBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -25937,17 +26030,20 @@ impl SolidColorBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -25961,7 +26057,7 @@ impl SolidColorBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -25971,9 +26067,9 @@ impl SolidColorBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -25987,7 +26083,7 @@ impl SolidColorBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -26035,12 +26131,12 @@ unsafe impl ::windows::runtime::Interface for SolidColorBrush {
 impl ::windows::runtime::RuntimeName for SolidColorBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.SolidColorBrush";
 }
-impl ::std::convert::From<SolidColorBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SolidColorBrush> for ::windows::runtime::IUnknown {
     fn from(value: SolidColorBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SolidColorBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SolidColorBrush> for ::windows::runtime::IUnknown {
     fn from(value: &SolidColorBrush) -> Self {
         value.0 .0.clone()
     }
@@ -26055,12 +26151,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SolidColorBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SolidColorBrush> for ::windows::runtime::IInspectable {
     fn from(value: SolidColorBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SolidColorBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SolidColorBrush> for ::windows::runtime::IInspectable {
     fn from(value: &SolidColorBrush) -> Self {
         value.0.clone()
     }
@@ -26078,14 +26174,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<SolidColorBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<SolidColorBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SolidColorBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&SolidColorBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&SolidColorBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SolidColorBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -26108,67 +26204,67 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SolidColorBrush> for Brush {
+impl ::core::convert::From<SolidColorBrush> for Brush {
     fn from(value: SolidColorBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&SolidColorBrush> for Brush {
+impl ::core::convert::From<&SolidColorBrush> for Brush {
     fn from(value: &SolidColorBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for SolidColorBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &SolidColorBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SolidColorBrush> for super::DependencyObject {
+impl ::core::convert::From<SolidColorBrush> for super::DependencyObject {
     fn from(value: SolidColorBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SolidColorBrush> for super::DependencyObject {
+impl ::core::convert::From<&SolidColorBrush> for super::DependencyObject {
     fn from(value: &SolidColorBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for SolidColorBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &SolidColorBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SolidColorBrush {}
-unsafe impl ::std::marker::Sync for SolidColorBrush {}
+unsafe impl ::core::marker::Send for SolidColorBrush {}
+unsafe impl ::core::marker::Sync for SolidColorBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct Stretch(pub i32);
@@ -26178,7 +26274,7 @@ impl Stretch {
     pub const Uniform: Stretch = Stretch(2i32);
     pub const UniformToFill: Stretch = Stretch(3i32);
 }
-impl ::std::convert::From<i32> for Stretch {
+impl ::core::convert::From<i32> for Stretch {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -26195,12 +26291,12 @@ impl ::windows::runtime::DefaultType for Stretch {
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct StyleSimulations(pub i32);
@@ -26210,7 +26306,7 @@ impl StyleSimulations {
     pub const ItalicSimulation: StyleSimulations = StyleSimulations(2i32);
     pub const BoldItalicSimulation: StyleSimulations = StyleSimulations(3i32);
 }
-impl ::std::convert::From<i32> for StyleSimulations {
+impl ::core::convert::From<i32> for StyleSimulations {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -26228,12 +26324,12 @@ impl ::windows::runtime::DefaultType for StyleSimulations {
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct SweepDirection(pub i32);
@@ -26241,7 +26337,7 @@ impl SweepDirection {
     pub const Counterclockwise: SweepDirection = SweepDirection(0i32);
     pub const Clockwise: SweepDirection = SweepDirection(1i32);
 }
-impl ::std::convert::From<i32> for SweepDirection {
+impl ::core::convert::From<i32> for SweepDirection {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -26260,10 +26356,10 @@ impl ::windows::runtime::DefaultType for SweepDirection {
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ThemeShadow(pub ::windows::runtime::IInspectable);
 impl ThemeShadow {
@@ -26271,9 +26367,9 @@ impl ThemeShadow {
     pub fn Receivers(&self) -> ::windows::runtime::Result<super::UIElementWeakCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElementWeakCollection>(result__)
@@ -26282,11 +26378,12 @@ impl ThemeShadow {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn new() -> ::windows::runtime::Result<ThemeShadow> {
         Self::IThemeShadowFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<ThemeShadow>(result__)
@@ -26299,9 +26396,9 @@ impl ThemeShadow {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -26321,7 +26418,7 @@ impl ThemeShadow {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -26336,7 +26433,7 @@ impl ThemeShadow {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -26352,9 +26449,9 @@ impl ThemeShadow {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -26371,9 +26468,9 @@ impl ThemeShadow {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -26392,9 +26489,9 @@ impl ThemeShadow {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -26414,7 +26511,7 @@ impl ThemeShadow {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -26425,9 +26522,9 @@ impl ThemeShadow {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -26440,9 +26537,9 @@ impl ThemeShadow {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -26476,12 +26573,12 @@ unsafe impl ::windows::runtime::Interface for ThemeShadow {
 impl ::windows::runtime::RuntimeName for ThemeShadow {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.ThemeShadow";
 }
-impl ::std::convert::From<ThemeShadow> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ThemeShadow> for ::windows::runtime::IUnknown {
     fn from(value: ThemeShadow) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ThemeShadow> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ThemeShadow> for ::windows::runtime::IUnknown {
     fn from(value: &ThemeShadow) -> Self {
         value.0 .0.clone()
     }
@@ -26496,12 +26593,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ThemeShadow> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ThemeShadow> for ::windows::runtime::IInspectable {
     fn from(value: ThemeShadow) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ThemeShadow> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ThemeShadow> for ::windows::runtime::IInspectable {
     fn from(value: &ThemeShadow) -> Self {
         value.0.clone()
     }
@@ -26516,61 +26613,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<ThemeShadow> for Shadow {
+impl ::core::convert::From<ThemeShadow> for Shadow {
     fn from(value: ThemeShadow) -> Self {
-        ::std::convert::Into::<Shadow>::into(&value)
+        ::core::convert::Into::<Shadow>::into(&value)
     }
 }
-impl ::std::convert::From<&ThemeShadow> for Shadow {
+impl ::core::convert::From<&ThemeShadow> for Shadow {
     fn from(value: &ThemeShadow) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Shadow> for ThemeShadow {
     fn into_param(self) -> ::windows::runtime::Param<'a, Shadow> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Shadow>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Shadow>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Shadow> for &ThemeShadow {
     fn into_param(self) -> ::windows::runtime::Param<'a, Shadow> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Shadow>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Shadow>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ThemeShadow> for super::DependencyObject {
+impl ::core::convert::From<ThemeShadow> for super::DependencyObject {
     fn from(value: ThemeShadow) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ThemeShadow> for super::DependencyObject {
+impl ::core::convert::From<&ThemeShadow> for super::DependencyObject {
     fn from(value: &ThemeShadow) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for ThemeShadow {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &ThemeShadow {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ThemeShadow {}
-unsafe impl ::std::marker::Sync for ThemeShadow {}
+unsafe impl ::core::marker::Send for ThemeShadow {}
+unsafe impl ::core::marker::Sync for ThemeShadow {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TileBrush(pub ::windows::runtime::IInspectable);
 impl TileBrush {
@@ -26578,9 +26675,9 @@ impl TileBrush {
     pub fn AlignmentX(&self) -> ::windows::runtime::Result<AlignmentX> {
         let this = self;
         unsafe {
-            let mut result__: AlignmentX = ::std::mem::zeroed();
+            let mut result__: AlignmentX = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<AlignmentX>(result__)
@@ -26590,17 +26687,20 @@ impl TileBrush {
     pub fn SetAlignmentX(&self, value: AlignmentX) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AlignmentY(&self) -> ::windows::runtime::Result<AlignmentY> {
         let this = self;
         unsafe {
-            let mut result__: AlignmentY = ::std::mem::zeroed();
+            let mut result__: AlignmentY = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<AlignmentY>(result__)
@@ -26610,17 +26710,20 @@ impl TileBrush {
     pub fn SetAlignmentY(&self, value: AlignmentY) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Stretch(&self) -> ::windows::runtime::Result<Stretch> {
         let this = self;
         unsafe {
-            let mut result__: Stretch = ::std::mem::zeroed();
+            let mut result__: Stretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Stretch>(result__)
@@ -26631,7 +26734,7 @@ impl TileBrush {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -26640,9 +26743,9 @@ impl TileBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AlignmentXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITileBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -26651,9 +26754,9 @@ impl TileBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn AlignmentYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITileBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -26662,9 +26765,9 @@ impl TileBrush {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn StretchProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITileBrushStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -26686,7 +26789,7 @@ impl TileBrush {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -26700,9 +26803,9 @@ impl TileBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -26722,7 +26825,7 @@ impl TileBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -26737,7 +26840,7 @@ impl TileBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -26753,9 +26856,9 @@ impl TileBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -26772,9 +26875,9 @@ impl TileBrush {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -26793,9 +26896,9 @@ impl TileBrush {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -26815,7 +26918,7 @@ impl TileBrush {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -26826,9 +26929,9 @@ impl TileBrush {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -26841,9 +26944,9 @@ impl TileBrush {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -26853,9 +26956,9 @@ impl TileBrush {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -26865,17 +26968,20 @@ impl TileBrush {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -26889,7 +26995,7 @@ impl TileBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -26899,9 +27005,9 @@ impl TileBrush {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -26915,7 +27021,7 @@ impl TileBrush {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -26946,12 +27052,12 @@ unsafe impl ::windows::runtime::Interface for TileBrush {
 impl ::windows::runtime::RuntimeName for TileBrush {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.TileBrush";
 }
-impl ::std::convert::From<TileBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TileBrush> for ::windows::runtime::IUnknown {
     fn from(value: TileBrush) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TileBrush> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TileBrush> for ::windows::runtime::IUnknown {
     fn from(value: &TileBrush) -> Self {
         value.0 .0.clone()
     }
@@ -26966,12 +27072,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TileBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TileBrush> for ::windows::runtime::IInspectable {
     fn from(value: TileBrush) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TileBrush> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TileBrush> for ::windows::runtime::IInspectable {
     fn from(value: &TileBrush) -> Self {
         value.0.clone()
     }
@@ -26987,14 +27093,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<TileBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<TileBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: TileBrush) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&TileBrush> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&TileBrush> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &TileBrush) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -27017,66 +27123,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<TileBrush> for Brush {
+impl ::core::convert::From<TileBrush> for Brush {
     fn from(value: TileBrush) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&TileBrush> for Brush {
+impl ::core::convert::From<&TileBrush> for Brush {
     fn from(value: &TileBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for TileBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &TileBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<TileBrush> for super::DependencyObject {
+impl ::core::convert::From<TileBrush> for super::DependencyObject {
     fn from(value: TileBrush) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&TileBrush> for super::DependencyObject {
+impl ::core::convert::From<&TileBrush> for super::DependencyObject {
     fn from(value: &TileBrush) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for TileBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &TileBrush {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for TileBrush {}
-unsafe impl ::std::marker::Sync for TileBrush {}
+unsafe impl ::core::marker::Send for TileBrush {}
+unsafe impl ::core::marker::Sync for TileBrush {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Transform(pub ::windows::runtime::IInspectable);
 impl Transform {
@@ -27087,9 +27193,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -27109,7 +27215,7 @@ impl Transform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -27124,7 +27230,7 @@ impl Transform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -27140,9 +27246,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -27159,9 +27265,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -27180,9 +27286,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -27202,7 +27308,7 @@ impl Transform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -27213,9 +27319,9 @@ impl Transform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -27228,9 +27334,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -27240,9 +27346,9 @@ impl Transform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -27258,9 +27364,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -27278,9 +27384,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -27298,9 +27404,9 @@ impl Transform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -27325,12 +27431,12 @@ unsafe impl ::windows::runtime::Interface for Transform {
 impl ::windows::runtime::RuntimeName for Transform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.Transform";
 }
-impl ::std::convert::From<Transform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Transform> for ::windows::runtime::IUnknown {
     fn from(value: Transform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Transform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Transform> for ::windows::runtime::IUnknown {
     fn from(value: &Transform) -> Self {
         value.0 .0.clone()
     }
@@ -27345,12 +27451,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Transform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Transform> for ::windows::runtime::IInspectable {
     fn from(value: Transform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Transform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Transform> for ::windows::runtime::IInspectable {
     fn from(value: &Transform) -> Self {
         value.0.clone()
     }
@@ -27365,61 +27471,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Transform> for GeneralTransform {
+impl ::core::convert::From<Transform> for GeneralTransform {
     fn from(value: Transform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&Transform> for GeneralTransform {
+impl ::core::convert::From<&Transform> for GeneralTransform {
     fn from(value: &Transform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for Transform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &Transform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Transform> for super::DependencyObject {
+impl ::core::convert::From<Transform> for super::DependencyObject {
     fn from(value: Transform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Transform> for super::DependencyObject {
+impl ::core::convert::From<&Transform> for super::DependencyObject {
     fn from(value: &Transform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Transform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Transform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Transform {}
-unsafe impl ::std::marker::Sync for Transform {}
+unsafe impl ::core::marker::Send for Transform {}
+unsafe impl ::core::marker::Sync for Transform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TransformCollection(pub ::windows::runtime::IInspectable);
 impl TransformCollection {
@@ -27442,9 +27548,9 @@ impl TransformCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<Transform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -27455,9 +27561,9 @@ impl TransformCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -27470,9 +27576,9 @@ impl TransformCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Transform>>(result__)
@@ -27486,9 +27592,9 @@ impl TransformCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -27505,7 +27611,7 @@ impl TransformCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -27521,7 +27627,7 @@ impl TransformCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -27533,7 +27639,7 @@ impl TransformCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -27547,7 +27653,7 @@ impl TransformCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -27557,14 +27663,14 @@ impl TransformCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
@@ -27575,12 +27681,12 @@ impl TransformCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -27594,9 +27700,9 @@ impl TransformCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -27609,9 +27715,9 @@ impl TransformCollection {
             ::windows::Foundation::Collections::IIterable<Transform>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<Transform>>(result__)
@@ -27628,12 +27734,12 @@ unsafe impl ::windows::runtime::Interface for TransformCollection {
 impl ::windows::runtime::RuntimeName for TransformCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.TransformCollection";
 }
-impl ::std::convert::From<TransformCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TransformCollection> for ::windows::runtime::IUnknown {
     fn from(value: TransformCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TransformCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TransformCollection> for ::windows::runtime::IUnknown {
     fn from(value: &TransformCollection) -> Self {
         value.0 .0.clone()
     }
@@ -27650,12 +27756,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TransformCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TransformCollection> for ::windows::runtime::IInspectable {
     fn from(value: TransformCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TransformCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TransformCollection> for ::windows::runtime::IInspectable {
     fn from(value: &TransformCollection) -> Self {
         value.0.clone()
     }
@@ -27674,18 +27780,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<TransformCollection>
+impl ::core::convert::From<TransformCollection>
     for ::windows::Foundation::Collections::IVector<Transform>
 {
     fn from(value: TransformCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&TransformCollection>
+impl ::core::convert::From<&TransformCollection>
     for ::windows::Foundation::Collections::IVector<Transform>
 {
     fn from(value: &TransformCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Transform>>
@@ -27694,7 +27800,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Transform>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Transform>>
@@ -27703,18 +27809,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Transform>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<TransformCollection>
+impl ::core::convert::TryFrom<TransformCollection>
     for ::windows::Foundation::Collections::IIterable<Transform>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: TransformCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&TransformCollection>
+impl ::core::convert::TryFrom<&TransformCollection>
     for ::windows::Foundation::Collections::IIterable<Transform>
 {
     type Error = ::windows::runtime::Error;
@@ -27739,36 +27845,36 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<Transform>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < Transform > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < Transform > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-unsafe impl ::std::marker::Send for TransformCollection {}
-unsafe impl ::std::marker::Sync for TransformCollection {}
+unsafe impl ::core::marker::Send for TransformCollection {}
+unsafe impl ::core::marker::Sync for TransformCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for TransformCollection {
+impl ::core::iter::IntoIterator for TransformCollection {
     type Item = Transform;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &TransformCollection {
+impl ::core::iter::IntoIterator for &TransformCollection {
     type Item = Transform;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TransformGroup(pub ::windows::runtime::IInspectable);
 impl TransformGroup {
@@ -27791,9 +27897,9 @@ impl TransformGroup {
     pub fn Children(&self) -> ::windows::runtime::Result<TransformCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TransformCollection>(result__)
@@ -27807,7 +27913,7 @@ impl TransformGroup {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -27817,9 +27923,9 @@ impl TransformGroup {
     pub fn Value(&self) -> ::windows::runtime::Result<Matrix> {
         let this = self;
         unsafe {
-            let mut result__: Matrix = ::std::mem::zeroed();
+            let mut result__: Matrix = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Matrix>(result__)
@@ -27828,9 +27934,9 @@ impl TransformGroup {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn ChildrenProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITransformGroupStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -27843,9 +27949,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -27865,7 +27971,7 @@ impl TransformGroup {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -27880,7 +27986,7 @@ impl TransformGroup {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -27896,9 +28002,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -27915,9 +28021,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -27936,9 +28042,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -27958,7 +28064,7 @@ impl TransformGroup {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -27969,9 +28075,9 @@ impl TransformGroup {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -27984,9 +28090,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -27996,9 +28102,9 @@ impl TransformGroup {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -28014,9 +28120,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -28034,9 +28140,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -28054,9 +28160,9 @@ impl TransformGroup {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -28093,12 +28199,12 @@ unsafe impl ::windows::runtime::Interface for TransformGroup {
 impl ::windows::runtime::RuntimeName for TransformGroup {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.TransformGroup";
 }
-impl ::std::convert::From<TransformGroup> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TransformGroup> for ::windows::runtime::IUnknown {
     fn from(value: TransformGroup) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TransformGroup> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TransformGroup> for ::windows::runtime::IUnknown {
     fn from(value: &TransformGroup) -> Self {
         value.0 .0.clone()
     }
@@ -28113,12 +28219,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TransformGroup> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TransformGroup> for ::windows::runtime::IInspectable {
     fn from(value: TransformGroup) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TransformGroup> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TransformGroup> for ::windows::runtime::IInspectable {
     fn from(value: &TransformGroup) -> Self {
         value.0.clone()
     }
@@ -28135,83 +28241,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<TransformGroup> for Transform {
+impl ::core::convert::From<TransformGroup> for Transform {
     fn from(value: TransformGroup) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&TransformGroup> for Transform {
+impl ::core::convert::From<&TransformGroup> for Transform {
     fn from(value: &TransformGroup) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for TransformGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &TransformGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<TransformGroup> for GeneralTransform {
+impl ::core::convert::From<TransformGroup> for GeneralTransform {
     fn from(value: TransformGroup) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&TransformGroup> for GeneralTransform {
+impl ::core::convert::From<&TransformGroup> for GeneralTransform {
     fn from(value: &TransformGroup) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for TransformGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &TransformGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<TransformGroup> for super::DependencyObject {
+impl ::core::convert::From<TransformGroup> for super::DependencyObject {
     fn from(value: TransformGroup) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&TransformGroup> for super::DependencyObject {
+impl ::core::convert::From<&TransformGroup> for super::DependencyObject {
     fn from(value: &TransformGroup) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for TransformGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &TransformGroup {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for TransformGroup {}
-unsafe impl ::std::marker::Sync for TransformGroup {}
+unsafe impl ::core::marker::Send for TransformGroup {}
+unsafe impl ::core::marker::Sync for TransformGroup {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TranslateTransform(pub ::windows::runtime::IInspectable);
 impl TranslateTransform {
@@ -28234,9 +28340,9 @@ impl TranslateTransform {
     pub fn X(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -28246,17 +28352,20 @@ impl TranslateTransform {
     pub fn SetX(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Y(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -28266,16 +28375,19 @@ impl TranslateTransform {
     pub fn SetY(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn XProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITranslateTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -28284,9 +28396,9 @@ impl TranslateTransform {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn YProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITranslateTransformStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -28299,9 +28411,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -28321,7 +28433,7 @@ impl TranslateTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -28336,7 +28448,7 @@ impl TranslateTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -28352,9 +28464,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -28371,9 +28483,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -28392,9 +28504,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -28414,7 +28526,7 @@ impl TranslateTransform {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -28425,9 +28537,9 @@ impl TranslateTransform {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -28440,9 +28552,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -28452,9 +28564,9 @@ impl TranslateTransform {
     pub fn Inverse(&self) -> ::windows::runtime::Result<GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<GeneralTransform>(result__)
@@ -28470,9 +28582,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 point.into_param().abi(),
                 &mut result__,
             )
@@ -28490,9 +28602,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 inpoint.into_param().abi(),
                 outpoint,
                 &mut result__,
@@ -28510,9 +28622,9 @@ impl TranslateTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = &::windows::runtime::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 rect.into_param().abi(),
                 &mut result__,
             )
@@ -28549,12 +28661,12 @@ unsafe impl ::windows::runtime::Interface for TranslateTransform {
 impl ::windows::runtime::RuntimeName for TranslateTransform {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.TranslateTransform";
 }
-impl ::std::convert::From<TranslateTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TranslateTransform> for ::windows::runtime::IUnknown {
     fn from(value: TranslateTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TranslateTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TranslateTransform> for ::windows::runtime::IUnknown {
     fn from(value: &TranslateTransform) -> Self {
         value.0 .0.clone()
     }
@@ -28571,12 +28683,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TranslateTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TranslateTransform> for ::windows::runtime::IInspectable {
     fn from(value: TranslateTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TranslateTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TranslateTransform> for ::windows::runtime::IInspectable {
     fn from(value: &TranslateTransform) -> Self {
         value.0.clone()
     }
@@ -28595,83 +28707,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<TranslateTransform> for Transform {
+impl ::core::convert::From<TranslateTransform> for Transform {
     fn from(value: TranslateTransform) -> Self {
-        ::std::convert::Into::<Transform>::into(&value)
+        ::core::convert::Into::<Transform>::into(&value)
     }
 }
-impl ::std::convert::From<&TranslateTransform> for Transform {
+impl ::core::convert::From<&TranslateTransform> for Transform {
     fn from(value: &TranslateTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for TranslateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Transform> for &TranslateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, Transform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Transform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Transform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<TranslateTransform> for GeneralTransform {
+impl ::core::convert::From<TranslateTransform> for GeneralTransform {
     fn from(value: TranslateTransform) -> Self {
-        ::std::convert::Into::<GeneralTransform>::into(&value)
+        ::core::convert::Into::<GeneralTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&TranslateTransform> for GeneralTransform {
+impl ::core::convert::From<&TranslateTransform> for GeneralTransform {
     fn from(value: &TranslateTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for TranslateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, GeneralTransform> for &TranslateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, GeneralTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<GeneralTransform>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<GeneralTransform>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<TranslateTransform> for super::DependencyObject {
+impl ::core::convert::From<TranslateTransform> for super::DependencyObject {
     fn from(value: TranslateTransform) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&TranslateTransform> for super::DependencyObject {
+impl ::core::convert::From<&TranslateTransform> for super::DependencyObject {
     fn from(value: &TranslateTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for TranslateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &TranslateTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for TranslateTransform {}
-unsafe impl ::std::marker::Sync for TranslateTransform {}
+unsafe impl ::core::marker::Send for TranslateTransform {}
+unsafe impl ::core::marker::Sync for TranslateTransform {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct VisualTreeHelper(pub ::windows::runtime::IInspectable);
 impl VisualTreeHelper {
@@ -28686,9 +28798,9 @@ impl VisualTreeHelper {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IIterable<super::UIElement>>
     {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 intersectingpoint.into_param().abi(),
                 subtree.into_param().abi(),
                 &mut result__,
@@ -28707,9 +28819,9 @@ impl VisualTreeHelper {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IIterable<super::UIElement>>
     {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 intersectingrect.into_param().abi(),
                 subtree.into_param().abi(),
                 &mut result__,
@@ -28729,9 +28841,9 @@ impl VisualTreeHelper {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IIterable<super::UIElement>>
     {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 intersectingpoint.into_param().abi(),
                 subtree.into_param().abi(),
                 includeallelements,
@@ -28752,9 +28864,9 @@ impl VisualTreeHelper {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IIterable<super::UIElement>>
     {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 intersectingrect.into_param().abi(),
                 subtree.into_param().abi(),
                 includeallelements,
@@ -28769,9 +28881,9 @@ impl VisualTreeHelper {
         childindex: i32,
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 childindex,
                 &mut result__,
@@ -28787,9 +28899,9 @@ impl VisualTreeHelper {
         reference: Param0,
     ) -> ::windows::runtime::Result<i32> {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 &mut result__,
             )
@@ -28801,9 +28913,9 @@ impl VisualTreeHelper {
         reference: Param0,
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 &mut result__,
             )
@@ -28819,7 +28931,7 @@ impl VisualTreeHelper {
     ) -> ::windows::runtime::Result<()> {
         Self::IVisualTreeHelperStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
             )
             .ok()
@@ -28833,9 +28945,9 @@ impl VisualTreeHelper {
         ::windows::Foundation::Collections::IVectorView<super::Controls::Primitives::Popup>,
     > {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 window.into_param().abi(),
                 &mut result__,
             )
@@ -28855,9 +28967,9 @@ impl VisualTreeHelper {
         ::windows::Foundation::Collections::IVectorView<super::Controls::Primitives::Popup>,
     > {
         Self::IVisualTreeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 xamlroot.into_param().abi(),
                 &mut result__,
             )
@@ -28896,12 +29008,12 @@ unsafe impl ::windows::runtime::Interface for VisualTreeHelper {
 impl ::windows::runtime::RuntimeName for VisualTreeHelper {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.VisualTreeHelper";
 }
-impl ::std::convert::From<VisualTreeHelper> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<VisualTreeHelper> for ::windows::runtime::IUnknown {
     fn from(value: VisualTreeHelper) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&VisualTreeHelper> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&VisualTreeHelper> for ::windows::runtime::IUnknown {
     fn from(value: &VisualTreeHelper) -> Self {
         value.0 .0.clone()
     }
@@ -28916,12 +29028,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<VisualTreeHelper> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<VisualTreeHelper> for ::windows::runtime::IInspectable {
     fn from(value: VisualTreeHelper) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&VisualTreeHelper> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&VisualTreeHelper> for ::windows::runtime::IInspectable {
     fn from(value: &VisualTreeHelper) -> Self {
         value.0.clone()
     }
@@ -28938,15 +29050,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for VisualTreeHelper {}
-unsafe impl ::std::marker::Sync for VisualTreeHelper {}
+unsafe impl ::core::marker::Send for VisualTreeHelper {}
+unsafe impl ::core::marker::Sync for VisualTreeHelper {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct XamlCompositionBrushBase(pub ::windows::runtime::IInspectable);
 impl XamlCompositionBrushBase {
@@ -28954,9 +29066,9 @@ impl XamlCompositionBrushBase {
     pub fn FallbackColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -28970,7 +29082,7 @@ impl XamlCompositionBrushBase {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -28984,9 +29096,9 @@ impl XamlCompositionBrushBase {
         let this =
             &::windows::runtime::Interface::cast::<IXamlCompositionBrushBaseProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
@@ -29005,7 +29117,7 @@ impl XamlCompositionBrushBase {
             &::windows::runtime::Interface::cast::<IXamlCompositionBrushBaseProtected>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -29014,9 +29126,9 @@ impl XamlCompositionBrushBase {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn FallbackColorProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IXamlCompositionBrushBaseStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -29038,7 +29150,7 @@ impl XamlCompositionBrushBase {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -29052,9 +29164,9 @@ impl XamlCompositionBrushBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -29074,7 +29186,7 @@ impl XamlCompositionBrushBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -29089,7 +29201,7 @@ impl XamlCompositionBrushBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -29105,9 +29217,9 @@ impl XamlCompositionBrushBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -29124,9 +29236,9 @@ impl XamlCompositionBrushBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -29145,9 +29257,9 @@ impl XamlCompositionBrushBase {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -29167,7 +29279,7 @@ impl XamlCompositionBrushBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -29178,9 +29290,9 @@ impl XamlCompositionBrushBase {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -29193,9 +29305,9 @@ impl XamlCompositionBrushBase {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -29205,9 +29317,9 @@ impl XamlCompositionBrushBase {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -29217,17 +29329,20 @@ impl XamlCompositionBrushBase {
     pub fn SetOpacity(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn Transform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -29241,7 +29356,7 @@ impl XamlCompositionBrushBase {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -29251,9 +29366,9 @@ impl XamlCompositionBrushBase {
     pub fn RelativeTransform(&self) -> ::windows::runtime::Result<Transform> {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<Transform>(result__)
@@ -29267,7 +29382,7 @@ impl XamlCompositionBrushBase {
         let this = &::windows::runtime::Interface::cast::<IBrush>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -29301,12 +29416,12 @@ unsafe impl ::windows::runtime::Interface for XamlCompositionBrushBase {
 impl ::windows::runtime::RuntimeName for XamlCompositionBrushBase {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.XamlCompositionBrushBase";
 }
-impl ::std::convert::From<XamlCompositionBrushBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<XamlCompositionBrushBase> for ::windows::runtime::IUnknown {
     fn from(value: XamlCompositionBrushBase) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&XamlCompositionBrushBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&XamlCompositionBrushBase> for ::windows::runtime::IUnknown {
     fn from(value: &XamlCompositionBrushBase) -> Self {
         value.0 .0.clone()
     }
@@ -29325,12 +29440,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<XamlCompositionBrushBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<XamlCompositionBrushBase> for ::windows::runtime::IInspectable {
     fn from(value: XamlCompositionBrushBase) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&XamlCompositionBrushBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&XamlCompositionBrushBase> for ::windows::runtime::IInspectable {
     fn from(value: &XamlCompositionBrushBase) -> Self {
         value.0.clone()
     }
@@ -29350,16 +29465,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<XamlCompositionBrushBase>
+impl ::core::convert::TryFrom<XamlCompositionBrushBase>
     for super::super::Composition::IAnimationObject
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: XamlCompositionBrushBase) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&XamlCompositionBrushBase>
+impl ::core::convert::TryFrom<&XamlCompositionBrushBase>
     for super::super::Composition::IAnimationObject
 {
     type Error = ::windows::runtime::Error;
@@ -29384,66 +29499,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<XamlCompositionBrushBase> for Brush {
+impl ::core::convert::From<XamlCompositionBrushBase> for Brush {
     fn from(value: XamlCompositionBrushBase) -> Self {
-        ::std::convert::Into::<Brush>::into(&value)
+        ::core::convert::Into::<Brush>::into(&value)
     }
 }
-impl ::std::convert::From<&XamlCompositionBrushBase> for Brush {
+impl ::core::convert::From<&XamlCompositionBrushBase> for Brush {
     fn from(value: &XamlCompositionBrushBase) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for XamlCompositionBrushBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Brush> for &XamlCompositionBrushBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, Brush> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Brush>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Brush>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<XamlCompositionBrushBase> for super::DependencyObject {
+impl ::core::convert::From<XamlCompositionBrushBase> for super::DependencyObject {
     fn from(value: XamlCompositionBrushBase) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&XamlCompositionBrushBase> for super::DependencyObject {
+impl ::core::convert::From<&XamlCompositionBrushBase> for super::DependencyObject {
     fn from(value: &XamlCompositionBrushBase) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for XamlCompositionBrushBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &XamlCompositionBrushBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for XamlCompositionBrushBase {}
-unsafe impl ::std::marker::Sync for XamlCompositionBrushBase {}
+unsafe impl ::core::marker::Send for XamlCompositionBrushBase {}
+unsafe impl ::core::marker::Sync for XamlCompositionBrushBase {}
 #[doc = "*Required features: `UI_Xaml_Media`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct XamlLight(pub ::windows::runtime::IInspectable);
 impl XamlLight {
@@ -29454,9 +29569,9 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<super::super::Composition::CompositionLight> {
         let this = &::windows::runtime::Interface::cast::<IXamlLightProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::CompositionLight>(result__)
@@ -29474,7 +29589,7 @@ impl XamlLight {
         let this = &::windows::runtime::Interface::cast::<IXamlLightProtected>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -29491,7 +29606,7 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<()> {
         Self::IXamlLightStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 lightid.into_param().abi(),
                 element.into_param().abi(),
             )
@@ -29509,7 +29624,7 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<()> {
         Self::IXamlLightStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 lightid.into_param().abi(),
                 element.into_param().abi(),
             )
@@ -29527,7 +29642,7 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<()> {
         Self::IXamlLightStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 lightid.into_param().abi(),
                 brush.into_param().abi(),
             )
@@ -29545,7 +29660,7 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<()> {
         Self::IXamlLightStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 lightid.into_param().abi(),
                 brush.into_param().abi(),
             )
@@ -29555,11 +29670,12 @@ impl XamlLight {
     #[doc = "*Required features: `UI_Xaml_Media`*"]
     pub fn new() -> ::windows::runtime::Result<XamlLight> {
         Self::IXamlLightFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<XamlLight>(result__)
@@ -29572,9 +29688,9 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -29594,7 +29710,7 @@ impl XamlLight {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -29609,7 +29725,7 @@ impl XamlLight {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -29625,9 +29741,9 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -29644,9 +29760,9 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -29665,9 +29781,9 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -29687,7 +29803,7 @@ impl XamlLight {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -29698,9 +29814,9 @@ impl XamlLight {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -29713,9 +29829,9 @@ impl XamlLight {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -29753,12 +29869,12 @@ unsafe impl ::windows::runtime::Interface for XamlLight {
 impl ::windows::runtime::RuntimeName for XamlLight {
     const NAME: &'static str = "Microsoft.UI.Xaml.Media.XamlLight";
 }
-impl ::std::convert::From<XamlLight> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<XamlLight> for ::windows::runtime::IUnknown {
     fn from(value: XamlLight) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&XamlLight> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&XamlLight> for ::windows::runtime::IUnknown {
     fn from(value: &XamlLight) -> Self {
         value.0 .0.clone()
     }
@@ -29773,12 +29889,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<XamlLight> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<XamlLight> for ::windows::runtime::IInspectable {
     fn from(value: XamlLight) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&XamlLight> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&XamlLight> for ::windows::runtime::IInspectable {
     fn from(value: &XamlLight) -> Self {
         value.0.clone()
     }
@@ -29793,29 +29909,29 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<XamlLight> for super::DependencyObject {
+impl ::core::convert::From<XamlLight> for super::DependencyObject {
     fn from(value: XamlLight) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&XamlLight> for super::DependencyObject {
+impl ::core::convert::From<&XamlLight> for super::DependencyObject {
     fn from(value: &XamlLight) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for XamlLight {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &XamlLight {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for XamlLight {}
-unsafe impl ::std::marker::Sync for XamlLight {}
+unsafe impl ::core::marker::Send for XamlLight {}
+unsafe impl ::core::marker::Sync for XamlLight {}

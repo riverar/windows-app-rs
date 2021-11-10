@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Composition_Core`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CompositorController(pub ::windows::runtime::IInspectable);
 impl CompositorController {
@@ -36,9 +36,9 @@ impl CompositorController {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -48,7 +48,7 @@ impl CompositorController {
     pub fn Commit(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).7)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Core`*"]
@@ -57,9 +57,9 @@ impl CompositorController {
     ) -> ::windows::runtime::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
@@ -81,9 +81,9 @@ impl CompositorController {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -101,7 +101,7 @@ impl CompositorController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -111,7 +111,7 @@ impl CompositorController {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -130,12 +130,12 @@ unsafe impl ::windows::runtime::Interface for CompositorController {
 impl ::windows::runtime::RuntimeName for CompositorController {
     const NAME: &'static str = "Microsoft.UI.Composition.Core.CompositorController";
 }
-impl ::std::convert::From<CompositorController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CompositorController> for ::windows::runtime::IUnknown {
     fn from(value: CompositorController) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CompositorController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CompositorController> for ::windows::runtime::IUnknown {
     fn from(value: &CompositorController) -> Self {
         value.0 .0.clone()
     }
@@ -152,12 +152,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CompositorController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CompositorController> for ::windows::runtime::IInspectable {
     fn from(value: CompositorController) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CompositorController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CompositorController> for ::windows::runtime::IInspectable {
     fn from(value: &CompositorController) -> Self {
         value.0.clone()
     }
@@ -176,13 +176,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<CompositorController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<CompositorController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: CompositorController) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&CompositorController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&CompositorController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &CompositorController) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -199,13 +199,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &CompositorController
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for CompositorController {}
-unsafe impl ::std::marker::Sync for CompositorController {}
+unsafe impl ::core::marker::Send for CompositorController {}
+unsafe impl ::core::marker::Sync for CompositorController {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct ICompositorController(pub ::windows::runtime::IInspectable);

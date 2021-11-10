@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ElementCompositionPreview(pub ::windows::runtime::IInspectable);
 impl ElementCompositionPreview {
@@ -23,9 +23,9 @@ impl ElementCompositionPreview {
         element: Param0,
     ) -> ::windows::runtime::Result<super::super::Composition::Visual> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -41,9 +41,9 @@ impl ElementCompositionPreview {
         element: Param0,
     ) -> ::windows::runtime::Result<super::super::Composition::Visual> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -62,7 +62,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::runtime::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 visual.into_param().abi(),
             )
@@ -78,9 +78,9 @@ impl ElementCompositionPreview {
         scrollviewer: Param0,
     ) -> ::windows::runtime::Result<super::super::Composition::CompositionPropertySet> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 scrollviewer.into_param().abi(),
                 &mut result__,
             )
@@ -99,7 +99,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::runtime::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -118,7 +118,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::runtime::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -135,7 +135,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::runtime::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -151,9 +151,9 @@ impl ElementCompositionPreview {
         targetelement: Param0,
     ) -> ::windows::runtime::Result<super::super::Composition::CompositionPropertySet> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 targetelement.into_param().abi(),
                 &mut result__,
             )
@@ -188,12 +188,12 @@ unsafe impl ::windows::runtime::Interface for ElementCompositionPreview {
 impl ::windows::runtime::RuntimeName for ElementCompositionPreview {
     const NAME: &'static str = "Microsoft.UI.Xaml.Hosting.ElementCompositionPreview";
 }
-impl ::std::convert::From<ElementCompositionPreview> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ElementCompositionPreview> for ::windows::runtime::IUnknown {
     fn from(value: ElementCompositionPreview) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ElementCompositionPreview> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ElementCompositionPreview> for ::windows::runtime::IUnknown {
     fn from(value: &ElementCompositionPreview) -> Self {
         value.0 .0.clone()
     }
@@ -212,12 +212,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ElementCompositionPreview> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ElementCompositionPreview> for ::windows::runtime::IInspectable {
     fn from(value: ElementCompositionPreview) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ElementCompositionPreview> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ElementCompositionPreview> for ::windows::runtime::IInspectable {
     fn from(value: &ElementCompositionPreview) -> Self {
         value.0.clone()
     }
@@ -236,25 +236,25 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ElementCompositionPreview {}
-unsafe impl ::std::marker::Sync for ElementCompositionPreview {}
+unsafe impl ::core::marker::Send for ElementCompositionPreview {}
+unsafe impl ::core::marker::Sync for ElementCompositionPreview {}
 #[repr(C)]
 #[derive(
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
 )]
 pub struct HostingContract(pub u8);
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IDesktopWindowXamlSourceNative(pub ::windows::runtime::IUnknown);
 impl IDesktopWindowXamlSourceNative {
@@ -267,7 +267,7 @@ impl IDesktopWindowXamlSourceNative {
         parentwnd: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             parentwnd.into_param().abi(),
         )
         .ok()
@@ -278,8 +278,8 @@ impl IDesktopWindowXamlSourceNative {
         hwnd: *mut ::windows::Win32::Foundation::HWND,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(hwnd),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(hwnd),
         )
         .ok()
     }
@@ -290,9 +290,9 @@ impl IDesktopWindowXamlSourceNative {
         result: *mut ::windows::Win32::Foundation::BOOL,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).5)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(message),
-            ::std::mem::transmute(result),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(message),
+            ::core::mem::transmute(result),
         )
         .ok()
     }
@@ -306,12 +306,12 @@ unsafe impl ::windows::runtime::Interface for IDesktopWindowXamlSourceNative {
         [140, 244, 52, 85, 81, 36, 219, 50],
     );
 }
-impl ::std::convert::From<IDesktopWindowXamlSourceNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IDesktopWindowXamlSourceNative> for ::windows::runtime::IUnknown {
     fn from(value: IDesktopWindowXamlSourceNative) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IDesktopWindowXamlSourceNative> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IDesktopWindowXamlSourceNative> for ::windows::runtime::IUnknown {
     fn from(value: &IDesktopWindowXamlSourceNative) -> Self {
         value.0.clone()
     }
@@ -483,10 +483,10 @@ pub struct IElementCompositionPreviewStatics_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IFindReferenceTargetsCallback(pub ::windows::runtime::IUnknown);
 impl IFindReferenceTargetsCallback {
@@ -499,7 +499,7 @@ impl IFindReferenceTargetsCallback {
         target: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             target.into_param().abi(),
         )
         .ok()
@@ -514,12 +514,12 @@ unsafe impl ::windows::runtime::Interface for IFindReferenceTargetsCallback {
         [141, 20, 80, 90, 181, 132, 221, 136],
     );
 }
-impl ::std::convert::From<IFindReferenceTargetsCallback> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IFindReferenceTargetsCallback> for ::windows::runtime::IUnknown {
     fn from(value: IFindReferenceTargetsCallback) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IFindReferenceTargetsCallback> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IFindReferenceTargetsCallback> for ::windows::runtime::IUnknown {
     fn from(value: &IFindReferenceTargetsCallback) -> Self {
         value.0.clone()
     }
@@ -556,20 +556,20 @@ pub struct IFindReferenceTargetsCallback_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IReferenceTracker(pub ::windows::runtime::IUnknown);
 impl IReferenceTracker {
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn ConnectFromTrackerSource(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).3)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).3)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn DisconnectFromTrackerSource(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).4)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).4)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn FindTrackerTargets<
@@ -580,7 +580,7 @@ impl IReferenceTracker {
         callback: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).5)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             callback.into_param().abi(),
         )
         .ok()
@@ -590,24 +590,24 @@ impl IReferenceTracker {
         &self,
     ) -> ::windows::runtime::Result<IReferenceTrackerManager> {
         let mut result__: <IReferenceTrackerManager as ::windows::runtime::Abi>::Abi =
-            ::std::mem::zeroed();
+            ::core::mem::zeroed();
         (::windows::runtime::Interface::vtable(self).6)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             &mut result__,
         )
         .from_abi::<IReferenceTrackerManager>(result__)
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn AddRefFromTrackerSource(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).7)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).7)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn ReleaseFromTrackerSource(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).8)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).8)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn PegFromTrackerSource(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).9)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).9)(::core::mem::transmute_copy(self)).ok()
     }
 }
 unsafe impl ::windows::runtime::Interface for IReferenceTracker {
@@ -619,12 +619,12 @@ unsafe impl ::windows::runtime::Interface for IReferenceTracker {
         [168, 190, 119, 18, 136, 40, 147, 230],
     );
 }
-impl ::std::convert::From<IReferenceTracker> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IReferenceTracker> for ::windows::runtime::IUnknown {
     fn from(value: IReferenceTracker) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IReferenceTracker> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IReferenceTracker> for ::windows::runtime::IUnknown {
     fn from(value: &IReferenceTracker) -> Self {
         value.0.clone()
     }
@@ -666,10 +666,10 @@ pub struct IReferenceTracker_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IReferenceTrackerExtension(pub ::windows::runtime::IUnknown);
 impl IReferenceTrackerExtension {}
@@ -682,12 +682,12 @@ unsafe impl ::windows::runtime::Interface for IReferenceTrackerExtension {
         [143, 140, 247, 235, 209, 243, 153, 176],
     );
 }
-impl ::std::convert::From<IReferenceTrackerExtension> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IReferenceTrackerExtension> for ::windows::runtime::IUnknown {
     fn from(value: IReferenceTrackerExtension) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IReferenceTrackerExtension> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IReferenceTrackerExtension> for ::windows::runtime::IUnknown {
     fn from(value: &IReferenceTrackerExtension) -> Self {
         value.0.clone()
     }
@@ -720,10 +720,10 @@ pub struct IReferenceTrackerExtension_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IReferenceTrackerHost(pub ::windows::runtime::IUnknown);
 impl IReferenceTrackerHost {
@@ -733,18 +733,18 @@ impl IReferenceTrackerHost {
         options: __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(options),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(options),
         )
         .ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn ReleaseDisconnectedReferenceSources(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).4)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).4)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn NotifyEndOfReferenceTrackingOnThread(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).5)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).5)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn GetTrackerTarget<
@@ -755,9 +755,9 @@ impl IReferenceTrackerHost {
         unknown: Param0,
     ) -> ::windows::runtime::Result<IReferenceTrackerTarget> {
         let mut result__: <IReferenceTrackerTarget as ::windows::runtime::Abi>::Abi =
-            ::std::mem::zeroed();
+            ::core::mem::zeroed();
         (::windows::runtime::Interface::vtable(self).6)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             unknown.into_param().abi(),
             &mut result__,
         )
@@ -766,8 +766,8 @@ impl IReferenceTrackerHost {
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn AddMemoryPressure(&self, bytesallocated: u64) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).7)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(bytesallocated),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(bytesallocated),
         )
         .ok()
     }
@@ -777,8 +777,8 @@ impl IReferenceTrackerHost {
         bytesallocated: u64,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).8)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(bytesallocated),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(bytesallocated),
         )
         .ok()
     }
@@ -792,12 +792,12 @@ unsafe impl ::windows::runtime::Interface for IReferenceTrackerHost {
         [163, 157, 226, 130, 90, 7, 167, 115],
     );
 }
-impl ::std::convert::From<IReferenceTrackerHost> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IReferenceTrackerHost> for ::windows::runtime::IUnknown {
     fn from(value: IReferenceTrackerHost) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IReferenceTrackerHost> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IReferenceTrackerHost> for ::windows::runtime::IUnknown {
     fn from(value: &IReferenceTrackerHost) -> Self {
         value.0.clone()
     }
@@ -847,16 +847,16 @@ pub struct IReferenceTrackerHost_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IReferenceTrackerManager(pub ::windows::runtime::IUnknown);
 impl IReferenceTrackerManager {
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn ReferenceTrackingStarted(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).3)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).3)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn FindTrackerTargetsCompleted(
@@ -864,14 +864,14 @@ impl IReferenceTrackerManager {
         findfailed: u8,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(findfailed),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(findfailed),
         )
         .ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn ReferenceTrackingCompleted(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).5)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).5)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn SetReferenceTrackerHost<
@@ -882,7 +882,7 @@ impl IReferenceTrackerManager {
         value: Param0,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).6)(
-            ::std::mem::transmute_copy(self),
+            ::core::mem::transmute_copy(self),
             value.into_param().abi(),
         )
         .ok()
@@ -897,12 +897,12 @@ unsafe impl ::windows::runtime::Interface for IReferenceTrackerManager {
         [132, 85, 126, 108, 233, 154, 50, 152],
     );
 }
-impl ::std::convert::From<IReferenceTrackerManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IReferenceTrackerManager> for ::windows::runtime::IUnknown {
     fn from(value: IReferenceTrackerManager) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IReferenceTrackerManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IReferenceTrackerManager> for ::windows::runtime::IUnknown {
     fn from(value: &IReferenceTrackerManager) -> Self {
         value.0.clone()
     }
@@ -945,32 +945,32 @@ pub struct IReferenceTrackerManager_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct IReferenceTrackerTarget(pub ::windows::runtime::IUnknown);
 impl IReferenceTrackerTarget {
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn AddRefFromReferenceTracker(&self) -> u32 {
-        ::std::mem::transmute((::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
+        ::core::mem::transmute((::windows::runtime::Interface::vtable(self).3)(
+            ::core::mem::transmute_copy(self),
         ))
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn ReleaseFromReferenceTracker(&self) -> u32 {
-        ::std::mem::transmute((::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
+        ::core::mem::transmute((::windows::runtime::Interface::vtable(self).4)(
+            ::core::mem::transmute_copy(self),
         ))
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn Peg(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).5)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).5)(::core::mem::transmute_copy(self)).ok()
     }
     #[doc = "*Required features: `UI_Xaml_Hosting`*"]
     pub unsafe fn Unpeg(&self) -> ::windows::runtime::Result<()> {
-        (::windows::runtime::Interface::vtable(self).6)(::std::mem::transmute_copy(self)).ok()
+        (::windows::runtime::Interface::vtable(self).6)(::core::mem::transmute_copy(self)).ok()
     }
 }
 unsafe impl ::windows::runtime::Interface for IReferenceTrackerTarget {
@@ -982,12 +982,12 @@ unsafe impl ::windows::runtime::Interface for IReferenceTrackerTarget {
         [183, 235, 41, 53, 21, 141, 174, 33],
     );
 }
-impl ::std::convert::From<IReferenceTrackerTarget> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IReferenceTrackerTarget> for ::windows::runtime::IUnknown {
     fn from(value: IReferenceTrackerTarget) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IReferenceTrackerTarget> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IReferenceTrackerTarget> for ::windows::runtime::IUnknown {
     fn from(value: &IReferenceTrackerTarget) -> Self {
         value.0.clone()
     }
@@ -1024,10 +1024,10 @@ pub struct IReferenceTrackerTarget_abi(
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ITrackerOwner(pub ::windows::runtime::IUnknown);
 impl ITrackerOwner {
@@ -1037,8 +1037,8 @@ impl ITrackerOwner {
         returnvalue: *mut *mut TrackerHandle__,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).3)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(returnvalue),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(returnvalue),
         )
         .ok()
     }
@@ -1048,8 +1048,8 @@ impl ITrackerOwner {
         handle: *mut TrackerHandle__,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).4)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(handle),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(handle),
         )
         .ok()
     }
@@ -1063,8 +1063,8 @@ impl ITrackerOwner {
         value: Param1,
     ) -> ::windows::runtime::Result<()> {
         (::windows::runtime::Interface::vtable(self).5)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(handle),
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(handle),
             value.into_param().abi(),
         )
         .ok()
@@ -1073,12 +1073,12 @@ impl ITrackerOwner {
     pub unsafe fn TryGetSafeTrackerValue(
         &self,
         handle: *mut TrackerHandle__,
-        returnvalue: *mut ::std::option::Option<::windows::runtime::IUnknown>,
+        returnvalue: *mut ::core::option::Option<::windows::runtime::IUnknown>,
     ) -> u8 {
-        ::std::mem::transmute((::windows::runtime::Interface::vtable(self).6)(
-            ::std::mem::transmute_copy(self),
-            ::std::mem::transmute(handle),
-            ::std::mem::transmute(returnvalue),
+        ::core::mem::transmute((::windows::runtime::Interface::vtable(self).6)(
+            ::core::mem::transmute_copy(self),
+            ::core::mem::transmute(handle),
+            ::core::mem::transmute(returnvalue),
         ))
     }
 }
@@ -1091,12 +1091,12 @@ unsafe impl ::windows::runtime::Interface for ITrackerOwner {
         [140, 255, 54, 246, 122, 17, 143, 78],
     );
 }
-impl ::std::convert::From<ITrackerOwner> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ITrackerOwner> for ::windows::runtime::IUnknown {
     fn from(value: ITrackerOwner) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ITrackerOwner> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ITrackerOwner> for ::windows::runtime::IUnknown {
     fn from(value: &ITrackerOwner) -> Self {
         value.0.clone()
     }
@@ -1140,42 +1140,42 @@ pub struct ITrackerOwner_abi(
         returnvalue: *mut ::windows::runtime::RawPtr,
     ) -> u8,
 );
-#[derive(:: std :: clone :: Clone, :: std :: marker :: Copy)]
+#[derive(:: core :: clone :: Clone, :: core :: marker :: Copy)]
 #[repr(C)]
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 pub struct TrackerHandle__ {
     pub unused: i32,
 }
 impl TrackerHandle__ {}
-impl ::std::default::Default for TrackerHandle__ {
+impl ::core::default::Default for TrackerHandle__ {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        unsafe { ::core::mem::zeroed() }
     }
 }
-impl ::std::fmt::Debug for TrackerHandle__ {
-    fn fmt(&self, fmt: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
+impl ::core::fmt::Debug for TrackerHandle__ {
+    fn fmt(&self, fmt: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
         fmt.debug_struct("TrackerHandle__")
             .field("unused", &self.unused)
             .finish()
     }
 }
-impl ::std::cmp::PartialEq for TrackerHandle__ {
+impl ::core::cmp::PartialEq for TrackerHandle__ {
     fn eq(&self, other: &Self) -> bool {
         self.unused == other.unused
     }
 }
-impl ::std::cmp::Eq for TrackerHandle__ {}
+impl ::core::cmp::Eq for TrackerHandle__ {}
 unsafe impl ::windows::runtime::Abi for TrackerHandle__ {
     type Abi = Self;
 }
 #[doc = "*Required features: `UI_Xaml_Hosting`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001(pub i32);
@@ -1185,7 +1185,7 @@ pub const XAML_REFERENCETRACKER_DISCONNECT_DEFAULT:
 pub const XAML_REFERENCETRACKER_DISCONNECT_SUSPEND:
     __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001 =
     __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001(1i32);
-impl ::std::convert::From<i32>
+impl ::core::convert::From<i32>
     for __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001
 {
     fn from(value: i32) -> Self {

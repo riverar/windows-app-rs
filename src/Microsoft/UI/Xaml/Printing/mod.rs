@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AddPagesEventArgs(pub ::windows::runtime::IInspectable);
 impl AddPagesEventArgs {
@@ -38,9 +38,9 @@ impl AddPagesEventArgs {
     ) -> ::windows::runtime::Result<::windows::Graphics::Printing::PrintTaskOptions> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Graphics::Printing::PrintTaskOptions>(result__)
@@ -64,12 +64,12 @@ unsafe impl ::windows::runtime::Interface for AddPagesEventArgs {
 impl ::windows::runtime::RuntimeName for AddPagesEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Printing.AddPagesEventArgs";
 }
-impl ::std::convert::From<AddPagesEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AddPagesEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: AddPagesEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AddPagesEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AddPagesEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &AddPagesEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -84,12 +84,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AddPagesEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AddPagesEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: AddPagesEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AddPagesEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AddPagesEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &AddPagesEventArgs) -> Self {
         value.0.clone()
     }
@@ -106,22 +106,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AddPagesEventArgs {}
-unsafe impl ::std::marker::Sync for AddPagesEventArgs {}
+unsafe impl ::core::marker::Send for AddPagesEventArgs {}
+unsafe impl ::core::marker::Sync for AddPagesEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AddPagesEventHandler(::windows::runtime::IUnknown);
 impl AddPagesEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<AddPagesEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<AddPagesEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -132,7 +132,7 @@ impl AddPagesEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Printing`*"]
     pub fn Invoke<
@@ -147,7 +147,7 @@ impl AddPagesEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -188,8 +188,8 @@ pub struct AddPagesEventHandler_abi(
 #[repr(C)]
 struct AddPagesEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<AddPagesEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<AddPagesEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -199,8 +199,8 @@ struct AddPagesEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<AddPagesEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<AddPagesEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > AddPagesEventHandler_box<F>
@@ -223,7 +223,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -240,7 +240,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -256,10 +256,10 @@ impl<
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GetPreviewPageEventArgs(pub ::windows::runtime::IInspectable);
 impl GetPreviewPageEventArgs {
@@ -282,9 +282,9 @@ impl GetPreviewPageEventArgs {
     pub fn PageNumber(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -306,12 +306,12 @@ unsafe impl ::windows::runtime::Interface for GetPreviewPageEventArgs {
 impl ::windows::runtime::RuntimeName for GetPreviewPageEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Printing.GetPreviewPageEventArgs";
 }
-impl ::std::convert::From<GetPreviewPageEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<GetPreviewPageEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: GetPreviewPageEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&GetPreviewPageEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&GetPreviewPageEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &GetPreviewPageEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -330,12 +330,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<GetPreviewPageEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<GetPreviewPageEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: GetPreviewPageEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&GetPreviewPageEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&GetPreviewPageEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &GetPreviewPageEventArgs) -> Self {
         value.0.clone()
     }
@@ -354,22 +354,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for GetPreviewPageEventArgs {}
-unsafe impl ::std::marker::Sync for GetPreviewPageEventArgs {}
+unsafe impl ::core::marker::Send for GetPreviewPageEventArgs {}
+unsafe impl ::core::marker::Sync for GetPreviewPageEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct GetPreviewPageEventHandler(::windows::runtime::IUnknown);
 impl GetPreviewPageEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<GetPreviewPageEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<GetPreviewPageEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -380,7 +380,7 @@ impl GetPreviewPageEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Printing`*"]
     pub fn Invoke<
@@ -395,7 +395,7 @@ impl GetPreviewPageEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -436,8 +436,8 @@ pub struct GetPreviewPageEventHandler_abi(
 #[repr(C)]
 struct GetPreviewPageEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<GetPreviewPageEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<GetPreviewPageEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -447,8 +447,8 @@ struct GetPreviewPageEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<GetPreviewPageEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<GetPreviewPageEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > GetPreviewPageEventHandler_box<F>
@@ -471,7 +471,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -488,7 +488,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -793,10 +793,10 @@ pub struct IPrintDocumentStatics_abi(
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PaginateEventArgs(pub ::windows::runtime::IInspectable);
 impl PaginateEventArgs {
@@ -821,9 +821,9 @@ impl PaginateEventArgs {
     ) -> ::windows::runtime::Result<::windows::Graphics::Printing::PrintTaskOptions> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Graphics::Printing::PrintTaskOptions>(result__)
@@ -833,9 +833,9 @@ impl PaginateEventArgs {
     pub fn CurrentPreviewPageNumber(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -859,12 +859,12 @@ unsafe impl ::windows::runtime::Interface for PaginateEventArgs {
 impl ::windows::runtime::RuntimeName for PaginateEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Printing.PaginateEventArgs";
 }
-impl ::std::convert::From<PaginateEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PaginateEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: PaginateEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PaginateEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PaginateEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &PaginateEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -879,12 +879,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PaginateEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PaginateEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: PaginateEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PaginateEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PaginateEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &PaginateEventArgs) -> Self {
         value.0.clone()
     }
@@ -901,22 +901,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for PaginateEventArgs {}
-unsafe impl ::std::marker::Sync for PaginateEventArgs {}
+unsafe impl ::core::marker::Send for PaginateEventArgs {}
+unsafe impl ::core::marker::Sync for PaginateEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PaginateEventHandler(::windows::runtime::IUnknown);
 impl PaginateEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<PaginateEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<PaginateEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -927,7 +927,7 @@ impl PaginateEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Printing`*"]
     pub fn Invoke<
@@ -942,7 +942,7 @@ impl PaginateEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -983,8 +983,8 @@ pub struct PaginateEventHandler_abi(
 #[repr(C)]
 struct PaginateEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<PaginateEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<PaginateEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -994,8 +994,8 @@ struct PaginateEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<PaginateEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<PaginateEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > PaginateEventHandler_box<F>
@@ -1018,7 +1018,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1035,7 +1035,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -1050,12 +1050,12 @@ impl<
 }
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct PreviewPageCountType(pub i32);
@@ -1063,7 +1063,7 @@ impl PreviewPageCountType {
     pub const Final: PreviewPageCountType = PreviewPageCountType(0i32);
     pub const Intermediate: PreviewPageCountType = PreviewPageCountType(1i32);
 }
-impl ::std::convert::From<i32> for PreviewPageCountType {
+impl ::core::convert::From<i32> for PreviewPageCountType {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1082,10 +1082,10 @@ impl ::windows::runtime::DefaultType for PreviewPageCountType {
 #[doc = "*Required features: `UI_Xaml_Printing`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PrintDocument(pub ::windows::runtime::IInspectable);
 impl PrintDocument {
@@ -1095,9 +1095,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::Graphics::Printing::IPrintDocumentSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Graphics::Printing::IPrintDocumentSource>(result__)
@@ -1110,9 +1110,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1130,7 +1130,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1146,9 +1146,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1166,7 +1166,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1179,9 +1179,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1199,7 +1199,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1213,7 +1213,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pagevisual.into_param().abi(),
             )
             .ok()
@@ -1223,7 +1223,7 @@ impl PrintDocument {
     pub fn AddPagesComplete(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Printing`*"]
@@ -1235,7 +1235,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 count,
                 r#type,
             )
@@ -1251,7 +1251,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pagenumber,
                 pagevisual.into_param().abi(),
             )
@@ -1262,15 +1262,15 @@ impl PrintDocument {
     pub fn InvalidatePreview(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).17)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).17)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Printing`*"]
     pub fn DocumentSourceProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IPrintDocumentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -1279,11 +1279,12 @@ impl PrintDocument {
     #[doc = "*Required features: `UI_Xaml_Printing`*"]
     pub fn new() -> ::windows::runtime::Result<PrintDocument> {
         Self::IPrintDocumentFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<PrintDocument>(result__)
@@ -1296,9 +1297,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1318,7 +1319,7 @@ impl PrintDocument {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1333,7 +1334,7 @@ impl PrintDocument {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1349,9 +1350,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1368,9 +1369,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1389,9 +1390,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1411,7 +1412,7 @@ impl PrintDocument {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1422,9 +1423,9 @@ impl PrintDocument {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1437,9 +1438,9 @@ impl PrintDocument {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1483,12 +1484,12 @@ unsafe impl ::windows::runtime::Interface for PrintDocument {
 impl ::windows::runtime::RuntimeName for PrintDocument {
     const NAME: &'static str = "Microsoft.UI.Xaml.Printing.PrintDocument";
 }
-impl ::std::convert::From<PrintDocument> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PrintDocument> for ::windows::runtime::IUnknown {
     fn from(value: PrintDocument) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PrintDocument> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PrintDocument> for ::windows::runtime::IUnknown {
     fn from(value: &PrintDocument) -> Self {
         value.0 .0.clone()
     }
@@ -1503,12 +1504,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PrintDocument> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PrintDocument> for ::windows::runtime::IInspectable {
     fn from(value: PrintDocument) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PrintDocument> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PrintDocument> for ::windows::runtime::IInspectable {
     fn from(value: &PrintDocument) -> Self {
         value.0.clone()
     }
@@ -1523,29 +1524,29 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<PrintDocument> for super::DependencyObject {
+impl ::core::convert::From<PrintDocument> for super::DependencyObject {
     fn from(value: PrintDocument) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&PrintDocument> for super::DependencyObject {
+impl ::core::convert::From<&PrintDocument> for super::DependencyObject {
     fn from(value: &PrintDocument) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for PrintDocument {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &PrintDocument {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for PrintDocument {}
-unsafe impl ::std::marker::Sync for PrintDocument {}
+unsafe impl ::core::marker::Send for PrintDocument {}
+unsafe impl ::core::marker::Sync for PrintDocument {}

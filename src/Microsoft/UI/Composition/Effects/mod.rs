@@ -130,10 +130,10 @@ pub struct ISceneLightingEffect2_abi(
 #[doc = "*Required features: `UI_Composition_Effects`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneLightingEffect(pub ::windows::runtime::IInspectable);
 impl SceneLightingEffect {
@@ -156,9 +156,9 @@ impl SceneLightingEffect {
     pub fn AmbientAmount(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -168,17 +168,20 @@ impl SceneLightingEffect {
     pub fn SetAmbientAmount(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Effects`*"]
     pub fn DiffuseAmount(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -188,8 +191,11 @@ impl SceneLightingEffect {
     pub fn SetDiffuseAmount(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Effects`*"]
@@ -198,9 +204,9 @@ impl SceneLightingEffect {
     ) -> ::windows::runtime::Result<::windows::Graphics::Effects::IGraphicsEffectSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Graphics::Effects::IGraphicsEffectSource>(result__)
@@ -217,7 +223,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -227,9 +233,9 @@ impl SceneLightingEffect {
     pub fn SpecularAmount(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -240,7 +246,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -250,9 +256,9 @@ impl SceneLightingEffect {
     pub fn SpecularShine(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -263,7 +269,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -275,9 +281,9 @@ impl SceneLightingEffect {
     ) -> ::windows::runtime::Result<SceneLightingEffectReflectanceModel> {
         let this = &::windows::runtime::Interface::cast::<ISceneLightingEffect2>(self)?;
         unsafe {
-            let mut result__: SceneLightingEffectReflectanceModel = ::std::mem::zeroed();
+            let mut result__: SceneLightingEffectReflectanceModel = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneLightingEffectReflectanceModel>(result__)
@@ -290,8 +296,11 @@ impl SceneLightingEffect {
     ) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ISceneLightingEffect2>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Effects`*"]
@@ -300,10 +309,10 @@ impl SceneLightingEffect {
             ::windows::Graphics::Effects::IGraphicsEffect,
         >(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -319,7 +328,7 @@ impl SceneLightingEffect {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
             )
             .ok()
@@ -341,12 +350,12 @@ unsafe impl ::windows::runtime::Interface for SceneLightingEffect {
 impl ::windows::runtime::RuntimeName for SceneLightingEffect {
     const NAME: &'static str = "Microsoft.UI.Composition.Effects.SceneLightingEffect";
 }
-impl ::std::convert::From<SceneLightingEffect> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneLightingEffect> for ::windows::runtime::IUnknown {
     fn from(value: SceneLightingEffect) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneLightingEffect> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneLightingEffect> for ::windows::runtime::IUnknown {
     fn from(value: &SceneLightingEffect) -> Self {
         value.0 .0.clone()
     }
@@ -363,12 +372,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneLightingEffect> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneLightingEffect> for ::windows::runtime::IInspectable {
     fn from(value: SceneLightingEffect) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneLightingEffect> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneLightingEffect> for ::windows::runtime::IInspectable {
     fn from(value: &SceneLightingEffect) -> Self {
         value.0.clone()
     }
@@ -387,15 +396,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneLightingEffect>
+impl ::core::convert::TryFrom<SceneLightingEffect>
     for ::windows::Graphics::Effects::IGraphicsEffect
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneLightingEffect) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneLightingEffect>
+impl ::core::convert::TryFrom<&SceneLightingEffect>
     for ::windows::Graphics::Effects::IGraphicsEffect
 {
     type Error = ::windows::runtime::Error;
@@ -418,20 +427,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Graphics::Effects::IGraphi
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Graphics::Effects::IGraphicsEffect> {
-        ::std::convert::TryInto::<::windows::Graphics::Effects::IGraphicsEffect>::try_into(self)
+        ::core::convert::TryInto::<::windows::Graphics::Effects::IGraphicsEffect>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneLightingEffect>
+impl ::core::convert::TryFrom<SceneLightingEffect>
     for ::windows::Graphics::Effects::IGraphicsEffectSource
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneLightingEffect) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneLightingEffect>
+impl ::core::convert::TryFrom<&SceneLightingEffect>
     for ::windows::Graphics::Effects::IGraphicsEffectSource
 {
     type Error = ::windows::runtime::Error;
@@ -454,23 +463,23 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Graphics::Effects::IGraphi
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Graphics::Effects::IGraphicsEffectSource> {
-        ::std::convert::TryInto::<::windows::Graphics::Effects::IGraphicsEffectSource>::try_into(
+        ::core::convert::TryInto::<::windows::Graphics::Effects::IGraphicsEffectSource>::try_into(
             self,
         )
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for SceneLightingEffect {}
-unsafe impl ::std::marker::Sync for SceneLightingEffect {}
+unsafe impl ::core::marker::Send for SceneLightingEffect {}
+unsafe impl ::core::marker::Sync for SceneLightingEffect {}
 #[doc = "*Required features: `UI_Composition_Effects`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct SceneLightingEffectReflectanceModel(pub i32);
@@ -480,7 +489,7 @@ impl SceneLightingEffectReflectanceModel {
     pub const PhysicallyBasedBlinnPhong: SceneLightingEffectReflectanceModel =
         SceneLightingEffectReflectanceModel(1i32);
 }
-impl ::std::convert::From<i32> for SceneLightingEffectReflectanceModel {
+impl ::core::convert::From<i32> for SceneLightingEffectReflectanceModel {
     fn from(value: i32) -> Self {
         Self(value)
     }

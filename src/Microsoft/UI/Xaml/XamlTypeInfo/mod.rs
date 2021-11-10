@@ -84,10 +84,10 @@ pub struct IXamlControlsXamlMetaDataProviderStatics_abi(
 #[doc = "*Required features: `UI_Xaml_XamlTypeInfo`, `UI_Xaml_Markup`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct XamlControlsXamlMetaDataProvider(pub ::windows::runtime::IInspectable);
 #[cfg(feature = "UI_Xaml_Markup")]
@@ -110,7 +110,7 @@ impl XamlControlsXamlMetaDataProvider {
     #[doc = "*Required features: `UI_Xaml_XamlTypeInfo`*"]
     pub fn Initialize() -> ::windows::runtime::Result<()> {
         Self::IXamlControlsXamlMetaDataProviderStatics(|this| unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         })
     }
     #[cfg(feature = "UI_Xaml_Markup")]
@@ -124,9 +124,9 @@ impl XamlControlsXamlMetaDataProvider {
     ) -> ::windows::runtime::Result<super::Markup::IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 r#type.into_param().abi(),
                 &mut result__,
             )
@@ -144,9 +144,9 @@ impl XamlControlsXamlMetaDataProvider {
     ) -> ::windows::runtime::Result<super::Markup::IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 fullname.into_param().abi(),
                 &mut result__,
             )
@@ -161,9 +161,9 @@ impl XamlControlsXamlMetaDataProvider {
         let this = self;
         unsafe {
             let mut result__: ::windows::runtime::Array<super::Markup::XmlnsDefinition> =
-                ::std::mem::zeroed();
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 ::windows::runtime::Array::<super::Markup::XmlnsDefinition>::set_abi_len(
                     &mut result__,
                 ),
@@ -204,13 +204,13 @@ impl ::windows::runtime::RuntimeName for XamlControlsXamlMetaDataProvider {
     const NAME: &'static str = "Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider";
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-impl ::std::convert::From<XamlControlsXamlMetaDataProvider> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<XamlControlsXamlMetaDataProvider> for ::windows::runtime::IUnknown {
     fn from(value: XamlControlsXamlMetaDataProvider) -> Self {
         value.0 .0
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-impl ::std::convert::From<&XamlControlsXamlMetaDataProvider> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&XamlControlsXamlMetaDataProvider> for ::windows::runtime::IUnknown {
     fn from(value: &XamlControlsXamlMetaDataProvider) -> Self {
         value.0 .0.clone()
     }
@@ -232,13 +232,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-impl ::std::convert::From<XamlControlsXamlMetaDataProvider> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<XamlControlsXamlMetaDataProvider> for ::windows::runtime::IInspectable {
     fn from(value: XamlControlsXamlMetaDataProvider) -> Self {
         value.0
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-impl ::std::convert::From<&XamlControlsXamlMetaDataProvider> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&XamlControlsXamlMetaDataProvider> for ::windows::runtime::IInspectable {
     fn from(value: &XamlControlsXamlMetaDataProvider) -> Self {
         value.0.clone()
     }
@@ -260,19 +260,19 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-impl ::std::convert::From<XamlControlsXamlMetaDataProvider>
+impl ::core::convert::From<XamlControlsXamlMetaDataProvider>
     for super::Markup::IXamlMetadataProvider
 {
     fn from(value: XamlControlsXamlMetaDataProvider) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-impl ::std::convert::From<&XamlControlsXamlMetaDataProvider>
+impl ::core::convert::From<&XamlControlsXamlMetaDataProvider>
     for super::Markup::IXamlMetadataProvider
 {
     fn from(value: &XamlControlsXamlMetaDataProvider) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
@@ -280,7 +280,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::Markup::IXamlMetadataProvider>
     for XamlControlsXamlMetaDataProvider
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::Markup::IXamlMetadataProvider> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
@@ -288,10 +288,10 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::Markup::IXamlMetadataProvider>
     for &XamlControlsXamlMetaDataProvider
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::Markup::IXamlMetadataProvider> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 #[cfg(feature = "UI_Xaml_Markup")]
-unsafe impl ::std::marker::Send for XamlControlsXamlMetaDataProvider {}
+unsafe impl ::core::marker::Send for XamlControlsXamlMetaDataProvider {}
 #[cfg(feature = "UI_Xaml_Markup")]
-unsafe impl ::std::marker::Sync for XamlControlsXamlMetaDataProvider {}
+unsafe impl ::core::marker::Sync for XamlControlsXamlMetaDataProvider {}

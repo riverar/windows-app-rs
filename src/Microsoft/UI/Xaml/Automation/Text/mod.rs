@@ -9,12 +9,12 @@
 )]
 #[doc = "*Required features: `UI_Xaml_Automation_Text`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct TextPatternRangeEndpoint(pub i32);
@@ -22,7 +22,7 @@ impl TextPatternRangeEndpoint {
     pub const Start: TextPatternRangeEndpoint = TextPatternRangeEndpoint(0i32);
     pub const End: TextPatternRangeEndpoint = TextPatternRangeEndpoint(1i32);
 }
-impl ::std::convert::From<i32> for TextPatternRangeEndpoint {
+impl ::core::convert::From<i32> for TextPatternRangeEndpoint {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -40,12 +40,12 @@ impl ::windows::runtime::DefaultType for TextPatternRangeEndpoint {
 }
 #[doc = "*Required features: `UI_Xaml_Automation_Text`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct TextUnit(pub i32);
@@ -58,7 +58,7 @@ impl TextUnit {
     pub const Page: TextUnit = TextUnit(5i32);
     pub const Document: TextUnit = TextUnit(6i32);
 }
-impl ::std::convert::From<i32> for TextUnit {
+impl ::core::convert::From<i32> for TextUnit {
     fn from(value: i32) -> Self {
         Self(value)
     }

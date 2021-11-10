@@ -44,39 +44,39 @@ pub struct IKnownResourceQualifierNameStatics_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -116,7 +116,7 @@ pub struct IResourceCandidate_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -170,7 +170,7 @@ pub struct IResourceCandidateFactory_abi(
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
         kind: ResourceCandidateKind,
-        data: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        data: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
@@ -257,13 +257,13 @@ pub struct IResourceLoader_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        resourceid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        resourceid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
         resourceuri: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -303,13 +303,13 @@ pub struct IResourceLoaderFactory_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        filename: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        filename: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        filename: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        resourcemap: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        filename: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        resourcemap: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
@@ -350,7 +350,7 @@ pub struct IResourceLoaderStatics_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -443,7 +443,7 @@ pub struct IResourceManagerFactory_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        filename: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        filename: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
@@ -488,22 +488,22 @@ pub struct IResourceMap_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        reference: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        reference: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        reference: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        reference: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        resource: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        resource: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        resource: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        resource: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         context: ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
@@ -520,12 +520,12 @@ pub struct IResourceMap_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        resource: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        resource: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        resource: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        resource: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         context: ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
@@ -571,7 +571,7 @@ pub struct IResourceNotFoundEventArgs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -584,10 +584,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn Contrast() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -596,10 +596,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn Custom() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -608,10 +608,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn DeviceFamily() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -620,10 +620,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn HomeRegion() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -632,10 +632,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn Language() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -644,10 +644,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn LayoutDirection() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -656,10 +656,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn Scale() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -668,10 +668,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn TargetSize() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -680,10 +680,10 @@ impl KnownResourceQualifierName {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn Theme() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -708,21 +708,21 @@ impl ::windows::runtime::RuntimeName for KnownResourceQualifierName {
 }
 #[repr(C)]
 #[derive(
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
 )]
 pub struct MrtContract(pub u8);
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ResourceCandidate(pub ::windows::runtime::IInspectable);
 impl ResourceCandidate {
@@ -730,10 +730,10 @@ impl ResourceCandidate {
     pub fn ValueAsString(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -743,9 +743,9 @@ impl ResourceCandidate {
     pub fn ValueAsBytes(&self) -> ::windows::runtime::Result<::windows::runtime::Array<u8>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::Array<u8> = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::Array<u8> = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 ::windows::runtime::Array::<u8>::set_abi_len(&mut result__),
                 &mut result__ as *mut _ as _,
             )
@@ -756,9 +756,9 @@ impl ResourceCandidate {
     pub fn Kind(&self) -> ::windows::runtime::Result<ResourceCandidateKind> {
         let this = self;
         unsafe {
-            let mut result__: ResourceCandidateKind = ::std::mem::zeroed();
+            let mut result__: ResourceCandidateKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceCandidateKind>(result__)
@@ -775,9 +775,9 @@ impl ResourceCandidate {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IMapView<
@@ -795,9 +795,9 @@ impl ResourceCandidate {
         data: Param1,
     ) -> ::windows::runtime::Result<ResourceCandidate> {
         Self::IResourceCandidateFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 kind,
                 data.into_param().abi(),
                 &mut result__,
@@ -810,11 +810,11 @@ impl ResourceCandidate {
         data: &[<u8 as ::windows::runtime::DefaultType>::DefaultType],
     ) -> ::windows::runtime::Result<ResourceCandidate> {
         Self::IResourceCandidateFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 data.len() as u32,
-                ::std::mem::transmute(data.as_ptr()),
+                ::core::mem::transmute(data.as_ptr()),
                 &mut result__,
             )
             .from_abi::<ResourceCandidate>(result__)
@@ -848,12 +848,12 @@ unsafe impl ::windows::runtime::Interface for ResourceCandidate {
 impl ::windows::runtime::RuntimeName for ResourceCandidate {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate";
 }
-impl ::std::convert::From<ResourceCandidate> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ResourceCandidate> for ::windows::runtime::IUnknown {
     fn from(value: ResourceCandidate) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ResourceCandidate> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ResourceCandidate> for ::windows::runtime::IUnknown {
     fn from(value: &ResourceCandidate) -> Self {
         value.0 .0.clone()
     }
@@ -868,12 +868,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ResourceCandidate> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ResourceCandidate> for ::windows::runtime::IInspectable {
     fn from(value: ResourceCandidate) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ResourceCandidate> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ResourceCandidate> for ::windows::runtime::IInspectable {
     fn from(value: &ResourceCandidate) -> Self {
         value.0.clone()
     }
@@ -890,16 +890,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ResourceCandidate {}
-unsafe impl ::std::marker::Sync for ResourceCandidate {}
+unsafe impl ::core::marker::Send for ResourceCandidate {}
+unsafe impl ::core::marker::Sync for ResourceCandidate {}
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct ResourceCandidateKind(pub i32);
@@ -909,7 +909,7 @@ impl ResourceCandidateKind {
     pub const FilePath: ResourceCandidateKind = ResourceCandidateKind(2i32);
     pub const EmbeddedData: ResourceCandidateKind = ResourceCandidateKind(3i32);
 }
-impl ::std::convert::From<i32> for ResourceCandidateKind {
+impl ::core::convert::From<i32> for ResourceCandidateKind {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -928,10 +928,10 @@ impl ::windows::runtime::DefaultType for ResourceCandidateKind {
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ResourceContext(pub ::windows::runtime::IInspectable);
 impl ResourceContext {
@@ -946,9 +946,9 @@ impl ResourceContext {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IMap<
@@ -973,12 +973,12 @@ unsafe impl ::windows::runtime::Interface for ResourceContext {
 impl ::windows::runtime::RuntimeName for ResourceContext {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceContext";
 }
-impl ::std::convert::From<ResourceContext> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ResourceContext> for ::windows::runtime::IUnknown {
     fn from(value: ResourceContext) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ResourceContext> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ResourceContext> for ::windows::runtime::IUnknown {
     fn from(value: &ResourceContext) -> Self {
         value.0 .0.clone()
     }
@@ -993,12 +993,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ResourceContext> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ResourceContext> for ::windows::runtime::IInspectable {
     fn from(value: ResourceContext) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ResourceContext> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ResourceContext> for ::windows::runtime::IInspectable {
     fn from(value: &ResourceContext) -> Self {
         value.0.clone()
     }
@@ -1015,15 +1015,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ResourceContext {}
-unsafe impl ::std::marker::Sync for ResourceContext {}
+unsafe impl ::core::marker::Send for ResourceContext {}
+unsafe impl ::core::marker::Sync for ResourceContext {}
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ResourceLoader(pub ::windows::runtime::IInspectable);
 impl ResourceLoader {
@@ -1049,10 +1049,10 @@ impl ResourceLoader {
     ) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 resourceid.into_param().abi(),
                 &mut result__,
             )
@@ -1069,10 +1069,10 @@ impl ResourceLoader {
     ) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 resourceuri.into_param().abi(),
                 &mut result__,
             )
@@ -1087,9 +1087,9 @@ impl ResourceLoader {
         filename: Param0,
     ) -> ::windows::runtime::Result<ResourceLoader> {
         Self::IResourceLoaderFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 filename.into_param().abi(),
                 &mut result__,
             )
@@ -1106,9 +1106,9 @@ impl ResourceLoader {
         resourcemap: Param1,
     ) -> ::windows::runtime::Result<ResourceLoader> {
         Self::IResourceLoaderFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 filename.into_param().abi(),
                 resourcemap.into_param().abi(),
                 &mut result__,
@@ -1119,10 +1119,10 @@ impl ResourceLoader {
     #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
     pub fn GetDefaultResourceFilePath() -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         Self::IResourceLoaderStatics(|this| unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -1168,12 +1168,12 @@ unsafe impl ::windows::runtime::Interface for ResourceLoader {
 impl ::windows::runtime::RuntimeName for ResourceLoader {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceLoader";
 }
-impl ::std::convert::From<ResourceLoader> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ResourceLoader> for ::windows::runtime::IUnknown {
     fn from(value: ResourceLoader) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ResourceLoader> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ResourceLoader> for ::windows::runtime::IUnknown {
     fn from(value: &ResourceLoader) -> Self {
         value.0 .0.clone()
     }
@@ -1188,12 +1188,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ResourceLoader> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ResourceLoader> for ::windows::runtime::IInspectable {
     fn from(value: ResourceLoader) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ResourceLoader> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ResourceLoader> for ::windows::runtime::IInspectable {
     fn from(value: &ResourceLoader) -> Self {
         value.0.clone()
     }
@@ -1210,15 +1210,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ResourceLoader {}
-unsafe impl ::std::marker::Sync for ResourceLoader {}
+unsafe impl ::core::marker::Send for ResourceLoader {}
+unsafe impl ::core::marker::Sync for ResourceLoader {}
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ResourceManager(pub ::windows::runtime::IInspectable);
 impl ResourceManager {
@@ -1241,9 +1241,9 @@ impl ResourceManager {
     pub fn MainResourceMap(&self) -> ::windows::runtime::Result<ResourceMap> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceMap>(result__)
@@ -1253,9 +1253,9 @@ impl ResourceManager {
     pub fn CreateResourceContext(&self) -> ::windows::runtime::Result<ResourceContext> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceContext>(result__)
@@ -1274,9 +1274,9 @@ impl ResourceManager {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1294,7 +1294,7 @@ impl ResourceManager {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1308,9 +1308,9 @@ impl ResourceManager {
         filename: Param0,
     ) -> ::windows::runtime::Result<ResourceManager> {
         Self::IResourceManagerFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 filename.into_param().abi(),
                 &mut result__,
             )
@@ -1345,12 +1345,12 @@ unsafe impl ::windows::runtime::Interface for ResourceManager {
 impl ::windows::runtime::RuntimeName for ResourceManager {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceManager";
 }
-impl ::std::convert::From<ResourceManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ResourceManager> for ::windows::runtime::IUnknown {
     fn from(value: ResourceManager) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ResourceManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ResourceManager> for ::windows::runtime::IUnknown {
     fn from(value: &ResourceManager) -> Self {
         value.0 .0.clone()
     }
@@ -1365,12 +1365,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ResourceManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ResourceManager> for ::windows::runtime::IInspectable {
     fn from(value: ResourceManager) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ResourceManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ResourceManager> for ::windows::runtime::IInspectable {
     fn from(value: &ResourceManager) -> Self {
         value.0.clone()
     }
@@ -1387,15 +1387,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ResourceManager {}
-unsafe impl ::std::marker::Sync for ResourceManager {}
+unsafe impl ::core::marker::Send for ResourceManager {}
+unsafe impl ::core::marker::Sync for ResourceManager {}
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ResourceMap(pub ::windows::runtime::IInspectable);
 impl ResourceMap {
@@ -1403,9 +1403,9 @@ impl ResourceMap {
     pub fn ResourceCount(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -1421,9 +1421,9 @@ impl ResourceMap {
     ) -> ::windows::runtime::Result<ResourceMap> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 &mut result__,
             )
@@ -1440,9 +1440,9 @@ impl ResourceMap {
     ) -> ::windows::runtime::Result<ResourceMap> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 &mut result__,
             )
@@ -1456,9 +1456,9 @@ impl ResourceMap {
     ) -> ::windows::runtime::Result<ResourceCandidate> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 &mut result__,
             )
@@ -1477,9 +1477,9 @@ impl ResourceMap {
     ) -> ::windows::runtime::Result<ResourceCandidate> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 context.into_param().abi(),
                 &mut result__,
@@ -1499,9 +1499,9 @@ impl ResourceMap {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -1527,9 +1527,9 @@ impl ResourceMap {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 context.into_param().abi(),
                 &mut result__,
@@ -1550,9 +1550,9 @@ impl ResourceMap {
     ) -> ::windows::runtime::Result<ResourceCandidate> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 &mut result__,
             )
@@ -1571,9 +1571,9 @@ impl ResourceMap {
     ) -> ::windows::runtime::Result<ResourceCandidate> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 context.into_param().abi(),
                 &mut result__,
@@ -1597,12 +1597,12 @@ unsafe impl ::windows::runtime::Interface for ResourceMap {
 impl ::windows::runtime::RuntimeName for ResourceMap {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceMap";
 }
-impl ::std::convert::From<ResourceMap> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ResourceMap> for ::windows::runtime::IUnknown {
     fn from(value: ResourceMap) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ResourceMap> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ResourceMap> for ::windows::runtime::IUnknown {
     fn from(value: &ResourceMap) -> Self {
         value.0 .0.clone()
     }
@@ -1617,12 +1617,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ResourceMap> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ResourceMap> for ::windows::runtime::IInspectable {
     fn from(value: ResourceMap) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ResourceMap> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ResourceMap> for ::windows::runtime::IInspectable {
     fn from(value: &ResourceMap) -> Self {
         value.0.clone()
     }
@@ -1637,15 +1637,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ResourceMap {}
-unsafe impl ::std::marker::Sync for ResourceMap {}
+unsafe impl ::core::marker::Send for ResourceMap {}
+unsafe impl ::core::marker::Sync for ResourceMap {}
 #[doc = "*Required features: `Windows_ApplicationModel_Resources`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ResourceNotFoundEventArgs(pub ::windows::runtime::IInspectable);
 impl ResourceNotFoundEventArgs {
@@ -1653,9 +1653,9 @@ impl ResourceNotFoundEventArgs {
     pub fn Context(&self) -> ::windows::runtime::Result<ResourceContext> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceContext>(result__)
@@ -1665,10 +1665,10 @@ impl ResourceNotFoundEventArgs {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -1685,7 +1685,7 @@ impl ResourceNotFoundEventArgs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 candidate.into_param().abi(),
             )
             .ok()
@@ -1708,12 +1708,12 @@ impl ::windows::runtime::RuntimeName for ResourceNotFoundEventArgs {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs";
 }
-impl ::std::convert::From<ResourceNotFoundEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ResourceNotFoundEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: ResourceNotFoundEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ResourceNotFoundEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ResourceNotFoundEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &ResourceNotFoundEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1732,12 +1732,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ResourceNotFoundEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ResourceNotFoundEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: ResourceNotFoundEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ResourceNotFoundEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ResourceNotFoundEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &ResourceNotFoundEventArgs) -> Self {
         value.0.clone()
     }
@@ -1756,5 +1756,5 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for ResourceNotFoundEventArgs {}
-unsafe impl ::std::marker::Sync for ResourceNotFoundEventArgs {}
+unsafe impl ::core::marker::Send for ResourceNotFoundEventArgs {}
+unsafe impl ::core::marker::Sync for ResourceNotFoundEventArgs {}

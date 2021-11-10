@@ -12,10 +12,10 @@ pub mod Power;
 #[doc = "*Required features: `Windows_System`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct EnvironmentManager(pub ::windows::runtime::IInspectable);
 impl EnvironmentManager {
@@ -30,9 +30,9 @@ impl EnvironmentManager {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IMapView<
@@ -51,10 +51,10 @@ impl EnvironmentManager {
     ) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -74,7 +74,7 @@ impl EnvironmentManager {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -92,7 +92,7 @@ impl EnvironmentManager {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 path.into_param().abi(),
             )
             .ok()
@@ -109,7 +109,7 @@ impl EnvironmentManager {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 path.into_param().abi(),
             )
             .ok()
@@ -126,7 +126,7 @@ impl EnvironmentManager {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pathext.into_param().abi(),
             )
             .ok()
@@ -143,7 +143,7 @@ impl EnvironmentManager {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pathext.into_param().abi(),
             )
             .ok()
@@ -152,9 +152,9 @@ impl EnvironmentManager {
     #[doc = "*Required features: `Windows_System`*"]
     pub fn GetForProcess() -> ::windows::runtime::Result<EnvironmentManager> {
         Self::IEnvironmentManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<EnvironmentManager>(result__)
@@ -163,9 +163,9 @@ impl EnvironmentManager {
     #[doc = "*Required features: `Windows_System`*"]
     pub fn GetForUser() -> ::windows::runtime::Result<EnvironmentManager> {
         Self::IEnvironmentManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<EnvironmentManager>(result__)
@@ -174,9 +174,9 @@ impl EnvironmentManager {
     #[doc = "*Required features: `Windows_System`*"]
     pub fn GetForMachine() -> ::windows::runtime::Result<EnvironmentManager> {
         Self::IEnvironmentManagerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<EnvironmentManager>(result__)
@@ -185,9 +185,9 @@ impl EnvironmentManager {
     #[doc = "*Required features: `Windows_System`*"]
     pub fn IsSupported() -> ::windows::runtime::Result<bool> {
         Self::IEnvironmentManagerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -223,12 +223,12 @@ unsafe impl ::windows::runtime::Interface for EnvironmentManager {
 impl ::windows::runtime::RuntimeName for EnvironmentManager {
     const NAME: &'static str = "Microsoft.Windows.System.EnvironmentManager";
 }
-impl ::std::convert::From<EnvironmentManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<EnvironmentManager> for ::windows::runtime::IUnknown {
     fn from(value: EnvironmentManager) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&EnvironmentManager> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&EnvironmentManager> for ::windows::runtime::IUnknown {
     fn from(value: &EnvironmentManager) -> Self {
         value.0 .0.clone()
     }
@@ -245,12 +245,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<EnvironmentManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<EnvironmentManager> for ::windows::runtime::IInspectable {
     fn from(value: EnvironmentManager) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&EnvironmentManager> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&EnvironmentManager> for ::windows::runtime::IInspectable {
     fn from(value: &EnvironmentManager) -> Self {
         value.0.clone()
     }
@@ -269,8 +269,8 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for EnvironmentManager {}
-unsafe impl ::std::marker::Sync for EnvironmentManager {}
+unsafe impl ::core::marker::Send for EnvironmentManager {}
+unsafe impl ::core::marker::Sync for EnvironmentManager {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IEnvironmentManager(pub ::windows::runtime::IInspectable);
@@ -312,29 +312,29 @@ pub struct IEnvironmentManager_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        path: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        path: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        path: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        path: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        pathext: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        pathext: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        pathext: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        pathext: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]

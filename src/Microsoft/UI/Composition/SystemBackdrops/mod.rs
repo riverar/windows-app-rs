@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DesktopAcrylicController(pub ::windows::runtime::IInspectable);
 impl DesktopAcrylicController {
@@ -36,9 +36,9 @@ impl DesktopAcrylicController {
     pub fn FallbackColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -52,7 +52,7 @@ impl DesktopAcrylicController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -62,9 +62,9 @@ impl DesktopAcrylicController {
     pub fn LuminosityOpacity(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -74,17 +74,20 @@ impl DesktopAcrylicController {
     pub fn SetLuminosityOpacity(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
     pub fn TintColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -98,7 +101,7 @@ impl DesktopAcrylicController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -108,9 +111,9 @@ impl DesktopAcrylicController {
     pub fn TintOpacity(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -121,7 +124,7 @@ impl DesktopAcrylicController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -139,9 +142,9 @@ impl DesktopAcrylicController {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ISystemBackdropController>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 windowid.into_param().abi(),
                 desktopwindowtarget.into_param().abi(),
                 &mut result__,
@@ -161,9 +164,9 @@ impl DesktopAcrylicController {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ISystemBackdropController>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 corewindow.into_param().abi(),
                 compositiontarget.into_param().abi(),
                 &mut result__,
@@ -175,15 +178,15 @@ impl DesktopAcrylicController {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
     pub fn IsSupported() -> ::windows::runtime::Result<bool> {
         Self::IDesktopAcrylicControllerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -217,12 +220,12 @@ unsafe impl ::windows::runtime::Interface for DesktopAcrylicController {
 impl ::windows::runtime::RuntimeName for DesktopAcrylicController {
     const NAME: &'static str = "Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController";
 }
-impl ::std::convert::From<DesktopAcrylicController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DesktopAcrylicController> for ::windows::runtime::IUnknown {
     fn from(value: DesktopAcrylicController) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DesktopAcrylicController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DesktopAcrylicController> for ::windows::runtime::IUnknown {
     fn from(value: &DesktopAcrylicController) -> Self {
         value.0 .0.clone()
     }
@@ -241,12 +244,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DesktopAcrylicController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DesktopAcrylicController> for ::windows::runtime::IInspectable {
     fn from(value: DesktopAcrylicController) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DesktopAcrylicController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DesktopAcrylicController> for ::windows::runtime::IInspectable {
     fn from(value: &DesktopAcrylicController) -> Self {
         value.0.clone()
     }
@@ -265,13 +268,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<DesktopAcrylicController> for ISystemBackdropController {
+impl ::core::convert::TryFrom<DesktopAcrylicController> for ISystemBackdropController {
     type Error = ::windows::runtime::Error;
     fn try_from(value: DesktopAcrylicController) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&DesktopAcrylicController> for ISystemBackdropController {
+impl ::core::convert::TryFrom<&DesktopAcrylicController> for ISystemBackdropController {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &DesktopAcrylicController) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -286,18 +289,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ISystemBackdropController>
     for &DesktopAcrylicController
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ISystemBackdropController> {
-        ::std::convert::TryInto::<ISystemBackdropController>::try_into(self)
+        ::core::convert::TryInto::<ISystemBackdropController>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<DesktopAcrylicController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<DesktopAcrylicController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: DesktopAcrylicController) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&DesktopAcrylicController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&DesktopAcrylicController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &DesktopAcrylicController) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -314,13 +317,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &DesktopAcrylicController
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for DesktopAcrylicController {}
-unsafe impl ::std::marker::Sync for DesktopAcrylicController {}
+unsafe impl ::core::marker::Send for DesktopAcrylicController {}
+unsafe impl ::core::marker::Sync for DesktopAcrylicController {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IDesktopAcrylicController(pub ::windows::runtime::IInspectable);
@@ -539,10 +542,10 @@ pub struct IMicaControllerStatics_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
 pub struct ISystemBackdropController(pub ::windows::runtime::IInspectable);
@@ -568,9 +571,9 @@ impl ISystemBackdropController {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 windowid.into_param().abi(),
                 desktopwindowtarget.into_param().abi(),
                 &mut result__,
@@ -590,9 +593,9 @@ impl ISystemBackdropController {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 corewindow.into_param().abi(),
                 compositiontarget.into_param().abi(),
                 &mut result__,
@@ -604,7 +607,7 @@ impl ISystemBackdropController {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -612,12 +615,12 @@ unsafe impl ::windows::runtime::RuntimeType for ISystemBackdropController {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{5632d76c-0b74-5b52-aa33-80262068aeb2}");
 }
-impl ::std::convert::From<ISystemBackdropController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ISystemBackdropController> for ::windows::runtime::IUnknown {
     fn from(value: ISystemBackdropController) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ISystemBackdropController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ISystemBackdropController> for ::windows::runtime::IUnknown {
     fn from(value: &ISystemBackdropController) -> Self {
         value.0 .0.clone()
     }
@@ -636,12 +639,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ISystemBackdropController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ISystemBackdropController> for ::windows::runtime::IInspectable {
     fn from(value: ISystemBackdropController) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ISystemBackdropController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ISystemBackdropController> for ::windows::runtime::IInspectable {
     fn from(value: &ISystemBackdropController) -> Self {
         value.0.clone()
     }
@@ -660,13 +663,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<ISystemBackdropController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<ISystemBackdropController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ISystemBackdropController) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&ISystemBackdropController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&ISystemBackdropController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &ISystemBackdropController) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -683,7 +686,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &ISystemBackdropController
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
@@ -727,10 +730,10 @@ pub struct ISystemBackdropController_abi(
 #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct MicaController(pub ::windows::runtime::IInspectable);
 impl MicaController {
@@ -753,9 +756,9 @@ impl MicaController {
     pub fn FallbackColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -769,7 +772,7 @@ impl MicaController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -779,9 +782,9 @@ impl MicaController {
     pub fn LuminosityOpacity(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -791,17 +794,20 @@ impl MicaController {
     pub fn SetLuminosityOpacity(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
     pub fn TintColor(&self) -> ::windows::runtime::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Color>(result__)
@@ -815,7 +821,7 @@ impl MicaController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -825,9 +831,9 @@ impl MicaController {
     pub fn TintOpacity(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -838,7 +844,7 @@ impl MicaController {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -856,9 +862,9 @@ impl MicaController {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ISystemBackdropController>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 windowid.into_param().abi(),
                 desktopwindowtarget.into_param().abi(),
                 &mut result__,
@@ -878,9 +884,9 @@ impl MicaController {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ISystemBackdropController>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 corewindow.into_param().abi(),
                 compositiontarget.into_param().abi(),
                 &mut result__,
@@ -892,15 +898,15 @@ impl MicaController {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_SystemBackdrops`*"]
     pub fn IsSupported() -> ::windows::runtime::Result<bool> {
         Self::IMicaControllerStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -934,12 +940,12 @@ unsafe impl ::windows::runtime::Interface for MicaController {
 impl ::windows::runtime::RuntimeName for MicaController {
     const NAME: &'static str = "Microsoft.UI.Composition.SystemBackdrops.MicaController";
 }
-impl ::std::convert::From<MicaController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<MicaController> for ::windows::runtime::IUnknown {
     fn from(value: MicaController) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&MicaController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&MicaController> for ::windows::runtime::IUnknown {
     fn from(value: &MicaController) -> Self {
         value.0 .0.clone()
     }
@@ -954,12 +960,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<MicaController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<MicaController> for ::windows::runtime::IInspectable {
     fn from(value: MicaController) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&MicaController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&MicaController> for ::windows::runtime::IInspectable {
     fn from(value: &MicaController) -> Self {
         value.0.clone()
     }
@@ -976,13 +982,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<MicaController> for ISystemBackdropController {
+impl ::core::convert::TryFrom<MicaController> for ISystemBackdropController {
     type Error = ::windows::runtime::Error;
     fn try_from(value: MicaController) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&MicaController> for ISystemBackdropController {
+impl ::core::convert::TryFrom<&MicaController> for ISystemBackdropController {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &MicaController) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -995,18 +1001,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ISystemBackdropController> for MicaCo
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ISystemBackdropController> for &MicaController {
     fn into_param(self) -> ::windows::runtime::Param<'a, ISystemBackdropController> {
-        ::std::convert::TryInto::<ISystemBackdropController>::try_into(self)
+        ::core::convert::TryInto::<ISystemBackdropController>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<MicaController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<MicaController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: MicaController) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&MicaController> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&MicaController> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &MicaController) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -1019,10 +1025,10 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &MicaController {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for MicaController {}
-unsafe impl ::std::marker::Sync for MicaController {}
+unsafe impl ::core::marker::Send for MicaController {}
+unsafe impl ::core::marker::Sync for MicaController {}

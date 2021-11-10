@@ -9,12 +9,12 @@
 )]
 #[doc = "*Required features: `Graphics_DirectX`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct DirectXAlphaMode(pub i32);
@@ -24,7 +24,7 @@ impl DirectXAlphaMode {
     pub const Straight: DirectXAlphaMode = DirectXAlphaMode(2i32);
     pub const Ignore: DirectXAlphaMode = DirectXAlphaMode(3i32);
 }
-impl ::std::convert::From<i32> for DirectXAlphaMode {
+impl ::core::convert::From<i32> for DirectXAlphaMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -42,12 +42,12 @@ impl ::windows::runtime::DefaultType for DirectXAlphaMode {
 }
 #[doc = "*Required features: `Graphics_DirectX`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct DirectXColorSpace(pub i32);
@@ -78,7 +78,7 @@ impl DirectXColorSpace {
     pub const YccStudioG24LeftP2020: DirectXColorSpace = DirectXColorSpace(23i32);
     pub const YccStudioG24TopLeftP2020: DirectXColorSpace = DirectXColorSpace(24i32);
 }
-impl ::std::convert::From<i32> for DirectXColorSpace {
+impl ::core::convert::From<i32> for DirectXColorSpace {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -96,12 +96,12 @@ impl ::windows::runtime::DefaultType for DirectXColorSpace {
 }
 #[doc = "*Required features: `Graphics_DirectX`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct DirectXPixelFormat(pub i32);
@@ -228,7 +228,7 @@ impl DirectXPixelFormat {
     pub const SamplerFeedbackMinMipOpaque: DirectXPixelFormat = DirectXPixelFormat(189i32);
     pub const SamplerFeedbackMipRegionUsedOpaque: DirectXPixelFormat = DirectXPixelFormat(190i32);
 }
-impl ::std::convert::From<i32> for DirectXPixelFormat {
+impl ::core::convert::From<i32> for DirectXPixelFormat {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -246,12 +246,12 @@ impl ::windows::runtime::DefaultType for DirectXPixelFormat {
 }
 #[doc = "*Required features: `Graphics_DirectX`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct DirectXPrimitiveTopology(pub i32);
@@ -263,7 +263,7 @@ impl DirectXPrimitiveTopology {
     pub const TriangleList: DirectXPrimitiveTopology = DirectXPrimitiveTopology(4i32);
     pub const TriangleStrip: DirectXPrimitiveTopology = DirectXPrimitiveTopology(5i32);
 }
-impl ::std::convert::From<i32> for DirectXPrimitiveTopology {
+impl ::core::convert::From<i32> for DirectXPrimitiveTopology {
     fn from(value: i32) -> Self {
         Self(value)
     }

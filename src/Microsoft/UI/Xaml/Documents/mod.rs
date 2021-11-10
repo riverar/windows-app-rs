@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Block(pub ::windows::runtime::IInspectable);
 impl Block {
@@ -21,9 +21,9 @@ impl Block {
     pub fn TextAlignment(&self) -> ::windows::runtime::Result<super::TextAlignment> {
         let this = self;
         unsafe {
-            let mut result__: super::TextAlignment = ::std::mem::zeroed();
+            let mut result__: super::TextAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::TextAlignment>(result__)
@@ -33,17 +33,20 @@ impl Block {
     pub fn SetTextAlignment(&self, value: super::TextAlignment) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn HorizontalTextAlignment(&self) -> ::windows::runtime::Result<super::TextAlignment> {
         let this = self;
         unsafe {
-            let mut result__: super::TextAlignment = ::std::mem::zeroed();
+            let mut result__: super::TextAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::TextAlignment>(result__)
@@ -56,17 +59,20 @@ impl Block {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn LineHeight(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -77,7 +83,7 @@ impl Block {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -87,9 +93,9 @@ impl Block {
     pub fn LineStackingStrategy(&self) -> ::windows::runtime::Result<super::LineStackingStrategy> {
         let this = self;
         unsafe {
-            let mut result__: super::LineStackingStrategy = ::std::mem::zeroed();
+            let mut result__: super::LineStackingStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::LineStackingStrategy>(result__)
@@ -103,7 +109,7 @@ impl Block {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -113,9 +119,9 @@ impl Block {
     pub fn Margin(&self) -> ::windows::runtime::Result<super::Thickness> {
         let this = self;
         unsafe {
-            let mut result__: super::Thickness = ::std::mem::zeroed();
+            let mut result__: super::Thickness = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Thickness>(result__)
@@ -129,7 +135,7 @@ impl Block {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -138,9 +144,9 @@ impl Block {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn TextAlignmentProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -150,9 +156,9 @@ impl Block {
     pub fn HorizontalTextAlignmentProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::IBlockStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -161,9 +167,9 @@ impl Block {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn LineHeightProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -172,9 +178,9 @@ impl Block {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn LineStackingStrategyProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -183,9 +189,9 @@ impl Block {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn MarginProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -198,9 +204,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -220,7 +226,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -235,7 +241,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -251,9 +257,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -270,9 +276,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -291,9 +297,9 @@ impl Block {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -313,7 +319,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -324,9 +330,9 @@ impl Block {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -339,9 +345,9 @@ impl Block {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -351,10 +357,10 @@ impl Block {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -364,9 +370,9 @@ impl Block {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -376,8 +382,11 @@ impl Block {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -385,9 +394,9 @@ impl Block {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -405,7 +414,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -415,9 +424,9 @@ impl Block {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -434,7 +443,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -444,9 +453,9 @@ impl Block {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -460,7 +469,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -470,9 +479,9 @@ impl Block {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -486,7 +495,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -496,9 +505,9 @@ impl Block {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -509,7 +518,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -520,9 +529,9 @@ impl Block {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -537,7 +546,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -547,10 +556,10 @@ impl Block {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -567,7 +576,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -577,9 +586,9 @@ impl Block {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -590,7 +599,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -602,9 +611,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -618,7 +627,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -628,9 +637,9 @@ impl Block {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -640,9 +649,9 @@ impl Block {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -652,9 +661,9 @@ impl Block {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -664,9 +673,9 @@ impl Block {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -676,9 +685,9 @@ impl Block {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -689,7 +698,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -699,10 +708,10 @@ impl Block {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -719,7 +728,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -729,9 +738,9 @@ impl Block {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -745,7 +754,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -755,9 +764,9 @@ impl Block {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -768,7 +777,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -778,9 +787,9 @@ impl Block {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -797,7 +806,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -810,9 +819,9 @@ impl Block {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -827,7 +836,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -837,9 +846,9 @@ impl Block {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -850,7 +859,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -860,9 +869,9 @@ impl Block {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -873,7 +882,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -883,9 +892,9 @@ impl Block {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -899,7 +908,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -922,9 +931,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -942,7 +951,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -965,9 +974,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -985,7 +994,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1008,9 +1017,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1028,7 +1037,7 @@ impl Block {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1041,9 +1050,9 @@ impl Block {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -1075,12 +1084,12 @@ unsafe impl ::windows::runtime::Interface for Block {
 impl ::windows::runtime::RuntimeName for Block {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Block";
 }
-impl ::std::convert::From<Block> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Block> for ::windows::runtime::IUnknown {
     fn from(value: Block) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Block> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Block> for ::windows::runtime::IUnknown {
     fn from(value: &Block) -> Self {
         value.0 .0.clone()
     }
@@ -1095,12 +1104,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Block> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Block> for ::windows::runtime::IInspectable {
     fn from(value: Block) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Block> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Block> for ::windows::runtime::IInspectable {
     fn from(value: &Block) -> Self {
         value.0.clone()
     }
@@ -1115,61 +1124,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Block> for TextElement {
+impl ::core::convert::From<Block> for TextElement {
     fn from(value: Block) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Block> for TextElement {
+impl ::core::convert::From<&Block> for TextElement {
     fn from(value: &Block) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Block {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Block {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Block> for super::DependencyObject {
+impl ::core::convert::From<Block> for super::DependencyObject {
     fn from(value: Block) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Block> for super::DependencyObject {
+impl ::core::convert::From<&Block> for super::DependencyObject {
     fn from(value: &Block) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Block {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Block {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Block {}
-unsafe impl ::std::marker::Sync for Block {}
+unsafe impl ::core::marker::Send for Block {}
+unsafe impl ::core::marker::Sync for Block {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BlockCollection(pub ::windows::runtime::IInspectable);
 impl BlockCollection {
@@ -1177,9 +1186,9 @@ impl BlockCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<Block> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -1190,9 +1199,9 @@ impl BlockCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -1204,9 +1213,9 @@ impl BlockCollection {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVectorView<Block>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Block>>(result__)
@@ -1220,9 +1229,9 @@ impl BlockCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -1239,7 +1248,7 @@ impl BlockCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -1255,7 +1264,7 @@ impl BlockCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -1267,7 +1276,7 @@ impl BlockCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -1281,7 +1290,7 @@ impl BlockCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1291,14 +1300,14 @@ impl BlockCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
@@ -1309,12 +1318,12 @@ impl BlockCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -1328,9 +1337,9 @@ impl BlockCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -1343,9 +1352,9 @@ impl BlockCollection {
             ::windows::Foundation::Collections::IIterable<Block>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<Block>>(result__)
@@ -1362,12 +1371,12 @@ unsafe impl ::windows::runtime::Interface for BlockCollection {
 impl ::windows::runtime::RuntimeName for BlockCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.BlockCollection";
 }
-impl ::std::convert::From<BlockCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<BlockCollection> for ::windows::runtime::IUnknown {
     fn from(value: BlockCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&BlockCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&BlockCollection> for ::windows::runtime::IUnknown {
     fn from(value: &BlockCollection) -> Self {
         value.0 .0.clone()
     }
@@ -1382,12 +1391,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<BlockCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<BlockCollection> for ::windows::runtime::IInspectable {
     fn from(value: BlockCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&BlockCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&BlockCollection> for ::windows::runtime::IInspectable {
     fn from(value: &BlockCollection) -> Self {
         value.0.clone()
     }
@@ -1404,14 +1413,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<BlockCollection> for ::windows::Foundation::Collections::IVector<Block> {
+impl ::core::convert::From<BlockCollection> for ::windows::Foundation::Collections::IVector<Block> {
     fn from(value: BlockCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&BlockCollection> for ::windows::Foundation::Collections::IVector<Block> {
+impl ::core::convert::From<&BlockCollection>
+    for ::windows::Foundation::Collections::IVector<Block>
+{
     fn from(value: &BlockCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Block>>
@@ -1420,7 +1431,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Block>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Block>>
@@ -1429,18 +1440,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Block>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<BlockCollection>
+impl ::core::convert::TryFrom<BlockCollection>
     for ::windows::Foundation::Collections::IIterable<Block>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: BlockCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&BlockCollection>
+impl ::core::convert::TryFrom<&BlockCollection>
     for ::windows::Foundation::Collections::IIterable<Block>
 {
     type Error = ::windows::runtime::Error;
@@ -1463,40 +1474,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<Block>> {
-        ::std::convert::TryInto::<::windows::Foundation::Collections::IIterable<Block>>::try_into(
+        ::core::convert::TryInto::<::windows::Foundation::Collections::IIterable<Block>>::try_into(
             self,
         )
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for BlockCollection {}
-unsafe impl ::std::marker::Sync for BlockCollection {}
+unsafe impl ::core::marker::Send for BlockCollection {}
+unsafe impl ::core::marker::Sync for BlockCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for BlockCollection {
+impl ::core::iter::IntoIterator for BlockCollection {
     type Item = Block;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &BlockCollection {
+impl ::core::iter::IntoIterator for &BlockCollection {
     type Item = Block;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Bold(pub ::windows::runtime::IInspectable);
 impl Bold {
@@ -1522,9 +1533,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1544,7 +1555,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1559,7 +1570,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1575,9 +1586,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1594,9 +1605,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -1615,9 +1626,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -1637,7 +1648,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1648,9 +1659,9 @@ impl Bold {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -1663,9 +1674,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1675,9 +1686,9 @@ impl Bold {
     pub fn Inlines(&self) -> ::windows::runtime::Result<InlineCollection> {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InlineCollection>(result__)
@@ -1691,7 +1702,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1701,10 +1712,10 @@ impl Bold {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -1714,9 +1725,9 @@ impl Bold {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -1726,8 +1737,11 @@ impl Bold {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -1735,9 +1749,9 @@ impl Bold {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -1755,7 +1769,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1765,9 +1779,9 @@ impl Bold {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -1784,7 +1798,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1794,9 +1808,9 @@ impl Bold {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -1810,7 +1824,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1820,9 +1834,9 @@ impl Bold {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -1836,7 +1850,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1846,9 +1860,9 @@ impl Bold {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -1859,7 +1873,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1870,9 +1884,9 @@ impl Bold {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -1887,7 +1901,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1897,10 +1911,10 @@ impl Bold {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -1917,7 +1931,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1927,9 +1941,9 @@ impl Bold {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -1940,7 +1954,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1952,9 +1966,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -1968,7 +1982,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -1978,9 +1992,9 @@ impl Bold {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -1990,9 +2004,9 @@ impl Bold {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -2002,9 +2016,9 @@ impl Bold {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -2014,9 +2028,9 @@ impl Bold {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -2026,9 +2040,9 @@ impl Bold {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2039,7 +2053,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2049,10 +2063,10 @@ impl Bold {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -2069,7 +2083,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2079,9 +2093,9 @@ impl Bold {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2095,7 +2109,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2105,9 +2119,9 @@ impl Bold {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2118,7 +2132,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2128,9 +2142,9 @@ impl Bold {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -2147,7 +2161,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2160,9 +2174,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -2177,7 +2191,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2187,9 +2201,9 @@ impl Bold {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -2200,7 +2214,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2210,9 +2224,9 @@ impl Bold {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -2223,7 +2237,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2233,9 +2247,9 @@ impl Bold {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -2249,7 +2263,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2272,9 +2286,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -2292,7 +2306,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2315,9 +2329,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -2335,7 +2349,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2358,9 +2372,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -2378,7 +2392,7 @@ impl Bold {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2391,9 +2405,9 @@ impl Bold {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -2418,12 +2432,12 @@ unsafe impl ::windows::runtime::Interface for Bold {
 impl ::windows::runtime::RuntimeName for Bold {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Bold";
 }
-impl ::std::convert::From<Bold> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Bold> for ::windows::runtime::IUnknown {
     fn from(value: Bold) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Bold> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Bold> for ::windows::runtime::IUnknown {
     fn from(value: &Bold) -> Self {
         value.0 .0.clone()
     }
@@ -2438,12 +2452,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Bold> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Bold> for ::windows::runtime::IInspectable {
     fn from(value: Bold) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Bold> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Bold> for ::windows::runtime::IInspectable {
     fn from(value: &Bold) -> Self {
         value.0.clone()
     }
@@ -2458,105 +2472,105 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Bold> for Span {
+impl ::core::convert::From<Bold> for Span {
     fn from(value: Bold) -> Self {
-        ::std::convert::Into::<Span>::into(&value)
+        ::core::convert::Into::<Span>::into(&value)
     }
 }
-impl ::std::convert::From<&Bold> for Span {
+impl ::core::convert::From<&Bold> for Span {
     fn from(value: &Bold) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for &Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Bold> for Inline {
+impl ::core::convert::From<Bold> for Inline {
     fn from(value: Bold) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&Bold> for Inline {
+impl ::core::convert::From<&Bold> for Inline {
     fn from(value: &Bold) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Bold> for TextElement {
+impl ::core::convert::From<Bold> for TextElement {
     fn from(value: Bold) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Bold> for TextElement {
+impl ::core::convert::From<&Bold> for TextElement {
     fn from(value: &Bold) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Bold> for super::DependencyObject {
+impl ::core::convert::From<Bold> for super::DependencyObject {
     fn from(value: Bold) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Bold> for super::DependencyObject {
+impl ::core::convert::From<&Bold> for super::DependencyObject {
     fn from(value: &Bold) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Bold {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Bold {}
-unsafe impl ::std::marker::Sync for Bold {}
+unsafe impl ::core::marker::Send for Bold {}
+unsafe impl ::core::marker::Sync for Bold {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Glyphs(pub ::windows::runtime::IInspectable);
 impl Glyphs {
@@ -2579,10 +2593,10 @@ impl Glyphs {
     pub fn UnicodeString(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -2599,7 +2613,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2609,10 +2623,10 @@ impl Glyphs {
     pub fn Indices(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -2629,7 +2643,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2639,9 +2653,9 @@ impl Glyphs {
     pub fn FontUri(&self) -> ::windows::runtime::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
@@ -2655,7 +2669,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2666,9 +2680,9 @@ impl Glyphs {
     pub fn StyleSimulations(&self) -> ::windows::runtime::Result<super::Media::StyleSimulations> {
         let this = self;
         unsafe {
-            let mut result__: super::Media::StyleSimulations = ::std::mem::zeroed();
+            let mut result__: super::Media::StyleSimulations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::StyleSimulations>(result__)
@@ -2683,7 +2697,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2693,9 +2707,9 @@ impl Glyphs {
     pub fn FontRenderingEmSize(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -2706,7 +2720,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2716,9 +2730,9 @@ impl Glyphs {
     pub fn OriginX(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -2729,7 +2743,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2739,9 +2753,9 @@ impl Glyphs {
     pub fn OriginY(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -2752,7 +2766,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2763,9 +2777,9 @@ impl Glyphs {
     pub fn Fill(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -2780,7 +2794,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2790,9 +2804,9 @@ impl Glyphs {
     pub fn IsColorFontEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -2803,7 +2817,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2813,9 +2827,9 @@ impl Glyphs {
     pub fn ColorFontPaletteIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -2826,7 +2840,7 @@ impl Glyphs {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -2835,9 +2849,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn UnicodeStringProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2846,9 +2860,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn IndicesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2857,9 +2871,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontUriProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2868,9 +2882,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StyleSimulationsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2879,9 +2893,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontRenderingEmSizeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2890,9 +2904,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn OriginXProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2901,9 +2915,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn OriginYProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2912,9 +2926,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FillProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2923,9 +2937,9 @@ impl Glyphs {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn IsColorFontEnabledProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2935,9 +2949,9 @@ impl Glyphs {
     pub fn ColorFontPaletteIndexProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::IGlyphsStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -2959,7 +2973,7 @@ impl Glyphs {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -2975,9 +2989,9 @@ impl Glyphs {
             super::super::Composition::IVisualElement2,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Composition::Visual>(result__)
@@ -2990,9 +3004,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -3012,7 +3026,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -3027,7 +3041,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -3043,9 +3057,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -3062,9 +3076,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -3083,9 +3097,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -3105,7 +3119,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -3116,9 +3130,9 @@ impl Glyphs {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -3131,9 +3145,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -3143,9 +3157,9 @@ impl Glyphs {
     pub fn Triggers(&self) -> ::windows::runtime::Result<super::TriggerCollection> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::TriggerCollection>(result__)
@@ -3155,9 +3169,9 @@ impl Glyphs {
     pub fn Resources(&self) -> ::windows::runtime::Result<super::ResourceDictionary> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ResourceDictionary>(result__)
@@ -3174,7 +3188,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3184,9 +3198,9 @@ impl Glyphs {
     pub fn Tag(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -3203,7 +3217,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3213,10 +3227,10 @@ impl Glyphs {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3233,7 +3247,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3243,9 +3257,9 @@ impl Glyphs {
     pub fn ActualWidth(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3255,9 +3269,9 @@ impl Glyphs {
     pub fn ActualHeight(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3267,9 +3281,9 @@ impl Glyphs {
     pub fn Width(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3280,7 +3294,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3290,9 +3304,9 @@ impl Glyphs {
     pub fn Height(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3303,7 +3317,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3313,9 +3327,9 @@ impl Glyphs {
     pub fn MinWidth(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3326,7 +3340,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3336,9 +3350,9 @@ impl Glyphs {
     pub fn MaxWidth(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3349,7 +3363,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3359,9 +3373,9 @@ impl Glyphs {
     pub fn MinHeight(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3372,7 +3386,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3382,9 +3396,9 @@ impl Glyphs {
     pub fn MaxHeight(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -3395,7 +3409,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3405,9 +3419,9 @@ impl Glyphs {
     pub fn HorizontalAlignment(&self) -> ::windows::runtime::Result<super::HorizontalAlignment> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::HorizontalAlignment = ::std::mem::zeroed();
+            let mut result__: super::HorizontalAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::HorizontalAlignment>(result__)
@@ -3421,7 +3435,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3431,9 +3445,9 @@ impl Glyphs {
     pub fn VerticalAlignment(&self) -> ::windows::runtime::Result<super::VerticalAlignment> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::VerticalAlignment = ::std::mem::zeroed();
+            let mut result__: super::VerticalAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::VerticalAlignment>(result__)
@@ -3447,7 +3461,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3457,9 +3471,9 @@ impl Glyphs {
     pub fn Margin(&self) -> ::windows::runtime::Result<super::Thickness> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::Thickness = ::std::mem::zeroed();
+            let mut result__: super::Thickness = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Thickness>(result__)
@@ -3473,7 +3487,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3483,10 +3497,10 @@ impl Glyphs {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3500,7 +3514,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3510,9 +3524,9 @@ impl Glyphs {
     pub fn BaseUri(&self) -> ::windows::runtime::Result<::windows::Foundation::Uri> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
@@ -3522,9 +3536,9 @@ impl Glyphs {
     pub fn DataContext(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -3541,7 +3555,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3551,9 +3565,9 @@ impl Glyphs {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -3564,7 +3578,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3574,9 +3588,9 @@ impl Glyphs {
     pub fn FocusVisualMargin(&self) -> ::windows::runtime::Result<super::Thickness> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::Thickness = ::std::mem::zeroed();
+            let mut result__: super::Thickness = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Thickness>(result__)
@@ -3590,7 +3604,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3600,9 +3614,9 @@ impl Glyphs {
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::runtime::Result<super::Thickness> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::Thickness = ::std::mem::zeroed();
+            let mut result__: super::Thickness = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Thickness>(result__)
@@ -3619,7 +3633,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3629,9 +3643,9 @@ impl Glyphs {
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::runtime::Result<super::Thickness> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::Thickness = ::std::mem::zeroed();
+            let mut result__: super::Thickness = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Thickness>(result__)
@@ -3648,7 +3662,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3659,9 +3673,9 @@ impl Glyphs {
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -3679,7 +3693,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3690,9 +3704,9 @@ impl Glyphs {
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -3710,7 +3724,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3720,9 +3734,9 @@ impl Glyphs {
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -3733,7 +3747,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3743,9 +3757,9 @@ impl Glyphs {
     pub fn Style(&self) -> ::windows::runtime::Result<super::Style> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Style>(result__)
@@ -3759,7 +3773,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3769,9 +3783,9 @@ impl Glyphs {
     pub fn Parent(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -3781,9 +3795,9 @@ impl Glyphs {
     pub fn FlowDirection(&self) -> ::windows::runtime::Result<super::FlowDirection> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::FlowDirection = ::std::mem::zeroed();
+            let mut result__: super::FlowDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FlowDirection>(result__)
@@ -3794,7 +3808,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).56)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3804,9 +3818,9 @@ impl Glyphs {
     pub fn RequestedTheme(&self) -> ::windows::runtime::Result<super::ElementTheme> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::ElementTheme = ::std::mem::zeroed();
+            let mut result__: super::ElementTheme = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).57)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ElementTheme>(result__)
@@ -3817,7 +3831,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).58)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -3827,9 +3841,9 @@ impl Glyphs {
     pub fn IsLoaded(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).59)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -3839,9 +3853,9 @@ impl Glyphs {
     pub fn ActualTheme(&self) -> ::windows::runtime::Result<super::ElementTheme> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: super::ElementTheme = ::std::mem::zeroed();
+            let mut result__: super::ElementTheme = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).60)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ElementTheme>(result__)
@@ -3854,9 +3868,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).61)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3874,7 +3888,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).62)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3887,9 +3901,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).63)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3907,7 +3921,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).64)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3929,9 +3943,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).65)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3949,7 +3963,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).66)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3965,9 +3979,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).67)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -3985,7 +3999,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).68)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4004,9 +4018,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).69)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -4024,7 +4038,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).70)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4046,9 +4060,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).71)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -4066,7 +4080,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).72)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4088,9 +4102,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).73)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -4108,7 +4122,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).74)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4130,9 +4144,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).75)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -4150,7 +4164,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).76)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4163,9 +4177,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).77)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -4186,7 +4200,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).78)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 binding.into_param().abi(),
             )
@@ -4204,9 +4218,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Data::BindingExpression> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).79)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -4217,16 +4231,16 @@ impl Glyphs {
     pub fn InvalidateViewport(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn DesiredSize(&self) -> ::windows::runtime::Result<::windows::Foundation::Size> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Size>(result__)
@@ -4236,9 +4250,9 @@ impl Glyphs {
     pub fn AllowDrop(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4248,17 +4262,20 @@ impl Glyphs {
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn Opacity(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -4269,7 +4286,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4280,9 +4297,9 @@ impl Glyphs {
     pub fn Clip(&self) -> ::windows::runtime::Result<super::Media::RectangleGeometry> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::RectangleGeometry>(result__)
@@ -4300,7 +4317,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4311,9 +4328,9 @@ impl Glyphs {
     pub fn RenderTransform(&self) -> ::windows::runtime::Result<super::Media::Transform> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Transform>(result__)
@@ -4331,7 +4348,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4342,9 +4359,9 @@ impl Glyphs {
     pub fn Projection(&self) -> ::windows::runtime::Result<super::Media::Projection> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Projection>(result__)
@@ -4362,7 +4379,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4373,9 +4390,9 @@ impl Glyphs {
     pub fn Transform3D(&self) -> ::windows::runtime::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
@@ -4393,7 +4410,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4405,9 +4422,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Point> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Point>(result__)
@@ -4424,7 +4441,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4434,9 +4451,9 @@ impl Glyphs {
     pub fn IsHitTestVisible(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4447,7 +4464,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4457,9 +4474,9 @@ impl Glyphs {
     pub fn Visibility(&self) -> ::windows::runtime::Result<super::Visibility> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Visibility = ::std::mem::zeroed();
+            let mut result__: super::Visibility = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Visibility>(result__)
@@ -4470,7 +4487,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4480,9 +4497,9 @@ impl Glyphs {
     pub fn RenderSize(&self) -> ::windows::runtime::Result<::windows::Foundation::Size> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Size>(result__)
@@ -4492,9 +4509,9 @@ impl Glyphs {
     pub fn UseLayoutRounding(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4505,7 +4522,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4518,9 +4535,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Media::Animation::TransitionCollection> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
@@ -4538,7 +4555,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4549,9 +4566,9 @@ impl Glyphs {
     pub fn CacheMode(&self) -> ::windows::runtime::Result<super::Media::CacheMode> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::CacheMode>(result__)
@@ -4566,7 +4583,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4576,9 +4593,9 @@ impl Glyphs {
     pub fn IsTapEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4589,7 +4606,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4599,9 +4616,9 @@ impl Glyphs {
     pub fn IsDoubleTapEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4612,7 +4629,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4622,9 +4639,9 @@ impl Glyphs {
     pub fn CanDrag(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4635,7 +4652,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4645,9 +4662,9 @@ impl Glyphs {
     pub fn IsRightTapEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4658,7 +4675,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4668,9 +4685,9 @@ impl Glyphs {
     pub fn IsHoldingEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4681,7 +4698,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4692,9 +4709,9 @@ impl Glyphs {
     pub fn ManipulationMode(&self) -> ::windows::runtime::Result<super::Input::ManipulationModes> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::ManipulationModes = ::std::mem::zeroed();
+            let mut result__: super::Input::ManipulationModes = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::ManipulationModes>(result__)
@@ -4709,7 +4726,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4724,9 +4741,9 @@ impl Glyphs {
     > {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<super::Input::Pointer>>(
@@ -4741,9 +4758,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Controls::Primitives::FlyoutBase> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
@@ -4761,7 +4778,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4772,9 +4789,9 @@ impl Glyphs {
     pub fn CompositeMode(&self) -> ::windows::runtime::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Media::ElementCompositeMode = ::std::mem::zeroed();
+            let mut result__: super::Media::ElementCompositeMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::ElementCompositeMode>(result__)
@@ -4789,7 +4806,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4804,9 +4821,9 @@ impl Glyphs {
     > {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<super::Media::XamlLight>>(
@@ -4818,9 +4835,9 @@ impl Glyphs {
     pub fn CanBeScrollAnchor(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4831,7 +4848,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4841,9 +4858,9 @@ impl Glyphs {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4857,7 +4874,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4867,9 +4884,9 @@ impl Glyphs {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -4880,7 +4897,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4890,9 +4907,9 @@ impl Glyphs {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).56)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -4909,7 +4926,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).57)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4919,10 +4936,10 @@ impl Glyphs {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).58)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -4939,7 +4956,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).59)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4952,9 +4969,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).60)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -4969,7 +4986,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).61)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -4979,9 +4996,9 @@ impl Glyphs {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).62)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -4992,7 +5009,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).63)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5002,9 +5019,9 @@ impl Glyphs {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).64)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -5015,7 +5032,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).65)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5025,9 +5042,9 @@ impl Glyphs {
     pub fn KeyTipTarget(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).66)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -5044,7 +5061,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).67)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5057,9 +5074,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::XYFocusKeyboardNavigationMode> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::XYFocusKeyboardNavigationMode = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusKeyboardNavigationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).68)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
@@ -5074,7 +5091,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).69)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5087,9 +5104,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).70)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -5104,7 +5121,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).71)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5117,9 +5134,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).72)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -5134,7 +5151,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).73)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5147,9 +5164,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).74)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -5164,7 +5181,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).75)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5177,9 +5194,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).76)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -5194,7 +5211,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).77)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5209,9 +5226,9 @@ impl Glyphs {
     > {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).78)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<
@@ -5225,9 +5242,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).79)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -5244,7 +5261,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).80)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5257,9 +5274,10 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::KeyboardAcceleratorPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyboardAcceleratorPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyboardAcceleratorPlacementMode =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).81)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
@@ -5274,7 +5292,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).82)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5286,9 +5304,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::ElementHighContrastAdjustment> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::ElementHighContrastAdjustment = ::std::mem::zeroed();
+            let mut result__: super::ElementHighContrastAdjustment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).83)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
@@ -5302,7 +5320,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).84)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5315,9 +5333,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Input::KeyboardNavigationMode> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyboardNavigationMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyboardNavigationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).85)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
@@ -5332,7 +5350,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).86)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5342,9 +5360,9 @@ impl Glyphs {
     pub fn OpacityTransition(&self) -> ::windows::runtime::Result<super::ScalarTransition> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).87)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ScalarTransition>(result__)
@@ -5361,7 +5379,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).88)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5373,9 +5391,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).89)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -5392,7 +5410,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).90)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5402,9 +5420,9 @@ impl Glyphs {
     pub fn TranslationTransition(&self) -> ::windows::runtime::Result<super::Vector3Transition> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).91)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Vector3Transition>(result__)
@@ -5421,7 +5439,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).92)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5431,9 +5449,9 @@ impl Glyphs {
     pub fn Rotation(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).93)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -5444,7 +5462,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).94)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5454,9 +5472,9 @@ impl Glyphs {
     pub fn RotationTransition(&self) -> ::windows::runtime::Result<super::ScalarTransition> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).95)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ScalarTransition>(result__)
@@ -5473,7 +5491,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).96)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5483,9 +5501,9 @@ impl Glyphs {
     pub fn Scale(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).97)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -5502,7 +5520,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).98)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5512,9 +5530,9 @@ impl Glyphs {
     pub fn ScaleTransition(&self) -> ::windows::runtime::Result<super::Vector3Transition> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).99)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Vector3Transition>(result__)
@@ -5531,7 +5549,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).100)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5543,9 +5561,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Matrix4x4> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Matrix4x4 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Matrix4x4 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).101)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
@@ -5562,7 +5580,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).102)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5574,9 +5592,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).103)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -5593,7 +5611,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).104)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5605,9 +5623,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).105)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -5624,7 +5642,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).106)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5636,9 +5654,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).107)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -5650,9 +5668,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).108)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
@@ -5662,9 +5680,9 @@ impl Glyphs {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).109)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -5678,7 +5696,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).110)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5689,9 +5707,9 @@ impl Glyphs {
     pub fn Shadow(&self) -> ::windows::runtime::Result<super::Media::Shadow> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).111)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Shadow>(result__)
@@ -5706,7 +5724,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).112)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5716,9 +5734,9 @@ impl Glyphs {
     pub fn RasterizationScale(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).113)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -5729,7 +5747,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).114)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5739,9 +5757,9 @@ impl Glyphs {
     pub fn FocusState(&self) -> ::windows::runtime::Result<super::FocusState> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: super::FocusState = ::std::mem::zeroed();
+            let mut result__: super::FocusState = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).115)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FocusState>(result__)
@@ -5751,9 +5769,9 @@ impl Glyphs {
     pub fn UseSystemFocusVisuals(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).116)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -5764,7 +5782,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).117)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5774,9 +5792,9 @@ impl Glyphs {
     pub fn XYFocusLeft(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).118)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -5793,7 +5811,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).119)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5803,9 +5821,9 @@ impl Glyphs {
     pub fn XYFocusRight(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).120)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -5822,7 +5840,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).121)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5832,9 +5850,9 @@ impl Glyphs {
     pub fn XYFocusUp(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).122)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -5848,7 +5866,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).123)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5858,9 +5876,9 @@ impl Glyphs {
     pub fn XYFocusDown(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).124)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -5877,7 +5895,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).125)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5887,9 +5905,9 @@ impl Glyphs {
     pub fn IsTabStop(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).126)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -5900,7 +5918,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).127)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5910,9 +5928,9 @@ impl Glyphs {
     pub fn TabIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).128)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -5923,7 +5941,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).129)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5937,9 +5955,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).130)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -5957,7 +5975,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).131)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5971,9 +5989,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).132)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -5991,7 +6009,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).133)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6004,9 +6022,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).134)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6024,7 +6042,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).135)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6037,9 +6055,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).136)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6057,7 +6075,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).137)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6079,9 +6097,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).138)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6099,7 +6117,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).139)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6121,9 +6139,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).140)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6141,7 +6159,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).141)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6164,9 +6182,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).142)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6184,7 +6202,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).143)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6197,9 +6215,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).144)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6217,7 +6235,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).145)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6230,9 +6248,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).146)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6250,7 +6268,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).147)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6263,9 +6281,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).148)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6283,7 +6301,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).149)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6296,9 +6314,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).150)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6316,7 +6334,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).151)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6333,9 +6351,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).152)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6353,7 +6371,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).153)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6370,9 +6388,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).154)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6390,7 +6408,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).155)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6407,9 +6425,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).156)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6427,7 +6445,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).157)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6444,9 +6462,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).158)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6464,7 +6482,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).159)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6481,9 +6499,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).160)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6501,7 +6519,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).161)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6518,9 +6536,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).162)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6538,7 +6556,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).163)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6555,9 +6573,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).164)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6575,7 +6593,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).165)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6592,9 +6610,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).166)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6612,7 +6630,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).167)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6629,9 +6647,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).168)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6649,7 +6667,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).169)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6666,9 +6684,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).170)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6686,7 +6704,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).171)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6703,9 +6721,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).172)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6723,7 +6741,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).173)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6746,9 +6764,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).174)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6766,7 +6784,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).175)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6785,9 +6803,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).176)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6805,7 +6823,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).177)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6822,9 +6840,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).178)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6842,7 +6860,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).179)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6859,9 +6877,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).180)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6879,7 +6897,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).181)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6896,9 +6914,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).182)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6916,7 +6934,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).183)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6933,9 +6951,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).184)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6953,7 +6971,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).185)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6970,9 +6988,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).186)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -6990,7 +7008,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).187)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7007,9 +7025,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).188)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7027,7 +7045,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).189)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7050,9 +7068,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).190)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7070,7 +7088,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).191)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7093,9 +7111,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).192)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7113,7 +7131,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).193)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7136,9 +7154,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).194)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7156,7 +7174,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).195)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7179,9 +7197,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).196)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7199,7 +7217,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).197)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7222,9 +7240,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).198)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7242,7 +7260,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).199)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7265,9 +7283,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).200)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7285,7 +7303,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).201)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7308,9 +7326,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).202)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7328,7 +7346,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).203)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7345,9 +7363,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).204)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7365,7 +7383,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).205)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7382,9 +7400,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).206)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7402,7 +7420,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).207)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7424,9 +7442,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).208)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -7444,7 +7462,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).209)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -7458,7 +7476,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).210)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 availablesize.into_param().abi(),
             )
             .ok()
@@ -7472,7 +7490,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).211)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 finalrect.into_param().abi(),
             )
             .ok()
@@ -7486,9 +7504,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).212)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 &mut result__,
             )
@@ -7507,7 +7525,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).213)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7517,7 +7535,8 @@ impl Glyphs {
     pub fn ReleasePointerCaptures(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).214)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).214)(::core::mem::transmute_copy(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
@@ -7534,7 +7553,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).215)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 routedevent.into_param().abi(),
                 handler.into_param().abi(),
                 handledeventstoo,
@@ -7555,7 +7574,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).216)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 routedevent.into_param().abi(),
                 handler.into_param().abi(),
             )
@@ -7570,9 +7589,9 @@ impl Glyphs {
     ) -> ::windows::runtime::Result<super::Media::GeneralTransform> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).217)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 visual.into_param().abi(),
                 &mut result__,
             )
@@ -7583,30 +7602,33 @@ impl Glyphs {
     pub fn InvalidateMeasure(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).218)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).218)(::core::mem::transmute_copy(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn InvalidateArrange(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).219)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).219)(::core::mem::transmute_copy(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn UpdateLayout(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).220)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).220)(::core::mem::transmute_copy(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).221)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -7627,9 +7649,9 @@ impl Glyphs {
     > {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).222)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pointerpoint.into_param().abi(),
                 &mut result__,
             )
@@ -7642,7 +7664,8 @@ impl Glyphs {
     pub fn StartBringIntoView(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).223)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).223)(::core::mem::transmute_copy(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
@@ -7656,7 +7679,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).224)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 options.into_param().abi(),
             )
             .ok()
@@ -7674,7 +7697,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).225)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 args.into_param().abi(),
             )
             .ok()
@@ -7684,9 +7707,9 @@ impl Glyphs {
     pub fn Focus(&self, value: super::FocusState) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).226)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
                 &mut result__,
             )
@@ -7705,7 +7728,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).227)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 animation.into_param().abi(),
             )
             .ok()
@@ -7723,7 +7746,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).228)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 animation.into_param().abi(),
             )
             .ok()
@@ -7734,9 +7757,9 @@ impl Glyphs {
     pub fn ProtectedCursor(&self) -> ::windows::runtime::Result<super::super::Input::InputCursor> {
         let this = &::windows::runtime::Interface::cast::<super::IUIElementProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Input::InputCursor>(result__)
@@ -7754,7 +7777,7 @@ impl Glyphs {
         let this = &::windows::runtime::Interface::cast::<super::IUIElementProtected>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7785,12 +7808,12 @@ unsafe impl ::windows::runtime::Interface for Glyphs {
 impl ::windows::runtime::RuntimeName for Glyphs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Glyphs";
 }
-impl ::std::convert::From<Glyphs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Glyphs> for ::windows::runtime::IUnknown {
     fn from(value: Glyphs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Glyphs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Glyphs> for ::windows::runtime::IUnknown {
     fn from(value: &Glyphs) -> Self {
         value.0 .0.clone()
     }
@@ -7805,12 +7828,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Glyphs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Glyphs> for ::windows::runtime::IInspectable {
     fn from(value: Glyphs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Glyphs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Glyphs> for ::windows::runtime::IInspectable {
     fn from(value: &Glyphs) -> Self {
         value.0.clone()
     }
@@ -7826,14 +7849,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<Glyphs> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<Glyphs> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: Glyphs) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&Glyphs> for super::super::Composition::IAnimationObject {
+impl ::core::convert::TryFrom<&Glyphs> for super::super::Composition::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &Glyphs) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7854,20 +7877,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IAnimation
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IAnimationObject> {
-        ::std::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<Glyphs> for super::super::Composition::IVisualElement {
+impl ::core::convert::TryFrom<Glyphs> for super::super::Composition::IVisualElement {
     type Error = ::windows::runtime::Error;
     fn try_from(value: Glyphs) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&Glyphs> for super::super::Composition::IVisualElement {
+impl ::core::convert::TryFrom<&Glyphs> for super::super::Composition::IVisualElement {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &Glyphs) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7886,20 +7909,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IVisualEle
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IVisualElement> {
-        ::std::convert::TryInto::<super::super::Composition::IVisualElement>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IVisualElement>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<Glyphs> for super::super::Composition::IVisualElement2 {
+impl ::core::convert::TryFrom<Glyphs> for super::super::Composition::IVisualElement2 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: Glyphs) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
 #[cfg(feature = "UI_Composition")]
-impl ::std::convert::TryFrom<&Glyphs> for super::super::Composition::IVisualElement2 {
+impl ::core::convert::TryFrom<&Glyphs> for super::super::Composition::IVisualElement2 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &Glyphs) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7918,90 +7941,90 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::super::Composition::IVisualEle
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, super::super::Composition::IVisualElement2> {
-        ::std::convert::TryInto::<super::super::Composition::IVisualElement2>::try_into(self)
+        ::core::convert::TryInto::<super::super::Composition::IVisualElement2>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<Glyphs> for super::FrameworkElement {
+impl ::core::convert::From<Glyphs> for super::FrameworkElement {
     fn from(value: Glyphs) -> Self {
-        ::std::convert::Into::<super::FrameworkElement>::into(&value)
+        ::core::convert::Into::<super::FrameworkElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Glyphs> for super::FrameworkElement {
+impl ::core::convert::From<&Glyphs> for super::FrameworkElement {
     fn from(value: &Glyphs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::FrameworkElement> for Glyphs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::FrameworkElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::FrameworkElement>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::FrameworkElement>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::FrameworkElement> for &Glyphs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::FrameworkElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::FrameworkElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::FrameworkElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Glyphs> for super::UIElement {
+impl ::core::convert::From<Glyphs> for super::UIElement {
     fn from(value: Glyphs) -> Self {
-        ::std::convert::Into::<super::UIElement>::into(&value)
+        ::core::convert::Into::<super::UIElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Glyphs> for super::UIElement {
+impl ::core::convert::From<&Glyphs> for super::UIElement {
     fn from(value: &Glyphs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::UIElement> for Glyphs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::UIElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::UIElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::UIElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::UIElement> for &Glyphs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::UIElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::UIElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::UIElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Glyphs> for super::DependencyObject {
+impl ::core::convert::From<Glyphs> for super::DependencyObject {
     fn from(value: Glyphs) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Glyphs> for super::DependencyObject {
+impl ::core::convert::From<&Glyphs> for super::DependencyObject {
     fn from(value: &Glyphs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Glyphs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Glyphs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Glyphs {}
-unsafe impl ::std::marker::Sync for Glyphs {}
+unsafe impl ::core::marker::Send for Glyphs {}
+unsafe impl ::core::marker::Sync for Glyphs {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Hyperlink(pub ::windows::runtime::IInspectable);
 impl Hyperlink {
@@ -8024,9 +8047,9 @@ impl Hyperlink {
     pub fn NavigateUri(&self) -> ::windows::runtime::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
@@ -8043,7 +8066,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8053,9 +8076,9 @@ impl Hyperlink {
     pub fn UnderlineStyle(&self) -> ::windows::runtime::Result<UnderlineStyle> {
         let this = self;
         unsafe {
-            let mut result__: UnderlineStyle = ::std::mem::zeroed();
+            let mut result__: UnderlineStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<UnderlineStyle>(result__)
@@ -8065,17 +8088,20 @@ impl Hyperlink {
     pub fn SetUnderlineStyle(&self, value: UnderlineStyle) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn XYFocusLeft(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -8092,7 +8118,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8102,9 +8128,9 @@ impl Hyperlink {
     pub fn XYFocusRight(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -8121,7 +8147,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8131,9 +8157,9 @@ impl Hyperlink {
     pub fn XYFocusUp(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -8147,7 +8173,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8157,9 +8183,9 @@ impl Hyperlink {
     pub fn XYFocusDown(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -8176,7 +8202,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8186,9 +8212,9 @@ impl Hyperlink {
     pub fn ElementSoundMode(&self) -> ::windows::runtime::Result<super::ElementSoundMode> {
         let this = self;
         unsafe {
-            let mut result__: super::ElementSoundMode = ::std::mem::zeroed();
+            let mut result__: super::ElementSoundMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ElementSoundMode>(result__)
@@ -8202,7 +8228,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8212,9 +8238,9 @@ impl Hyperlink {
     pub fn FocusState(&self) -> ::windows::runtime::Result<super::FocusState> {
         let this = self;
         unsafe {
-            let mut result__: super::FocusState = ::std::mem::zeroed();
+            let mut result__: super::FocusState = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FocusState>(result__)
@@ -8227,9 +8253,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -8244,7 +8270,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8257,9 +8283,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -8274,7 +8300,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8287,9 +8313,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -8304,7 +8330,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8317,9 +8343,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<super::Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: super::Input::XYFocusNavigationStrategy = ::std::mem::zeroed();
+            let mut result__: super::Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
@@ -8334,7 +8360,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8344,9 +8370,9 @@ impl Hyperlink {
     pub fn IsTabStop(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8357,7 +8383,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8367,9 +8393,9 @@ impl Hyperlink {
     pub fn TabIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -8380,7 +8406,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8399,9 +8425,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -8419,7 +8445,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -8432,9 +8458,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -8452,7 +8478,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -8465,9 +8491,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -8485,7 +8511,7 @@ impl Hyperlink {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -8495,9 +8521,9 @@ impl Hyperlink {
     pub fn Focus(&self, value: super::FocusState) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
                 &mut result__,
             )
@@ -8507,9 +8533,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn NavigateUriProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8518,9 +8544,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn UnderlineStyleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8529,9 +8555,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn XYFocusLeftProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8540,9 +8566,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn XYFocusRightProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8551,9 +8577,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn XYFocusUpProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8562,9 +8588,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn XYFocusDownProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8573,9 +8599,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn ElementSoundModeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8584,9 +8610,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FocusStateProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8596,9 +8622,9 @@ impl Hyperlink {
     pub fn XYFocusUpNavigationStrategyProperty(
     ) -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8608,9 +8634,9 @@ impl Hyperlink {
     pub fn XYFocusDownNavigationStrategyProperty(
     ) -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8620,9 +8646,9 @@ impl Hyperlink {
     pub fn XYFocusLeftNavigationStrategyProperty(
     ) -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8632,9 +8658,9 @@ impl Hyperlink {
     pub fn XYFocusRightNavigationStrategyProperty(
     ) -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8643,9 +8669,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn IsTabStopProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8654,9 +8680,9 @@ impl Hyperlink {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn TabIndexProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -8669,9 +8695,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -8691,7 +8717,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -8706,7 +8732,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -8722,9 +8748,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -8741,9 +8767,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -8762,9 +8788,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -8784,7 +8810,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -8795,9 +8821,9 @@ impl Hyperlink {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -8810,9 +8836,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -8822,9 +8848,9 @@ impl Hyperlink {
     pub fn Inlines(&self) -> ::windows::runtime::Result<InlineCollection> {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InlineCollection>(result__)
@@ -8838,7 +8864,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8848,10 +8874,10 @@ impl Hyperlink {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -8861,9 +8887,9 @@ impl Hyperlink {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -8873,8 +8899,11 @@ impl Hyperlink {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -8882,9 +8911,9 @@ impl Hyperlink {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -8902,7 +8931,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8912,9 +8941,9 @@ impl Hyperlink {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -8931,7 +8960,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8941,9 +8970,9 @@ impl Hyperlink {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -8957,7 +8986,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8967,9 +8996,9 @@ impl Hyperlink {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -8983,7 +9012,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8993,9 +9022,9 @@ impl Hyperlink {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -9006,7 +9035,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9017,9 +9046,9 @@ impl Hyperlink {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -9034,7 +9063,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9044,10 +9073,10 @@ impl Hyperlink {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -9064,7 +9093,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9074,9 +9103,9 @@ impl Hyperlink {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -9087,7 +9116,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9099,9 +9128,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -9115,7 +9144,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9125,9 +9154,9 @@ impl Hyperlink {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -9137,9 +9166,9 @@ impl Hyperlink {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -9149,9 +9178,9 @@ impl Hyperlink {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -9161,9 +9190,9 @@ impl Hyperlink {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -9173,9 +9202,9 @@ impl Hyperlink {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -9186,7 +9215,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9196,10 +9225,10 @@ impl Hyperlink {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -9216,7 +9245,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9226,9 +9255,9 @@ impl Hyperlink {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -9242,7 +9271,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9252,9 +9281,9 @@ impl Hyperlink {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -9265,7 +9294,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9275,9 +9304,9 @@ impl Hyperlink {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -9294,7 +9323,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9307,9 +9336,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -9324,7 +9353,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9334,9 +9363,9 @@ impl Hyperlink {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -9347,7 +9376,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9357,9 +9386,9 @@ impl Hyperlink {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -9370,7 +9399,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9380,9 +9409,9 @@ impl Hyperlink {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -9396,7 +9425,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9419,9 +9448,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -9439,7 +9468,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -9462,9 +9491,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -9482,7 +9511,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -9505,9 +9534,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -9525,7 +9554,7 @@ impl Hyperlink {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -9538,9 +9567,9 @@ impl Hyperlink {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -9572,12 +9601,12 @@ unsafe impl ::windows::runtime::Interface for Hyperlink {
 impl ::windows::runtime::RuntimeName for Hyperlink {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Hyperlink";
 }
-impl ::std::convert::From<Hyperlink> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Hyperlink> for ::windows::runtime::IUnknown {
     fn from(value: Hyperlink) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Hyperlink> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Hyperlink> for ::windows::runtime::IUnknown {
     fn from(value: &Hyperlink) -> Self {
         value.0 .0.clone()
     }
@@ -9592,12 +9621,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Hyperlink> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Hyperlink> for ::windows::runtime::IInspectable {
     fn from(value: Hyperlink) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Hyperlink> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Hyperlink> for ::windows::runtime::IInspectable {
     fn from(value: &Hyperlink) -> Self {
         value.0.clone()
     }
@@ -9612,105 +9641,105 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Hyperlink> for Span {
+impl ::core::convert::From<Hyperlink> for Span {
     fn from(value: Hyperlink) -> Self {
-        ::std::convert::Into::<Span>::into(&value)
+        ::core::convert::Into::<Span>::into(&value)
     }
 }
-impl ::std::convert::From<&Hyperlink> for Span {
+impl ::core::convert::From<&Hyperlink> for Span {
     fn from(value: &Hyperlink) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for &Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Hyperlink> for Inline {
+impl ::core::convert::From<Hyperlink> for Inline {
     fn from(value: Hyperlink) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&Hyperlink> for Inline {
+impl ::core::convert::From<&Hyperlink> for Inline {
     fn from(value: &Hyperlink) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Hyperlink> for TextElement {
+impl ::core::convert::From<Hyperlink> for TextElement {
     fn from(value: Hyperlink) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Hyperlink> for TextElement {
+impl ::core::convert::From<&Hyperlink> for TextElement {
     fn from(value: &Hyperlink) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Hyperlink> for super::DependencyObject {
+impl ::core::convert::From<Hyperlink> for super::DependencyObject {
     fn from(value: Hyperlink) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Hyperlink> for super::DependencyObject {
+impl ::core::convert::From<&Hyperlink> for super::DependencyObject {
     fn from(value: &Hyperlink) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Hyperlink {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Hyperlink {}
-unsafe impl ::std::marker::Sync for Hyperlink {}
+unsafe impl ::core::marker::Send for Hyperlink {}
+unsafe impl ::core::marker::Sync for Hyperlink {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct HyperlinkClickEventArgs(pub ::windows::runtime::IInspectable);
 impl HyperlinkClickEventArgs {
@@ -9718,9 +9747,9 @@ impl HyperlinkClickEventArgs {
     pub fn OriginalSource(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -9742,12 +9771,12 @@ unsafe impl ::windows::runtime::Interface for HyperlinkClickEventArgs {
 impl ::windows::runtime::RuntimeName for HyperlinkClickEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.HyperlinkClickEventArgs";
 }
-impl ::std::convert::From<HyperlinkClickEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<HyperlinkClickEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: HyperlinkClickEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&HyperlinkClickEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&HyperlinkClickEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &HyperlinkClickEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -9766,12 +9795,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<HyperlinkClickEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<HyperlinkClickEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: HyperlinkClickEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&HyperlinkClickEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&HyperlinkClickEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &HyperlinkClickEventArgs) -> Self {
         value.0.clone()
     }
@@ -9790,30 +9819,32 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<HyperlinkClickEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<HyperlinkClickEventArgs> for super::RoutedEventArgs {
     fn from(value: HyperlinkClickEventArgs) -> Self {
-        ::std::convert::Into::<super::RoutedEventArgs>::into(&value)
+        ::core::convert::Into::<super::RoutedEventArgs>::into(&value)
     }
 }
-impl ::std::convert::From<&HyperlinkClickEventArgs> for super::RoutedEventArgs {
+impl ::core::convert::From<&HyperlinkClickEventArgs> for super::RoutedEventArgs {
     fn from(value: &HyperlinkClickEventArgs) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for HyperlinkClickEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::RoutedEventArgs> for &HyperlinkClickEventArgs {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::RoutedEventArgs> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::RoutedEventArgs>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::RoutedEventArgs>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for HyperlinkClickEventArgs {}
-unsafe impl ::std::marker::Sync for HyperlinkClickEventArgs {}
+unsafe impl ::core::marker::Send for HyperlinkClickEventArgs {}
+unsafe impl ::core::marker::Sync for HyperlinkClickEventArgs {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IBlock(pub ::windows::runtime::IInspectable);
@@ -10061,19 +10092,19 @@ pub struct IGlyphs_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -10863,11 +10894,11 @@ pub struct IRun_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -11041,7 +11072,7 @@ pub struct ITextElement_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -11109,11 +11140,11 @@ pub struct ITextElement_abi(
     #[cfg(not(feature = "UI_Xaml_Media"))] usize,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -11157,11 +11188,11 @@ pub struct ITextElement_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -11258,7 +11289,7 @@ pub struct ITextElement_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        name: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        name: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
@@ -12441,10 +12472,10 @@ pub struct IUnderline_abi(
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Inline(pub ::windows::runtime::IInspectable);
 impl Inline {
@@ -12455,9 +12486,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -12477,7 +12508,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -12492,7 +12523,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -12508,9 +12539,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -12527,9 +12558,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -12548,9 +12579,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -12570,7 +12601,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -12581,9 +12612,9 @@ impl Inline {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -12596,9 +12627,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -12608,10 +12639,10 @@ impl Inline {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -12621,9 +12652,9 @@ impl Inline {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -12633,8 +12664,11 @@ impl Inline {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -12642,9 +12676,9 @@ impl Inline {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -12662,7 +12696,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12672,9 +12706,9 @@ impl Inline {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -12691,7 +12725,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12701,9 +12735,9 @@ impl Inline {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -12717,7 +12751,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -12727,9 +12761,9 @@ impl Inline {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -12743,7 +12777,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -12753,9 +12787,9 @@ impl Inline {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -12766,7 +12800,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -12777,9 +12811,9 @@ impl Inline {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -12794,7 +12828,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12804,10 +12838,10 @@ impl Inline {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -12824,7 +12858,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12834,9 +12868,9 @@ impl Inline {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -12847,7 +12881,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -12859,9 +12893,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -12875,7 +12909,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -12885,9 +12919,9 @@ impl Inline {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -12897,9 +12931,9 @@ impl Inline {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -12909,9 +12943,9 @@ impl Inline {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -12921,9 +12955,9 @@ impl Inline {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -12933,9 +12967,9 @@ impl Inline {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -12946,7 +12980,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -12956,10 +12990,10 @@ impl Inline {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -12976,7 +13010,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12986,9 +13020,9 @@ impl Inline {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -13002,7 +13036,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -13012,9 +13046,9 @@ impl Inline {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -13025,7 +13059,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -13035,9 +13069,9 @@ impl Inline {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -13054,7 +13088,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13067,9 +13101,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -13084,7 +13118,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -13094,9 +13128,9 @@ impl Inline {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -13107,7 +13141,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -13117,9 +13151,9 @@ impl Inline {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -13130,7 +13164,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -13140,9 +13174,9 @@ impl Inline {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -13156,7 +13190,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13179,9 +13213,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -13199,7 +13233,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13222,9 +13256,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -13242,7 +13276,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13265,9 +13299,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -13285,7 +13319,7 @@ impl Inline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13298,9 +13332,9 @@ impl Inline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -13325,12 +13359,12 @@ unsafe impl ::windows::runtime::Interface for Inline {
 impl ::windows::runtime::RuntimeName for Inline {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Inline";
 }
-impl ::std::convert::From<Inline> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Inline> for ::windows::runtime::IUnknown {
     fn from(value: Inline) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Inline> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Inline> for ::windows::runtime::IUnknown {
     fn from(value: &Inline) -> Self {
         value.0 .0.clone()
     }
@@ -13345,12 +13379,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Inline> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Inline> for ::windows::runtime::IInspectable {
     fn from(value: Inline) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Inline> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Inline> for ::windows::runtime::IInspectable {
     fn from(value: &Inline) -> Self {
         value.0.clone()
     }
@@ -13365,61 +13399,61 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Inline> for TextElement {
+impl ::core::convert::From<Inline> for TextElement {
     fn from(value: Inline) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Inline> for TextElement {
+impl ::core::convert::From<&Inline> for TextElement {
     fn from(value: &Inline) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Inline {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Inline {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Inline> for super::DependencyObject {
+impl ::core::convert::From<Inline> for super::DependencyObject {
     fn from(value: Inline) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Inline> for super::DependencyObject {
+impl ::core::convert::From<&Inline> for super::DependencyObject {
     fn from(value: &Inline) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Inline {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Inline {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Inline {}
-unsafe impl ::std::marker::Sync for Inline {}
+unsafe impl ::core::marker::Send for Inline {}
+unsafe impl ::core::marker::Sync for Inline {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InlineCollection(pub ::windows::runtime::IInspectable);
 impl InlineCollection {
@@ -13427,9 +13461,9 @@ impl InlineCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<Inline> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -13440,9 +13474,9 @@ impl InlineCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -13454,9 +13488,9 @@ impl InlineCollection {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVectorView<Inline>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Inline>>(result__)
@@ -13470,9 +13504,9 @@ impl InlineCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -13489,7 +13523,7 @@ impl InlineCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -13505,7 +13539,7 @@ impl InlineCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -13517,7 +13551,7 @@ impl InlineCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -13531,7 +13565,7 @@ impl InlineCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13541,14 +13575,14 @@ impl InlineCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
@@ -13559,12 +13593,12 @@ impl InlineCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -13578,9 +13612,9 @@ impl InlineCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -13593,9 +13627,9 @@ impl InlineCollection {
             ::windows::Foundation::Collections::IIterable<Inline>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<Inline>>(result__)
@@ -13612,12 +13646,12 @@ unsafe impl ::windows::runtime::Interface for InlineCollection {
 impl ::windows::runtime::RuntimeName for InlineCollection {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.InlineCollection";
 }
-impl ::std::convert::From<InlineCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InlineCollection> for ::windows::runtime::IUnknown {
     fn from(value: InlineCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InlineCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InlineCollection> for ::windows::runtime::IUnknown {
     fn from(value: &InlineCollection) -> Self {
         value.0 .0.clone()
     }
@@ -13632,12 +13666,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InlineCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InlineCollection> for ::windows::runtime::IInspectable {
     fn from(value: InlineCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InlineCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InlineCollection> for ::windows::runtime::IInspectable {
     fn from(value: &InlineCollection) -> Self {
         value.0.clone()
     }
@@ -13654,18 +13688,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<InlineCollection>
+impl ::core::convert::From<InlineCollection>
     for ::windows::Foundation::Collections::IVector<Inline>
 {
     fn from(value: InlineCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&InlineCollection>
+impl ::core::convert::From<&InlineCollection>
     for ::windows::Foundation::Collections::IVector<Inline>
 {
     fn from(value: &InlineCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Inline>>
@@ -13674,7 +13708,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Inline>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<Inline>>
@@ -13683,18 +13717,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<Inline>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<InlineCollection>
+impl ::core::convert::TryFrom<InlineCollection>
     for ::windows::Foundation::Collections::IIterable<Inline>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: InlineCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&InlineCollection>
+impl ::core::convert::TryFrom<&InlineCollection>
     for ::windows::Foundation::Collections::IIterable<Inline>
 {
     type Error = ::windows::runtime::Error;
@@ -13717,40 +13751,40 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<Inline>> {
-        ::std::convert::TryInto::<::windows::Foundation::Collections::IIterable<Inline>>::try_into(
+        ::core::convert::TryInto::<::windows::Foundation::Collections::IIterable<Inline>>::try_into(
             self,
         )
         .map(::windows::runtime::Param::Owned)
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-unsafe impl ::std::marker::Send for InlineCollection {}
-unsafe impl ::std::marker::Sync for InlineCollection {}
+unsafe impl ::core::marker::Send for InlineCollection {}
+unsafe impl ::core::marker::Sync for InlineCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for InlineCollection {
+impl ::core::iter::IntoIterator for InlineCollection {
     type Item = Inline;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &InlineCollection {
+impl ::core::iter::IntoIterator for &InlineCollection {
     type Item = Inline;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct InlineUIContainer(pub ::windows::runtime::IInspectable);
 impl InlineUIContainer {
@@ -13773,9 +13807,9 @@ impl InlineUIContainer {
     pub fn Child(&self) -> ::windows::runtime::Result<super::UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::UIElement>(result__)
@@ -13789,7 +13823,7 @@ impl InlineUIContainer {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13802,9 +13836,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -13824,7 +13858,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -13839,7 +13873,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -13855,9 +13889,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -13874,9 +13908,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -13895,9 +13929,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -13917,7 +13951,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -13928,9 +13962,9 @@ impl InlineUIContainer {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -13943,9 +13977,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -13955,10 +13989,10 @@ impl InlineUIContainer {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -13968,9 +14002,9 @@ impl InlineUIContainer {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -13980,8 +14014,11 @@ impl InlineUIContainer {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -13989,9 +14026,9 @@ impl InlineUIContainer {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -14009,7 +14046,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14019,9 +14056,9 @@ impl InlineUIContainer {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -14038,7 +14075,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14048,9 +14085,9 @@ impl InlineUIContainer {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -14064,7 +14101,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14074,9 +14111,9 @@ impl InlineUIContainer {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -14090,7 +14127,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14100,9 +14137,9 @@ impl InlineUIContainer {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -14113,7 +14150,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14124,9 +14161,9 @@ impl InlineUIContainer {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -14141,7 +14178,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14151,10 +14188,10 @@ impl InlineUIContainer {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -14171,7 +14208,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14181,9 +14218,9 @@ impl InlineUIContainer {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -14194,7 +14231,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14206,9 +14243,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -14222,7 +14259,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14232,9 +14269,9 @@ impl InlineUIContainer {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -14244,9 +14281,9 @@ impl InlineUIContainer {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -14256,9 +14293,9 @@ impl InlineUIContainer {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -14268,9 +14305,9 @@ impl InlineUIContainer {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -14280,9 +14317,9 @@ impl InlineUIContainer {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -14293,7 +14330,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14303,10 +14340,10 @@ impl InlineUIContainer {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -14323,7 +14360,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14333,9 +14370,9 @@ impl InlineUIContainer {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -14349,7 +14386,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14359,9 +14396,9 @@ impl InlineUIContainer {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -14372,7 +14409,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14382,9 +14419,9 @@ impl InlineUIContainer {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -14401,7 +14438,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14414,9 +14451,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -14431,7 +14468,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14441,9 +14478,9 @@ impl InlineUIContainer {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -14454,7 +14491,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14464,9 +14501,9 @@ impl InlineUIContainer {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -14477,7 +14514,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -14487,9 +14524,9 @@ impl InlineUIContainer {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -14503,7 +14540,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14526,9 +14563,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -14546,7 +14583,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14569,9 +14606,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -14589,7 +14626,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14612,9 +14649,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -14632,7 +14669,7 @@ impl InlineUIContainer {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14645,9 +14682,9 @@ impl InlineUIContainer {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -14672,12 +14709,12 @@ unsafe impl ::windows::runtime::Interface for InlineUIContainer {
 impl ::windows::runtime::RuntimeName for InlineUIContainer {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.InlineUIContainer";
 }
-impl ::std::convert::From<InlineUIContainer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<InlineUIContainer> for ::windows::runtime::IUnknown {
     fn from(value: InlineUIContainer) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&InlineUIContainer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&InlineUIContainer> for ::windows::runtime::IUnknown {
     fn from(value: &InlineUIContainer) -> Self {
         value.0 .0.clone()
     }
@@ -14692,12 +14729,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<InlineUIContainer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<InlineUIContainer> for ::windows::runtime::IInspectable {
     fn from(value: InlineUIContainer) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&InlineUIContainer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&InlineUIContainer> for ::windows::runtime::IInspectable {
     fn from(value: &InlineUIContainer) -> Self {
         value.0.clone()
     }
@@ -14714,83 +14751,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<InlineUIContainer> for Inline {
+impl ::core::convert::From<InlineUIContainer> for Inline {
     fn from(value: InlineUIContainer) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&InlineUIContainer> for Inline {
+impl ::core::convert::From<&InlineUIContainer> for Inline {
     fn from(value: &InlineUIContainer) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for InlineUIContainer {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &InlineUIContainer {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<InlineUIContainer> for TextElement {
+impl ::core::convert::From<InlineUIContainer> for TextElement {
     fn from(value: InlineUIContainer) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&InlineUIContainer> for TextElement {
+impl ::core::convert::From<&InlineUIContainer> for TextElement {
     fn from(value: &InlineUIContainer) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for InlineUIContainer {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &InlineUIContainer {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<InlineUIContainer> for super::DependencyObject {
+impl ::core::convert::From<InlineUIContainer> for super::DependencyObject {
     fn from(value: InlineUIContainer) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&InlineUIContainer> for super::DependencyObject {
+impl ::core::convert::From<&InlineUIContainer> for super::DependencyObject {
     fn from(value: &InlineUIContainer) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for InlineUIContainer {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &InlineUIContainer {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for InlineUIContainer {}
-unsafe impl ::std::marker::Sync for InlineUIContainer {}
+unsafe impl ::core::marker::Send for InlineUIContainer {}
+unsafe impl ::core::marker::Sync for InlineUIContainer {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Italic(pub ::windows::runtime::IInspectable);
 impl Italic {
@@ -14816,9 +14853,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14838,7 +14875,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -14853,7 +14890,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -14869,9 +14906,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14888,9 +14925,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -14909,9 +14946,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -14931,7 +14968,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -14942,9 +14979,9 @@ impl Italic {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -14957,9 +14994,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -14969,9 +15006,9 @@ impl Italic {
     pub fn Inlines(&self) -> ::windows::runtime::Result<InlineCollection> {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InlineCollection>(result__)
@@ -14985,7 +15022,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -14995,10 +15032,10 @@ impl Italic {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -15008,9 +15045,9 @@ impl Italic {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -15020,8 +15057,11 @@ impl Italic {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -15029,9 +15069,9 @@ impl Italic {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -15049,7 +15089,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15059,9 +15099,9 @@ impl Italic {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -15078,7 +15118,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15088,9 +15128,9 @@ impl Italic {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -15104,7 +15144,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15114,9 +15154,9 @@ impl Italic {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -15130,7 +15170,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15140,9 +15180,9 @@ impl Italic {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -15153,7 +15193,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15164,9 +15204,9 @@ impl Italic {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -15181,7 +15221,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15191,10 +15231,10 @@ impl Italic {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -15211,7 +15251,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15221,9 +15261,9 @@ impl Italic {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -15234,7 +15274,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15246,9 +15286,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -15262,7 +15302,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15272,9 +15312,9 @@ impl Italic {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -15284,9 +15324,9 @@ impl Italic {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -15296,9 +15336,9 @@ impl Italic {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -15308,9 +15348,9 @@ impl Italic {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -15320,9 +15360,9 @@ impl Italic {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -15333,7 +15373,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15343,10 +15383,10 @@ impl Italic {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -15363,7 +15403,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15373,9 +15413,9 @@ impl Italic {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -15389,7 +15429,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15399,9 +15439,9 @@ impl Italic {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -15412,7 +15452,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15422,9 +15462,9 @@ impl Italic {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -15441,7 +15481,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15454,9 +15494,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -15471,7 +15511,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15481,9 +15521,9 @@ impl Italic {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -15494,7 +15534,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15504,9 +15544,9 @@ impl Italic {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -15517,7 +15557,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -15527,9 +15567,9 @@ impl Italic {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -15543,7 +15583,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15566,9 +15606,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -15586,7 +15626,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -15609,9 +15649,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -15629,7 +15669,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -15652,9 +15692,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -15672,7 +15712,7 @@ impl Italic {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -15685,9 +15725,9 @@ impl Italic {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -15712,12 +15752,12 @@ unsafe impl ::windows::runtime::Interface for Italic {
 impl ::windows::runtime::RuntimeName for Italic {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Italic";
 }
-impl ::std::convert::From<Italic> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Italic> for ::windows::runtime::IUnknown {
     fn from(value: Italic) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Italic> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Italic> for ::windows::runtime::IUnknown {
     fn from(value: &Italic) -> Self {
         value.0 .0.clone()
     }
@@ -15732,12 +15772,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Italic> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Italic> for ::windows::runtime::IInspectable {
     fn from(value: Italic) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Italic> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Italic> for ::windows::runtime::IInspectable {
     fn from(value: &Italic) -> Self {
         value.0.clone()
     }
@@ -15752,105 +15792,105 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Italic> for Span {
+impl ::core::convert::From<Italic> for Span {
     fn from(value: Italic) -> Self {
-        ::std::convert::Into::<Span>::into(&value)
+        ::core::convert::Into::<Span>::into(&value)
     }
 }
-impl ::std::convert::From<&Italic> for Span {
+impl ::core::convert::From<&Italic> for Span {
     fn from(value: &Italic) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for &Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Italic> for Inline {
+impl ::core::convert::From<Italic> for Inline {
     fn from(value: Italic) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&Italic> for Inline {
+impl ::core::convert::From<&Italic> for Inline {
     fn from(value: &Italic) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Italic> for TextElement {
+impl ::core::convert::From<Italic> for TextElement {
     fn from(value: Italic) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Italic> for TextElement {
+impl ::core::convert::From<&Italic> for TextElement {
     fn from(value: &Italic) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Italic> for super::DependencyObject {
+impl ::core::convert::From<Italic> for super::DependencyObject {
     fn from(value: Italic) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Italic> for super::DependencyObject {
+impl ::core::convert::From<&Italic> for super::DependencyObject {
     fn from(value: &Italic) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Italic {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Italic {}
-unsafe impl ::std::marker::Sync for Italic {}
+unsafe impl ::core::marker::Send for Italic {}
+unsafe impl ::core::marker::Sync for Italic {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct LineBreak(pub ::windows::runtime::IInspectable);
 impl LineBreak {
@@ -15876,9 +15916,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15898,7 +15938,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -15913,7 +15953,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -15929,9 +15969,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15948,9 +15988,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -15969,9 +16009,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -15991,7 +16031,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -16002,9 +16042,9 @@ impl LineBreak {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -16017,9 +16057,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -16029,10 +16069,10 @@ impl LineBreak {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -16042,9 +16082,9 @@ impl LineBreak {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -16054,8 +16094,11 @@ impl LineBreak {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -16063,9 +16106,9 @@ impl LineBreak {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -16083,7 +16126,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16093,9 +16136,9 @@ impl LineBreak {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -16112,7 +16155,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16122,9 +16165,9 @@ impl LineBreak {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -16138,7 +16181,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16148,9 +16191,9 @@ impl LineBreak {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -16164,7 +16207,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16174,9 +16217,9 @@ impl LineBreak {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -16187,7 +16230,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16198,9 +16241,9 @@ impl LineBreak {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -16215,7 +16258,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16225,10 +16268,10 @@ impl LineBreak {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -16245,7 +16288,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16255,9 +16298,9 @@ impl LineBreak {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -16268,7 +16311,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16280,9 +16323,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -16296,7 +16339,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16306,9 +16349,9 @@ impl LineBreak {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -16318,9 +16361,9 @@ impl LineBreak {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -16330,9 +16373,9 @@ impl LineBreak {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -16342,9 +16385,9 @@ impl LineBreak {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -16354,9 +16397,9 @@ impl LineBreak {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -16367,7 +16410,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16377,10 +16420,10 @@ impl LineBreak {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -16397,7 +16440,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16407,9 +16450,9 @@ impl LineBreak {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -16423,7 +16466,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16433,9 +16476,9 @@ impl LineBreak {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -16446,7 +16489,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16456,9 +16499,9 @@ impl LineBreak {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -16475,7 +16518,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16488,9 +16531,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -16505,7 +16548,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16515,9 +16558,9 @@ impl LineBreak {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -16528,7 +16571,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16538,9 +16581,9 @@ impl LineBreak {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -16551,7 +16594,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -16561,9 +16604,9 @@ impl LineBreak {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -16577,7 +16620,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -16600,9 +16643,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -16620,7 +16663,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -16643,9 +16686,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -16663,7 +16706,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -16686,9 +16729,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -16706,7 +16749,7 @@ impl LineBreak {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -16719,9 +16762,9 @@ impl LineBreak {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -16746,12 +16789,12 @@ unsafe impl ::windows::runtime::Interface for LineBreak {
 impl ::windows::runtime::RuntimeName for LineBreak {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.LineBreak";
 }
-impl ::std::convert::From<LineBreak> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<LineBreak> for ::windows::runtime::IUnknown {
     fn from(value: LineBreak) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&LineBreak> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&LineBreak> for ::windows::runtime::IUnknown {
     fn from(value: &LineBreak) -> Self {
         value.0 .0.clone()
     }
@@ -16766,12 +16809,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<LineBreak> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<LineBreak> for ::windows::runtime::IInspectable {
     fn from(value: LineBreak) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&LineBreak> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&LineBreak> for ::windows::runtime::IInspectable {
     fn from(value: &LineBreak) -> Self {
         value.0.clone()
     }
@@ -16786,84 +16829,84 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<LineBreak> for Inline {
+impl ::core::convert::From<LineBreak> for Inline {
     fn from(value: LineBreak) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&LineBreak> for Inline {
+impl ::core::convert::From<&LineBreak> for Inline {
     fn from(value: &LineBreak) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for LineBreak {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &LineBreak {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<LineBreak> for TextElement {
+impl ::core::convert::From<LineBreak> for TextElement {
     fn from(value: LineBreak) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&LineBreak> for TextElement {
+impl ::core::convert::From<&LineBreak> for TextElement {
     fn from(value: &LineBreak) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for LineBreak {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &LineBreak {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<LineBreak> for super::DependencyObject {
+impl ::core::convert::From<LineBreak> for super::DependencyObject {
     fn from(value: LineBreak) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&LineBreak> for super::DependencyObject {
+impl ::core::convert::From<&LineBreak> for super::DependencyObject {
     fn from(value: &LineBreak) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for LineBreak {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &LineBreak {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for LineBreak {}
-unsafe impl ::std::marker::Sync for LineBreak {}
+unsafe impl ::core::marker::Send for LineBreak {}
+unsafe impl ::core::marker::Sync for LineBreak {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct LogicalDirection(pub i32);
@@ -16871,7 +16914,7 @@ impl LogicalDirection {
     pub const Backward: LogicalDirection = LogicalDirection(0i32);
     pub const Forward: LogicalDirection = LogicalDirection(1i32);
 }
-impl ::std::convert::From<i32> for LogicalDirection {
+impl ::core::convert::From<i32> for LogicalDirection {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -16890,10 +16933,10 @@ impl ::windows::runtime::DefaultType for LogicalDirection {
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Paragraph(pub ::windows::runtime::IInspectable);
 impl Paragraph {
@@ -16916,9 +16959,9 @@ impl Paragraph {
     pub fn Inlines(&self) -> ::windows::runtime::Result<InlineCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InlineCollection>(result__)
@@ -16928,9 +16971,9 @@ impl Paragraph {
     pub fn TextIndent(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -16940,16 +16983,19 @@ impl Paragraph {
     pub fn SetTextIndent(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn TextIndentProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IParagraphStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -16962,9 +17008,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -16984,7 +17030,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -16999,7 +17045,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -17015,9 +17061,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17034,9 +17080,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -17055,9 +17101,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -17077,7 +17123,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -17088,9 +17134,9 @@ impl Paragraph {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -17103,9 +17149,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -17115,9 +17161,9 @@ impl Paragraph {
     pub fn TextAlignment(&self) -> ::windows::runtime::Result<super::TextAlignment> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            let mut result__: super::TextAlignment = ::std::mem::zeroed();
+            let mut result__: super::TextAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::TextAlignment>(result__)
@@ -17127,17 +17173,20 @@ impl Paragraph {
     pub fn SetTextAlignment(&self, value: super::TextAlignment) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn HorizontalTextAlignment(&self) -> ::windows::runtime::Result<super::TextAlignment> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            let mut result__: super::TextAlignment = ::std::mem::zeroed();
+            let mut result__: super::TextAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::TextAlignment>(result__)
@@ -17150,17 +17199,20 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn LineHeight(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -17171,7 +17223,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17181,9 +17233,9 @@ impl Paragraph {
     pub fn LineStackingStrategy(&self) -> ::windows::runtime::Result<super::LineStackingStrategy> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            let mut result__: super::LineStackingStrategy = ::std::mem::zeroed();
+            let mut result__: super::LineStackingStrategy = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::LineStackingStrategy>(result__)
@@ -17197,7 +17249,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17207,9 +17259,9 @@ impl Paragraph {
     pub fn Margin(&self) -> ::windows::runtime::Result<super::Thickness> {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
-            let mut result__: super::Thickness = ::std::mem::zeroed();
+            let mut result__: super::Thickness = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Thickness>(result__)
@@ -17223,7 +17275,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<IBlock>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17233,10 +17285,10 @@ impl Paragraph {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -17246,9 +17298,9 @@ impl Paragraph {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -17258,8 +17310,11 @@ impl Paragraph {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -17267,9 +17322,9 @@ impl Paragraph {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -17287,7 +17342,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17297,9 +17352,9 @@ impl Paragraph {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -17316,7 +17371,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17326,9 +17381,9 @@ impl Paragraph {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -17342,7 +17397,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17352,9 +17407,9 @@ impl Paragraph {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -17368,7 +17423,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17378,9 +17433,9 @@ impl Paragraph {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -17391,7 +17446,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17402,9 +17457,9 @@ impl Paragraph {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -17419,7 +17474,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17429,10 +17484,10 @@ impl Paragraph {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -17449,7 +17504,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17459,9 +17514,9 @@ impl Paragraph {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -17472,7 +17527,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17484,9 +17539,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -17500,7 +17555,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17510,9 +17565,9 @@ impl Paragraph {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -17522,9 +17577,9 @@ impl Paragraph {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -17534,9 +17589,9 @@ impl Paragraph {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -17546,9 +17601,9 @@ impl Paragraph {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -17558,9 +17613,9 @@ impl Paragraph {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -17571,7 +17626,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17581,10 +17636,10 @@ impl Paragraph {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -17601,7 +17656,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17611,9 +17666,9 @@ impl Paragraph {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -17627,7 +17682,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17637,9 +17692,9 @@ impl Paragraph {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -17650,7 +17705,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17660,9 +17715,9 @@ impl Paragraph {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -17679,7 +17734,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17692,9 +17747,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -17709,7 +17764,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17719,9 +17774,9 @@ impl Paragraph {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -17732,7 +17787,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17742,9 +17797,9 @@ impl Paragraph {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -17755,7 +17810,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -17765,9 +17820,9 @@ impl Paragraph {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -17781,7 +17836,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -17804,9 +17859,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -17824,7 +17879,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -17847,9 +17902,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -17867,7 +17922,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -17890,9 +17945,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -17910,7 +17965,7 @@ impl Paragraph {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -17923,9 +17978,9 @@ impl Paragraph {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -17957,12 +18012,12 @@ unsafe impl ::windows::runtime::Interface for Paragraph {
 impl ::windows::runtime::RuntimeName for Paragraph {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Paragraph";
 }
-impl ::std::convert::From<Paragraph> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Paragraph> for ::windows::runtime::IUnknown {
     fn from(value: Paragraph) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Paragraph> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Paragraph> for ::windows::runtime::IUnknown {
     fn from(value: &Paragraph) -> Self {
         value.0 .0.clone()
     }
@@ -17977,12 +18032,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Paragraph> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Paragraph> for ::windows::runtime::IInspectable {
     fn from(value: Paragraph) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Paragraph> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Paragraph> for ::windows::runtime::IInspectable {
     fn from(value: &Paragraph) -> Self {
         value.0.clone()
     }
@@ -17997,83 +18052,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Paragraph> for Block {
+impl ::core::convert::From<Paragraph> for Block {
     fn from(value: Paragraph) -> Self {
-        ::std::convert::Into::<Block>::into(&value)
+        ::core::convert::Into::<Block>::into(&value)
     }
 }
-impl ::std::convert::From<&Paragraph> for Block {
+impl ::core::convert::From<&Paragraph> for Block {
     fn from(value: &Paragraph) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Block> for Paragraph {
     fn into_param(self) -> ::windows::runtime::Param<'a, Block> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Block>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Block>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Block> for &Paragraph {
     fn into_param(self) -> ::windows::runtime::Param<'a, Block> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Block>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Block>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Paragraph> for TextElement {
+impl ::core::convert::From<Paragraph> for TextElement {
     fn from(value: Paragraph) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Paragraph> for TextElement {
+impl ::core::convert::From<&Paragraph> for TextElement {
     fn from(value: &Paragraph) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Paragraph {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Paragraph {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Paragraph> for super::DependencyObject {
+impl ::core::convert::From<Paragraph> for super::DependencyObject {
     fn from(value: Paragraph) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Paragraph> for super::DependencyObject {
+impl ::core::convert::From<&Paragraph> for super::DependencyObject {
     fn from(value: &Paragraph) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Paragraph {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Paragraph {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Paragraph {}
-unsafe impl ::std::marker::Sync for Paragraph {}
+unsafe impl ::core::marker::Send for Paragraph {}
+unsafe impl ::core::marker::Sync for Paragraph {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Run(pub ::windows::runtime::IInspectable);
 impl Run {
@@ -18096,10 +18151,10 @@ impl Run {
     pub fn Text(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -18113,7 +18168,7 @@ impl Run {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18123,9 +18178,9 @@ impl Run {
     pub fn FlowDirection(&self) -> ::windows::runtime::Result<super::FlowDirection> {
         let this = self;
         unsafe {
-            let mut result__: super::FlowDirection = ::std::mem::zeroed();
+            let mut result__: super::FlowDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FlowDirection>(result__)
@@ -18135,16 +18190,19 @@ impl Run {
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FlowDirectionProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::IRunStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -18157,9 +18215,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18179,7 +18237,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -18194,7 +18252,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -18210,9 +18268,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18229,9 +18287,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -18250,9 +18308,9 @@ impl Run {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -18272,7 +18330,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -18283,9 +18341,9 @@ impl Run {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -18298,9 +18356,9 @@ impl Run {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -18310,10 +18368,10 @@ impl Run {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -18323,9 +18381,9 @@ impl Run {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -18335,8 +18393,11 @@ impl Run {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -18344,9 +18405,9 @@ impl Run {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -18364,7 +18425,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18374,9 +18435,9 @@ impl Run {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -18393,7 +18454,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18403,9 +18464,9 @@ impl Run {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -18419,7 +18480,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18429,9 +18490,9 @@ impl Run {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -18445,7 +18506,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18455,9 +18516,9 @@ impl Run {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -18468,7 +18529,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18479,9 +18540,9 @@ impl Run {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -18496,7 +18557,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18506,10 +18567,10 @@ impl Run {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -18526,7 +18587,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18536,9 +18597,9 @@ impl Run {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -18549,7 +18610,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18561,9 +18622,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -18577,7 +18638,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18587,9 +18648,9 @@ impl Run {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -18599,9 +18660,9 @@ impl Run {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -18611,9 +18672,9 @@ impl Run {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -18623,9 +18684,9 @@ impl Run {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -18635,9 +18696,9 @@ impl Run {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -18648,7 +18709,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18658,10 +18719,10 @@ impl Run {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -18678,7 +18739,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18688,9 +18749,9 @@ impl Run {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -18704,7 +18765,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18714,9 +18775,9 @@ impl Run {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -18727,7 +18788,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18737,9 +18798,9 @@ impl Run {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -18756,7 +18817,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18769,9 +18830,9 @@ impl Run {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -18786,7 +18847,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18796,9 +18857,9 @@ impl Run {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -18809,7 +18870,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18819,9 +18880,9 @@ impl Run {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -18832,7 +18893,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -18842,9 +18903,9 @@ impl Run {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -18858,7 +18919,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -18881,9 +18942,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -18901,7 +18962,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -18924,9 +18985,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -18944,7 +19005,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -18967,9 +19028,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -18987,7 +19048,7 @@ impl Run {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -19000,9 +19061,9 @@ impl Run {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -19034,12 +19095,12 @@ unsafe impl ::windows::runtime::Interface for Run {
 impl ::windows::runtime::RuntimeName for Run {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Run";
 }
-impl ::std::convert::From<Run> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Run> for ::windows::runtime::IUnknown {
     fn from(value: Run) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Run> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Run> for ::windows::runtime::IUnknown {
     fn from(value: &Run) -> Self {
         value.0 .0.clone()
     }
@@ -19054,12 +19115,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Run> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Run> for ::windows::runtime::IInspectable {
     fn from(value: Run) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Run> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Run> for ::windows::runtime::IInspectable {
     fn from(value: &Run) -> Self {
         value.0.clone()
     }
@@ -19074,83 +19135,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Run> for Inline {
+impl ::core::convert::From<Run> for Inline {
     fn from(value: Run) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&Run> for Inline {
+impl ::core::convert::From<&Run> for Inline {
     fn from(value: &Run) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for Run {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &Run {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Run> for TextElement {
+impl ::core::convert::From<Run> for TextElement {
     fn from(value: Run) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Run> for TextElement {
+impl ::core::convert::From<&Run> for TextElement {
     fn from(value: &Run) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Run {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Run {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Run> for super::DependencyObject {
+impl ::core::convert::From<Run> for super::DependencyObject {
     fn from(value: Run) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Run> for super::DependencyObject {
+impl ::core::convert::From<&Run> for super::DependencyObject {
     fn from(value: &Run) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Run {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Run {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Run {}
-unsafe impl ::std::marker::Sync for Run {}
+unsafe impl ::core::marker::Send for Run {}
+unsafe impl ::core::marker::Sync for Run {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Span(pub ::windows::runtime::IInspectable);
 impl Span {
@@ -19158,9 +19219,9 @@ impl Span {
     pub fn Inlines(&self) -> ::windows::runtime::Result<InlineCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InlineCollection>(result__)
@@ -19174,7 +19235,7 @@ impl Span {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19183,11 +19244,12 @@ impl Span {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn new() -> ::windows::runtime::Result<Span> {
         Self::ISpanFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<Span>(result__)
@@ -19200,9 +19262,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -19222,7 +19284,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -19237,7 +19299,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -19253,9 +19315,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -19272,9 +19334,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -19293,9 +19355,9 @@ impl Span {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -19315,7 +19377,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -19326,9 +19388,9 @@ impl Span {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -19341,9 +19403,9 @@ impl Span {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -19353,10 +19415,10 @@ impl Span {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -19366,9 +19428,9 @@ impl Span {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19378,8 +19440,11 @@ impl Span {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -19387,9 +19452,9 @@ impl Span {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -19407,7 +19472,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19417,9 +19482,9 @@ impl Span {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -19436,7 +19501,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19446,9 +19511,9 @@ impl Span {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -19462,7 +19527,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19472,9 +19537,9 @@ impl Span {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -19488,7 +19553,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19498,9 +19563,9 @@ impl Span {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -19511,7 +19576,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19522,9 +19587,9 @@ impl Span {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -19539,7 +19604,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19549,10 +19614,10 @@ impl Span {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -19569,7 +19634,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19579,9 +19644,9 @@ impl Span {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -19592,7 +19657,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19604,9 +19669,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -19620,7 +19685,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19630,9 +19695,9 @@ impl Span {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -19642,9 +19707,9 @@ impl Span {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -19654,9 +19719,9 @@ impl Span {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -19666,9 +19731,9 @@ impl Span {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -19678,9 +19743,9 @@ impl Span {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -19691,7 +19756,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19701,10 +19766,10 @@ impl Span {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -19721,7 +19786,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19731,9 +19796,9 @@ impl Span {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -19747,7 +19812,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19757,9 +19822,9 @@ impl Span {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -19770,7 +19835,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19780,9 +19845,9 @@ impl Span {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -19799,7 +19864,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19812,9 +19877,9 @@ impl Span {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -19829,7 +19894,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19839,9 +19904,9 @@ impl Span {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19852,7 +19917,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19862,9 +19927,9 @@ impl Span {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -19875,7 +19940,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -19885,9 +19950,9 @@ impl Span {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -19901,7 +19966,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -19924,9 +19989,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -19944,7 +20009,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -19967,9 +20032,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -19987,7 +20052,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -20010,9 +20075,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -20030,7 +20095,7 @@ impl Span {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -20043,9 +20108,9 @@ impl Span {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -20077,12 +20142,12 @@ unsafe impl ::windows::runtime::Interface for Span {
 impl ::windows::runtime::RuntimeName for Span {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Span";
 }
-impl ::std::convert::From<Span> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Span> for ::windows::runtime::IUnknown {
     fn from(value: Span) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Span> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Span> for ::windows::runtime::IUnknown {
     fn from(value: &Span) -> Self {
         value.0 .0.clone()
     }
@@ -20097,12 +20162,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Span> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Span> for ::windows::runtime::IInspectable {
     fn from(value: Span) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Span> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Span> for ::windows::runtime::IInspectable {
     fn from(value: &Span) -> Self {
         value.0.clone()
     }
@@ -20117,83 +20182,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Span> for Inline {
+impl ::core::convert::From<Span> for Inline {
     fn from(value: Span) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&Span> for Inline {
+impl ::core::convert::From<&Span> for Inline {
     fn from(value: &Span) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for Span {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &Span {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Span> for TextElement {
+impl ::core::convert::From<Span> for TextElement {
     fn from(value: Span) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Span> for TextElement {
+impl ::core::convert::From<&Span> for TextElement {
     fn from(value: &Span) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Span {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Span {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Span> for super::DependencyObject {
+impl ::core::convert::From<Span> for super::DependencyObject {
     fn from(value: Span) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Span> for super::DependencyObject {
+impl ::core::convert::From<&Span> for super::DependencyObject {
     fn from(value: &Span) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Span {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Span {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Span {}
-unsafe impl ::std::marker::Sync for Span {}
+unsafe impl ::core::marker::Send for Span {}
+unsafe impl ::core::marker::Sync for Span {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TextElement(pub ::windows::runtime::IInspectable);
 impl TextElement {
@@ -20201,10 +20266,10 @@ impl TextElement {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -20214,9 +20279,9 @@ impl TextElement {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -20226,8 +20291,11 @@ impl TextElement {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -20235,9 +20303,9 @@ impl TextElement {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -20255,7 +20323,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20265,9 +20333,9 @@ impl TextElement {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -20284,7 +20352,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20294,9 +20362,9 @@ impl TextElement {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -20310,7 +20378,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20320,9 +20388,9 @@ impl TextElement {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -20336,7 +20404,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20346,9 +20414,9 @@ impl TextElement {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -20359,7 +20427,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20370,9 +20438,9 @@ impl TextElement {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -20387,7 +20455,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20397,10 +20465,10 @@ impl TextElement {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -20417,7 +20485,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20427,9 +20495,9 @@ impl TextElement {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -20440,7 +20508,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20452,9 +20520,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -20468,7 +20536,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20478,9 +20546,9 @@ impl TextElement {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -20490,9 +20558,9 @@ impl TextElement {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -20502,9 +20570,9 @@ impl TextElement {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -20514,9 +20582,9 @@ impl TextElement {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -20526,9 +20594,9 @@ impl TextElement {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -20539,7 +20607,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20549,10 +20617,10 @@ impl TextElement {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -20569,7 +20637,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20579,9 +20647,9 @@ impl TextElement {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -20595,7 +20663,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20605,9 +20673,9 @@ impl TextElement {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -20618,7 +20686,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20628,9 +20696,9 @@ impl TextElement {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -20647,7 +20715,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20660,9 +20728,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = self;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -20677,7 +20745,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20687,9 +20755,9 @@ impl TextElement {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -20700,7 +20768,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20710,9 +20778,9 @@ impl TextElement {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -20723,7 +20791,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -20733,9 +20801,9 @@ impl TextElement {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -20749,7 +20817,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -20772,9 +20840,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -20792,7 +20860,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -20815,9 +20883,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -20835,7 +20903,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -20858,9 +20926,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -20878,7 +20946,7 @@ impl TextElement {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -20891,9 +20959,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -20903,9 +20971,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontSizeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20914,9 +20982,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontFamilyProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20925,9 +20993,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontWeightProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20936,9 +21004,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontStyleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20947,9 +21015,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FontStretchProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20958,9 +21026,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn CharacterSpacingProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20969,9 +21037,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn ForegroundProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20980,9 +21048,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn LanguageProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -20992,9 +21060,9 @@ impl TextElement {
     pub fn IsTextScaleFactorEnabledProperty(
     ) -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21003,9 +21071,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn TextDecorationsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21015,9 +21083,9 @@ impl TextElement {
     pub fn AllowFocusOnInteractionProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21026,9 +21094,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn AccessKeyProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21038,9 +21106,9 @@ impl TextElement {
     pub fn ExitDisplayModeOnAccessKeyInvokedProperty(
     ) -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21049,9 +21117,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn IsAccessKeyScopeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21060,9 +21128,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn AccessKeyScopeOwnerProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21071,9 +21139,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn KeyTipPlacementModeProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21083,9 +21151,9 @@ impl TextElement {
     pub fn KeyTipHorizontalOffsetProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21094,9 +21162,9 @@ impl TextElement {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn KeyTipVerticalOffsetProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21109,9 +21177,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21131,7 +21199,7 @@ impl TextElement {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -21146,7 +21214,7 @@ impl TextElement {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -21162,9 +21230,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21181,9 +21249,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21202,9 +21270,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -21224,7 +21292,7 @@ impl TextElement {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -21235,9 +21303,9 @@ impl TextElement {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -21250,9 +21318,9 @@ impl TextElement {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -21286,12 +21354,12 @@ unsafe impl ::windows::runtime::Interface for TextElement {
 impl ::windows::runtime::RuntimeName for TextElement {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.TextElement";
 }
-impl ::std::convert::From<TextElement> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TextElement> for ::windows::runtime::IUnknown {
     fn from(value: TextElement) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TextElement> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TextElement> for ::windows::runtime::IUnknown {
     fn from(value: &TextElement) -> Self {
         value.0 .0.clone()
     }
@@ -21306,12 +21374,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TextElement> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TextElement> for ::windows::runtime::IInspectable {
     fn from(value: TextElement) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TextElement> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TextElement> for ::windows::runtime::IInspectable {
     fn from(value: &TextElement) -> Self {
         value.0.clone()
     }
@@ -21326,39 +21394,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<TextElement> for super::DependencyObject {
+impl ::core::convert::From<TextElement> for super::DependencyObject {
     fn from(value: TextElement) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&TextElement> for super::DependencyObject {
+impl ::core::convert::From<&TextElement> for super::DependencyObject {
     fn from(value: &TextElement) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for TextElement {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &TextElement {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for TextElement {}
-unsafe impl ::std::marker::Sync for TextElement {}
+unsafe impl ::core::marker::Send for TextElement {}
+unsafe impl ::core::marker::Sync for TextElement {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TextHighlighter(pub ::windows::runtime::IInspectable);
 impl TextHighlighter {
@@ -21368,9 +21436,9 @@ impl TextHighlighter {
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVector<TextRange>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<TextRange>>(result__)
@@ -21381,9 +21449,9 @@ impl TextHighlighter {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -21398,7 +21466,7 @@ impl TextHighlighter {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -21409,9 +21477,9 @@ impl TextHighlighter {
     pub fn Background(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -21426,7 +21494,7 @@ impl TextHighlighter {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -21435,9 +21503,9 @@ impl TextHighlighter {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn ForegroundProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextHighlighterStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21446,9 +21514,9 @@ impl TextHighlighter {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn BackgroundProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITextHighlighterStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -21457,11 +21525,12 @@ impl TextHighlighter {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn new() -> ::windows::runtime::Result<TextHighlighter> {
         Self::ITextHighlighterFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::mem::transmute_copy(this),
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<TextHighlighter>(result__)
@@ -21509,12 +21578,12 @@ unsafe impl ::windows::runtime::Interface for TextHighlighter {
 impl ::windows::runtime::RuntimeName for TextHighlighter {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.TextHighlighter";
 }
-impl ::std::convert::From<TextHighlighter> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TextHighlighter> for ::windows::runtime::IUnknown {
     fn from(value: TextHighlighter) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TextHighlighter> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TextHighlighter> for ::windows::runtime::IUnknown {
     fn from(value: &TextHighlighter) -> Self {
         value.0 .0.clone()
     }
@@ -21529,12 +21598,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TextHighlighter> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TextHighlighter> for ::windows::runtime::IInspectable {
     fn from(value: TextHighlighter) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TextHighlighter> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TextHighlighter> for ::windows::runtime::IInspectable {
     fn from(value: &TextHighlighter) -> Self {
         value.0.clone()
     }
@@ -21551,15 +21620,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for TextHighlighter {}
-unsafe impl ::std::marker::Sync for TextHighlighter {}
+unsafe impl ::core::marker::Send for TextHighlighter {}
+unsafe impl ::core::marker::Sync for TextHighlighter {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TextHighlighterBase(pub ::windows::runtime::IInspectable);
 impl TextHighlighterBase {
@@ -21570,9 +21639,9 @@ impl TextHighlighterBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21592,7 +21661,7 @@ impl TextHighlighterBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -21607,7 +21676,7 @@ impl TextHighlighterBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -21623,9 +21692,9 @@ impl TextHighlighterBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21642,9 +21711,9 @@ impl TextHighlighterBase {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -21663,9 +21732,9 @@ impl TextHighlighterBase {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -21685,7 +21754,7 @@ impl TextHighlighterBase {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -21696,9 +21765,9 @@ impl TextHighlighterBase {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -21711,9 +21780,9 @@ impl TextHighlighterBase {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -21735,12 +21804,12 @@ unsafe impl ::windows::runtime::Interface for TextHighlighterBase {
 impl ::windows::runtime::RuntimeName for TextHighlighterBase {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.TextHighlighterBase";
 }
-impl ::std::convert::From<TextHighlighterBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TextHighlighterBase> for ::windows::runtime::IUnknown {
     fn from(value: TextHighlighterBase) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TextHighlighterBase> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TextHighlighterBase> for ::windows::runtime::IUnknown {
     fn from(value: &TextHighlighterBase) -> Self {
         value.0 .0.clone()
     }
@@ -21757,12 +21826,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TextHighlighterBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TextHighlighterBase> for ::windows::runtime::IInspectable {
     fn from(value: TextHighlighterBase) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TextHighlighterBase> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TextHighlighterBase> for ::windows::runtime::IInspectable {
     fn from(value: &TextHighlighterBase) -> Self {
         value.0.clone()
     }
@@ -21781,39 +21850,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<TextHighlighterBase> for super::DependencyObject {
+impl ::core::convert::From<TextHighlighterBase> for super::DependencyObject {
     fn from(value: TextHighlighterBase) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&TextHighlighterBase> for super::DependencyObject {
+impl ::core::convert::From<&TextHighlighterBase> for super::DependencyObject {
     fn from(value: &TextHighlighterBase) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for TextHighlighterBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &TextHighlighterBase {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for TextHighlighterBase {}
-unsafe impl ::std::marker::Sync for TextHighlighterBase {}
+unsafe impl ::core::marker::Send for TextHighlighterBase {}
+unsafe impl ::core::marker::Sync for TextHighlighterBase {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct TextPointer(pub ::windows::runtime::IInspectable);
 impl TextPointer {
@@ -21821,9 +21890,9 @@ impl TextPointer {
     pub fn Parent(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -21833,9 +21902,9 @@ impl TextPointer {
     pub fn VisualParent(&self) -> ::windows::runtime::Result<super::FrameworkElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::FrameworkElement>(result__)
@@ -21845,9 +21914,9 @@ impl TextPointer {
     pub fn LogicalDirection(&self) -> ::windows::runtime::Result<LogicalDirection> {
         let this = self;
         unsafe {
-            let mut result__: LogicalDirection = ::std::mem::zeroed();
+            let mut result__: LogicalDirection = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<LogicalDirection>(result__)
@@ -21857,9 +21926,9 @@ impl TextPointer {
     pub fn Offset(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -21872,9 +21941,9 @@ impl TextPointer {
     ) -> ::windows::runtime::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 direction,
                 &mut result__,
             )
@@ -21889,9 +21958,9 @@ impl TextPointer {
     ) -> ::windows::runtime::Result<TextPointer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 offset,
                 direction,
                 &mut result__,
@@ -21917,12 +21986,12 @@ unsafe impl ::windows::runtime::Interface for TextPointer {
 impl ::windows::runtime::RuntimeName for TextPointer {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.TextPointer";
 }
-impl ::std::convert::From<TextPointer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<TextPointer> for ::windows::runtime::IUnknown {
     fn from(value: TextPointer) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&TextPointer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&TextPointer> for ::windows::runtime::IUnknown {
     fn from(value: &TextPointer) -> Self {
         value.0 .0.clone()
     }
@@ -21937,12 +22006,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<TextPointer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<TextPointer> for ::windows::runtime::IInspectable {
     fn from(value: TextPointer) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&TextPointer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&TextPointer> for ::windows::runtime::IInspectable {
     fn from(value: &TextPointer) -> Self {
         value.0.clone()
     }
@@ -21957,9 +22026,9 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for TextPointer {}
-unsafe impl ::std::marker::Sync for TextPointer {}
-#[derive(:: std :: clone :: Clone, :: std :: marker :: Copy)]
+unsafe impl ::core::marker::Send for TextPointer {}
+unsafe impl ::core::marker::Sync for TextPointer {}
+#[derive(:: core :: clone :: Clone, :: core :: marker :: Copy)]
 #[repr(C)]
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 pub struct TextRange {
@@ -21967,25 +22036,25 @@ pub struct TextRange {
     pub Length: i32,
 }
 impl TextRange {}
-impl ::std::default::Default for TextRange {
+impl ::core::default::Default for TextRange {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        unsafe { ::core::mem::zeroed() }
     }
 }
-impl ::std::fmt::Debug for TextRange {
-    fn fmt(&self, fmt: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
+impl ::core::fmt::Debug for TextRange {
+    fn fmt(&self, fmt: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
         fmt.debug_struct("TextRange")
             .field("StartIndex", &self.StartIndex)
             .field("Length", &self.Length)
             .finish()
     }
 }
-impl ::std::cmp::PartialEq for TextRange {
+impl ::core::cmp::PartialEq for TextRange {
     fn eq(&self, other: &Self) -> bool {
         self.StartIndex == other.StartIndex && self.Length == other.Length
     }
 }
-impl ::std::cmp::Eq for TextRange {}
+impl ::core::cmp::Eq for TextRange {}
 unsafe impl ::windows::runtime::Abi for TextRange {
     type Abi = Self;
 }
@@ -22000,19 +22069,19 @@ impl ::windows::runtime::DefaultType for TextRange {
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Typography(pub ::windows::runtime::IInspectable);
 impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn AnnotationAlternatesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22026,9 +22095,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<i32> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22045,7 +22114,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22055,9 +22124,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn EastAsianExpertFormsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22071,9 +22140,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22090,7 +22159,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22100,9 +22169,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn EastAsianLanguageProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22116,9 +22185,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontEastAsianLanguage> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontEastAsianLanguage = ::std::mem::zeroed();
+            let mut result__: super::FontEastAsianLanguage = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22135,7 +22204,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22145,9 +22214,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn EastAsianWidthsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22161,9 +22230,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontEastAsianWidths> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontEastAsianWidths = ::std::mem::zeroed();
+            let mut result__: super::FontEastAsianWidths = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22180,7 +22249,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22190,9 +22259,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StandardLigaturesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22206,9 +22275,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22225,7 +22294,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22235,9 +22304,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn ContextualLigaturesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22251,9 +22320,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22270,7 +22339,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22281,9 +22350,9 @@ impl Typography {
     pub fn DiscretionaryLigaturesProperty() -> ::windows::runtime::Result<super::DependencyProperty>
     {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22297,9 +22366,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22316,7 +22385,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22326,9 +22395,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn HistoricalLigaturesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22342,9 +22411,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22361,7 +22430,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22371,9 +22440,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StandardSwashesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22387,9 +22456,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<i32> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22406,7 +22475,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22416,9 +22485,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn ContextualSwashesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22432,9 +22501,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<i32> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22451,7 +22520,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22461,9 +22530,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn ContextualAlternatesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22477,9 +22546,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22496,7 +22565,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22506,9 +22575,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticAlternatesProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22522,9 +22591,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<i32> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22541,7 +22610,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22551,9 +22620,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet1Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22567,9 +22636,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22586,7 +22655,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22596,9 +22665,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet2Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22612,9 +22681,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22631,7 +22700,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22641,9 +22710,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet3Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22657,9 +22726,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22676,7 +22745,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22686,9 +22755,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet4Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22702,9 +22771,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22721,7 +22790,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22731,9 +22800,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet5Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22747,9 +22816,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22766,7 +22835,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).56)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22776,9 +22845,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet6Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).57)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22792,9 +22861,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).58)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22811,7 +22880,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).59)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22821,9 +22890,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet7Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).60)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22837,9 +22906,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).61)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22856,7 +22925,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).62)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22866,9 +22935,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet8Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).63)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22882,9 +22951,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).64)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22901,7 +22970,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).65)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22911,9 +22980,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet9Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).66)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22927,9 +22996,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).67)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22946,7 +23015,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).68)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -22956,9 +23025,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet10Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).69)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -22972,9 +23041,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).70)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -22991,7 +23060,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).71)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23001,9 +23070,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet11Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).72)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23017,9 +23086,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).73)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23036,7 +23105,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).74)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23046,9 +23115,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet12Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).75)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23062,9 +23131,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).76)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23081,7 +23150,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).77)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23091,9 +23160,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet13Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).78)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23107,9 +23176,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).79)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23126,7 +23195,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).80)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23136,9 +23205,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet14Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).81)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23152,9 +23221,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).82)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23171,7 +23240,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).83)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23181,9 +23250,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet15Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).84)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23197,9 +23266,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).85)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23216,7 +23285,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).86)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23226,9 +23295,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet16Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).87)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23242,9 +23311,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).88)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23261,7 +23330,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).89)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23271,9 +23340,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet17Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).90)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23287,9 +23356,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).91)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23306,7 +23375,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).92)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23316,9 +23385,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet18Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).93)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23332,9 +23401,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).94)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23351,7 +23420,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).95)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23361,9 +23430,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet19Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).96)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23377,9 +23446,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).97)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23396,7 +23465,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).98)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23406,9 +23475,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn StylisticSet20Property() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).99)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23422,9 +23491,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).100)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23441,7 +23510,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).101)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23451,9 +23520,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn CapitalsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).102)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23464,9 +23533,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontCapitals> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontCapitals = ::std::mem::zeroed();
+            let mut result__: super::FontCapitals = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).103)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23480,7 +23549,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).104)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23490,9 +23559,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn CapitalSpacingProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).105)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23506,9 +23575,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).106)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23525,7 +23594,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).107)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23535,9 +23604,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn KerningProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).108)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23548,9 +23617,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).109)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23564,7 +23633,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).110)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23574,9 +23643,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn CaseSensitiveFormsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).111)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23590,9 +23659,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).112)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23609,7 +23678,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).113)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23619,9 +23688,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn HistoricalFormsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).114)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23635,9 +23704,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).115)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23654,7 +23723,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).116)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23664,9 +23733,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn FractionProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).117)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23677,9 +23746,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontFraction> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontFraction = ::std::mem::zeroed();
+            let mut result__: super::FontFraction = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).118)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23693,7 +23762,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).119)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23703,9 +23772,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn NumeralStyleProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).120)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23719,9 +23788,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontNumeralStyle> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontNumeralStyle = ::std::mem::zeroed();
+            let mut result__: super::FontNumeralStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).121)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23738,7 +23807,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).122)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23748,9 +23817,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn NumeralAlignmentProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).123)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23764,9 +23833,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontNumeralAlignment> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontNumeralAlignment = ::std::mem::zeroed();
+            let mut result__: super::FontNumeralAlignment = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).124)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23783,7 +23852,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).125)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23793,9 +23862,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn SlashedZeroProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).126)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23809,9 +23878,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).127)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23828,7 +23897,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).128)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23838,9 +23907,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn MathematicalGreekProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).129)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23854,9 +23923,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<bool> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).130)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23873,7 +23942,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).131)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23883,9 +23952,9 @@ impl Typography {
     #[doc = "*Required features: `UI_Xaml_Documents`*"]
     pub fn VariantsProperty() -> ::windows::runtime::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).132)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyProperty>(result__)
@@ -23896,9 +23965,9 @@ impl Typography {
         element: Param0,
     ) -> ::windows::runtime::Result<super::FontVariants> {
         Self::ITypographyStatics(|this| unsafe {
-            let mut result__: super::FontVariants = ::std::mem::zeroed();
+            let mut result__: super::FontVariants = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).133)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 &mut result__,
             )
@@ -23912,7 +23981,7 @@ impl Typography {
     ) -> ::windows::runtime::Result<()> {
         Self::ITypographyStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).134)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 element.into_param().abi(),
                 value,
             )
@@ -23947,12 +24016,12 @@ unsafe impl ::windows::runtime::Interface for Typography {
 impl ::windows::runtime::RuntimeName for Typography {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Typography";
 }
-impl ::std::convert::From<Typography> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Typography> for ::windows::runtime::IUnknown {
     fn from(value: Typography) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Typography> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Typography> for ::windows::runtime::IUnknown {
     fn from(value: &Typography) -> Self {
         value.0 .0.clone()
     }
@@ -23967,12 +24036,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Typography> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Typography> for ::windows::runtime::IInspectable {
     fn from(value: Typography) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Typography> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Typography> for ::windows::runtime::IInspectable {
     fn from(value: &Typography) -> Self {
         value.0.clone()
     }
@@ -23987,15 +24056,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for Typography {}
-unsafe impl ::std::marker::Sync for Typography {}
+unsafe impl ::core::marker::Send for Typography {}
+unsafe impl ::core::marker::Sync for Typography {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct Underline(pub ::windows::runtime::IInspectable);
 impl Underline {
@@ -24021,9 +24090,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24043,7 +24112,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -24058,7 +24127,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -24074,9 +24143,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24093,9 +24162,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 &mut result__,
             )
@@ -24114,9 +24183,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<i64> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::std::mem::zeroed();
+            let mut result__: i64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
                 &mut result__,
@@ -24136,7 +24205,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -24147,9 +24216,9 @@ impl Underline {
     pub fn Dispatcher(&self) -> ::windows::runtime::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
@@ -24162,9 +24231,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -24174,9 +24243,9 @@ impl Underline {
     pub fn Inlines(&self) -> ::windows::runtime::Result<InlineCollection> {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<InlineCollection>(result__)
@@ -24190,7 +24259,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ISpan>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24200,10 +24269,10 @@ impl Underline {
     pub fn Name(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -24213,9 +24282,9 @@ impl Underline {
     pub fn FontSize(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24225,8 +24294,11 @@ impl Underline {
     pub fn SetFontSize(&self, value: f64) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "UI_Xaml_Media")]
@@ -24234,9 +24306,9 @@ impl Underline {
     pub fn FontFamily(&self) -> ::windows::runtime::Result<super::Media::FontFamily> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::FontFamily>(result__)
@@ -24254,7 +24326,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24264,9 +24336,9 @@ impl Underline {
     pub fn FontWeight(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
@@ -24283,7 +24355,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24293,9 +24365,9 @@ impl Underline {
     pub fn FontStyle(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
@@ -24309,7 +24381,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24319,9 +24391,9 @@ impl Underline {
     pub fn FontStretch(&self) -> ::windows::runtime::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
@@ -24335,7 +24407,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24345,9 +24417,9 @@ impl Underline {
     pub fn CharacterSpacing(&self) -> ::windows::runtime::Result<i32> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -24358,7 +24430,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24369,9 +24441,9 @@ impl Underline {
     pub fn Foreground(&self) -> ::windows::runtime::Result<super::Media::Brush> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Media::Brush>(result__)
@@ -24386,7 +24458,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24396,10 +24468,10 @@ impl Underline {
     pub fn Language(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -24416,7 +24488,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24426,9 +24498,9 @@ impl Underline {
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -24439,7 +24511,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24451,9 +24523,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Text::TextDecorations = ::std::mem::zeroed();
+            let mut result__: ::windows::UI::Text::TextDecorations = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
@@ -24467,7 +24539,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24477,9 +24549,9 @@ impl Underline {
     pub fn ContentStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -24489,9 +24561,9 @@ impl Underline {
     pub fn ContentEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -24501,9 +24573,9 @@ impl Underline {
     pub fn ElementStart(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -24513,9 +24585,9 @@ impl Underline {
     pub fn ElementEnd(&self) -> ::windows::runtime::Result<TextPointer> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<TextPointer>(result__)
@@ -24525,9 +24597,9 @@ impl Underline {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -24538,7 +24610,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24548,10 +24620,10 @@ impl Underline {
     pub fn AccessKey(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -24568,7 +24640,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24578,9 +24650,9 @@ impl Underline {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -24594,7 +24666,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24604,9 +24676,9 @@ impl Underline {
     pub fn IsAccessKeyScope(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -24617,7 +24689,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24627,9 +24699,9 @@ impl Underline {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::runtime::Result<super::DependencyObject> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).39)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::DependencyObject>(result__)
@@ -24646,7 +24718,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).40)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24659,9 +24731,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<super::Input::KeyTipPlacementMode> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: super::Input::KeyTipPlacementMode = ::std::mem::zeroed();
+            let mut result__: super::Input::KeyTipPlacementMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).41)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
@@ -24676,7 +24748,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).42)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24686,9 +24758,9 @@ impl Underline {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).43)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24699,7 +24771,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).44)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24709,9 +24781,9 @@ impl Underline {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::runtime::Result<f64> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::std::mem::zeroed();
+            let mut result__: f64 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).45)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f64>(result__)
@@ -24722,7 +24794,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).46)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -24732,9 +24804,9 @@ impl Underline {
     pub fn XamlRoot(&self) -> ::windows::runtime::Result<super::XamlRoot> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).47)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::XamlRoot>(result__)
@@ -24748,7 +24820,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).48)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24771,9 +24843,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).49)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -24791,7 +24863,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).50)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -24814,9 +24886,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).51)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -24834,7 +24906,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).52)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -24857,9 +24929,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).53)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -24877,7 +24949,7 @@ impl Underline {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).54)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -24890,9 +24962,9 @@ impl Underline {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<ITextElement>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).55)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 name.into_param().abi(),
                 &mut result__,
             )
@@ -24917,12 +24989,12 @@ unsafe impl ::windows::runtime::Interface for Underline {
 impl ::windows::runtime::RuntimeName for Underline {
     const NAME: &'static str = "Microsoft.UI.Xaml.Documents.Underline";
 }
-impl ::std::convert::From<Underline> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<Underline> for ::windows::runtime::IUnknown {
     fn from(value: Underline) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&Underline> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&Underline> for ::windows::runtime::IUnknown {
     fn from(value: &Underline) -> Self {
         value.0 .0.clone()
     }
@@ -24937,12 +25009,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<Underline> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<Underline> for ::windows::runtime::IInspectable {
     fn from(value: Underline) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&Underline> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&Underline> for ::windows::runtime::IInspectable {
     fn from(value: &Underline) -> Self {
         value.0.clone()
     }
@@ -24957,106 +25029,106 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<Underline> for Span {
+impl ::core::convert::From<Underline> for Span {
     fn from(value: Underline) -> Self {
-        ::std::convert::Into::<Span>::into(&value)
+        ::core::convert::Into::<Span>::into(&value)
     }
 }
-impl ::std::convert::From<&Underline> for Span {
+impl ::core::convert::From<&Underline> for Span {
     fn from(value: &Underline) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Span> for &Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, Span> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Span>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Span>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Underline> for Inline {
+impl ::core::convert::From<Underline> for Inline {
     fn from(value: Underline) -> Self {
-        ::std::convert::Into::<Inline>::into(&value)
+        ::core::convert::Into::<Inline>::into(&value)
     }
 }
-impl ::std::convert::From<&Underline> for Inline {
+impl ::core::convert::From<&Underline> for Inline {
     fn from(value: &Underline) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, Inline> for &Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, Inline> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<Inline>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<Inline>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Underline> for TextElement {
+impl ::core::convert::From<Underline> for TextElement {
     fn from(value: Underline) -> Self {
-        ::std::convert::Into::<TextElement>::into(&value)
+        ::core::convert::Into::<TextElement>::into(&value)
     }
 }
-impl ::std::convert::From<&Underline> for TextElement {
+impl ::core::convert::From<&Underline> for TextElement {
     fn from(value: &Underline) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, TextElement> for &Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, TextElement> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<TextElement>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<TextElement>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<Underline> for super::DependencyObject {
+impl ::core::convert::From<Underline> for super::DependencyObject {
     fn from(value: Underline) -> Self {
-        ::std::convert::Into::<super::DependencyObject>::into(&value)
+        ::core::convert::Into::<super::DependencyObject>::into(&value)
     }
 }
-impl ::std::convert::From<&Underline> for super::DependencyObject {
+impl ::core::convert::From<&Underline> for super::DependencyObject {
     fn from(value: &Underline) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::DependencyObject> for &Underline {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::DependencyObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::DependencyObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::DependencyObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for Underline {}
-unsafe impl ::std::marker::Sync for Underline {}
+unsafe impl ::core::marker::Send for Underline {}
+unsafe impl ::core::marker::Sync for Underline {}
 #[doc = "*Required features: `UI_Xaml_Documents`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct UnderlineStyle(pub i32);
@@ -25064,7 +25136,7 @@ impl UnderlineStyle {
     pub const None: UnderlineStyle = UnderlineStyle(0i32);
     pub const Single: UnderlineStyle = UnderlineStyle(1i32);
 }
-impl ::std::convert::From<i32> for UnderlineStyle {
+impl ::core::convert::From<i32> for UnderlineStyle {
     fn from(value: i32) -> Self {
         Self(value)
     }

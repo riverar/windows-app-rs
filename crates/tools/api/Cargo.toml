@@ -5,6 +5,6 @@ edition = "2018"
 publish = false
 
 [dependencies]
-reader = { package = "windows_reader", git = "https://github.com/microsoft/windows-rs" }
-gen = { package = "windows_gen", git = "https://github.com/microsoft/windows-rs" }
+reader = { package = "windows_reader", version = "0.26" }
+gen = { package = "windows_gen", version = "0.26" }
 rayon = "1.5.1"

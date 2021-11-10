@@ -1372,12 +1372,12 @@ pub struct ISceneVisualStatics_abi(
 );
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct SceneAlphaMode(pub i32);
@@ -1386,7 +1386,7 @@ impl SceneAlphaMode {
     pub const AlphaTest: SceneAlphaMode = SceneAlphaMode(1i32);
     pub const Blend: SceneAlphaMode = SceneAlphaMode(2i32);
 }
-impl ::std::convert::From<i32> for SceneAlphaMode {
+impl ::core::convert::From<i32> for SceneAlphaMode {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1404,12 +1404,12 @@ impl ::windows::runtime::DefaultType for SceneAlphaMode {
 }
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct SceneAttributeSemantic(pub i32);
@@ -1422,7 +1422,7 @@ impl SceneAttributeSemantic {
     pub const Color: SceneAttributeSemantic = SceneAttributeSemantic(5i32);
     pub const Tangent: SceneAttributeSemantic = SceneAttributeSemantic(6i32);
 }
-impl ::std::convert::From<i32> for SceneAttributeSemantic {
+impl ::core::convert::From<i32> for SceneAttributeSemantic {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1441,10 +1441,10 @@ impl ::windows::runtime::DefaultType for SceneAttributeSemantic {
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneBoundingBox(pub ::windows::runtime::IInspectable);
 impl SceneBoundingBox {
@@ -1452,9 +1452,9 @@ impl SceneBoundingBox {
     pub fn Center(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -1464,9 +1464,9 @@ impl SceneBoundingBox {
     pub fn Extents(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -1476,9 +1476,9 @@ impl SceneBoundingBox {
     pub fn Max(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -1488,9 +1488,9 @@ impl SceneBoundingBox {
     pub fn Min(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -1500,9 +1500,9 @@ impl SceneBoundingBox {
     pub fn Size(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -1521,7 +1521,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -1532,9 +1532,9 @@ impl SceneBoundingBox {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -1544,9 +1544,9 @@ impl SceneBoundingBox {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -1565,7 +1565,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -1583,7 +1583,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -1593,10 +1593,10 @@ impl SceneBoundingBox {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -1613,7 +1613,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1625,9 +1625,9 @@ impl SceneBoundingBox {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -1644,7 +1644,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1661,7 +1661,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1678,7 +1678,7 @@ impl SceneBoundingBox {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1691,9 +1691,9 @@ impl SceneBoundingBox {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -1709,9 +1709,9 @@ impl SceneBoundingBox {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -1722,7 +1722,7 @@ impl SceneBoundingBox {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -1741,12 +1741,12 @@ unsafe impl ::windows::runtime::Interface for SceneBoundingBox {
 impl ::windows::runtime::RuntimeName for SceneBoundingBox {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneBoundingBox";
 }
-impl ::std::convert::From<SceneBoundingBox> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneBoundingBox> for ::windows::runtime::IUnknown {
     fn from(value: SceneBoundingBox) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneBoundingBox> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneBoundingBox> for ::windows::runtime::IUnknown {
     fn from(value: &SceneBoundingBox) -> Self {
         value.0 .0.clone()
     }
@@ -1761,12 +1761,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneBoundingBox> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneBoundingBox> for ::windows::runtime::IInspectable {
     fn from(value: SceneBoundingBox) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneBoundingBox> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneBoundingBox> for ::windows::runtime::IInspectable {
     fn from(value: &SceneBoundingBox) -> Self {
         value.0.clone()
     }
@@ -1783,13 +1783,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneBoundingBox> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneBoundingBox> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneBoundingBox) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneBoundingBox> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneBoundingBox> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneBoundingBox) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -1802,18 +1802,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneBou
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneBoundingBox {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneBoundingBox> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneBoundingBox> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneBoundingBox) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneBoundingBox> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneBoundingBox> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneBoundingBox) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -1826,66 +1826,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneBoundingBox {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneBoundingBox> for SceneObject {
+impl ::core::convert::From<SceneBoundingBox> for SceneObject {
     fn from(value: SceneBoundingBox) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneBoundingBox> for SceneObject {
+impl ::core::convert::From<&SceneBoundingBox> for SceneObject {
     fn from(value: &SceneBoundingBox) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneBoundingBox {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneBoundingBox {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneBoundingBox> for super::CompositionObject {
+impl ::core::convert::From<SceneBoundingBox> for super::CompositionObject {
     fn from(value: SceneBoundingBox) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneBoundingBox> for super::CompositionObject {
+impl ::core::convert::From<&SceneBoundingBox> for super::CompositionObject {
     fn from(value: &SceneBoundingBox) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneBoundingBox {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneBoundingBox {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneBoundingBox {}
-unsafe impl ::std::marker::Sync for SceneBoundingBox {}
+unsafe impl ::core::marker::Send for SceneBoundingBox {}
+unsafe impl ::core::marker::Sync for SceneBoundingBox {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneComponent(pub ::windows::runtime::IInspectable);
 impl SceneComponent {
@@ -1893,9 +1893,9 @@ impl SceneComponent {
     pub fn ComponentType(&self) -> ::windows::runtime::Result<SceneComponentType> {
         let this = self;
         unsafe {
-            let mut result__: SceneComponentType = ::std::mem::zeroed();
+            let mut result__: SceneComponentType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneComponentType>(result__)
@@ -1914,7 +1914,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -1925,9 +1925,9 @@ impl SceneComponent {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -1937,9 +1937,9 @@ impl SceneComponent {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -1958,7 +1958,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -1976,7 +1976,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -1986,10 +1986,10 @@ impl SceneComponent {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -2006,7 +2006,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2018,9 +2018,9 @@ impl SceneComponent {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -2037,7 +2037,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2054,7 +2054,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2071,7 +2071,7 @@ impl SceneComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2084,9 +2084,9 @@ impl SceneComponent {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -2102,9 +2102,9 @@ impl SceneComponent {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -2115,7 +2115,7 @@ impl SceneComponent {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -2134,12 +2134,12 @@ unsafe impl ::windows::runtime::Interface for SceneComponent {
 impl ::windows::runtime::RuntimeName for SceneComponent {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneComponent";
 }
-impl ::std::convert::From<SceneComponent> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneComponent> for ::windows::runtime::IUnknown {
     fn from(value: SceneComponent) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneComponent> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneComponent> for ::windows::runtime::IUnknown {
     fn from(value: &SceneComponent) -> Self {
         value.0 .0.clone()
     }
@@ -2154,12 +2154,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneComponent> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneComponent> for ::windows::runtime::IInspectable {
     fn from(value: SceneComponent) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneComponent> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneComponent> for ::windows::runtime::IInspectable {
     fn from(value: &SceneComponent) -> Self {
         value.0.clone()
     }
@@ -2176,13 +2176,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneComponent> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneComponent> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneComponent) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneComponent> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneComponent> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneComponent) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -2195,18 +2195,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneCom
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneComponent> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneComponent> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneComponent) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneComponent> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneComponent> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneComponent) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -2219,66 +2219,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneComponent> for SceneObject {
+impl ::core::convert::From<SceneComponent> for SceneObject {
     fn from(value: SceneComponent) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneComponent> for SceneObject {
+impl ::core::convert::From<&SceneComponent> for SceneObject {
     fn from(value: &SceneComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneComponent> for super::CompositionObject {
+impl ::core::convert::From<SceneComponent> for super::CompositionObject {
     fn from(value: SceneComponent) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneComponent> for super::CompositionObject {
+impl ::core::convert::From<&SceneComponent> for super::CompositionObject {
     fn from(value: &SceneComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneComponent {}
-unsafe impl ::std::marker::Sync for SceneComponent {}
+unsafe impl ::core::marker::Send for SceneComponent {}
+unsafe impl ::core::marker::Sync for SceneComponent {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneComponentCollection(pub ::windows::runtime::IInspectable);
 impl SceneComponentCollection {
@@ -2286,9 +2286,9 @@ impl SceneComponentCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<SceneComponent> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -2299,9 +2299,9 @@ impl SceneComponentCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -2314,9 +2314,9 @@ impl SceneComponentCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<SceneComponent>>(result__)
@@ -2330,9 +2330,9 @@ impl SceneComponentCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -2349,7 +2349,7 @@ impl SceneComponentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -2365,7 +2365,7 @@ impl SceneComponentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -2377,7 +2377,7 @@ impl SceneComponentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -2391,7 +2391,7 @@ impl SceneComponentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2401,14 +2401,14 @@ impl SceneComponentCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
@@ -2419,12 +2419,12 @@ impl SceneComponentCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -2438,9 +2438,9 @@ impl SceneComponentCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -2454,9 +2454,9 @@ impl SceneComponentCollection {
             ::windows::Foundation::Collections::IIterable<SceneComponent>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<SceneComponent>>(result__)
@@ -2475,7 +2475,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -2486,9 +2486,9 @@ impl SceneComponentCollection {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -2498,9 +2498,9 @@ impl SceneComponentCollection {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -2519,7 +2519,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -2537,7 +2537,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -2547,10 +2547,10 @@ impl SceneComponentCollection {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -2567,7 +2567,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2579,9 +2579,9 @@ impl SceneComponentCollection {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -2598,7 +2598,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2615,7 +2615,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2632,7 +2632,7 @@ impl SceneComponentCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2645,9 +2645,9 @@ impl SceneComponentCollection {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -2663,9 +2663,9 @@ impl SceneComponentCollection {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -2676,7 +2676,7 @@ impl SceneComponentCollection {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -2690,12 +2690,12 @@ unsafe impl ::windows::runtime::Interface for SceneComponentCollection {
 impl ::windows::runtime::RuntimeName for SceneComponentCollection {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneComponentCollection";
 }
-impl ::std::convert::From<SceneComponentCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneComponentCollection> for ::windows::runtime::IUnknown {
     fn from(value: SceneComponentCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneComponentCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneComponentCollection> for ::windows::runtime::IUnknown {
     fn from(value: &SceneComponentCollection) -> Self {
         value.0 .0.clone()
     }
@@ -2714,12 +2714,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneComponentCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneComponentCollection> for ::windows::runtime::IInspectable {
     fn from(value: SceneComponentCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneComponentCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneComponentCollection> for ::windows::runtime::IInspectable {
     fn from(value: &SceneComponentCollection) -> Self {
         value.0.clone()
     }
@@ -2738,18 +2738,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<SceneComponentCollection>
+impl ::core::convert::From<SceneComponentCollection>
     for ::windows::Foundation::Collections::IVector<SceneComponent>
 {
     fn from(value: SceneComponentCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&SceneComponentCollection>
+impl ::core::convert::From<&SceneComponentCollection>
     for ::windows::Foundation::Collections::IVector<SceneComponent>
 {
     fn from(value: &SceneComponentCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a>
@@ -2760,7 +2760,7 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<SceneComponent>>
     {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a>
@@ -2771,18 +2771,18 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<SceneComponent>>
     {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<SceneComponentCollection>
+impl ::core::convert::TryFrom<SceneComponentCollection>
     for ::windows::Foundation::Collections::IIterable<SceneComponent>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneComponentCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneComponentCollection>
+impl ::core::convert::TryFrom<&SceneComponentCollection>
     for ::windows::Foundation::Collections::IIterable<SceneComponent>
 {
     type Error = ::windows::runtime::Error;
@@ -2809,16 +2809,16 @@ impl<'a>
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<SceneComponent>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < SceneComponent > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < SceneComponent > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-impl ::std::convert::TryFrom<SceneComponentCollection> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneComponentCollection> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneComponentCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneComponentCollection> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneComponentCollection> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneComponentCollection) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -2831,18 +2831,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneCom
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneComponentCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneComponentCollection> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneComponentCollection> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneComponentCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneComponentCollection> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneComponentCollection> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneComponentCollection) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -2859,92 +2859,92 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneComponentCollection
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneComponentCollection> for SceneObject {
+impl ::core::convert::From<SceneComponentCollection> for SceneObject {
     fn from(value: SceneComponentCollection) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneComponentCollection> for SceneObject {
+impl ::core::convert::From<&SceneComponentCollection> for SceneObject {
     fn from(value: &SceneComponentCollection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneComponentCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneComponentCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneComponentCollection> for super::CompositionObject {
+impl ::core::convert::From<SceneComponentCollection> for super::CompositionObject {
     fn from(value: SceneComponentCollection) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneComponentCollection> for super::CompositionObject {
+impl ::core::convert::From<&SceneComponentCollection> for super::CompositionObject {
     fn from(value: &SceneComponentCollection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneComponentCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneComponentCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneComponentCollection {}
-unsafe impl ::std::marker::Sync for SceneComponentCollection {}
+unsafe impl ::core::marker::Send for SceneComponentCollection {}
+unsafe impl ::core::marker::Sync for SceneComponentCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for SceneComponentCollection {
+impl ::core::iter::IntoIterator for SceneComponentCollection {
     type Item = SceneComponent;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &SceneComponentCollection {
+impl ::core::iter::IntoIterator for &SceneComponentCollection {
     type Item = SceneComponent;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct SceneComponentType(pub i32);
 impl SceneComponentType {
     pub const MeshRendererComponent: SceneComponentType = SceneComponentType(0i32);
 }
-impl ::std::convert::From<i32> for SceneComponentType {
+impl ::core::convert::From<i32> for SceneComponentType {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -2963,10 +2963,10 @@ impl ::windows::runtime::DefaultType for SceneComponentType {
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneMaterial(pub ::windows::runtime::IInspectable);
 impl SceneMaterial {
@@ -2983,7 +2983,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -2994,9 +2994,9 @@ impl SceneMaterial {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -3006,9 +3006,9 @@ impl SceneMaterial {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -3027,7 +3027,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -3045,7 +3045,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -3055,10 +3055,10 @@ impl SceneMaterial {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3075,7 +3075,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3087,9 +3087,9 @@ impl SceneMaterial {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -3106,7 +3106,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3123,7 +3123,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3140,7 +3140,7 @@ impl SceneMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3153,9 +3153,9 @@ impl SceneMaterial {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -3171,9 +3171,9 @@ impl SceneMaterial {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -3184,7 +3184,7 @@ impl SceneMaterial {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -3205,12 +3205,12 @@ unsafe impl ::windows::runtime::Interface for SceneMaterial {
 impl ::windows::runtime::RuntimeName for SceneMaterial {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneMaterial";
 }
-impl ::std::convert::From<SceneMaterial> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneMaterial> for ::windows::runtime::IUnknown {
     fn from(value: SceneMaterial) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneMaterial> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneMaterial> for ::windows::runtime::IUnknown {
     fn from(value: &SceneMaterial) -> Self {
         value.0 .0.clone()
     }
@@ -3225,12 +3225,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneMaterial> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneMaterial> for ::windows::runtime::IInspectable {
     fn from(value: SceneMaterial) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneMaterial> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneMaterial> for ::windows::runtime::IInspectable {
     fn from(value: &SceneMaterial) -> Self {
         value.0.clone()
     }
@@ -3245,13 +3245,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneMaterial> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneMaterial> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMaterial) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMaterial> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneMaterial> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMaterial) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -3264,18 +3264,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneMat
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMaterial> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneMaterial> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMaterial) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMaterial> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneMaterial> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMaterial) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -3288,66 +3288,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneMaterial> for SceneObject {
+impl ::core::convert::From<SceneMaterial> for SceneObject {
     fn from(value: SceneMaterial) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMaterial> for SceneObject {
+impl ::core::convert::From<&SceneMaterial> for SceneObject {
     fn from(value: &SceneMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMaterial> for super::CompositionObject {
+impl ::core::convert::From<SceneMaterial> for super::CompositionObject {
     fn from(value: SceneMaterial) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMaterial> for super::CompositionObject {
+impl ::core::convert::From<&SceneMaterial> for super::CompositionObject {
     fn from(value: &SceneMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneMaterial {}
-unsafe impl ::std::marker::Sync for SceneMaterial {}
+unsafe impl ::core::marker::Send for SceneMaterial {}
+unsafe impl ::core::marker::Sync for SceneMaterial {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneMaterialInput(pub ::windows::runtime::IInspectable);
 impl SceneMaterialInput {
@@ -3364,7 +3364,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -3375,9 +3375,9 @@ impl SceneMaterialInput {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -3387,9 +3387,9 @@ impl SceneMaterialInput {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -3408,7 +3408,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -3426,7 +3426,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -3436,10 +3436,10 @@ impl SceneMaterialInput {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3456,7 +3456,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3468,9 +3468,9 @@ impl SceneMaterialInput {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -3487,7 +3487,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3504,7 +3504,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3521,7 +3521,7 @@ impl SceneMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3534,9 +3534,9 @@ impl SceneMaterialInput {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -3552,9 +3552,9 @@ impl SceneMaterialInput {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -3565,7 +3565,7 @@ impl SceneMaterialInput {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -3584,12 +3584,12 @@ unsafe impl ::windows::runtime::Interface for SceneMaterialInput {
 impl ::windows::runtime::RuntimeName for SceneMaterialInput {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneMaterialInput";
 }
-impl ::std::convert::From<SceneMaterialInput> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneMaterialInput> for ::windows::runtime::IUnknown {
     fn from(value: SceneMaterialInput) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneMaterialInput> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneMaterialInput> for ::windows::runtime::IUnknown {
     fn from(value: &SceneMaterialInput) -> Self {
         value.0 .0.clone()
     }
@@ -3606,12 +3606,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneMaterialInput> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneMaterialInput> for ::windows::runtime::IInspectable {
     fn from(value: SceneMaterialInput) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneMaterialInput> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneMaterialInput> for ::windows::runtime::IInspectable {
     fn from(value: &SceneMaterialInput) -> Self {
         value.0.clone()
     }
@@ -3630,13 +3630,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneMaterialInput> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneMaterialInput> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMaterialInput) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMaterialInput> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneMaterialInput> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMaterialInput) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -3649,18 +3649,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneMat
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMaterialInput> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneMaterialInput> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMaterialInput) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMaterialInput> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneMaterialInput> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMaterialInput) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -3677,66 +3677,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneMaterialInput
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneMaterialInput> for SceneObject {
+impl ::core::convert::From<SceneMaterialInput> for SceneObject {
     fn from(value: SceneMaterialInput) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMaterialInput> for SceneObject {
+impl ::core::convert::From<&SceneMaterialInput> for SceneObject {
     fn from(value: &SceneMaterialInput) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMaterialInput> for super::CompositionObject {
+impl ::core::convert::From<SceneMaterialInput> for super::CompositionObject {
     fn from(value: SceneMaterialInput) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMaterialInput> for super::CompositionObject {
+impl ::core::convert::From<&SceneMaterialInput> for super::CompositionObject {
     fn from(value: &SceneMaterialInput) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneMaterialInput {}
-unsafe impl ::std::marker::Sync for SceneMaterialInput {}
+unsafe impl ::core::marker::Send for SceneMaterialInput {}
+unsafe impl ::core::marker::Sync for SceneMaterialInput {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneMesh(pub ::windows::runtime::IInspectable);
 impl SceneMesh {
@@ -3744,9 +3744,9 @@ impl SceneMesh {
     pub fn Bounds(&self) -> ::windows::runtime::Result<SceneBoundingBox> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneBoundingBox>(result__)
@@ -3761,9 +3761,9 @@ impl SceneMesh {
         let this = self;
         unsafe {
             let mut result__: super::super::super::Graphics::DirectX::DirectXPrimitiveTopology =
-                ::std::mem::zeroed();
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::super::Graphics::DirectX::DirectXPrimitiveTopology>(result__)
@@ -3777,8 +3777,11 @@ impl SceneMesh {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).8)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).8)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[cfg(feature = "Graphics_DirectX")]
@@ -3795,7 +3798,7 @@ impl SceneMesh {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 semantic,
                 format,
                 memory.into_param().abi(),
@@ -3808,9 +3811,9 @@ impl SceneMesh {
         compositor: Param0,
     ) -> ::windows::runtime::Result<SceneMesh> {
         Self::ISceneMeshStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -3830,7 +3833,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -3841,9 +3844,9 @@ impl SceneMesh {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -3853,9 +3856,9 @@ impl SceneMesh {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -3874,7 +3877,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -3892,7 +3895,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -3902,10 +3905,10 @@ impl SceneMesh {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -3922,7 +3925,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3934,9 +3937,9 @@ impl SceneMesh {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -3953,7 +3956,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3970,7 +3973,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3987,7 +3990,7 @@ impl SceneMesh {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4000,9 +4003,9 @@ impl SceneMesh {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -4018,9 +4021,9 @@ impl SceneMesh {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -4031,7 +4034,7 @@ impl SceneMesh {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ISceneMeshStatics<R, F: FnOnce(&ISceneMeshStatics) -> ::windows::runtime::Result<R>>(
@@ -4059,12 +4062,12 @@ unsafe impl ::windows::runtime::Interface for SceneMesh {
 impl ::windows::runtime::RuntimeName for SceneMesh {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneMesh";
 }
-impl ::std::convert::From<SceneMesh> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneMesh> for ::windows::runtime::IUnknown {
     fn from(value: SceneMesh) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneMesh> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneMesh> for ::windows::runtime::IUnknown {
     fn from(value: &SceneMesh) -> Self {
         value.0 .0.clone()
     }
@@ -4079,12 +4082,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneMesh> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneMesh> for ::windows::runtime::IInspectable {
     fn from(value: SceneMesh) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneMesh> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneMesh> for ::windows::runtime::IInspectable {
     fn from(value: &SceneMesh) -> Self {
         value.0.clone()
     }
@@ -4099,13 +4102,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneMesh> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneMesh> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMesh) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMesh> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneMesh> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMesh) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -4118,18 +4121,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneMes
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneMesh {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMesh> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneMesh> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMesh) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMesh> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneMesh> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMesh) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -4142,66 +4145,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneMesh {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneMesh> for SceneObject {
+impl ::core::convert::From<SceneMesh> for SceneObject {
     fn from(value: SceneMesh) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMesh> for SceneObject {
+impl ::core::convert::From<&SceneMesh> for SceneObject {
     fn from(value: &SceneMesh) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneMesh {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneMesh {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMesh> for super::CompositionObject {
+impl ::core::convert::From<SceneMesh> for super::CompositionObject {
     fn from(value: SceneMesh) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMesh> for super::CompositionObject {
+impl ::core::convert::From<&SceneMesh> for super::CompositionObject {
     fn from(value: &SceneMesh) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneMesh {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneMesh {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneMesh {}
-unsafe impl ::std::marker::Sync for SceneMesh {}
+unsafe impl ::core::marker::Send for SceneMesh {}
+unsafe impl ::core::marker::Sync for SceneMesh {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneMeshMaterialAttributeMap(pub ::windows::runtime::IInspectable);
 impl SceneMeshMaterialAttributeMap {
@@ -4225,9 +4228,9 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
@@ -4250,9 +4253,9 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            let mut result__: SceneAttributeSemantic = ::std::mem::zeroed();
+            let mut result__: SceneAttributeSemantic = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 key.into_param().abi(),
                 &mut result__,
             )
@@ -4268,9 +4271,9 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -4288,9 +4291,9 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 key.into_param().abi(),
                 &mut result__,
             )
@@ -4313,9 +4316,9 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IMapView<
@@ -4337,9 +4340,9 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 key.into_param().abi(),
                 value,
                 &mut result__,
@@ -4360,7 +4363,7 @@ impl SceneMeshMaterialAttributeMap {
         >(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 key.into_param().abi(),
             )
             .ok()
@@ -4375,7 +4378,7 @@ impl SceneMeshMaterialAttributeMap {
             >,
         >(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).12)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).12)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
@@ -4391,7 +4394,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -4402,9 +4405,9 @@ impl SceneMeshMaterialAttributeMap {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -4414,9 +4417,9 @@ impl SceneMeshMaterialAttributeMap {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -4435,7 +4438,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -4453,7 +4456,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -4463,10 +4466,10 @@ impl SceneMeshMaterialAttributeMap {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -4483,7 +4486,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4495,9 +4498,9 @@ impl SceneMeshMaterialAttributeMap {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -4514,7 +4517,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4531,7 +4534,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4548,7 +4551,7 @@ impl SceneMeshMaterialAttributeMap {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4561,9 +4564,9 @@ impl SceneMeshMaterialAttributeMap {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -4579,9 +4582,9 @@ impl SceneMeshMaterialAttributeMap {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -4592,7 +4595,7 @@ impl SceneMeshMaterialAttributeMap {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -4611,12 +4614,12 @@ unsafe impl ::windows::runtime::Interface for SceneMeshMaterialAttributeMap {
 impl ::windows::runtime::RuntimeName for SceneMeshMaterialAttributeMap {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap";
 }
-impl ::std::convert::From<SceneMeshMaterialAttributeMap> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneMeshMaterialAttributeMap> for ::windows::runtime::IUnknown {
     fn from(value: SceneMeshMaterialAttributeMap) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneMeshMaterialAttributeMap> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneMeshMaterialAttributeMap> for ::windows::runtime::IUnknown {
     fn from(value: &SceneMeshMaterialAttributeMap) -> Self {
         value.0 .0.clone()
     }
@@ -4635,12 +4638,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneMeshMaterialAttributeMap> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneMeshMaterialAttributeMap> for ::windows::runtime::IInspectable {
     fn from(value: SceneMeshMaterialAttributeMap) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneMeshMaterialAttributeMap> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneMeshMaterialAttributeMap> for ::windows::runtime::IInspectable {
     fn from(value: &SceneMeshMaterialAttributeMap) -> Self {
         value.0.clone()
     }
@@ -4659,7 +4662,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneMeshMaterialAttributeMap>
+impl ::core::convert::TryFrom<SceneMeshMaterialAttributeMap>
     for ::windows::Foundation::Collections::IIterable<
         ::windows::Foundation::Collections::IKeyValuePair<
             ::windows::runtime::HSTRING,
@@ -4669,10 +4672,10 @@ impl ::std::convert::TryFrom<SceneMeshMaterialAttributeMap>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMeshMaterialAttributeMap) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMeshMaterialAttributeMap>
+impl ::core::convert::TryFrom<&SceneMeshMaterialAttributeMap>
     for ::windows::Foundation::Collections::IIterable<
         ::windows::Foundation::Collections::IKeyValuePair<
             ::windows::runtime::HSTRING,
@@ -4732,7 +4735,7 @@ impl<'a>
             >,
         >,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IIterable<
                 ::windows::Foundation::Collections::IKeyValuePair<
                     ::windows::runtime::HSTRING,
@@ -4744,7 +4747,7 @@ impl<'a>
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMeshMaterialAttributeMap>
+impl ::core::convert::TryFrom<SceneMeshMaterialAttributeMap>
     for ::windows::Foundation::Collections::IMap<
         ::windows::runtime::HSTRING,
         SceneAttributeSemantic,
@@ -4752,10 +4755,10 @@ impl ::std::convert::TryFrom<SceneMeshMaterialAttributeMap>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMeshMaterialAttributeMap) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMeshMaterialAttributeMap>
+impl ::core::convert::TryFrom<&SceneMeshMaterialAttributeMap>
     for ::windows::Foundation::Collections::IMap<
         ::windows::runtime::HSTRING,
         SceneAttributeSemantic,
@@ -4805,7 +4808,7 @@ impl<'a>
             SceneAttributeSemantic,
         >,
     > {
-        ::std::convert::TryInto::<
+        ::core::convert::TryInto::<
             ::windows::Foundation::Collections::IMap<
                 ::windows::runtime::HSTRING,
                 SceneAttributeSemantic,
@@ -4815,13 +4818,13 @@ impl<'a>
         .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMeshMaterialAttributeMap> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneMeshMaterialAttributeMap> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMeshMaterialAttributeMap) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMeshMaterialAttributeMap> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneMeshMaterialAttributeMap> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMeshMaterialAttributeMap) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -4838,18 +4841,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &SceneMeshMaterialAttributeMap
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMeshMaterialAttributeMap> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneMeshMaterialAttributeMap> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMeshMaterialAttributeMap) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMeshMaterialAttributeMap> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneMeshMaterialAttributeMap> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMeshMaterialAttributeMap) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -4866,39 +4869,39 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneMeshMaterialAttributeMap
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneMeshMaterialAttributeMap> for SceneObject {
+impl ::core::convert::From<SceneMeshMaterialAttributeMap> for SceneObject {
     fn from(value: SceneMeshMaterialAttributeMap) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMeshMaterialAttributeMap> for SceneObject {
+impl ::core::convert::From<&SceneMeshMaterialAttributeMap> for SceneObject {
     fn from(value: &SceneMeshMaterialAttributeMap) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneMeshMaterialAttributeMap {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneMeshMaterialAttributeMap {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMeshMaterialAttributeMap> for super::CompositionObject {
+impl ::core::convert::From<SceneMeshMaterialAttributeMap> for super::CompositionObject {
     fn from(value: SceneMeshMaterialAttributeMap) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMeshMaterialAttributeMap> for super::CompositionObject {
+impl ::core::convert::From<&SceneMeshMaterialAttributeMap> for super::CompositionObject {
     fn from(value: &SceneMeshMaterialAttributeMap) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -4907,7 +4910,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for SceneMeshMaterialAttributeMap
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -4916,26 +4919,26 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &SceneMeshMaterialAttributeMap
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneMeshMaterialAttributeMap {}
-unsafe impl ::std::marker::Sync for SceneMeshMaterialAttributeMap {}
+unsafe impl ::core::marker::Send for SceneMeshMaterialAttributeMap {}
+unsafe impl ::core::marker::Sync for SceneMeshMaterialAttributeMap {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for SceneMeshMaterialAttributeMap {
+impl ::core::iter::IntoIterator for SceneMeshMaterialAttributeMap {
     type Item = ::windows::Foundation::Collections::IKeyValuePair<
         ::windows::runtime::HSTRING,
         SceneAttributeSemantic,
     >;
     type IntoIter = ::windows::Foundation::Collections::IIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &SceneMeshMaterialAttributeMap {
+impl ::core::iter::IntoIterator for &SceneMeshMaterialAttributeMap {
     type Item = ::windows::Foundation::Collections::IKeyValuePair<
         ::windows::runtime::HSTRING,
         SceneAttributeSemantic,
@@ -4948,10 +4951,10 @@ impl ::std::iter::IntoIterator for &SceneMeshMaterialAttributeMap {
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneMeshRendererComponent(pub ::windows::runtime::IInspectable);
 impl SceneMeshRendererComponent {
@@ -4959,9 +4962,9 @@ impl SceneMeshRendererComponent {
     pub fn Material(&self) -> ::windows::runtime::Result<SceneMaterial> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterial>(result__)
@@ -4975,7 +4978,7 @@ impl SceneMeshRendererComponent {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4985,9 +4988,9 @@ impl SceneMeshRendererComponent {
     pub fn Mesh(&self) -> ::windows::runtime::Result<SceneMesh> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMesh>(result__)
@@ -5001,7 +5004,7 @@ impl SceneMeshRendererComponent {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5011,9 +5014,9 @@ impl SceneMeshRendererComponent {
     pub fn UVMappings(&self) -> ::windows::runtime::Result<SceneMeshMaterialAttributeMap> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMeshMaterialAttributeMap>(result__)
@@ -5024,9 +5027,9 @@ impl SceneMeshRendererComponent {
         compositor: Param0,
     ) -> ::windows::runtime::Result<SceneMeshRendererComponent> {
         Self::ISceneMeshRendererComponentStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -5046,7 +5049,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -5057,9 +5060,9 @@ impl SceneMeshRendererComponent {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -5069,9 +5072,9 @@ impl SceneMeshRendererComponent {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -5090,7 +5093,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -5108,7 +5111,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -5118,10 +5121,10 @@ impl SceneMeshRendererComponent {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -5138,7 +5141,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5150,9 +5153,9 @@ impl SceneMeshRendererComponent {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -5169,7 +5172,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5186,7 +5189,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5203,7 +5206,7 @@ impl SceneMeshRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5216,9 +5219,9 @@ impl SceneMeshRendererComponent {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -5234,9 +5237,9 @@ impl SceneMeshRendererComponent {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -5247,9 +5250,9 @@ impl SceneMeshRendererComponent {
     pub fn ComponentType(&self) -> ::windows::runtime::Result<SceneComponentType> {
         let this = &::windows::runtime::Interface::cast::<ISceneComponent>(self)?;
         unsafe {
-            let mut result__: SceneComponentType = ::std::mem::zeroed();
+            let mut result__: SceneComponentType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneComponentType>(result__)
@@ -5259,7 +5262,7 @@ impl SceneMeshRendererComponent {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ISceneMeshRendererComponentStatics<
@@ -5290,12 +5293,12 @@ unsafe impl ::windows::runtime::Interface for SceneMeshRendererComponent {
 impl ::windows::runtime::RuntimeName for SceneMeshRendererComponent {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent";
 }
-impl ::std::convert::From<SceneMeshRendererComponent> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneMeshRendererComponent> for ::windows::runtime::IUnknown {
     fn from(value: SceneMeshRendererComponent) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneMeshRendererComponent> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneMeshRendererComponent> for ::windows::runtime::IUnknown {
     fn from(value: &SceneMeshRendererComponent) -> Self {
         value.0 .0.clone()
     }
@@ -5314,12 +5317,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneMeshRendererComponent> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneMeshRendererComponent> for ::windows::runtime::IInspectable {
     fn from(value: SceneMeshRendererComponent) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneMeshRendererComponent> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneMeshRendererComponent> for ::windows::runtime::IInspectable {
     fn from(value: &SceneMeshRendererComponent) -> Self {
         value.0.clone()
     }
@@ -5338,13 +5341,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneMeshRendererComponent> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneMeshRendererComponent> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMeshRendererComponent) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMeshRendererComponent> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneMeshRendererComponent> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMeshRendererComponent) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -5359,18 +5362,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &SceneMeshRendererComponent
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMeshRendererComponent> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneMeshRendererComponent> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMeshRendererComponent) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMeshRendererComponent> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneMeshRendererComponent> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMeshRendererComponent) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -5387,83 +5390,85 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneMeshRendererComponent
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneMeshRendererComponent> for SceneRendererComponent {
+impl ::core::convert::From<SceneMeshRendererComponent> for SceneRendererComponent {
     fn from(value: SceneMeshRendererComponent) -> Self {
-        ::std::convert::Into::<SceneRendererComponent>::into(&value)
+        ::core::convert::Into::<SceneRendererComponent>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMeshRendererComponent> for SceneRendererComponent {
+impl ::core::convert::From<&SceneMeshRendererComponent> for SceneRendererComponent {
     fn from(value: &SceneMeshRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneRendererComponent> for SceneMeshRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneRendererComponent> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneRendererComponent>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneRendererComponent>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneRendererComponent> for &SceneMeshRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneRendererComponent> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneRendererComponent>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneRendererComponent>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMeshRendererComponent> for SceneComponent {
+impl ::core::convert::From<SceneMeshRendererComponent> for SceneComponent {
     fn from(value: SceneMeshRendererComponent) -> Self {
-        ::std::convert::Into::<SceneComponent>::into(&value)
+        ::core::convert::Into::<SceneComponent>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMeshRendererComponent> for SceneComponent {
+impl ::core::convert::From<&SceneMeshRendererComponent> for SceneComponent {
     fn from(value: &SceneMeshRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneComponent> for SceneMeshRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneComponent> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneComponent>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneComponent>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneComponent> for &SceneMeshRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneComponent> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneComponent>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneComponent>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMeshRendererComponent> for SceneObject {
+impl ::core::convert::From<SceneMeshRendererComponent> for SceneObject {
     fn from(value: SceneMeshRendererComponent) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMeshRendererComponent> for SceneObject {
+impl ::core::convert::From<&SceneMeshRendererComponent> for SceneObject {
     fn from(value: &SceneMeshRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneMeshRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneMeshRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMeshRendererComponent> for super::CompositionObject {
+impl ::core::convert::From<SceneMeshRendererComponent> for super::CompositionObject {
     fn from(value: SceneMeshRendererComponent) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMeshRendererComponent> for super::CompositionObject {
+impl ::core::convert::From<&SceneMeshRendererComponent> for super::CompositionObject {
     fn from(value: &SceneMeshRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -5472,7 +5477,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for SceneMeshRendererComponent
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -5481,20 +5486,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &SceneMeshRendererComponent
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneMeshRendererComponent {}
-unsafe impl ::std::marker::Sync for SceneMeshRendererComponent {}
+unsafe impl ::core::marker::Send for SceneMeshRendererComponent {}
+unsafe impl ::core::marker::Sync for SceneMeshRendererComponent {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneMetallicRoughnessMaterial(pub ::windows::runtime::IInspectable);
 impl SceneMetallicRoughnessMaterial {
@@ -5502,9 +5507,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn BaseColorInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -5518,7 +5523,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5530,9 +5535,9 @@ impl SceneMetallicRoughnessMaterial {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector4> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector4 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector4 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector4>(result__)
@@ -5549,7 +5554,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5559,9 +5564,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn MetallicFactor(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -5572,7 +5577,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5582,9 +5587,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn MetallicRoughnessInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -5601,7 +5606,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5611,9 +5616,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn RoughnessFactor(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -5624,7 +5629,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5635,9 +5640,9 @@ impl SceneMetallicRoughnessMaterial {
         compositor: Param0,
     ) -> ::windows::runtime::Result<SceneMetallicRoughnessMaterial> {
         Self::ISceneMetallicRoughnessMaterialStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -5657,7 +5662,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -5668,9 +5673,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -5680,9 +5685,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -5701,7 +5706,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -5719,7 +5724,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -5729,10 +5734,10 @@ impl SceneMetallicRoughnessMaterial {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -5749,7 +5754,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5761,9 +5766,9 @@ impl SceneMetallicRoughnessMaterial {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -5780,7 +5785,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5797,7 +5802,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5814,7 +5819,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5827,9 +5832,9 @@ impl SceneMetallicRoughnessMaterial {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -5845,9 +5850,9 @@ impl SceneMetallicRoughnessMaterial {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -5858,9 +5863,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn AlphaCutoff(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -5870,17 +5875,20 @@ impl SceneMetallicRoughnessMaterial {
     pub fn SetAlphaCutoff(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn AlphaMode(&self) -> ::windows::runtime::Result<SceneAlphaMode> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: SceneAlphaMode = ::std::mem::zeroed();
+            let mut result__: SceneAlphaMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneAlphaMode>(result__)
@@ -5890,17 +5898,20 @@ impl SceneMetallicRoughnessMaterial {
     pub fn SetAlphaMode(&self, value: SceneAlphaMode) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn EmissiveInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -5914,7 +5925,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5926,9 +5937,9 @@ impl SceneMetallicRoughnessMaterial {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -5945,7 +5956,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5955,9 +5966,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn IsDoubleSided(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -5968,7 +5979,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -5978,9 +5989,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn NormalInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -5994,7 +6005,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6004,9 +6015,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn NormalScale(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -6017,7 +6028,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -6027,9 +6038,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn OcclusionInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -6043,7 +6054,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6053,9 +6064,9 @@ impl SceneMetallicRoughnessMaterial {
     pub fn OcclusionStrength(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -6066,7 +6077,7 @@ impl SceneMetallicRoughnessMaterial {
         let this = &::windows::runtime::Interface::cast::<IScenePbrMaterial>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -6076,7 +6087,7 @@ impl SceneMetallicRoughnessMaterial {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ISceneMetallicRoughnessMaterialStatics<
@@ -6107,12 +6118,12 @@ unsafe impl ::windows::runtime::Interface for SceneMetallicRoughnessMaterial {
 impl ::windows::runtime::RuntimeName for SceneMetallicRoughnessMaterial {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial";
 }
-impl ::std::convert::From<SceneMetallicRoughnessMaterial> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneMetallicRoughnessMaterial> for ::windows::runtime::IUnknown {
     fn from(value: SceneMetallicRoughnessMaterial) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneMetallicRoughnessMaterial> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneMetallicRoughnessMaterial> for ::windows::runtime::IUnknown {
     fn from(value: &SceneMetallicRoughnessMaterial) -> Self {
         value.0 .0.clone()
     }
@@ -6131,12 +6142,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneMetallicRoughnessMaterial> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneMetallicRoughnessMaterial> for ::windows::runtime::IInspectable {
     fn from(value: SceneMetallicRoughnessMaterial) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneMetallicRoughnessMaterial> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneMetallicRoughnessMaterial> for ::windows::runtime::IInspectable {
     fn from(value: &SceneMetallicRoughnessMaterial) -> Self {
         value.0.clone()
     }
@@ -6155,13 +6166,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneMetallicRoughnessMaterial> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneMetallicRoughnessMaterial> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMetallicRoughnessMaterial) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMetallicRoughnessMaterial> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneMetallicRoughnessMaterial> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMetallicRoughnessMaterial) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -6178,18 +6189,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject>
     for &SceneMetallicRoughnessMaterial
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneMetallicRoughnessMaterial> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneMetallicRoughnessMaterial> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneMetallicRoughnessMaterial) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneMetallicRoughnessMaterial> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneMetallicRoughnessMaterial>
+    for ::windows::Foundation::IClosable
+{
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneMetallicRoughnessMaterial) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -6206,83 +6219,83 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneMetallicRoughnessMaterial
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneMetallicRoughnessMaterial> for ScenePbrMaterial {
+impl ::core::convert::From<SceneMetallicRoughnessMaterial> for ScenePbrMaterial {
     fn from(value: SceneMetallicRoughnessMaterial) -> Self {
-        ::std::convert::Into::<ScenePbrMaterial>::into(&value)
+        ::core::convert::Into::<ScenePbrMaterial>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMetallicRoughnessMaterial> for ScenePbrMaterial {
+impl ::core::convert::From<&SceneMetallicRoughnessMaterial> for ScenePbrMaterial {
     fn from(value: &SceneMetallicRoughnessMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ScenePbrMaterial> for SceneMetallicRoughnessMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, ScenePbrMaterial> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<ScenePbrMaterial>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<ScenePbrMaterial>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ScenePbrMaterial> for &SceneMetallicRoughnessMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, ScenePbrMaterial> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<ScenePbrMaterial>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<ScenePbrMaterial>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMetallicRoughnessMaterial> for SceneMaterial {
+impl ::core::convert::From<SceneMetallicRoughnessMaterial> for SceneMaterial {
     fn from(value: SceneMetallicRoughnessMaterial) -> Self {
-        ::std::convert::Into::<SceneMaterial>::into(&value)
+        ::core::convert::Into::<SceneMaterial>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMetallicRoughnessMaterial> for SceneMaterial {
+impl ::core::convert::From<&SceneMetallicRoughnessMaterial> for SceneMaterial {
     fn from(value: &SceneMetallicRoughnessMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneMaterial> for SceneMetallicRoughnessMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneMaterial> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneMaterial>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneMaterial>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneMaterial> for &SceneMetallicRoughnessMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneMaterial> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneMaterial>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneMaterial>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMetallicRoughnessMaterial> for SceneObject {
+impl ::core::convert::From<SceneMetallicRoughnessMaterial> for SceneObject {
     fn from(value: SceneMetallicRoughnessMaterial) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMetallicRoughnessMaterial> for SceneObject {
+impl ::core::convert::From<&SceneMetallicRoughnessMaterial> for SceneObject {
     fn from(value: &SceneMetallicRoughnessMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneMetallicRoughnessMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneMetallicRoughnessMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneMetallicRoughnessMaterial> for super::CompositionObject {
+impl ::core::convert::From<SceneMetallicRoughnessMaterial> for super::CompositionObject {
     fn from(value: SceneMetallicRoughnessMaterial) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneMetallicRoughnessMaterial> for super::CompositionObject {
+impl ::core::convert::From<&SceneMetallicRoughnessMaterial> for super::CompositionObject {
     fn from(value: &SceneMetallicRoughnessMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
@@ -6291,7 +6304,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for SceneMetallicRoughnessMaterial
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -6300,20 +6313,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &SceneMetallicRoughnessMaterial
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneMetallicRoughnessMaterial {}
-unsafe impl ::std::marker::Sync for SceneMetallicRoughnessMaterial {}
+unsafe impl ::core::marker::Send for SceneMetallicRoughnessMaterial {}
+unsafe impl ::core::marker::Sync for SceneMetallicRoughnessMaterial {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneModelTransform(pub ::windows::runtime::IInspectable);
 impl SceneModelTransform {
@@ -6323,9 +6336,9 @@ impl SceneModelTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Quaternion> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Quaternion = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Quaternion = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Quaternion>(result__)
@@ -6342,7 +6355,7 @@ impl SceneModelTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6352,9 +6365,9 @@ impl SceneModelTransform {
     pub fn RotationAngle(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -6364,17 +6377,20 @@ impl SceneModelTransform {
     pub fn SetRotationAngle(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn RotationAngleInDegrees(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -6385,7 +6401,7 @@ impl SceneModelTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -6397,9 +6413,9 @@ impl SceneModelTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -6416,7 +6432,7 @@ impl SceneModelTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6426,9 +6442,9 @@ impl SceneModelTransform {
     pub fn Scale(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -6445,7 +6461,7 @@ impl SceneModelTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6457,9 +6473,9 @@ impl SceneModelTransform {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -6476,7 +6492,7 @@ impl SceneModelTransform {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6495,7 +6511,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -6506,9 +6522,9 @@ impl SceneModelTransform {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -6518,9 +6534,9 @@ impl SceneModelTransform {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -6539,7 +6555,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -6557,7 +6573,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -6567,10 +6583,10 @@ impl SceneModelTransform {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -6587,7 +6603,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6599,9 +6615,9 @@ impl SceneModelTransform {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -6618,7 +6634,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6635,7 +6651,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6652,7 +6668,7 @@ impl SceneModelTransform {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6665,9 +6681,9 @@ impl SceneModelTransform {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -6683,9 +6699,9 @@ impl SceneModelTransform {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -6696,7 +6712,7 @@ impl SceneModelTransform {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -6715,12 +6731,12 @@ unsafe impl ::windows::runtime::Interface for SceneModelTransform {
 impl ::windows::runtime::RuntimeName for SceneModelTransform {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneModelTransform";
 }
-impl ::std::convert::From<SceneModelTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneModelTransform> for ::windows::runtime::IUnknown {
     fn from(value: SceneModelTransform) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneModelTransform> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneModelTransform> for ::windows::runtime::IUnknown {
     fn from(value: &SceneModelTransform) -> Self {
         value.0 .0.clone()
     }
@@ -6737,12 +6753,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneModelTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneModelTransform> for ::windows::runtime::IInspectable {
     fn from(value: SceneModelTransform) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneModelTransform> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneModelTransform> for ::windows::runtime::IInspectable {
     fn from(value: &SceneModelTransform) -> Self {
         value.0.clone()
     }
@@ -6761,13 +6777,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneModelTransform> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneModelTransform> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneModelTransform) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneModelTransform> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneModelTransform> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneModelTransform) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -6780,18 +6796,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneMod
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneModelTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneModelTransform> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneModelTransform> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneModelTransform) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneModelTransform> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneModelTransform> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneModelTransform) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -6808,68 +6824,70 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneModelTransform
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneModelTransform> for super::CompositionTransform {
+impl ::core::convert::From<SceneModelTransform> for super::CompositionTransform {
     fn from(value: SceneModelTransform) -> Self {
-        ::std::convert::Into::<super::CompositionTransform>::into(&value)
+        ::core::convert::Into::<super::CompositionTransform>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneModelTransform> for super::CompositionTransform {
+impl ::core::convert::From<&SceneModelTransform> for super::CompositionTransform {
     fn from(value: &SceneModelTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionTransform> for SceneModelTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionTransform>::into(
-            self,
-        ))
+        ::windows::runtime::Param::Owned(
+            ::core::convert::Into::<super::CompositionTransform>::into(self),
+        )
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionTransform> for &SceneModelTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionTransform> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionTransform>::into(
-            ::std::clone::Clone::clone(self),
-        ))
+        ::windows::runtime::Param::Owned(
+            ::core::convert::Into::<super::CompositionTransform>::into(
+                ::core::clone::Clone::clone(self),
+            ),
+        )
     }
 }
-impl ::std::convert::From<SceneModelTransform> for super::CompositionObject {
+impl ::core::convert::From<SceneModelTransform> for super::CompositionObject {
     fn from(value: SceneModelTransform) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneModelTransform> for super::CompositionObject {
+impl ::core::convert::From<&SceneModelTransform> for super::CompositionObject {
     fn from(value: &SceneModelTransform) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneModelTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneModelTransform {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneModelTransform {}
-unsafe impl ::std::marker::Sync for SceneModelTransform {}
+unsafe impl ::core::marker::Send for SceneModelTransform {}
+unsafe impl ::core::marker::Sync for SceneModelTransform {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneNode(pub ::windows::runtime::IInspectable);
 impl SceneNode {
@@ -6877,9 +6895,9 @@ impl SceneNode {
     pub fn Children(&self) -> ::windows::runtime::Result<SceneNodeCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneNodeCollection>(result__)
@@ -6889,9 +6907,9 @@ impl SceneNode {
     pub fn Components(&self) -> ::windows::runtime::Result<SceneComponentCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneComponentCollection>(result__)
@@ -6901,9 +6919,9 @@ impl SceneNode {
     pub fn Parent(&self) -> ::windows::runtime::Result<SceneNode> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneNode>(result__)
@@ -6913,9 +6931,9 @@ impl SceneNode {
     pub fn Transform(&self) -> ::windows::runtime::Result<SceneModelTransform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneModelTransform>(result__)
@@ -6928,9 +6946,9 @@ impl SceneNode {
     ) -> ::windows::runtime::Result<SceneComponent> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
                 &mut result__,
             )
@@ -6942,9 +6960,9 @@ impl SceneNode {
         compositor: Param0,
     ) -> ::windows::runtime::Result<SceneNode> {
         Self::ISceneNodeStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -6964,7 +6982,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -6975,9 +6993,9 @@ impl SceneNode {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -6987,9 +7005,9 @@ impl SceneNode {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -7008,7 +7026,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -7026,7 +7044,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -7036,10 +7054,10 @@ impl SceneNode {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -7056,7 +7074,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7068,9 +7086,9 @@ impl SceneNode {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -7087,7 +7105,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7104,7 +7122,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7121,7 +7139,7 @@ impl SceneNode {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7134,9 +7152,9 @@ impl SceneNode {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -7152,9 +7170,9 @@ impl SceneNode {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -7165,7 +7183,7 @@ impl SceneNode {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ISceneNodeStatics<R, F: FnOnce(&ISceneNodeStatics) -> ::windows::runtime::Result<R>>(
@@ -7193,12 +7211,12 @@ unsafe impl ::windows::runtime::Interface for SceneNode {
 impl ::windows::runtime::RuntimeName for SceneNode {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneNode";
 }
-impl ::std::convert::From<SceneNode> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneNode> for ::windows::runtime::IUnknown {
     fn from(value: SceneNode) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneNode> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneNode> for ::windows::runtime::IUnknown {
     fn from(value: &SceneNode) -> Self {
         value.0 .0.clone()
     }
@@ -7213,12 +7231,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneNode> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneNode> for ::windows::runtime::IInspectable {
     fn from(value: SceneNode) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneNode> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneNode> for ::windows::runtime::IInspectable {
     fn from(value: &SceneNode) -> Self {
         value.0.clone()
     }
@@ -7233,13 +7251,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneNode> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneNode> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneNode) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneNode> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneNode> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneNode) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7252,18 +7270,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneNod
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneNode {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneNode> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneNode> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneNode) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneNode> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneNode> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneNode) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7276,66 +7294,66 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneNode {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneNode> for SceneObject {
+impl ::core::convert::From<SceneNode> for SceneObject {
     fn from(value: SceneNode) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneNode> for SceneObject {
+impl ::core::convert::From<&SceneNode> for SceneObject {
     fn from(value: &SceneNode) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneNode {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneNode {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneNode> for super::CompositionObject {
+impl ::core::convert::From<SceneNode> for super::CompositionObject {
     fn from(value: SceneNode) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneNode> for super::CompositionObject {
+impl ::core::convert::From<&SceneNode> for super::CompositionObject {
     fn from(value: &SceneNode) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneNode {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneNode {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneNode {}
-unsafe impl ::std::marker::Sync for SceneNode {}
+unsafe impl ::core::marker::Send for SceneNode {}
+unsafe impl ::core::marker::Sync for SceneNode {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneNodeCollection(pub ::windows::runtime::IInspectable);
 impl SceneNodeCollection {
@@ -7343,9 +7361,9 @@ impl SceneNodeCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::runtime::Result<SceneNode> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -7356,9 +7374,9 @@ impl SceneNodeCollection {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -7371,9 +7389,9 @@ impl SceneNodeCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<SceneNode>>(result__)
@@ -7387,9 +7405,9 @@ impl SceneNodeCollection {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -7406,7 +7424,7 @@ impl SceneNodeCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -7422,7 +7440,7 @@ impl SceneNodeCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -7434,7 +7452,7 @@ impl SceneNodeCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -7448,7 +7466,7 @@ impl SceneNodeCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7458,14 +7476,14 @@ impl SceneNodeCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
@@ -7476,12 +7494,12 @@ impl SceneNodeCollection {
     ) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 startindex,
                 items.len() as u32,
-                ::std::mem::transmute_copy(&items),
+                ::core::mem::transmute_copy(&items),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -7495,9 +7513,9 @@ impl SceneNodeCollection {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 items.len() as u32,
-                ::std::mem::transmute(items.as_ptr()),
+                ::core::mem::transmute(items.as_ptr()),
             )
             .ok()
         }
@@ -7510,9 +7528,9 @@ impl SceneNodeCollection {
             ::windows::Foundation::Collections::IIterable<SceneNode>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<SceneNode>>(result__)
@@ -7531,7 +7549,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -7542,9 +7560,9 @@ impl SceneNodeCollection {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -7554,9 +7572,9 @@ impl SceneNodeCollection {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -7575,7 +7593,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -7593,7 +7611,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -7603,10 +7621,10 @@ impl SceneNodeCollection {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -7623,7 +7641,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7635,9 +7653,9 @@ impl SceneNodeCollection {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -7654,7 +7672,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7671,7 +7689,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7688,7 +7706,7 @@ impl SceneNodeCollection {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7701,9 +7719,9 @@ impl SceneNodeCollection {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -7719,9 +7737,9 @@ impl SceneNodeCollection {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -7732,7 +7750,7 @@ impl SceneNodeCollection {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -7746,12 +7764,12 @@ unsafe impl ::windows::runtime::Interface for SceneNodeCollection {
 impl ::windows::runtime::RuntimeName for SceneNodeCollection {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneNodeCollection";
 }
-impl ::std::convert::From<SceneNodeCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneNodeCollection> for ::windows::runtime::IUnknown {
     fn from(value: SceneNodeCollection) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneNodeCollection> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneNodeCollection> for ::windows::runtime::IUnknown {
     fn from(value: &SceneNodeCollection) -> Self {
         value.0 .0.clone()
     }
@@ -7768,12 +7786,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneNodeCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneNodeCollection> for ::windows::runtime::IInspectable {
     fn from(value: SceneNodeCollection) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneNodeCollection> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneNodeCollection> for ::windows::runtime::IInspectable {
     fn from(value: &SceneNodeCollection) -> Self {
         value.0.clone()
     }
@@ -7792,18 +7810,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::From<SceneNodeCollection>
+impl ::core::convert::From<SceneNodeCollection>
     for ::windows::Foundation::Collections::IVector<SceneNode>
 {
     fn from(value: SceneNodeCollection) -> Self {
-        unsafe { ::std::mem::transmute(value) }
+        unsafe { ::core::mem::transmute(value) }
     }
 }
-impl ::std::convert::From<&SceneNodeCollection>
+impl ::core::convert::From<&SceneNodeCollection>
     for ::windows::Foundation::Collections::IVector<SceneNode>
 {
     fn from(value: &SceneNodeCollection) -> Self {
-        ::std::convert::From::from(::std::clone::Clone::clone(value))
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<SceneNode>>
@@ -7812,7 +7830,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<SceneNode>> {
-        ::windows::runtime::Param::Owned(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::IVector<SceneNode>>
@@ -7821,18 +7839,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
     fn into_param(
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IVector<SceneNode>> {
-        ::windows::runtime::Param::Borrowed(unsafe { ::std::mem::transmute(self) })
+        ::windows::runtime::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
-impl ::std::convert::TryFrom<SceneNodeCollection>
+impl ::core::convert::TryFrom<SceneNodeCollection>
     for ::windows::Foundation::Collections::IIterable<SceneNode>
 {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneNodeCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneNodeCollection>
+impl ::core::convert::TryFrom<&SceneNodeCollection>
     for ::windows::Foundation::Collections::IIterable<SceneNode>
 {
     type Error = ::windows::runtime::Error;
@@ -7857,16 +7875,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::Collections::I
         self,
     ) -> ::windows::runtime::Param<'a, ::windows::Foundation::Collections::IIterable<SceneNode>>
     {
-        :: std :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < SceneNode > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
+        :: core :: convert :: TryInto :: < ::windows::Foundation::Collections:: IIterable :: < SceneNode > > :: try_into ( self ) . map ( :: windows :: runtime :: Param :: Owned ) . unwrap_or ( :: windows :: runtime :: Param :: None )
     }
 }
-impl ::std::convert::TryFrom<SceneNodeCollection> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneNodeCollection> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneNodeCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneNodeCollection> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneNodeCollection> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneNodeCollection) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7879,18 +7897,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneNod
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneNodeCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneNodeCollection> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneNodeCollection> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneNodeCollection) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneNodeCollection> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneNodeCollection> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneNodeCollection) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -7907,84 +7925,84 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneNodeCollection
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneNodeCollection> for SceneObject {
+impl ::core::convert::From<SceneNodeCollection> for SceneObject {
     fn from(value: SceneNodeCollection) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneNodeCollection> for SceneObject {
+impl ::core::convert::From<&SceneNodeCollection> for SceneObject {
     fn from(value: &SceneNodeCollection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneNodeCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneNodeCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneNodeCollection> for super::CompositionObject {
+impl ::core::convert::From<SceneNodeCollection> for super::CompositionObject {
     fn from(value: SceneNodeCollection) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneNodeCollection> for super::CompositionObject {
+impl ::core::convert::From<&SceneNodeCollection> for super::CompositionObject {
     fn from(value: &SceneNodeCollection) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneNodeCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneNodeCollection {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneNodeCollection {}
-unsafe impl ::std::marker::Sync for SceneNodeCollection {}
+unsafe impl ::core::marker::Send for SceneNodeCollection {}
+unsafe impl ::core::marker::Sync for SceneNodeCollection {}
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for SceneNodeCollection {
+impl ::core::iter::IntoIterator for SceneNodeCollection {
     type Item = SceneNode;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
-        ::std::iter::IntoIterator::into_iter(&self)
+        ::core::iter::IntoIterator::into_iter(&self)
     }
 }
 #[cfg(all(feature = "Foundation_Collections"))]
-impl ::std::iter::IntoIterator for &SceneNodeCollection {
+impl ::core::iter::IntoIterator for &SceneNodeCollection {
     type Item = SceneNode;
     type IntoIter = ::windows::Foundation::Collections::VectorIterator<Self::Item>;
     fn into_iter(self) -> Self::IntoIter {
         ::windows::Foundation::Collections::VectorIterator::new(
-            ::std::convert::TryInto::try_into(self).ok(),
+            ::core::convert::TryInto::try_into(self).ok(),
         )
     }
 }
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneObject(pub ::windows::runtime::IInspectable);
 impl SceneObject {
@@ -8001,7 +8019,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -8012,9 +8030,9 @@ impl SceneObject {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -8024,9 +8042,9 @@ impl SceneObject {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -8045,7 +8063,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -8063,7 +8081,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -8073,10 +8091,10 @@ impl SceneObject {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -8093,7 +8111,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8105,9 +8123,9 @@ impl SceneObject {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -8124,7 +8142,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8141,7 +8159,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8158,7 +8176,7 @@ impl SceneObject {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8171,9 +8189,9 @@ impl SceneObject {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -8189,9 +8207,9 @@ impl SceneObject {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -8202,7 +8220,7 @@ impl SceneObject {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -8223,12 +8241,12 @@ unsafe impl ::windows::runtime::Interface for SceneObject {
 impl ::windows::runtime::RuntimeName for SceneObject {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneObject";
 }
-impl ::std::convert::From<SceneObject> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneObject> for ::windows::runtime::IUnknown {
     fn from(value: SceneObject) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneObject> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneObject> for ::windows::runtime::IUnknown {
     fn from(value: &SceneObject) -> Self {
         value.0 .0.clone()
     }
@@ -8243,12 +8261,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneObject> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneObject> for ::windows::runtime::IInspectable {
     fn from(value: SceneObject) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneObject> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneObject> for ::windows::runtime::IInspectable {
     fn from(value: &SceneObject) -> Self {
         value.0.clone()
     }
@@ -8263,13 +8281,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneObject> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneObject> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneObject) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneObject> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneObject> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneObject) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -8282,18 +8300,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneObj
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneObject {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneObject> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneObject> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneObject) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneObject> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneObject> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneObject) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -8306,44 +8324,44 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneObject {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneObject> for super::CompositionObject {
+impl ::core::convert::From<SceneObject> for super::CompositionObject {
     fn from(value: SceneObject) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneObject> for super::CompositionObject {
+impl ::core::convert::From<&SceneObject> for super::CompositionObject {
     fn from(value: &SceneObject) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneObject {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneObject {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneObject {}
-unsafe impl ::std::marker::Sync for SceneObject {}
+unsafe impl ::core::marker::Send for SceneObject {}
+unsafe impl ::core::marker::Sync for SceneObject {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct ScenePbrMaterial(pub ::windows::runtime::IInspectable);
 impl ScenePbrMaterial {
@@ -8351,9 +8369,9 @@ impl ScenePbrMaterial {
     pub fn AlphaCutoff(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -8363,17 +8381,20 @@ impl ScenePbrMaterial {
     pub fn SetAlphaCutoff(&self, value: f32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn AlphaMode(&self) -> ::windows::runtime::Result<SceneAlphaMode> {
         let this = self;
         unsafe {
-            let mut result__: SceneAlphaMode = ::std::mem::zeroed();
+            let mut result__: SceneAlphaMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneAlphaMode>(result__)
@@ -8383,17 +8404,20 @@ impl ScenePbrMaterial {
     pub fn SetAlphaMode(&self, value: SceneAlphaMode) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn EmissiveInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -8407,7 +8431,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8419,9 +8443,9 @@ impl ScenePbrMaterial {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -8438,7 +8462,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8448,9 +8472,9 @@ impl ScenePbrMaterial {
     pub fn IsDoubleSided(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -8461,7 +8485,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8471,9 +8495,9 @@ impl ScenePbrMaterial {
     pub fn NormalInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -8487,7 +8511,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8497,9 +8521,9 @@ impl ScenePbrMaterial {
     pub fn NormalScale(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -8510,7 +8534,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8520,9 +8544,9 @@ impl ScenePbrMaterial {
     pub fn OcclusionInput(&self) -> ::windows::runtime::Result<SceneMaterialInput> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneMaterialInput>(result__)
@@ -8536,7 +8560,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8546,9 +8570,9 @@ impl ScenePbrMaterial {
     pub fn OcclusionStrength(&self) -> ::windows::runtime::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -8559,7 +8583,7 @@ impl ScenePbrMaterial {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -8578,7 +8602,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -8589,9 +8613,9 @@ impl ScenePbrMaterial {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -8601,9 +8625,9 @@ impl ScenePbrMaterial {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -8622,7 +8646,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -8640,7 +8664,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -8650,10 +8674,10 @@ impl ScenePbrMaterial {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -8670,7 +8694,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8682,9 +8706,9 @@ impl ScenePbrMaterial {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -8701,7 +8725,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8718,7 +8742,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8735,7 +8759,7 @@ impl ScenePbrMaterial {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8748,9 +8772,9 @@ impl ScenePbrMaterial {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -8766,9 +8790,9 @@ impl ScenePbrMaterial {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -8779,7 +8803,7 @@ impl ScenePbrMaterial {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -8798,12 +8822,12 @@ unsafe impl ::windows::runtime::Interface for ScenePbrMaterial {
 impl ::windows::runtime::RuntimeName for ScenePbrMaterial {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.ScenePbrMaterial";
 }
-impl ::std::convert::From<ScenePbrMaterial> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<ScenePbrMaterial> for ::windows::runtime::IUnknown {
     fn from(value: ScenePbrMaterial) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&ScenePbrMaterial> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&ScenePbrMaterial> for ::windows::runtime::IUnknown {
     fn from(value: &ScenePbrMaterial) -> Self {
         value.0 .0.clone()
     }
@@ -8818,12 +8842,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<ScenePbrMaterial> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<ScenePbrMaterial> for ::windows::runtime::IInspectable {
     fn from(value: ScenePbrMaterial) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&ScenePbrMaterial> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&ScenePbrMaterial> for ::windows::runtime::IInspectable {
     fn from(value: &ScenePbrMaterial) -> Self {
         value.0.clone()
     }
@@ -8840,13 +8864,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<ScenePbrMaterial> for super::IAnimationObject {
+impl ::core::convert::TryFrom<ScenePbrMaterial> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ScenePbrMaterial) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&ScenePbrMaterial> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&ScenePbrMaterial> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &ScenePbrMaterial) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -8859,18 +8883,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for ScenePbr
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<ScenePbrMaterial> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<ScenePbrMaterial> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: ScenePbrMaterial) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&ScenePbrMaterial> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&ScenePbrMaterial> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &ScenePbrMaterial) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -8883,88 +8907,88 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<ScenePbrMaterial> for SceneMaterial {
+impl ::core::convert::From<ScenePbrMaterial> for SceneMaterial {
     fn from(value: ScenePbrMaterial) -> Self {
-        ::std::convert::Into::<SceneMaterial>::into(&value)
+        ::core::convert::Into::<SceneMaterial>::into(&value)
     }
 }
-impl ::std::convert::From<&ScenePbrMaterial> for SceneMaterial {
+impl ::core::convert::From<&ScenePbrMaterial> for SceneMaterial {
     fn from(value: &ScenePbrMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneMaterial> for ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneMaterial> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneMaterial>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneMaterial>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneMaterial> for &ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneMaterial> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneMaterial>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneMaterial>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ScenePbrMaterial> for SceneObject {
+impl ::core::convert::From<ScenePbrMaterial> for SceneObject {
     fn from(value: ScenePbrMaterial) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ScenePbrMaterial> for SceneObject {
+impl ::core::convert::From<&ScenePbrMaterial> for SceneObject {
     fn from(value: &ScenePbrMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<ScenePbrMaterial> for super::CompositionObject {
+impl ::core::convert::From<ScenePbrMaterial> for super::CompositionObject {
     fn from(value: ScenePbrMaterial) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&ScenePbrMaterial> for super::CompositionObject {
+impl ::core::convert::From<&ScenePbrMaterial> for super::CompositionObject {
     fn from(value: &ScenePbrMaterial) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &ScenePbrMaterial {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for ScenePbrMaterial {}
-unsafe impl ::std::marker::Sync for ScenePbrMaterial {}
+unsafe impl ::core::marker::Send for ScenePbrMaterial {}
+unsafe impl ::core::marker::Sync for ScenePbrMaterial {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneRendererComponent(pub ::windows::runtime::IInspectable);
 impl SceneRendererComponent {
@@ -8981,7 +9005,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -8992,9 +9016,9 @@ impl SceneRendererComponent {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -9004,9 +9028,9 @@ impl SceneRendererComponent {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -9025,7 +9049,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -9043,7 +9067,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -9053,10 +9077,10 @@ impl SceneRendererComponent {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -9073,7 +9097,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9085,9 +9109,9 @@ impl SceneRendererComponent {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -9104,7 +9128,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9121,7 +9145,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9138,7 +9162,7 @@ impl SceneRendererComponent {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9151,9 +9175,9 @@ impl SceneRendererComponent {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -9169,9 +9193,9 @@ impl SceneRendererComponent {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -9182,9 +9206,9 @@ impl SceneRendererComponent {
     pub fn ComponentType(&self) -> ::windows::runtime::Result<SceneComponentType> {
         let this = &::windows::runtime::Interface::cast::<ISceneComponent>(self)?;
         unsafe {
-            let mut result__: SceneComponentType = ::std::mem::zeroed();
+            let mut result__: SceneComponentType = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneComponentType>(result__)
@@ -9194,7 +9218,7 @@ impl SceneRendererComponent {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -9213,12 +9237,12 @@ unsafe impl ::windows::runtime::Interface for SceneRendererComponent {
 impl ::windows::runtime::RuntimeName for SceneRendererComponent {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneRendererComponent";
 }
-impl ::std::convert::From<SceneRendererComponent> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneRendererComponent> for ::windows::runtime::IUnknown {
     fn from(value: SceneRendererComponent) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneRendererComponent> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneRendererComponent> for ::windows::runtime::IUnknown {
     fn from(value: &SceneRendererComponent) -> Self {
         value.0 .0.clone()
     }
@@ -9237,12 +9261,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneRendererComponent> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneRendererComponent> for ::windows::runtime::IInspectable {
     fn from(value: SceneRendererComponent) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneRendererComponent> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneRendererComponent> for ::windows::runtime::IInspectable {
     fn from(value: &SceneRendererComponent) -> Self {
         value.0.clone()
     }
@@ -9261,13 +9285,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneRendererComponent> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneRendererComponent> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneRendererComponent) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneRendererComponent> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneRendererComponent> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneRendererComponent) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9280,18 +9304,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneRen
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneRendererComponent> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneRendererComponent> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneRendererComponent) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneRendererComponent> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneRendererComponent> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneRendererComponent) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9308,88 +9332,88 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneRendererComponent
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneRendererComponent> for SceneComponent {
+impl ::core::convert::From<SceneRendererComponent> for SceneComponent {
     fn from(value: SceneRendererComponent) -> Self {
-        ::std::convert::Into::<SceneComponent>::into(&value)
+        ::core::convert::Into::<SceneComponent>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneRendererComponent> for SceneComponent {
+impl ::core::convert::From<&SceneRendererComponent> for SceneComponent {
     fn from(value: &SceneRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneComponent> for SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneComponent> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneComponent>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneComponent>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneComponent> for &SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneComponent> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneComponent>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneComponent>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneRendererComponent> for SceneObject {
+impl ::core::convert::From<SceneRendererComponent> for SceneObject {
     fn from(value: SceneRendererComponent) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneRendererComponent> for SceneObject {
+impl ::core::convert::From<&SceneRendererComponent> for SceneObject {
     fn from(value: &SceneRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneRendererComponent> for super::CompositionObject {
+impl ::core::convert::From<SceneRendererComponent> for super::CompositionObject {
     fn from(value: SceneRendererComponent) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneRendererComponent> for super::CompositionObject {
+impl ::core::convert::From<&SceneRendererComponent> for super::CompositionObject {
     fn from(value: &SceneRendererComponent) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneRendererComponent {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneRendererComponent {}
-unsafe impl ::std::marker::Sync for SceneRendererComponent {}
+unsafe impl ::core::marker::Send for SceneRendererComponent {}
+unsafe impl ::core::marker::Sync for SceneRendererComponent {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneSurfaceMaterialInput(pub ::windows::runtime::IInspectable);
 impl SceneSurfaceMaterialInput {
@@ -9399,9 +9423,9 @@ impl SceneSurfaceMaterialInput {
     ) -> ::windows::runtime::Result<super::CompositionBitmapInterpolationMode> {
         let this = self;
         unsafe {
-            let mut result__: super::CompositionBitmapInterpolationMode = ::std::mem::zeroed();
+            let mut result__: super::CompositionBitmapInterpolationMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionBitmapInterpolationMode>(result__)
@@ -9414,17 +9438,20 @@ impl SceneSurfaceMaterialInput {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn Surface(&self) -> ::windows::runtime::Result<super::ICompositionSurface> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ICompositionSurface>(result__)
@@ -9438,7 +9465,7 @@ impl SceneSurfaceMaterialInput {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9448,9 +9475,9 @@ impl SceneSurfaceMaterialInput {
     pub fn WrappingUMode(&self) -> ::windows::runtime::Result<SceneWrappingMode> {
         let this = self;
         unsafe {
-            let mut result__: SceneWrappingMode = ::std::mem::zeroed();
+            let mut result__: SceneWrappingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneWrappingMode>(result__)
@@ -9461,7 +9488,7 @@ impl SceneSurfaceMaterialInput {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9471,9 +9498,9 @@ impl SceneSurfaceMaterialInput {
     pub fn WrappingVMode(&self) -> ::windows::runtime::Result<SceneWrappingMode> {
         let this = self;
         unsafe {
-            let mut result__: SceneWrappingMode = ::std::mem::zeroed();
+            let mut result__: SceneWrappingMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneWrappingMode>(result__)
@@ -9484,7 +9511,7 @@ impl SceneSurfaceMaterialInput {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -9495,9 +9522,9 @@ impl SceneSurfaceMaterialInput {
         compositor: Param0,
     ) -> ::windows::runtime::Result<SceneSurfaceMaterialInput> {
         Self::ISceneSurfaceMaterialInputStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -9517,7 +9544,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -9528,9 +9555,9 @@ impl SceneSurfaceMaterialInput {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -9540,9 +9567,9 @@ impl SceneSurfaceMaterialInput {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -9561,7 +9588,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -9579,7 +9606,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -9589,10 +9616,10 @@ impl SceneSurfaceMaterialInput {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -9609,7 +9636,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9621,9 +9648,9 @@ impl SceneSurfaceMaterialInput {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -9640,7 +9667,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9657,7 +9684,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9674,7 +9701,7 @@ impl SceneSurfaceMaterialInput {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9687,9 +9714,9 @@ impl SceneSurfaceMaterialInput {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -9705,9 +9732,9 @@ impl SceneSurfaceMaterialInput {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -9718,7 +9745,7 @@ impl SceneSurfaceMaterialInput {
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ISceneSurfaceMaterialInputStatics<
@@ -9749,12 +9776,12 @@ unsafe impl ::windows::runtime::Interface for SceneSurfaceMaterialInput {
 impl ::windows::runtime::RuntimeName for SceneSurfaceMaterialInput {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput";
 }
-impl ::std::convert::From<SceneSurfaceMaterialInput> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneSurfaceMaterialInput> for ::windows::runtime::IUnknown {
     fn from(value: SceneSurfaceMaterialInput) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneSurfaceMaterialInput> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneSurfaceMaterialInput> for ::windows::runtime::IUnknown {
     fn from(value: &SceneSurfaceMaterialInput) -> Self {
         value.0 .0.clone()
     }
@@ -9773,12 +9800,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneSurfaceMaterialInput> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneSurfaceMaterialInput> for ::windows::runtime::IInspectable {
     fn from(value: SceneSurfaceMaterialInput) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneSurfaceMaterialInput> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneSurfaceMaterialInput> for ::windows::runtime::IInspectable {
     fn from(value: &SceneSurfaceMaterialInput) -> Self {
         value.0.clone()
     }
@@ -9797,13 +9824,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneSurfaceMaterialInput> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneSurfaceMaterialInput> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneSurfaceMaterialInput) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneSurfaceMaterialInput> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneSurfaceMaterialInput> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneSurfaceMaterialInput) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9816,18 +9843,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneSur
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneSurfaceMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneSurfaceMaterialInput> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneSurfaceMaterialInput> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneSurfaceMaterialInput) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneSurfaceMaterialInput> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneSurfaceMaterialInput> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneSurfaceMaterialInput) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -9844,68 +9871,68 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable>
     for &SceneSurfaceMaterialInput
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneSurfaceMaterialInput> for SceneMaterialInput {
+impl ::core::convert::From<SceneSurfaceMaterialInput> for SceneMaterialInput {
     fn from(value: SceneSurfaceMaterialInput) -> Self {
-        ::std::convert::Into::<SceneMaterialInput>::into(&value)
+        ::core::convert::Into::<SceneMaterialInput>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneSurfaceMaterialInput> for SceneMaterialInput {
+impl ::core::convert::From<&SceneSurfaceMaterialInput> for SceneMaterialInput {
     fn from(value: &SceneSurfaceMaterialInput) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneMaterialInput> for SceneSurfaceMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneMaterialInput> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneMaterialInput>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneMaterialInput>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneMaterialInput> for &SceneSurfaceMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneMaterialInput> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneMaterialInput>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneMaterialInput>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneSurfaceMaterialInput> for SceneObject {
+impl ::core::convert::From<SceneSurfaceMaterialInput> for SceneObject {
     fn from(value: SceneSurfaceMaterialInput) -> Self {
-        ::std::convert::Into::<SceneObject>::into(&value)
+        ::core::convert::Into::<SceneObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneSurfaceMaterialInput> for SceneObject {
+impl ::core::convert::From<&SceneSurfaceMaterialInput> for SceneObject {
     fn from(value: &SceneSurfaceMaterialInput) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for SceneSurfaceMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, SceneObject> for &SceneSurfaceMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, SceneObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<SceneObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<SceneObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneSurfaceMaterialInput> for super::CompositionObject {
+impl ::core::convert::From<SceneSurfaceMaterialInput> for super::CompositionObject {
     fn from(value: SceneSurfaceMaterialInput) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneSurfaceMaterialInput> for super::CompositionObject {
+impl ::core::convert::From<&SceneSurfaceMaterialInput> for super::CompositionObject {
     fn from(value: &SceneSurfaceMaterialInput) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneSurfaceMaterialInput {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
@@ -9914,20 +9941,20 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject>
     for &SceneSurfaceMaterialInput
 {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneSurfaceMaterialInput {}
-unsafe impl ::std::marker::Sync for SceneSurfaceMaterialInput {}
+unsafe impl ::core::marker::Send for SceneSurfaceMaterialInput {}
+unsafe impl ::core::marker::Sync for SceneSurfaceMaterialInput {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct SceneVisual(pub ::windows::runtime::IInspectable);
 impl SceneVisual {
@@ -9935,9 +9962,9 @@ impl SceneVisual {
     pub fn Root(&self) -> ::windows::runtime::Result<SceneNode> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<SceneNode>(result__)
@@ -9951,7 +9978,7 @@ impl SceneVisual {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9962,9 +9989,9 @@ impl SceneVisual {
         compositor: Param0,
     ) -> ::windows::runtime::Result<SceneVisual> {
         Self::ISceneVisualStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 compositor.into_param().abi(),
                 &mut result__,
             )
@@ -9984,7 +10011,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IAnimationObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -9995,9 +10022,9 @@ impl SceneVisual {
     pub fn Compositor(&self) -> ::windows::runtime::Result<super::Compositor> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Compositor>(result__)
@@ -10007,9 +10034,9 @@ impl SceneVisual {
     pub fn Properties(&self) -> ::windows::runtime::Result<super::CompositionPropertySet> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionPropertySet>(result__)
@@ -10028,7 +10055,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -10046,7 +10073,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
             )
             .ok()
@@ -10056,10 +10083,10 @@ impl SceneVisual {
     pub fn Comment(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -10076,7 +10103,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10088,9 +10115,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<super::ImplicitAnimationCollection> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ImplicitAnimationCollection>(result__)
@@ -10107,7 +10134,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10124,7 +10151,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10141,7 +10168,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10154,9 +10181,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject3>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
@@ -10172,9 +10199,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<super::AnimationController> {
         let this = &::windows::runtime::Interface::cast::<super::ICompositionObject4>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 propertyname.into_param().abi(),
                 &mut result__,
             )
@@ -10185,9 +10212,9 @@ impl SceneVisual {
     pub fn Children(&self) -> ::windows::runtime::Result<super::VisualCollection> {
         let this = &::windows::runtime::Interface::cast::<super::IContainerVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::VisualCollection>(result__)
@@ -10199,9 +10226,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
@@ -10218,7 +10245,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10230,9 +10257,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<super::CompositionBackfaceVisibility> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: super::CompositionBackfaceVisibility = ::std::mem::zeroed();
+            let mut result__: super::CompositionBackfaceVisibility = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionBackfaceVisibility>(result__)
@@ -10245,17 +10272,20 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn BorderMode(&self) -> ::windows::runtime::Result<super::CompositionBorderMode> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: super::CompositionBorderMode = ::std::mem::zeroed();
+            let mut result__: super::CompositionBorderMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionBorderMode>(result__)
@@ -10269,7 +10299,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10281,9 +10311,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -10300,7 +10330,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10310,9 +10340,9 @@ impl SceneVisual {
     pub fn Clip(&self) -> ::windows::runtime::Result<super::CompositionClip> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionClip>(result__)
@@ -10326,7 +10356,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).15)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10336,9 +10366,9 @@ impl SceneVisual {
     pub fn CompositeMode(&self) -> ::windows::runtime::Result<super::CompositionCompositeMode> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: super::CompositionCompositeMode = ::std::mem::zeroed();
+            let mut result__: super::CompositionCompositeMode = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).16)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::CompositionCompositeMode>(result__)
@@ -10352,7 +10382,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).17)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10362,9 +10392,9 @@ impl SceneVisual {
     pub fn IsVisible(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).18)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10375,7 +10405,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).19)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10385,9 +10415,9 @@ impl SceneVisual {
     pub fn Offset(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).20)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -10404,7 +10434,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).21)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10414,9 +10444,9 @@ impl SceneVisual {
     pub fn Opacity(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).22)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -10427,7 +10457,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).23)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10439,9 +10469,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Quaternion> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Quaternion = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Quaternion = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).24)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Quaternion>(result__)
@@ -10458,7 +10488,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).25)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10468,9 +10498,9 @@ impl SceneVisual {
     pub fn Parent(&self) -> ::windows::runtime::Result<super::ContainerVisual> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).26)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::ContainerVisual>(result__)
@@ -10480,9 +10510,9 @@ impl SceneVisual {
     pub fn RotationAngle(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).27)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -10493,7 +10523,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).28)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10503,9 +10533,9 @@ impl SceneVisual {
     pub fn RotationAngleInDegrees(&self) -> ::windows::runtime::Result<f32> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: f32 = ::std::mem::zeroed();
+            let mut result__: f32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).29)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<f32>(result__)
@@ -10516,7 +10546,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).30)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -10528,9 +10558,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).31)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -10547,7 +10577,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).32)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10557,9 +10587,9 @@ impl SceneVisual {
     pub fn Scale(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).33)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -10576,7 +10606,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).34)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10586,9 +10616,9 @@ impl SceneVisual {
     pub fn Size(&self) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).35)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
@@ -10605,7 +10635,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).36)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10617,9 +10647,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Matrix4x4> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Matrix4x4 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Matrix4x4 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).37)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
@@ -10636,7 +10666,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).38)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10646,9 +10676,9 @@ impl SceneVisual {
     pub fn ParentForTransform(&self) -> ::windows::runtime::Result<super::Visual> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual2>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<super::Visual>(result__)
@@ -10662,7 +10692,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10674,9 +10704,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
@@ -10693,7 +10723,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10705,9 +10735,9 @@ impl SceneVisual {
     ) -> ::windows::runtime::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
@@ -10724,7 +10754,7 @@ impl SceneVisual {
         let this = &::windows::runtime::Interface::cast::<super::IVisual2>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10734,9 +10764,9 @@ impl SceneVisual {
     pub fn IsHitTestVisible(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual3>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10746,17 +10776,20 @@ impl SceneVisual {
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual3>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn IsPixelSnappingEnabled(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual4>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -10766,15 +10799,18 @@ impl SceneVisual {
     pub fn SetIsPixelSnappingEnabled(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<super::IVisual4>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `UI_Composition_Scenes`*"]
     pub fn Close(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     pub fn ISceneVisualStatics<
@@ -10805,12 +10841,12 @@ unsafe impl ::windows::runtime::Interface for SceneVisual {
 impl ::windows::runtime::RuntimeName for SceneVisual {
     const NAME: &'static str = "Microsoft.UI.Composition.Scenes.SceneVisual";
 }
-impl ::std::convert::From<SceneVisual> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<SceneVisual> for ::windows::runtime::IUnknown {
     fn from(value: SceneVisual) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&SceneVisual> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&SceneVisual> for ::windows::runtime::IUnknown {
     fn from(value: &SceneVisual) -> Self {
         value.0 .0.clone()
     }
@@ -10825,12 +10861,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<SceneVisual> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<SceneVisual> for ::windows::runtime::IInspectable {
     fn from(value: SceneVisual) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&SceneVisual> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&SceneVisual> for ::windows::runtime::IInspectable {
     fn from(value: &SceneVisual) -> Self {
         value.0.clone()
     }
@@ -10845,13 +10881,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<SceneVisual> for super::IAnimationObject {
+impl ::core::convert::TryFrom<SceneVisual> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneVisual) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneVisual> for super::IAnimationObject {
+impl ::core::convert::TryFrom<&SceneVisual> for super::IAnimationObject {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneVisual) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -10864,18 +10900,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for SceneVis
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::IAnimationObject> for &SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::IAnimationObject> {
-        ::std::convert::TryInto::<super::IAnimationObject>::try_into(self)
+        ::core::convert::TryInto::<super::IAnimationObject>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<SceneVisual> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<SceneVisual> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: SceneVisual) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&SceneVisual> for ::windows::Foundation::IClosable {
+impl ::core::convert::TryFrom<&SceneVisual> for ::windows::Foundation::IClosable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &SceneVisual) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -10888,89 +10924,91 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for
 }
 impl<'a> ::windows::runtime::IntoParam<'a, ::windows::Foundation::IClosable> for &SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, ::windows::Foundation::IClosable> {
-        ::std::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
+        ::core::convert::TryInto::<::windows::Foundation::IClosable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::From<SceneVisual> for super::ContainerVisual {
+impl ::core::convert::From<SceneVisual> for super::ContainerVisual {
     fn from(value: SceneVisual) -> Self {
-        ::std::convert::Into::<super::ContainerVisual>::into(&value)
+        ::core::convert::Into::<super::ContainerVisual>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneVisual> for super::ContainerVisual {
+impl ::core::convert::From<&SceneVisual> for super::ContainerVisual {
     fn from(value: &SceneVisual) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::ContainerVisual> for SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::ContainerVisual> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::ContainerVisual>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::ContainerVisual>::into(
+            self,
+        ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::ContainerVisual> for &SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::ContainerVisual> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::ContainerVisual>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::ContainerVisual>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneVisual> for super::Visual {
+impl ::core::convert::From<SceneVisual> for super::Visual {
     fn from(value: SceneVisual) -> Self {
-        ::std::convert::Into::<super::Visual>::into(&value)
+        ::core::convert::Into::<super::Visual>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneVisual> for super::Visual {
+impl ::core::convert::From<&SceneVisual> for super::Visual {
     fn from(value: &SceneVisual) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::Visual> for SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::Visual> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::Visual>::into(self))
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::Visual>::into(self))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::Visual> for &SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::Visual> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::Visual>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::Visual>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-impl ::std::convert::From<SceneVisual> for super::CompositionObject {
+impl ::core::convert::From<SceneVisual> for super::CompositionObject {
     fn from(value: SceneVisual) -> Self {
-        ::std::convert::Into::<super::CompositionObject>::into(&value)
+        ::core::convert::Into::<super::CompositionObject>::into(&value)
     }
 }
-impl ::std::convert::From<&SceneVisual> for super::CompositionObject {
+impl ::core::convert::From<&SceneVisual> for super::CompositionObject {
     fn from(value: &SceneVisual) -> Self {
         ::windows::runtime::Interface::cast(value).unwrap()
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
             self,
         ))
     }
 }
 impl<'a> ::windows::runtime::IntoParam<'a, super::CompositionObject> for &SceneVisual {
     fn into_param(self) -> ::windows::runtime::Param<'a, super::CompositionObject> {
-        ::windows::runtime::Param::Owned(::std::convert::Into::<super::CompositionObject>::into(
-            ::std::clone::Clone::clone(self),
+        ::windows::runtime::Param::Owned(::core::convert::Into::<super::CompositionObject>::into(
+            ::core::clone::Clone::clone(self),
         ))
     }
 }
-unsafe impl ::std::marker::Send for SceneVisual {}
-unsafe impl ::std::marker::Sync for SceneVisual {}
+unsafe impl ::core::marker::Send for SceneVisual {}
+unsafe impl ::core::marker::Sync for SceneVisual {}
 #[doc = "*Required features: `UI_Composition_Scenes`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct SceneWrappingMode(pub i32);
@@ -10979,7 +11017,7 @@ impl SceneWrappingMode {
     pub const MirroredRepeat: SceneWrappingMode = SceneWrappingMode(1i32);
     pub const Repeat: SceneWrappingMode = SceneWrappingMode(2i32);
 }
-impl ::std::convert::From<i32> for SceneWrappingMode {
+impl ::core::convert::From<i32> for SceneWrappingMode {
     fn from(value: i32) -> Self {
         Self(value)
     }

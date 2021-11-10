@@ -10,10 +10,10 @@
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AddPackageDependencyOptions(pub ::windows::runtime::IInspectable);
 impl AddPackageDependencyOptions {
@@ -36,9 +36,9 @@ impl AddPackageDependencyOptions {
     pub fn Rank(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -48,17 +48,20 @@ impl AddPackageDependencyOptions {
     pub fn SetRank(&self, value: i32) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
     pub fn PrependIfRankCollision(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -68,8 +71,11 @@ impl AddPackageDependencyOptions {
     pub fn SetPrependIfRankCollision(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -89,12 +95,12 @@ impl ::windows::runtime::RuntimeName for AddPackageDependencyOptions {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions";
 }
-impl ::std::convert::From<AddPackageDependencyOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AddPackageDependencyOptions> for ::windows::runtime::IUnknown {
     fn from(value: AddPackageDependencyOptions) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AddPackageDependencyOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AddPackageDependencyOptions> for ::windows::runtime::IUnknown {
     fn from(value: &AddPackageDependencyOptions) -> Self {
         value.0 .0.clone()
     }
@@ -113,12 +119,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AddPackageDependencyOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AddPackageDependencyOptions> for ::windows::runtime::IInspectable {
     fn from(value: AddPackageDependencyOptions) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AddPackageDependencyOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AddPackageDependencyOptions> for ::windows::runtime::IInspectable {
     fn from(value: &AddPackageDependencyOptions) -> Self {
         value.0.clone()
     }
@@ -137,15 +143,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AddPackageDependencyOptions {}
-unsafe impl ::std::marker::Sync for AddPackageDependencyOptions {}
+unsafe impl ::core::marker::Send for AddPackageDependencyOptions {}
+unsafe impl ::core::marker::Sync for AddPackageDependencyOptions {}
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct CreatePackageDependencyOptions(pub ::windows::runtime::IInspectable);
 impl CreatePackageDependencyOptions {
@@ -170,9 +176,9 @@ impl CreatePackageDependencyOptions {
     ) -> ::windows::runtime::Result<PackageDependencyProcessorArchitectures> {
         let this = self;
         unsafe {
-            let mut result__: PackageDependencyProcessorArchitectures = ::std::mem::zeroed();
+            let mut result__: PackageDependencyProcessorArchitectures = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PackageDependencyProcessorArchitectures>(result__)
@@ -185,17 +191,20 @@ impl CreatePackageDependencyOptions {
     ) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).7)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
     pub fn VerifyDependencyResolution(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -205,8 +214,11 @@ impl CreatePackageDependencyOptions {
     pub fn SetVerifyDependencyResolution(&self, value: bool) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this), value)
-                .ok()
+            (::windows::runtime::Interface::vtable(this).9)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
@@ -215,9 +227,9 @@ impl CreatePackageDependencyOptions {
     ) -> ::windows::runtime::Result<PackageDependencyLifetimeArtifactKind> {
         let this = self;
         unsafe {
-            let mut result__: PackageDependencyLifetimeArtifactKind = ::std::mem::zeroed();
+            let mut result__: PackageDependencyLifetimeArtifactKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PackageDependencyLifetimeArtifactKind>(result__)
@@ -231,7 +243,7 @@ impl CreatePackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -241,10 +253,10 @@ impl CreatePackageDependencyOptions {
     pub fn LifetimeArtifact(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -261,7 +273,7 @@ impl CreatePackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -284,12 +296,12 @@ impl ::windows::runtime::RuntimeName for CreatePackageDependencyOptions {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions";
 }
-impl ::std::convert::From<CreatePackageDependencyOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<CreatePackageDependencyOptions> for ::windows::runtime::IUnknown {
     fn from(value: CreatePackageDependencyOptions) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&CreatePackageDependencyOptions> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&CreatePackageDependencyOptions> for ::windows::runtime::IUnknown {
     fn from(value: &CreatePackageDependencyOptions) -> Self {
         value.0 .0.clone()
     }
@@ -308,12 +320,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<CreatePackageDependencyOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<CreatePackageDependencyOptions> for ::windows::runtime::IInspectable {
     fn from(value: CreatePackageDependencyOptions) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&CreatePackageDependencyOptions> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&CreatePackageDependencyOptions> for ::windows::runtime::IInspectable {
     fn from(value: &CreatePackageDependencyOptions) -> Self {
         value.0.clone()
     }
@@ -332,8 +344,8 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for CreatePackageDependencyOptions {}
-unsafe impl ::std::marker::Sync for CreatePackageDependencyOptions {}
+unsafe impl ::core::marker::Send for CreatePackageDependencyOptions {}
+unsafe impl ::core::marker::Sync for CreatePackageDependencyOptions {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IAddPackageDependencyOptions(pub ::windows::runtime::IInspectable);
@@ -447,11 +459,11 @@ pub struct ICreatePackageDependencyOptions_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        value: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        value: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -491,7 +503,7 @@ pub struct IPackageDependency_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub unsafe extern "system" fn(this: ::windows::runtime::RawPtr) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
@@ -545,11 +557,11 @@ pub struct IPackageDependencyContext_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub unsafe extern "system" fn(this: ::windows::runtime::RawPtr) -> ::windows::runtime::HRESULT,
 );
@@ -671,30 +683,30 @@ pub struct IPackageDependencyStatics_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        id: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        id: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        id: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        id: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        packagefamilyname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        packagefamilyname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         minversion: ::windows::ApplicationModel::PackageVersion,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        packagefamilyname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        packagefamilyname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         minversion: ::windows::ApplicationModel::PackageVersion,
         options: ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        packagefamilyname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        packagefamilyname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         minversion: ::windows::ApplicationModel::PackageVersion,
         options: ::windows::runtime::RawPtr,
         result__: *mut ::windows::runtime::RawPtr,
@@ -707,10 +719,10 @@ pub struct IPackageDependencyStatics_abi(
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PackageDependency(pub ::windows::runtime::IInspectable);
 impl PackageDependency {
@@ -718,10 +730,10 @@ impl PackageDependency {
     pub fn Id(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -731,16 +743,16 @@ impl PackageDependency {
     pub fn Delete(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).7)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).7)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
     pub fn Add(&self) -> ::windows::runtime::Result<PackageDependencyContext> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PackageDependencyContext>(result__)
@@ -753,9 +765,9 @@ impl PackageDependency {
     ) -> ::windows::runtime::Result<PackageDependencyContext> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 options.into_param().abi(),
                 &mut result__,
             )
@@ -767,9 +779,9 @@ impl PackageDependency {
         id: Param0,
     ) -> ::windows::runtime::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 id.into_param().abi(),
                 &mut result__,
             )
@@ -784,9 +796,9 @@ impl PackageDependency {
         id: Param0,
     ) -> ::windows::runtime::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 id.into_param().abi(),
                 &mut result__,
             )
@@ -803,9 +815,9 @@ impl PackageDependency {
         minversion: Param1,
     ) -> ::windows::runtime::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 packagefamilyname.into_param().abi(),
                 minversion.into_param().abi(),
                 &mut result__,
@@ -825,9 +837,9 @@ impl PackageDependency {
         options: Param2,
     ) -> ::windows::runtime::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 packagefamilyname.into_param().abi(),
                 minversion.into_param().abi(),
                 options.into_param().abi(),
@@ -848,9 +860,9 @@ impl PackageDependency {
         options: Param2,
     ) -> ::windows::runtime::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 packagefamilyname.into_param().abi(),
                 minversion.into_param().abi(),
                 options.into_param().abi(),
@@ -862,9 +874,9 @@ impl PackageDependency {
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
     pub fn GenerationId() -> ::windows::runtime::Result<u32> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -899,12 +911,12 @@ impl ::windows::runtime::RuntimeName for PackageDependency {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency";
 }
-impl ::std::convert::From<PackageDependency> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PackageDependency> for ::windows::runtime::IUnknown {
     fn from(value: PackageDependency) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PackageDependency> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PackageDependency> for ::windows::runtime::IUnknown {
     fn from(value: &PackageDependency) -> Self {
         value.0 .0.clone()
     }
@@ -919,12 +931,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PackageDependency> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PackageDependency> for ::windows::runtime::IInspectable {
     fn from(value: PackageDependency) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PackageDependency> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PackageDependency> for ::windows::runtime::IInspectable {
     fn from(value: &PackageDependency) -> Self {
         value.0.clone()
     }
@@ -941,15 +953,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for PackageDependency {}
-unsafe impl ::std::marker::Sync for PackageDependency {}
+unsafe impl ::core::marker::Send for PackageDependency {}
+unsafe impl ::core::marker::Sync for PackageDependency {}
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct PackageDependencyContext(pub ::windows::runtime::IInspectable);
 impl PackageDependencyContext {
@@ -957,9 +969,9 @@ impl PackageDependencyContext {
     pub fn ContextId(&self) -> ::windows::runtime::Result<PackageDependencyContextId> {
         let this = self;
         unsafe {
-            let mut result__: PackageDependencyContextId = ::std::mem::zeroed();
+            let mut result__: PackageDependencyContextId = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<PackageDependencyContextId>(result__)
@@ -969,10 +981,10 @@ impl PackageDependencyContext {
     pub fn PackageDependencyId(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -982,10 +994,10 @@ impl PackageDependencyContext {
     pub fn PackageFullName(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -995,7 +1007,7 @@ impl PackageDependencyContext {
     pub fn Remove(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).9)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).9)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
@@ -1006,9 +1018,9 @@ impl PackageDependencyContext {
         contextid: Param0,
     ) -> ::windows::runtime::Result<PackageDependencyContext> {
         Self::IPackageDependencyContextFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 contextid.into_param().abi(),
                 &mut result__,
             )
@@ -1044,12 +1056,12 @@ impl ::windows::runtime::RuntimeName for PackageDependencyContext {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext";
 }
-impl ::std::convert::From<PackageDependencyContext> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<PackageDependencyContext> for ::windows::runtime::IUnknown {
     fn from(value: PackageDependencyContext) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&PackageDependencyContext> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&PackageDependencyContext> for ::windows::runtime::IUnknown {
     fn from(value: &PackageDependencyContext) -> Self {
         value.0 .0.clone()
     }
@@ -1068,12 +1080,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<PackageDependencyContext> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<PackageDependencyContext> for ::windows::runtime::IInspectable {
     fn from(value: PackageDependencyContext) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&PackageDependencyContext> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&PackageDependencyContext> for ::windows::runtime::IInspectable {
     fn from(value: &PackageDependencyContext) -> Self {
         value.0.clone()
     }
@@ -1092,33 +1104,33 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for PackageDependencyContext {}
-unsafe impl ::std::marker::Sync for PackageDependencyContext {}
-#[derive(:: std :: clone :: Clone, :: std :: marker :: Copy)]
+unsafe impl ::core::marker::Send for PackageDependencyContext {}
+unsafe impl ::core::marker::Sync for PackageDependencyContext {}
+#[derive(:: core :: clone :: Clone, :: core :: marker :: Copy)]
 #[repr(C)]
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 pub struct PackageDependencyContextId {
     pub Id: u64,
 }
 impl PackageDependencyContextId {}
-impl ::std::default::Default for PackageDependencyContextId {
+impl ::core::default::Default for PackageDependencyContextId {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        unsafe { ::core::mem::zeroed() }
     }
 }
-impl ::std::fmt::Debug for PackageDependencyContextId {
-    fn fmt(&self, fmt: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
+impl ::core::fmt::Debug for PackageDependencyContextId {
+    fn fmt(&self, fmt: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
         fmt.debug_struct("PackageDependencyContextId")
             .field("Id", &self.Id)
             .finish()
     }
 }
-impl ::std::cmp::PartialEq for PackageDependencyContextId {
+impl ::core::cmp::PartialEq for PackageDependencyContextId {
     fn eq(&self, other: &Self) -> bool {
         self.Id == other.Id
     }
 }
-impl ::std::cmp::Eq for PackageDependencyContextId {}
+impl ::core::cmp::Eq for PackageDependencyContextId {}
 unsafe impl ::windows::runtime::Abi for PackageDependencyContextId {
     type Abi = Self;
 }
@@ -1130,12 +1142,12 @@ impl ::windows::runtime::DefaultType for PackageDependencyContextId {
 }
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct PackageDependencyLifetimeArtifactKind(pub i32);
@@ -1147,7 +1159,7 @@ impl PackageDependencyLifetimeArtifactKind {
     pub const RegistryKey: PackageDependencyLifetimeArtifactKind =
         PackageDependencyLifetimeArtifactKind(2i32);
 }
-impl ::std::convert::From<i32> for PackageDependencyLifetimeArtifactKind {
+impl ::core::convert::From<i32> for PackageDependencyLifetimeArtifactKind {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1163,12 +1175,12 @@ impl ::windows::runtime::DefaultType for PackageDependencyLifetimeArtifactKind {
 }
 #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct PackageDependencyProcessorArchitectures(pub u32);
@@ -1188,7 +1200,7 @@ impl PackageDependencyProcessorArchitectures {
     pub const X86OnArm64: PackageDependencyProcessorArchitectures =
         PackageDependencyProcessorArchitectures(32u32);
 }
-impl ::std::convert::From<u32> for PackageDependencyProcessorArchitectures {
+impl ::core::convert::From<u32> for PackageDependencyProcessorArchitectures {
     fn from(value: u32) -> Self {
         Self(value)
     }
@@ -1202,29 +1214,29 @@ unsafe impl ::windows::runtime::RuntimeType for PackageDependencyProcessorArchit
 impl ::windows::runtime::DefaultType for PackageDependencyProcessorArchitectures {
     type DefaultType = Self;
 }
-impl ::std::ops::BitOr for PackageDependencyProcessorArchitectures {
+impl ::core::ops::BitOr for PackageDependencyProcessorArchitectures {
     type Output = Self;
     fn bitor(self, rhs: Self) -> Self {
         Self(self.0 | rhs.0)
     }
 }
-impl ::std::ops::BitAnd for PackageDependencyProcessorArchitectures {
+impl ::core::ops::BitAnd for PackageDependencyProcessorArchitectures {
     type Output = Self;
     fn bitand(self, rhs: Self) -> Self {
         Self(self.0 & rhs.0)
     }
 }
-impl ::std::ops::BitOrAssign for PackageDependencyProcessorArchitectures {
+impl ::core::ops::BitOrAssign for PackageDependencyProcessorArchitectures {
     fn bitor_assign(&mut self, rhs: Self) {
         self.0.bitor_assign(rhs.0)
     }
 }
-impl ::std::ops::BitAndAssign for PackageDependencyProcessorArchitectures {
+impl ::core::ops::BitAndAssign for PackageDependencyProcessorArchitectures {
     fn bitand_assign(&mut self, rhs: Self) {
         self.0.bitand_assign(rhs.0)
     }
 }
-impl ::std::ops::Not for PackageDependencyProcessorArchitectures {
+impl ::core::ops::Not for PackageDependencyProcessorArchitectures {
     type Output = Self;
     fn not(self) -> Self {
         Self(self.0.not())
@@ -1236,9 +1248,9 @@ impl PackageDependencyRank {
     #[doc = "*Required features: `Windows_ApplicationModel_DynamicDependency`*"]
     pub fn Default() -> ::windows::runtime::Result<i32> {
         Self::IPackageDependencyRankStatics(|this| unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)

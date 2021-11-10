@@ -10,10 +10,10 @@
 #[doc = "*Required features: `UI_Dispatching`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DispatcherQueue(pub ::windows::runtime::IInspectable);
 impl DispatcherQueue {
@@ -21,9 +21,9 @@ impl DispatcherQueue {
     pub fn CreateTimer(&self) -> ::windows::runtime::Result<DispatcherQueueTimer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<DispatcherQueueTimer>(result__)
@@ -36,9 +36,9 @@ impl DispatcherQueue {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 callback.into_param().abi(),
                 &mut result__,
             )
@@ -56,9 +56,9 @@ impl DispatcherQueue {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 priority,
                 callback.into_param().abi(),
                 &mut result__,
@@ -82,9 +82,9 @@ impl DispatcherQueue {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -102,7 +102,7 @@ impl DispatcherQueue {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -124,9 +124,9 @@ impl DispatcherQueue {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -144,7 +144,7 @@ impl DispatcherQueue {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -154,9 +154,9 @@ impl DispatcherQueue {
     pub fn HasThreadAccess(&self) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IDispatcherQueue2>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -165,9 +165,9 @@ impl DispatcherQueue {
     #[doc = "*Required features: `UI_Dispatching`*"]
     pub fn GetForCurrentThread() -> ::windows::runtime::Result<DispatcherQueue> {
         Self::IDispatcherQueueStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<DispatcherQueue>(result__)
@@ -203,12 +203,12 @@ unsafe impl ::windows::runtime::Interface for DispatcherQueue {
 impl ::windows::runtime::RuntimeName for DispatcherQueue {
     const NAME: &'static str = "Microsoft.UI.Dispatching.DispatcherQueue";
 }
-impl ::std::convert::From<DispatcherQueue> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DispatcherQueue> for ::windows::runtime::IUnknown {
     fn from(value: DispatcherQueue) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DispatcherQueue> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DispatcherQueue> for ::windows::runtime::IUnknown {
     fn from(value: &DispatcherQueue) -> Self {
         value.0 .0.clone()
     }
@@ -223,12 +223,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DispatcherQueue> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DispatcherQueue> for ::windows::runtime::IInspectable {
     fn from(value: DispatcherQueue) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DispatcherQueue> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DispatcherQueue> for ::windows::runtime::IInspectable {
     fn from(value: &DispatcherQueue) -> Self {
         value.0.clone()
     }
@@ -245,15 +245,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for DispatcherQueue {}
-unsafe impl ::std::marker::Sync for DispatcherQueue {}
+unsafe impl ::core::marker::Send for DispatcherQueue {}
+unsafe impl ::core::marker::Sync for DispatcherQueue {}
 #[doc = "*Required features: `UI_Dispatching`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DispatcherQueueController(pub ::windows::runtime::IInspectable);
 impl DispatcherQueueController {
@@ -261,9 +261,9 @@ impl DispatcherQueueController {
     pub fn DispatcherQueue(&self) -> ::windows::runtime::Result<DispatcherQueue> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<DispatcherQueue>(result__)
@@ -275,9 +275,9 @@ impl DispatcherQueueController {
     ) -> ::windows::runtime::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
@@ -286,9 +286,9 @@ impl DispatcherQueueController {
     #[doc = "*Required features: `UI_Dispatching`*"]
     pub fn CreateOnDedicatedThread() -> ::windows::runtime::Result<DispatcherQueueController> {
         Self::IDispatcherQueueControllerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<DispatcherQueueController>(result__)
@@ -297,9 +297,9 @@ impl DispatcherQueueController {
     #[doc = "*Required features: `UI_Dispatching`*"]
     pub fn CreateOnCurrentThread() -> ::windows::runtime::Result<DispatcherQueueController> {
         Self::IDispatcherQueueControllerStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<DispatcherQueueController>(result__)
@@ -333,12 +333,12 @@ unsafe impl ::windows::runtime::Interface for DispatcherQueueController {
 impl ::windows::runtime::RuntimeName for DispatcherQueueController {
     const NAME: &'static str = "Microsoft.UI.Dispatching.DispatcherQueueController";
 }
-impl ::std::convert::From<DispatcherQueueController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DispatcherQueueController> for ::windows::runtime::IUnknown {
     fn from(value: DispatcherQueueController) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DispatcherQueueController> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DispatcherQueueController> for ::windows::runtime::IUnknown {
     fn from(value: &DispatcherQueueController) -> Self {
         value.0 .0.clone()
     }
@@ -357,12 +357,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DispatcherQueueController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DispatcherQueueController> for ::windows::runtime::IInspectable {
     fn from(value: DispatcherQueueController) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DispatcherQueueController> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DispatcherQueueController> for ::windows::runtime::IInspectable {
     fn from(value: &DispatcherQueueController) -> Self {
         value.0.clone()
     }
@@ -381,15 +381,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for DispatcherQueueController {}
-unsafe impl ::std::marker::Sync for DispatcherQueueController {}
+unsafe impl ::core::marker::Send for DispatcherQueueController {}
+unsafe impl ::core::marker::Sync for DispatcherQueueController {}
 #[doc = "*Required features: `UI_Dispatching`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DispatcherQueueHandler(::windows::runtime::IUnknown);
 impl DispatcherQueueHandler {
@@ -399,13 +399,13 @@ impl DispatcherQueueHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Dispatching`*"]
     pub fn Invoke(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).3)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).3)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -460,7 +460,7 @@ impl<F: FnMut() -> ::windows::runtime::Result<()> + 'static> DispatcherQueueHand
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -477,7 +477,7 @@ impl<F: FnMut() -> ::windows::runtime::Result<()> + 'static> DispatcherQueueHand
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -490,12 +490,12 @@ impl<F: FnMut() -> ::windows::runtime::Result<()> + 'static> DispatcherQueueHand
 }
 #[doc = "*Required features: `UI_Dispatching`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct DispatcherQueuePriority(pub i32);
@@ -504,7 +504,7 @@ impl DispatcherQueuePriority {
     pub const Normal: DispatcherQueuePriority = DispatcherQueuePriority(0i32);
     pub const High: DispatcherQueuePriority = DispatcherQueuePriority(10i32);
 }
-impl ::std::convert::From<i32> for DispatcherQueuePriority {
+impl ::core::convert::From<i32> for DispatcherQueuePriority {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -523,10 +523,10 @@ impl ::windows::runtime::DefaultType for DispatcherQueuePriority {
 #[doc = "*Required features: `UI_Dispatching`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DispatcherQueueShutdownStartingEventArgs(pub ::windows::runtime::IInspectable);
 impl DispatcherQueueShutdownStartingEventArgs {
@@ -534,9 +534,9 @@ impl DispatcherQueueShutdownStartingEventArgs {
     pub fn GetDeferral(&self) -> ::windows::runtime::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
@@ -558,14 +558,14 @@ unsafe impl ::windows::runtime::Interface for DispatcherQueueShutdownStartingEve
 impl ::windows::runtime::RuntimeName for DispatcherQueueShutdownStartingEventArgs {
     const NAME: &'static str = "Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs";
 }
-impl ::std::convert::From<DispatcherQueueShutdownStartingEventArgs>
+impl ::core::convert::From<DispatcherQueueShutdownStartingEventArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: DispatcherQueueShutdownStartingEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DispatcherQueueShutdownStartingEventArgs>
+impl ::core::convert::From<&DispatcherQueueShutdownStartingEventArgs>
     for ::windows::runtime::IUnknown
 {
     fn from(value: &DispatcherQueueShutdownStartingEventArgs) -> Self {
@@ -586,14 +586,14 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DispatcherQueueShutdownStartingEventArgs>
+impl ::core::convert::From<DispatcherQueueShutdownStartingEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: DispatcherQueueShutdownStartingEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DispatcherQueueShutdownStartingEventArgs>
+impl ::core::convert::From<&DispatcherQueueShutdownStartingEventArgs>
     for ::windows::runtime::IInspectable
 {
     fn from(value: &DispatcherQueueShutdownStartingEventArgs) -> Self {
@@ -614,15 +614,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for DispatcherQueueShutdownStartingEventArgs {}
-unsafe impl ::std::marker::Sync for DispatcherQueueShutdownStartingEventArgs {}
+unsafe impl ::core::marker::Send for DispatcherQueueShutdownStartingEventArgs {}
+unsafe impl ::core::marker::Sync for DispatcherQueueShutdownStartingEventArgs {}
 #[doc = "*Required features: `UI_Dispatching`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct DispatcherQueueTimer(pub ::windows::runtime::IInspectable);
 impl DispatcherQueueTimer {
@@ -630,9 +630,9 @@ impl DispatcherQueueTimer {
     pub fn Interval(&self) -> ::windows::runtime::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
@@ -649,7 +649,7 @@ impl DispatcherQueueTimer {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -659,9 +659,9 @@ impl DispatcherQueueTimer {
     pub fn IsRunning(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -671,9 +671,9 @@ impl DispatcherQueueTimer {
     pub fn IsRepeating(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -684,7 +684,7 @@ impl DispatcherQueueTimer {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value,
             )
             .ok()
@@ -694,14 +694,14 @@ impl DispatcherQueueTimer {
     pub fn Start(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).11)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).11)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Dispatching`*"]
     pub fn Stop(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).12)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).12)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Dispatching`*"]
@@ -720,9 +720,9 @@ impl DispatcherQueueTimer {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -740,7 +740,7 @@ impl DispatcherQueueTimer {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).14)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -764,12 +764,12 @@ unsafe impl ::windows::runtime::Interface for DispatcherQueueTimer {
 impl ::windows::runtime::RuntimeName for DispatcherQueueTimer {
     const NAME: &'static str = "Microsoft.UI.Dispatching.DispatcherQueueTimer";
 }
-impl ::std::convert::From<DispatcherQueueTimer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<DispatcherQueueTimer> for ::windows::runtime::IUnknown {
     fn from(value: DispatcherQueueTimer) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&DispatcherQueueTimer> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&DispatcherQueueTimer> for ::windows::runtime::IUnknown {
     fn from(value: &DispatcherQueueTimer) -> Self {
         value.0 .0.clone()
     }
@@ -786,12 +786,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<DispatcherQueueTimer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<DispatcherQueueTimer> for ::windows::runtime::IInspectable {
     fn from(value: DispatcherQueueTimer) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&DispatcherQueueTimer> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&DispatcherQueueTimer> for ::windows::runtime::IInspectable {
     fn from(value: &DispatcherQueueTimer) -> Self {
         value.0.clone()
     }
@@ -810,8 +810,8 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for DispatcherQueueTimer {}
-unsafe impl ::std::marker::Sync for DispatcherQueueTimer {}
+unsafe impl ::core::marker::Send for DispatcherQueueTimer {}
+unsafe impl ::core::marker::Sync for DispatcherQueueTimer {}
 #[repr(transparent)]
 #[doc(hidden)]
 pub struct IDispatcherQueue(pub ::windows::runtime::IInspectable);

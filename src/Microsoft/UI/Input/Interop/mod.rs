@@ -56,9 +56,9 @@ impl PenDeviceInterop {
         pointerpoint: Param0,
     ) -> ::windows::runtime::Result<::windows::Devices::Input::PenDevice> {
         Self::IPenDeviceInteropStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 pointerpoint.into_param().abi(),
                 &mut result__,
             )

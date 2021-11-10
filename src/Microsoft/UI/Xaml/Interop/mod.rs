@@ -10,17 +10,17 @@
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct BindableVectorChangedEventHandler(::windows::runtime::IUnknown);
 impl BindableVectorChangedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<IBindableObservableVector>,
-                &::std::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<IBindableObservableVector>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -31,7 +31,7 @@ impl BindableVectorChangedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Interop`*"]
     pub fn Invoke<
@@ -46,7 +46,7 @@ impl BindableVectorChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 vector.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -87,8 +87,8 @@ pub struct BindableVectorChangedEventHandler_abi(
 #[repr(C)]
 struct BindableVectorChangedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<IBindableObservableVector>,
-            &::std::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<IBindableObservableVector>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -98,8 +98,8 @@ struct BindableVectorChangedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<IBindableObservableVector>,
-                &::std::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<IBindableObservableVector>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > BindableVectorChangedEventHandler_box<F>
@@ -123,7 +123,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -140,7 +140,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }
@@ -155,10 +155,10 @@ impl<
 }
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 pub struct IBindableIterable(pub ::windows::runtime::IInspectable);
@@ -176,9 +176,9 @@ impl IBindableIterable {
     pub fn First(&self) -> ::windows::runtime::Result<IBindableIterator> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableIterator>(result__)
@@ -189,12 +189,12 @@ unsafe impl ::windows::runtime::RuntimeType for IBindableIterable {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{036d2c08-df29-41af-8aa2-d774be62ba6f}");
 }
-impl ::std::convert::From<IBindableIterable> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IBindableIterable> for ::windows::runtime::IUnknown {
     fn from(value: IBindableIterable) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IBindableIterable> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IBindableIterable> for ::windows::runtime::IUnknown {
     fn from(value: &IBindableIterable) -> Self {
         value.0 .0.clone()
     }
@@ -209,12 +209,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IBindableIterable> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IBindableIterable> for ::windows::runtime::IInspectable {
     fn from(value: IBindableIterable) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IBindableIterable> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IBindableIterable> for ::windows::runtime::IInspectable {
     fn from(value: &IBindableIterable) -> Self {
         value.0.clone()
     }
@@ -261,10 +261,10 @@ pub struct IBindableIterable_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 pub struct IBindableIterator(pub ::windows::runtime::IInspectable);
@@ -282,9 +282,9 @@ impl IBindableIterator {
     pub fn Current(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -294,9 +294,9 @@ impl IBindableIterator {
     pub fn HasCurrent(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -306,9 +306,9 @@ impl IBindableIterator {
     pub fn MoveNext(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -319,12 +319,12 @@ unsafe impl ::windows::runtime::RuntimeType for IBindableIterator {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{6a1d6c07-076d-49f2-8314-f52c9c9a8331}");
 }
-impl ::std::convert::From<IBindableIterator> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IBindableIterator> for ::windows::runtime::IUnknown {
     fn from(value: IBindableIterator) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IBindableIterator> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IBindableIterator> for ::windows::runtime::IUnknown {
     fn from(value: &IBindableIterator) -> Self {
         value.0 .0.clone()
     }
@@ -339,12 +339,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IBindableIterator> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IBindableIterator> for ::windows::runtime::IInspectable {
     fn from(value: IBindableIterator) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IBindableIterator> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IBindableIterator> for ::windows::runtime::IInspectable {
     fn from(value: &IBindableIterator) -> Self {
         value.0.clone()
     }
@@ -399,10 +399,10 @@ pub struct IBindableIterator_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 pub struct IBindableObservableVector(pub ::windows::runtime::IInspectable);
@@ -426,9 +426,9 @@ impl IBindableObservableVector {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -446,7 +446,7 @@ impl IBindableObservableVector {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -456,9 +456,9 @@ impl IBindableObservableVector {
     pub fn First(&self) -> ::windows::runtime::Result<IBindableIterator> {
         let this = &::windows::runtime::Interface::cast::<IBindableIterable>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableIterator>(result__)
@@ -471,9 +471,9 @@ impl IBindableObservableVector {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -484,9 +484,9 @@ impl IBindableObservableVector {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -496,9 +496,9 @@ impl IBindableObservableVector {
     pub fn GetView(&self) -> ::windows::runtime::Result<IBindableVectorView> {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableVectorView>(result__)
@@ -515,9 +515,9 @@ impl IBindableObservableVector {
     ) -> ::windows::runtime::Result<bool> {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -537,7 +537,7 @@ impl IBindableObservableVector {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -556,7 +556,7 @@ impl IBindableObservableVector {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -568,7 +568,7 @@ impl IBindableObservableVector {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -585,7 +585,7 @@ impl IBindableObservableVector {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -595,14 +595,14 @@ impl IBindableObservableVector {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Interop`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = &::windows::runtime::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
 }
@@ -610,12 +610,12 @@ unsafe impl ::windows::runtime::RuntimeType for IBindableObservableVector {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{fe1eb536-7e7f-4f90-ac9a-474984aae512}");
 }
-impl ::std::convert::From<IBindableObservableVector> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IBindableObservableVector> for ::windows::runtime::IUnknown {
     fn from(value: IBindableObservableVector) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IBindableObservableVector> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IBindableObservableVector> for ::windows::runtime::IUnknown {
     fn from(value: &IBindableObservableVector) -> Self {
         value.0 .0.clone()
     }
@@ -634,12 +634,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IBindableObservableVector> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IBindableObservableVector> for ::windows::runtime::IInspectable {
     fn from(value: IBindableObservableVector) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IBindableObservableVector> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IBindableObservableVector> for ::windows::runtime::IInspectable {
     fn from(value: &IBindableObservableVector) -> Self {
         value.0.clone()
     }
@@ -658,13 +658,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<IBindableObservableVector> for IBindableIterable {
+impl ::core::convert::TryFrom<IBindableObservableVector> for IBindableIterable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: IBindableObservableVector) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&IBindableObservableVector> for IBindableIterable {
+impl ::core::convert::TryFrom<&IBindableObservableVector> for IBindableIterable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &IBindableObservableVector) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -677,18 +677,18 @@ impl<'a> ::windows::runtime::IntoParam<'a, IBindableIterable> for IBindableObser
 }
 impl<'a> ::windows::runtime::IntoParam<'a, IBindableIterable> for &IBindableObservableVector {
     fn into_param(self) -> ::windows::runtime::Param<'a, IBindableIterable> {
-        ::std::convert::TryInto::<IBindableIterable>::try_into(self)
+        ::core::convert::TryInto::<IBindableIterable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
 }
-impl ::std::convert::TryFrom<IBindableObservableVector> for IBindableVector {
+impl ::core::convert::TryFrom<IBindableObservableVector> for IBindableVector {
     type Error = ::windows::runtime::Error;
     fn try_from(value: IBindableObservableVector) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&IBindableObservableVector> for IBindableVector {
+impl ::core::convert::TryFrom<&IBindableObservableVector> for IBindableVector {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &IBindableObservableVector) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -701,7 +701,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, IBindableVector> for IBindableObserva
 }
 impl<'a> ::windows::runtime::IntoParam<'a, IBindableVector> for &IBindableObservableVector {
     fn into_param(self) -> ::windows::runtime::Param<'a, IBindableVector> {
-        ::std::convert::TryInto::<IBindableVector>::try_into(self)
+        ::core::convert::TryInto::<IBindableVector>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
@@ -741,10 +741,10 @@ pub struct IBindableObservableVector_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 pub struct IBindableVector(pub ::windows::runtime::IInspectable);
@@ -765,9 +765,9 @@ impl IBindableVector {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -778,9 +778,9 @@ impl IBindableVector {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -790,9 +790,9 @@ impl IBindableVector {
     pub fn GetView(&self) -> ::windows::runtime::Result<IBindableVectorView> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableVectorView>(result__)
@@ -809,9 +809,9 @@ impl IBindableVector {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -831,7 +831,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -850,7 +850,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 value.into_param().abi(),
             )
@@ -862,7 +862,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
             )
             .ok()
@@ -879,7 +879,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -889,23 +889,23 @@ impl IBindableVector {
     pub fn RemoveAtEnd(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).14)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).14)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Interop`*"]
     pub fn Clear(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).15)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).15)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `UI_Xaml_Interop`*"]
     pub fn First(&self) -> ::windows::runtime::Result<IBindableIterator> {
         let this = &::windows::runtime::Interface::cast::<IBindableIterable>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableIterator>(result__)
@@ -916,12 +916,12 @@ unsafe impl ::windows::runtime::RuntimeType for IBindableVector {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{393de7de-6fd0-4c0d-bb71-47244a113e93}");
 }
-impl ::std::convert::From<IBindableVector> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IBindableVector> for ::windows::runtime::IUnknown {
     fn from(value: IBindableVector) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IBindableVector> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IBindableVector> for ::windows::runtime::IUnknown {
     fn from(value: &IBindableVector) -> Self {
         value.0 .0.clone()
     }
@@ -936,12 +936,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IBindableVector> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IBindableVector> for ::windows::runtime::IInspectable {
     fn from(value: IBindableVector) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IBindableVector> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IBindableVector> for ::windows::runtime::IInspectable {
     fn from(value: &IBindableVector) -> Self {
         value.0.clone()
     }
@@ -958,13 +958,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<IBindableVector> for IBindableIterable {
+impl ::core::convert::TryFrom<IBindableVector> for IBindableIterable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: IBindableVector) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&IBindableVector> for IBindableIterable {
+impl ::core::convert::TryFrom<&IBindableVector> for IBindableIterable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &IBindableVector) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -977,7 +977,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, IBindableIterable> for IBindableVecto
 }
 impl<'a> ::windows::runtime::IntoParam<'a, IBindableIterable> for &IBindableVector {
     fn into_param(self) -> ::windows::runtime::Param<'a, IBindableIterable> {
-        ::std::convert::TryInto::<IBindableIterable>::try_into(self)
+        ::core::convert::TryInto::<IBindableIterable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
@@ -1047,10 +1047,10 @@ pub struct IBindableVector_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 pub struct IBindableVectorView(pub ::windows::runtime::IInspectable);
@@ -1071,9 +1071,9 @@ impl IBindableVectorView {
     ) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
             )
@@ -1084,9 +1084,9 @@ impl IBindableVectorView {
     pub fn Size(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -1103,9 +1103,9 @@ impl IBindableVectorView {
     ) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 value.into_param().abi(),
                 index,
                 &mut result__,
@@ -1117,9 +1117,9 @@ impl IBindableVectorView {
     pub fn First(&self) -> ::windows::runtime::Result<IBindableIterator> {
         let this = &::windows::runtime::Interface::cast::<IBindableIterable>(self)?;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableIterator>(result__)
@@ -1130,12 +1130,12 @@ unsafe impl ::windows::runtime::RuntimeType for IBindableVectorView {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{346dd6e7-976e-4bc3-815d-ece243bc0f33}");
 }
-impl ::std::convert::From<IBindableVectorView> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<IBindableVectorView> for ::windows::runtime::IUnknown {
     fn from(value: IBindableVectorView) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&IBindableVectorView> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&IBindableVectorView> for ::windows::runtime::IUnknown {
     fn from(value: &IBindableVectorView) -> Self {
         value.0 .0.clone()
     }
@@ -1152,12 +1152,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<IBindableVectorView> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<IBindableVectorView> for ::windows::runtime::IInspectable {
     fn from(value: IBindableVectorView) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&IBindableVectorView> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&IBindableVectorView> for ::windows::runtime::IInspectable {
     fn from(value: &IBindableVectorView) -> Self {
         value.0.clone()
     }
@@ -1176,13 +1176,13 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-impl ::std::convert::TryFrom<IBindableVectorView> for IBindableIterable {
+impl ::core::convert::TryFrom<IBindableVectorView> for IBindableIterable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: IBindableVectorView) -> ::windows::runtime::Result<Self> {
-        ::std::convert::TryFrom::try_from(&value)
+        ::core::convert::TryFrom::try_from(&value)
     }
 }
-impl ::std::convert::TryFrom<&IBindableVectorView> for IBindableIterable {
+impl ::core::convert::TryFrom<&IBindableVectorView> for IBindableIterable {
     type Error = ::windows::runtime::Error;
     fn try_from(value: &IBindableVectorView) -> ::windows::runtime::Result<Self> {
         ::windows::runtime::Interface::cast(value)
@@ -1195,7 +1195,7 @@ impl<'a> ::windows::runtime::IntoParam<'a, IBindableIterable> for IBindableVecto
 }
 impl<'a> ::windows::runtime::IntoParam<'a, IBindableIterable> for &IBindableVectorView {
     fn into_param(self) -> ::windows::runtime::Param<'a, IBindableIterable> {
-        ::std::convert::TryInto::<IBindableIterable>::try_into(self)
+        ::core::convert::TryInto::<IBindableIterable>::try_into(self)
             .map(::windows::runtime::Param::Owned)
             .unwrap_or(::windows::runtime::Param::None)
     }
@@ -1241,10 +1241,10 @@ pub struct IBindableVectorView_abi(
 );
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 pub struct INotifyCollectionChanged(pub ::windows::runtime::IInspectable);
@@ -1268,9 +1268,9 @@ impl INotifyCollectionChanged {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -1288,7 +1288,7 @@ impl INotifyCollectionChanged {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1299,12 +1299,12 @@ unsafe impl ::windows::runtime::RuntimeType for INotifyCollectionChanged {
     const SIGNATURE: ::windows::runtime::ConstBuffer =
         ::windows::runtime::ConstBuffer::from_slice(b"{530155e1-28a5-5693-87ce-30724d95a06d}");
 }
-impl ::std::convert::From<INotifyCollectionChanged> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<INotifyCollectionChanged> for ::windows::runtime::IUnknown {
     fn from(value: INotifyCollectionChanged) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&INotifyCollectionChanged> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&INotifyCollectionChanged> for ::windows::runtime::IUnknown {
     fn from(value: &INotifyCollectionChanged) -> Self {
         value.0 .0.clone()
     }
@@ -1323,12 +1323,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<INotifyCollectionChanged> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<INotifyCollectionChanged> for ::windows::runtime::IInspectable {
     fn from(value: INotifyCollectionChanged) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&INotifyCollectionChanged> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&INotifyCollectionChanged> for ::windows::runtime::IInspectable {
     fn from(value: &INotifyCollectionChanged) -> Self {
         value.0.clone()
     }
@@ -1485,12 +1485,12 @@ pub struct INotifyCollectionChangedEventArgsFactory_abi(
 );
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct NotifyCollectionChangedAction(pub i32);
@@ -1501,7 +1501,7 @@ impl NotifyCollectionChangedAction {
     pub const Move: NotifyCollectionChangedAction = NotifyCollectionChangedAction(3i32);
     pub const Reset: NotifyCollectionChangedAction = NotifyCollectionChangedAction(4i32);
 }
-impl ::std::convert::From<i32> for NotifyCollectionChangedAction {
+impl ::core::convert::From<i32> for NotifyCollectionChangedAction {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -1520,10 +1520,10 @@ impl ::windows::runtime::DefaultType for NotifyCollectionChangedAction {
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NotifyCollectionChangedEventArgs(pub ::windows::runtime::IInspectable);
 impl NotifyCollectionChangedEventArgs {
@@ -1531,9 +1531,9 @@ impl NotifyCollectionChangedEventArgs {
     pub fn Action(&self) -> ::windows::runtime::Result<NotifyCollectionChangedAction> {
         let this = self;
         unsafe {
-            let mut result__: NotifyCollectionChangedAction = ::std::mem::zeroed();
+            let mut result__: NotifyCollectionChangedAction = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<NotifyCollectionChangedAction>(result__)
@@ -1543,9 +1543,9 @@ impl NotifyCollectionChangedEventArgs {
     pub fn NewItems(&self) -> ::windows::runtime::Result<IBindableVector> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableVector>(result__)
@@ -1555,9 +1555,9 @@ impl NotifyCollectionChangedEventArgs {
     pub fn OldItems(&self) -> ::windows::runtime::Result<IBindableVector> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<IBindableVector>(result__)
@@ -1567,9 +1567,9 @@ impl NotifyCollectionChangedEventArgs {
     pub fn NewStartingIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -1579,9 +1579,9 @@ impl NotifyCollectionChangedEventArgs {
     pub fn OldStartingIndex(&self) -> ::windows::runtime::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::std::mem::zeroed();
+            let mut result__: i32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<i32>(result__)
@@ -1600,16 +1600,17 @@ impl NotifyCollectionChangedEventArgs {
         oldindex: i32,
     ) -> ::windows::runtime::Result<NotifyCollectionChangedEventArgs> {
         Self::INotifyCollectionChangedEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 action,
                 newitems.into_param().abi(),
                 olditems.into_param().abi(),
                 newindex,
                 oldindex,
-                ::std::ptr::null_mut(),
-                &mut ::std::option::Option::<::windows::runtime::IInspectable>::None as *mut _ as _,
+                ::core::ptr::null_mut(),
+                &mut ::core::option::Option::<::windows::runtime::IInspectable>::None as *mut _
+                    as _,
                 &mut result__,
             )
             .from_abi::<NotifyCollectionChangedEventArgs>(result__)
@@ -1643,12 +1644,12 @@ unsafe impl ::windows::runtime::Interface for NotifyCollectionChangedEventArgs {
 impl ::windows::runtime::RuntimeName for NotifyCollectionChangedEventArgs {
     const NAME: &'static str = "Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventArgs";
 }
-impl ::std::convert::From<NotifyCollectionChangedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<NotifyCollectionChangedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: NotifyCollectionChangedEventArgs) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&NotifyCollectionChangedEventArgs> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&NotifyCollectionChangedEventArgs> for ::windows::runtime::IUnknown {
     fn from(value: &NotifyCollectionChangedEventArgs) -> Self {
         value.0 .0.clone()
     }
@@ -1667,12 +1668,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<NotifyCollectionChangedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<NotifyCollectionChangedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: NotifyCollectionChangedEventArgs) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&NotifyCollectionChangedEventArgs> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&NotifyCollectionChangedEventArgs> for ::windows::runtime::IInspectable {
     fn from(value: &NotifyCollectionChangedEventArgs) -> Self {
         value.0.clone()
     }
@@ -1691,22 +1692,22 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for NotifyCollectionChangedEventArgs {}
-unsafe impl ::std::marker::Sync for NotifyCollectionChangedEventArgs {}
+unsafe impl ::core::marker::Send for NotifyCollectionChangedEventArgs {}
+unsafe impl ::core::marker::Sync for NotifyCollectionChangedEventArgs {}
 #[doc = "*Required features: `UI_Xaml_Interop`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct NotifyCollectionChangedEventHandler(::windows::runtime::IUnknown);
 impl NotifyCollectionChangedEventHandler {
     pub fn new<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NotifyCollectionChangedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NotifyCollectionChangedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     >(
@@ -1717,7 +1718,7 @@ impl NotifyCollectionChangedEventHandler {
             count: ::windows::runtime::RefCount::new(1),
             invoke,
         };
-        unsafe { std::mem::transmute(::std::boxed::Box::new(com)) }
+        unsafe { core::mem::transmute(::windows::runtime::alloc::boxed::Box::new(com)) }
     }
     #[doc = "*Required features: `UI_Xaml_Interop`*"]
     pub fn Invoke<
@@ -1732,7 +1733,7 @@ impl NotifyCollectionChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).3)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1773,8 +1774,8 @@ pub struct NotifyCollectionChangedEventHandler_abi(
 #[repr(C)]
 struct NotifyCollectionChangedEventHandler_box<
     F: FnMut(
-            &::std::option::Option<::windows::runtime::IInspectable>,
-            &::std::option::Option<NotifyCollectionChangedEventArgs>,
+            &::core::option::Option<::windows::runtime::IInspectable>,
+            &::core::option::Option<NotifyCollectionChangedEventArgs>,
         ) -> ::windows::runtime::Result<()>
         + 'static,
 > {
@@ -1784,8 +1785,8 @@ struct NotifyCollectionChangedEventHandler_box<
 }
 impl<
         F: FnMut(
-                &::std::option::Option<::windows::runtime::IInspectable>,
-                &::std::option::Option<NotifyCollectionChangedEventArgs>,
+                &::core::option::Option<::windows::runtime::IInspectable>,
+                &::core::option::Option<NotifyCollectionChangedEventArgs>,
             ) -> ::windows::runtime::Result<()>
             + 'static,
     > NotifyCollectionChangedEventHandler_box<F>
@@ -1809,7 +1810,7 @@ impl<
         {
             &mut (*this).vtable as *mut _ as _
         } else {
-            ::std::ptr::null_mut()
+            ::core::ptr::null_mut()
         };
         if (*interface).is_null() {
             ::windows::runtime::HRESULT(0x8000_4002)
@@ -1826,7 +1827,7 @@ impl<
         let this = this as *mut ::windows::runtime::RawPtr as *mut Self;
         let remaining = (*this).count.release();
         if remaining == 0 {
-            Box::from_raw(this);
+            ::windows::runtime::alloc::boxed::Box::from_raw(this);
         }
         remaining
     }

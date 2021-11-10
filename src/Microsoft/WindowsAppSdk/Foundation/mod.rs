@@ -29,7 +29,7 @@ pub unsafe fn MddBootstrapInitialize<
             ) -> ::windows::runtime::HRESULT;
         }
         MddBootstrapInitialize(
-            ::std::mem::transmute(majorminorversion),
+            ::core::mem::transmute(majorminorversion),
             versiontag.into_param().abi(),
             minversion.into_param().abi(),
         )
@@ -47,7 +47,7 @@ pub unsafe fn MddBootstrapShutdown() {
         extern "system" {
             fn MddBootstrapShutdown();
         }
-        ::std::mem::transmute(MddBootstrapShutdown())
+        ::core::mem::transmute(MddBootstrapShutdown())
     }
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");

@@ -25,13 +25,13 @@ impl ActivationRegistrationManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IActivationRegistrationManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 supportedfiletypes.len() as u32,
-                ::std::mem::transmute(supportedfiletypes.as_ptr()),
+                ::core::mem::transmute(supportedfiletypes.as_ptr()),
                 logo.into_param().abi(),
                 displayname.into_param().abi(),
                 supportedverbs.len() as u32,
-                ::std::mem::transmute(supportedverbs.as_ptr()),
+                ::core::mem::transmute(supportedverbs.as_ptr()),
                 exepath.into_param().abi(),
             )
             .ok()
@@ -52,7 +52,7 @@ impl ActivationRegistrationManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IActivationRegistrationManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 scheme.into_param().abi(),
                 logo.into_param().abi(),
                 displayname.into_param().abi(),
@@ -72,7 +72,7 @@ impl ActivationRegistrationManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IActivationRegistrationManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 taskid.into_param().abi(),
                 exepath.into_param().abi(),
             )
@@ -89,9 +89,9 @@ impl ActivationRegistrationManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IActivationRegistrationManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 filetypes.len() as u32,
-                ::std::mem::transmute(filetypes.as_ptr()),
+                ::core::mem::transmute(filetypes.as_ptr()),
                 exepath.into_param().abi(),
             )
             .ok()
@@ -108,7 +108,7 @@ impl ActivationRegistrationManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IActivationRegistrationManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 scheme.into_param().abi(),
                 exepath.into_param().abi(),
             )
@@ -124,7 +124,7 @@ impl ActivationRegistrationManager {
     ) -> ::windows::runtime::Result<()> {
         Self::IActivationRegistrationManagerStatics(|this| unsafe {
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 taskid.into_param().abi(),
             )
             .ok()
@@ -149,10 +149,10 @@ impl ::windows::runtime::RuntimeName for ActivationRegistrationManager {
 #[doc = "*Required features: `Windows_AppLifecycle`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AppActivationArguments(pub ::windows::runtime::IInspectable);
 impl AppActivationArguments {
@@ -160,9 +160,9 @@ impl AppActivationArguments {
     pub fn Kind(&self) -> ::windows::runtime::Result<ExtendedActivationKind> {
         let this = self;
         unsafe {
-            let mut result__: ExtendedActivationKind = ::std::mem::zeroed();
+            let mut result__: ExtendedActivationKind = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ExtendedActivationKind>(result__)
@@ -172,9 +172,9 @@ impl AppActivationArguments {
     pub fn Data(&self) -> ::windows::runtime::Result<::windows::runtime::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::IInspectable>(result__)
@@ -196,12 +196,12 @@ unsafe impl ::windows::runtime::Interface for AppActivationArguments {
 impl ::windows::runtime::RuntimeName for AppActivationArguments {
     const NAME: &'static str = "Microsoft.Windows.AppLifecycle.AppActivationArguments";
 }
-impl ::std::convert::From<AppActivationArguments> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AppActivationArguments> for ::windows::runtime::IUnknown {
     fn from(value: AppActivationArguments) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AppActivationArguments> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AppActivationArguments> for ::windows::runtime::IUnknown {
     fn from(value: &AppActivationArguments) -> Self {
         value.0 .0.clone()
     }
@@ -220,12 +220,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown>
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AppActivationArguments> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AppActivationArguments> for ::windows::runtime::IInspectable {
     fn from(value: AppActivationArguments) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AppActivationArguments> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AppActivationArguments> for ::windows::runtime::IInspectable {
     fn from(value: &AppActivationArguments) -> Self {
         value.0.clone()
     }
@@ -244,15 +244,15 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable>
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AppActivationArguments {}
-unsafe impl ::std::marker::Sync for AppActivationArguments {}
+unsafe impl ::core::marker::Send for AppActivationArguments {}
+unsafe impl ::core::marker::Sync for AppActivationArguments {}
 #[doc = "*Required features: `Windows_AppLifecycle`*"]
 #[repr(transparent)]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: clone :: Clone,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: clone :: Clone,
+    :: core :: fmt :: Debug,
 )]
 pub struct AppInstance(pub ::windows::runtime::IInspectable);
 impl AppInstance {
@@ -260,7 +260,7 @@ impl AppInstance {
     pub fn UnregisterKey(&self) -> ::windows::runtime::Result<()> {
         let this = self;
         unsafe {
-            (::windows::runtime::Interface::vtable(this).6)(::std::mem::transmute_copy(this)).ok()
+            (::windows::runtime::Interface::vtable(this).6)(::core::mem::transmute_copy(this)).ok()
         }
     }
     #[doc = "*Required features: `Windows_AppLifecycle`*"]
@@ -273,9 +273,9 @@ impl AppInstance {
     ) -> ::windows::runtime::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 args.into_param().abi(),
                 &mut result__,
             )
@@ -286,9 +286,9 @@ impl AppInstance {
     pub fn GetActivatedEventArgs(&self) -> ::windows::runtime::Result<AppActivationArguments> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<AppActivationArguments>(result__)
@@ -307,9 +307,9 @@ impl AppInstance {
     ) -> ::windows::runtime::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::std::mem::zeroed();
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).9)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
             )
@@ -327,7 +327,7 @@ impl AppInstance {
         let this = self;
         unsafe {
             (::windows::runtime::Interface::vtable(this).10)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -337,10 +337,10 @@ impl AppInstance {
     pub fn Key(&self) -> ::windows::runtime::Result<::windows::runtime::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING> =
-                ::std::mem::zeroed();
+            let mut result__: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING> =
+                ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).11)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::runtime::HSTRING>(result__)
@@ -350,9 +350,9 @@ impl AppInstance {
     pub fn IsCurrent(&self) -> ::windows::runtime::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::std::mem::zeroed();
+            let mut result__: bool = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).12)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<bool>(result__)
@@ -362,9 +362,9 @@ impl AppInstance {
     pub fn ProcessId(&self) -> ::windows::runtime::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::std::mem::zeroed();
+            let mut result__: u32 = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).13)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
@@ -373,9 +373,9 @@ impl AppInstance {
     #[doc = "*Required features: `Windows_AppLifecycle`*"]
     pub fn GetCurrent() -> ::windows::runtime::Result<AppInstance> {
         Self::IAppInstanceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).6)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<AppInstance>(result__)
@@ -385,9 +385,9 @@ impl AppInstance {
     pub fn GetInstances(
     ) -> ::windows::runtime::Result<::windows::Foundation::Collections::IVector<AppInstance>> {
         Self::IAppInstanceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).7)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::Foundation::Collections::IVector<AppInstance>>(result__)
@@ -401,9 +401,9 @@ impl AppInstance {
         key: Param0,
     ) -> ::windows::runtime::Result<AppInstance> {
         Self::IAppInstanceStatics(|this| unsafe {
-            let mut result__: ::windows::runtime::RawPtr = ::std::mem::zeroed();
+            let mut result__: ::windows::runtime::RawPtr = ::core::mem::zeroed();
             (::windows::runtime::Interface::vtable(this).8)(
-                ::std::mem::transmute_copy(this),
+                ::core::mem::transmute_copy(this),
                 key.into_param().abi(),
                 &mut result__,
             )
@@ -438,12 +438,12 @@ unsafe impl ::windows::runtime::Interface for AppInstance {
 impl ::windows::runtime::RuntimeName for AppInstance {
     const NAME: &'static str = "Microsoft.Windows.AppLifecycle.AppInstance";
 }
-impl ::std::convert::From<AppInstance> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<AppInstance> for ::windows::runtime::IUnknown {
     fn from(value: AppInstance) -> Self {
         value.0 .0
     }
 }
-impl ::std::convert::From<&AppInstance> for ::windows::runtime::IUnknown {
+impl ::core::convert::From<&AppInstance> for ::windows::runtime::IUnknown {
     fn from(value: &AppInstance) -> Self {
         value.0 .0.clone()
     }
@@ -458,12 +458,12 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IUnknown> for &'a
         ::windows::runtime::Param::Borrowed(&self.0 .0)
     }
 }
-impl ::std::convert::From<AppInstance> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<AppInstance> for ::windows::runtime::IInspectable {
     fn from(value: AppInstance) -> Self {
         value.0
     }
 }
-impl ::std::convert::From<&AppInstance> for ::windows::runtime::IInspectable {
+impl ::core::convert::From<&AppInstance> for ::windows::runtime::IInspectable {
     fn from(value: &AppInstance) -> Self {
         value.0.clone()
     }
@@ -478,16 +478,16 @@ impl<'a> ::windows::runtime::IntoParam<'a, ::windows::runtime::IInspectable> for
         ::windows::runtime::Param::Borrowed(&self.0)
     }
 }
-unsafe impl ::std::marker::Send for AppInstance {}
-unsafe impl ::std::marker::Sync for AppInstance {}
+unsafe impl ::core::marker::Send for AppInstance {}
+unsafe impl ::core::marker::Sync for AppInstance {}
 #[doc = "*Required features: `Windows_AppLifecycle`*"]
 #[derive(
-    :: std :: cmp :: PartialEq,
-    :: std :: cmp :: Eq,
-    :: std :: marker :: Copy,
-    :: std :: clone :: Clone,
-    :: std :: default :: Default,
-    :: std :: fmt :: Debug,
+    :: core :: cmp :: PartialEq,
+    :: core :: cmp :: Eq,
+    :: core :: marker :: Copy,
+    :: core :: clone :: Clone,
+    :: core :: default :: Default,
+    :: core :: fmt :: Debug,
 )]
 #[repr(transparent)]
 pub struct ExtendedActivationKind(pub i32);
@@ -539,7 +539,7 @@ impl ExtendedActivationKind {
     pub const VpnForeground: ExtendedActivationKind = ExtendedActivationKind(1026i32);
     pub const Push: ExtendedActivationKind = ExtendedActivationKind(5000i32);
 }
-impl ::std::convert::From<i32> for ExtendedActivationKind {
+impl ::core::convert::From<i32> for ExtendedActivationKind {
     fn from(value: i32) -> Self {
         Self(value)
     }
@@ -593,39 +593,39 @@ pub struct IActivationRegistrationManagerStatics_abi(
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
         supportedFileTypes_array_size: u32,
-        supportedfiletypes: *const ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        logo: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        displayname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        supportedfiletypes: *const ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        logo: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        displayname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         supportedVerbs_array_size: u32,
-        supportedverbs: *const ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        exepath: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        supportedverbs: *const ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        exepath: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        scheme: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        logo: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        displayname: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        exepath: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        scheme: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        logo: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        displayname: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        exepath: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        taskid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        exepath: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        taskid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        exepath: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
         fileTypes_array_size: u32,
-        filetypes: *const ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        exepath: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        filetypes: *const ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        exepath: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        scheme: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
-        exepath: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        scheme: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        exepath: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        taskid: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        taskid: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
 );
 #[repr(transparent)]
@@ -728,7 +728,7 @@ pub struct IAppInstance_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        result__: *mut ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
@@ -784,7 +784,7 @@ pub struct IAppInstanceStatics_abi(
     ) -> ::windows::runtime::HRESULT,
     pub  unsafe extern "system" fn(
         this: ::windows::runtime::RawPtr,
-        key: ::std::mem::ManuallyDrop<::windows::runtime::HSTRING>,
+        key: ::core::mem::ManuallyDrop<::windows::runtime::HSTRING>,
         result__: *mut ::windows::runtime::RawPtr,
     ) -> ::windows::runtime::HRESULT,
 );
