@@ -68,7 +68,6 @@ features = [
     "Foundation_Collections",
     "Win32_Foundation",
     "Win32_Storage_Packaging_Appx",
-    "Win32_UI_WindowsAndMessaging"
 ]
 
 [features]

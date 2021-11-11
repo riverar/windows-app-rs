@@ -3,40 +3,16 @@ Utilities for bootstrapping an app that uses the Windows App SDK.
 !*/
 
 use crate::Microsoft::WindowsAppSdk::Foundation::*;
-use windows::Win32::{
-    Foundation::HWND,
-    Storage::Packaging::Appx::{PACKAGE_VERSION, PACKAGE_VERSION_0, PACKAGE_VERSION_0_0},
-    UI::WindowsAndMessaging::{MessageBoxW, MB_ICONERROR, MB_OK},
+use windows::Win32::Storage::Packaging::Appx::{
+    PACKAGE_VERSION, PACKAGE_VERSION_0, PACKAGE_VERSION_0_0,
 };
-
-/// Locates the Windows App SDK framework package compatible with the (currently internal)
-/// versioning criteria and loads it into the current process.
-///
-/// On error a dialog box will be displayed. To not have the dialog box displayed,
-/// use [`initialize_without_dialog`] instead.
-///
-/// If multiple packages meet the criteria, the best candidate is selected.
-pub fn initialize() -> windows::runtime::Result<()> {
-    initialize_without_dialog().map_err(|outer_error| {
-        unsafe {
-            // There is no runtime download link to provide the user at this time. Awaiting resolution of
-            // https://github.com/microsoft/WindowsAppSDK/issues/1205
-
-            MessageBoxW(
-                HWND::default(),
-                "To run this application, the Windows App SDK preview 3 runtime must be installed.",
-                "This application could not be started",
-                MB_OK | MB_ICONERROR,
-            );
-            outer_error
-        }
-    })
-}
 
 #[allow(clippy::identity_op)]
 /// Locates the Windows App SDK framework package compatible with the (currently internal)
 /// versioning criteria and loads it into the current process.
-pub fn initialize_without_dialog() -> windows::runtime::Result<()> {
+///
+/// If multiple packages meet the criteria, the best candidate is selected.
+pub fn initialize() -> windows::runtime::Result<()> {
     let version_tag = "preview3";
     let mdd_version = (1 << 16) | 0_u32;
     let min_framework_version = PACKAGE_VERSION {
