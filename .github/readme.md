@@ -3,15 +3,16 @@
 # Rust for the Windows App SDK
 The `windows-app` crate lets you call any [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) (formerly known as Project Reunion) API using code generated from the metadata describing the API. It is powered by the [windows](https://github.com/microsoft/windows-rs) crate.
 
-## Channels
-TBD
+## Release channel coverage
+The Windows App SDK is delivered via [three release channels](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/release-channels)—experimental, preview, and stable. The `windows-app` crate currently targets APIs available in the preview and stable channels.
 
 ## Getting started
 Add the following to your Cargo.toml file:
 
 ```toml
-[build-dependencies]
-"windows" = { version = "0.26", features = ["build"] }
+[build-dependencies.windows]
+version = "0.26"
+features = ["build"]
 
 [dependencies.windows-app]
 version = "0.2"
@@ -20,7 +21,6 @@ features = [
     "WindowsAppSdk_Foundation",
     "Windows_System_Power"
 ]
-
 ```
 
 Make use of any Windows App SDK APIs as needed.
@@ -38,8 +38,6 @@ fn main() -> ::windows::runtime::Result<()> {
             );
             Ok(())
         })
-        .and_then(|_| bootstrap::uninitialize())?;
-    Ok(())
+        .and_then(|_| bootstrap::uninitialize())
 }
-
 ```
